@@ -104,16 +104,16 @@ public struct ItemClasses
 	[ReferenceTable("AchievementItems")]
 	public TRef EquipAchievements;
 
-	[FieldOffset(181)]
-	public bool UsedInMapDevice;
+	//[FieldOffset(181)]
+	//public bool UsedInMapDevice;
 
-	[FieldOffset(182)]
-	public bool Unk030;
+	//[FieldOffset(182)]
+	//public bool Unk030;
 
-	[FieldOffset(183)]
-	public bool Unk031;
+	//[FieldOffset(183)]
+	//public bool Unk031;
 
-	[FieldOffset(184)]
-	public bool Unk032;
+	//[FieldOffset(184)]
+	//public bool Unk032;
 
 }
