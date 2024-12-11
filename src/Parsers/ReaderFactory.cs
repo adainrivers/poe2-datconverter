@@ -6,7 +6,7 @@ public static class ReaderFactory
 {
     public static DatReader GetReader(string name, ReadOnlySpan<byte> data)
     {
-        if (ReaderTypes.ReaderMap.TryGetValue(name, out var type))
+        if (TypesFactory.StructsMap.TryGetValue(name, out var type))
         {
             var reader = new DatReader();
             reader.Read(data, type);

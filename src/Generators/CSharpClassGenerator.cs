@@ -8,7 +8,7 @@ public static class CSharpClassGenerator
     public static void Generate()
     {
         Console.WriteLine("Generating CSharp Files");
-        var structTypes = ReaderTypes.ReaderMap.Values;
+        var structTypes = TypesFactory.StructsMap.Values;
 
         foreach (var type in structTypes)
         {
@@ -72,7 +72,7 @@ public static class CSharpClassGenerator
         }
 
 
-        foreach (var enumType in ReaderTypes.Enums)
+        foreach (var enumType in TypesFactory.Enums)
         {
             var stringBuilder = new StringBuilder();
             stringBuilder.AppendLine("using System;");
