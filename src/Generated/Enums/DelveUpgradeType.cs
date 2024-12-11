@@ -1,0 +1,15 @@
+namespace Extractor.Generated.Enums;
+
+public enum DelveUpgradeType
+{
+	SULPHITE_CAPACITY = 0,
+	FLARE_CAPACITY = 1,
+	DYNAMITE_CAPACITY = 2,
+	CART_LIGHT_RADIUS = 3,
+	FLARE_LIGHT_RADIUS = 4,
+	DYNAMITE_RADIUS = 5,
+	Unk006 = 6,
+	DYNAMITE_DAMAGE = 7,
+	DARKNESS_RESISTANCE = 8,
+	FLARE_DURATION = 9,
+}
