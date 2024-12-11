@@ -31,9 +31,12 @@ public class DatStructSerializer
         var fields = type.GetFields();
 
         _jsonWriter.WriteStartArray();
-        foreach (var row in rows)
+        for (var i = 0; i < rows.Count; i++)
         {
+            var row = rows[i];
             _jsonWriter.WriteStartObject();
+            _jsonWriter.WritePropertyName("RowIndex");
+            _jsonWriter.WriteValue(i);
             foreach (var fieldInfo in fields)
             {
                 if (fieldInfo.Name.StartsWith("Unk")) continue;
@@ -48,14 +51,21 @@ public class DatStructSerializer
                         _jsonWriter.WriteNull();
                         continue;
                     }
+
                     var elementType = fieldInfo.GetCustomAttribute<ElementTypeAttribute>()?.Type ?? typeof(int);
                     var array = (TArray)value;
                     var values = array.GetValues(_reader, elementType);
+                    if (values == null)
+                    {
+                        _jsonWriter.WriteNull();
+                        continue;
+                    }
                     _jsonWriter.WriteStartArray();
                     foreach (var arrayValue in values)
                     {
                         WriteFieldValue(elementType, arrayValue, fieldInfo.GetCustomAttributes<Attribute>());
                     }
+
                     _jsonWriter.WriteEndArray();
 
                     continue;
@@ -65,8 +75,8 @@ public class DatStructSerializer
             }
 
             _jsonWriter.WriteEndObject();
-
         }
+
         _jsonWriter.WriteEndArray();
 
         _jsonWriter.Flush();
@@ -96,10 +106,16 @@ public class DatStructSerializer
 
         if (fieldType == typeof(TRef))
         {
+            var tRefValue=(TRef)value;
+            if(tRefValue.RowIndex == Constants.Null)
+            {
+                _jsonWriter.WriteNull();
+                return;
+            }
             var tableName = attributes?.Where(a => a.GetType() == typeof(ReferenceTableAttribute)).Cast<ReferenceTableAttribute>().FirstOrDefault()?.TableName;
             _jsonWriter.WriteStartObject();
             _jsonWriter.WritePropertyName("RowIndex");
-            _jsonWriter.WriteValue(((TRef)value).RowIndex);
+            _jsonWriter.WriteValue(tRefValue.RowIndex);
             _jsonWriter.WritePropertyName("TableName");
             _jsonWriter.WriteValue(tableName);
             _jsonWriter.WriteEndObject();

@@ -163,10 +163,10 @@ public struct MonsterVarieties
 	[ElementType(typeof(TRef))]
 	public TArray Special_ModsKeys;
 
-	[FieldOffset(400)]
-	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray KillRare_AchievementItemsKeys;
+	//[FieldOffset(400)]
+	//[ReferenceTable("AchievementItems")]
+	//[ElementType(typeof(TRef))]
+	//public TArray KillRare_AchievementItemsKeys;
 
 	[FieldOffset(416)]
 	public bool Unk046;
