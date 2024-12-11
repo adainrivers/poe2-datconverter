@@ -13,6 +13,6 @@ public struct MicrotransactionFireworksVariations
 	public TString AOFile;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

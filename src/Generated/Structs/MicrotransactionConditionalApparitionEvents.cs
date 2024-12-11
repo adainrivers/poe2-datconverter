@@ -18,7 +18,7 @@ public struct MicrotransactionConditionalApparitionEvents
 	public TRef Unk003;
 
 	[FieldOffset(40)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(41)]
 	public int Unk005;

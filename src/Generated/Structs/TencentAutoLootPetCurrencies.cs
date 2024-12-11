@@ -10,7 +10,7 @@ public struct TencentAutoLootPetCurrencies
 	public TRef BaseItemTypesKey;
 
 	[FieldOffset(16)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(17)]
 	[ElementType(typeof(int))]

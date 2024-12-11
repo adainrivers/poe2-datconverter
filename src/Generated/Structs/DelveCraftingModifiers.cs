@@ -39,16 +39,16 @@ public struct DelveCraftingModifiers
 	public TArray AllowedDelveCraftingTagsKeys;
 
 	[FieldOffset(112)]
-	public bool CanMirrorItem;
+	public TBool CanMirrorItem;
 
 	[FieldOffset(113)]
 	public int CorruptedEssenceChance;
 
 	[FieldOffset(117)]
-	public bool CanImproveQuality;
+	public TBool CanImproveQuality;
 
 	[FieldOffset(118)]
-	public bool HasLuckyRolls;
+	public TBool HasLuckyRolls;
 
 	[FieldOffset(119)]
 	[ReferenceTable("Mods")]
@@ -56,7 +56,7 @@ public struct DelveCraftingModifiers
 	public TArray SellPrice_ModsKeys;
 
 	[FieldOffset(135)]
-	public bool CanRollWhiteSockets;
+	public TBool CanRollWhiteSockets;
 
 	[FieldOffset(136)]
 	[ReferenceTable("Tags")]
@@ -78,10 +78,10 @@ public struct DelveCraftingModifiers
 	public TArray BlockedDelveCraftingModifierDescriptionsKeys;
 
 	[FieldOffset(200)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(201)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(202)]
 	[ElementType(typeof(int))]

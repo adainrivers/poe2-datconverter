@@ -22,6 +22,6 @@ public struct AzmeriFeatureRooms
 	public TArray Unk004;
 
 	[FieldOffset(40)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

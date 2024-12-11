@@ -36,6 +36,6 @@ public struct UniqueStashTypes
 	public int ChallengeLeagueCount;
 
 	[FieldOffset(52)]
-	public bool IsDisabled;
+	public TBool IsDisabled;
 
 }

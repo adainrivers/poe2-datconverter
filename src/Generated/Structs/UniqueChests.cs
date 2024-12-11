@@ -35,7 +35,7 @@ public struct UniqueChests
 	public TString AOFile;
 
 	[FieldOffset(88)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(89)]
 	[ElementType(typeof(int))]

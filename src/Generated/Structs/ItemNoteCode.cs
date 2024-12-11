@@ -16,7 +16,7 @@ public struct ItemNoteCode
 	public int Order1;
 
 	[FieldOffset(28)]
-	public bool Show;
+	public TBool Show;
 
 	[FieldOffset(29)]
 	public int Order2;

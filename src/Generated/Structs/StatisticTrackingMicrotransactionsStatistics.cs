@@ -6,7 +6,7 @@ namespace Extractor.Generated.Structs;
 public struct StatisticTrackingMicrotransactionsStatistics
 {
 	[FieldOffset(0)]
-	public bool Unk000;
+	public TBool Unk000;
 
 	[FieldOffset(1)]
 	public int Unk001;
@@ -42,6 +42,6 @@ public struct StatisticTrackingMicrotransactionsStatistics
 	public TString Unk011;
 
 	[FieldOffset(49)]
-	public bool Unk012;
+	public TBool Unk012;
 
 }

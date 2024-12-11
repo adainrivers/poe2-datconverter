@@ -12,15 +12,15 @@ public struct LeagueFlag
 	public TString Image;
 
 	[FieldOffset(16)]
-	public bool IsHC;
+	public TBool IsHC;
 
 	[FieldOffset(17)]
-	public bool IsSSF;
+	public TBool IsSSF;
 
 	[FieldOffset(18)]
 	public TString Banner;
 
 	[FieldOffset(26)]
-	public bool IsRuthless;
+	public TBool IsRuthless;
 
 }

@@ -37,7 +37,7 @@ public struct HeistAreaFormationLayout
 	public int Unk009;
 
 	[FieldOffset(52)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(53)]
 	public int Unk011;

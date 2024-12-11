@@ -27,7 +27,7 @@ public struct AlternateQualityTypes
 	public int Unk005;
 
 	[FieldOffset(68)]
-	public bool IsCatalyst;
+	public TBool IsCatalyst;
 
 	[FieldOffset(69)]
 	public short HASH16;

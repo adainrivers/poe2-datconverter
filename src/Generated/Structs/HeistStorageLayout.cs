@@ -13,7 +13,7 @@ public struct HeistStorageLayout
 	public TRef StoredItem;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(25)]
 	public TString ButtonFile;

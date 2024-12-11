@@ -69,6 +69,6 @@ public struct ExplodingStormBuffs
 	public TRef BuffDefinitionsKey2;
 
 	[FieldOffset(196)]
-	public bool IsOnlySpawningNearPlayer;
+	public TBool IsOnlySpawningNearPlayer;
 
 }

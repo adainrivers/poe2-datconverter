@@ -44,13 +44,13 @@ public struct ActiveSkills
 	public TString WebsiteImage;
 
 	[FieldOffset(112)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(113)]
 	public TString Unk011;
 
 	[FieldOffset(121)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(122)]
 	[ReferenceTable("SkillTotems")]
@@ -58,7 +58,7 @@ public struct ActiveSkills
 	public TEnum SkillTotemId;
 
 	[FieldOffset(126)]
-	public bool IsManuallyCasted;
+	public TBool IsManuallyCasted;
 
 	[FieldOffset(127)]
 	[ReferenceTable("Stats")]
@@ -76,10 +76,10 @@ public struct ActiveSkills
 	public TArray MinionActiveSkillTypes;
 
 	[FieldOffset(175)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(176)]
-	public bool Unk019;
+	public TBool Unk019;
 
 	[FieldOffset(177)]
 	[ReferenceTable("Stats")]
@@ -94,7 +94,7 @@ public struct ActiveSkills
 	public TRef AlternateSkillTargetingBehavioursKey;
 
 	[FieldOffset(213)]
-	public bool Unk023;
+	public TBool Unk023;
 
 	[FieldOffset(214)]
 	public TString AIFile;
@@ -104,13 +104,13 @@ public struct ActiveSkills
 	public TArray Unk025;
 
 	[FieldOffset(238)]
-	public bool Unk026;
+	public TBool Unk026;
 
 	[FieldOffset(239)]
-	public bool Unk027;
+	public TBool Unk027;
 
 	[FieldOffset(240)]
-	public bool Unk028;
+	public TBool Unk028;
 
 	[FieldOffset(241)]
 	[ReferenceTable("ActiveSkills")]

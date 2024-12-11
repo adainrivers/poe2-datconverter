@@ -32,7 +32,7 @@ public struct ExecuteGEAL
 	public int Unk007;
 
 	[FieldOffset(44)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(45)]
 	public int Unk009;
@@ -44,14 +44,14 @@ public struct ExecuteGEAL
 	public int Unk011;
 
 	[FieldOffset(57)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(58)]
 	[ElementType(typeof(int))]
 	public TArray Unk013;
 
 	[FieldOffset(74)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(75)]
 	public int Unk015;
@@ -60,19 +60,19 @@ public struct ExecuteGEAL
 	public TRef Unk016;
 
 	[FieldOffset(95)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(96)]
 	public TString Script;
 
 	[FieldOffset(104)]
-	public bool Unk019;
+	public TBool Unk019;
 
 	[FieldOffset(105)]
 	public int Unk020;
 
 	[FieldOffset(109)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(110)]
 	public int Unk022;
@@ -81,7 +81,7 @@ public struct ExecuteGEAL
 	public int Unk023;
 
 	[FieldOffset(118)]
-	public bool Unk024;
+	public TBool Unk024;
 
 	[FieldOffset(119)]
 	public int Unk025;
@@ -105,26 +105,26 @@ public struct ExecuteGEAL
 	public int Unk030;
 
 	[FieldOffset(183)]
-	public bool Unk031;
+	public TBool Unk031;
 
 	[FieldOffset(184)]
 	[ElementType(typeof(int))]
 	public TArray Unk032;
 
 	[FieldOffset(200)]
-	public bool Unk033;
+	public TBool Unk033;
 
 	[FieldOffset(201)]
 	public int Unk034;
 
 	[FieldOffset(205)]
-	public bool Unk035;
+	public TBool Unk035;
 
 	[FieldOffset(206)]
 	public int Unk036;
 
 	[FieldOffset(210)]
-	public bool Unk037;
+	public TBool Unk037;
 
 	[FieldOffset(211)]
 	public int Unk038;

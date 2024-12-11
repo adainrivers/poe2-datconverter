@@ -32,7 +32,7 @@ public struct UltimatumModifiers
 	public TRef PreviousTier;
 
 	[FieldOffset(80)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(81)]
 	public int Radius;
@@ -77,7 +77,7 @@ public struct UltimatumModifiers
 	public TArray MonsterSpawners;
 
 	[FieldOffset(189)]
-	public bool Unk019;
+	public TBool Unk019;
 
 	[FieldOffset(190)]
 	[ReferenceTable("AchievementItems")]

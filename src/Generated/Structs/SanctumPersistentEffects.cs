@@ -27,7 +27,7 @@ public struct SanctumPersistentEffects
 	public int Unk005;
 
 	[FieldOffset(60)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(61)]
 	[ReferenceTable("SanctumPersistentEffectCategories")]
@@ -53,7 +53,7 @@ public struct SanctumPersistentEffects
 	public int Unk013;
 
 	[FieldOffset(117)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(118)]
 	[ElementType(typeof(TRef))]
@@ -75,10 +75,10 @@ public struct SanctumPersistentEffects
 	public int Unk019;
 
 	[FieldOffset(166)]
-	public bool Unk020;
+	public TBool Unk020;
 
 	[FieldOffset(167)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(168)]
 	public int HASH16;

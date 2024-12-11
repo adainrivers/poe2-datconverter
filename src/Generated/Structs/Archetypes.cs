@@ -40,18 +40,18 @@ public struct Archetypes
 	public TString BackgroundImageFile;
 
 	[FieldOffset(84)]
-	public bool IsTemporary;
+	public TBool IsTemporary;
 
 	[FieldOffset(85)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(86)]
 	public TString ArchetypeImage;
 
 	[FieldOffset(94)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(95)]
-	public bool Unk015;
+	public TBool Unk015;
 
 }

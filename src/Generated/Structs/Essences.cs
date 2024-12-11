@@ -237,7 +237,7 @@ public struct Essences
 	public TRef Display_Items_ModsKey;
 
 	[FieldOffset(940)]
-	public bool IsScreamingEssence;
+	public TBool IsScreamingEssence;
 
 	[FieldOffset(941)]
 	[ReferenceTable("Mods")]

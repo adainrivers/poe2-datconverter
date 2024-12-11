@@ -32,7 +32,7 @@ public struct HarvestCraftOptions
 	public TString Description;
 
 	[FieldOffset(74)]
-	public bool IsEnchant;
+	public TBool IsEnchant;
 
 	[FieldOffset(75)]
 	public int LifeforceType;
@@ -44,7 +44,7 @@ public struct HarvestCraftOptions
 	public int SacredCost;
 
 	[FieldOffset(87)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(88)]
 	[ReferenceTable("AchievementItems")]

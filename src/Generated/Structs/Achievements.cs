@@ -22,34 +22,34 @@ public struct Achievements
 	public short HASH16;
 
 	[FieldOffset(30)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(31)]
-	public bool HideAchievementItems;
+	public TBool HideAchievementItems;
 
 	[FieldOffset(32)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(33)]
 	public int MinCompletedItems;
 
 	[FieldOffset(37)]
-	public bool TwoColumnLayout;
+	public TBool TwoColumnLayout;
 
 	[FieldOffset(38)]
-	public bool ShowItemCompletionsAsOne;
+	public TBool ShowItemCompletionsAsOne;
 
 	[FieldOffset(39)]
 	public TString Unk011;
 
 	[FieldOffset(47)]
-	public bool SoftcoreOnly;
+	public TBool SoftcoreOnly;
 
 	[FieldOffset(48)]
-	public bool HardcoreOnly;
+	public TBool HardcoreOnly;
 
 	[FieldOffset(49)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(50)]
 	public TString Unk015;

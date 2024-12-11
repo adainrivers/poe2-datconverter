@@ -18,10 +18,10 @@ public struct SanctumPersistentEffectCategories
 	public TString Glow;
 
 	[FieldOffset(32)]
-	public bool Curse;
+	public TBool Curse;
 
 	[FieldOffset(33)]
-	public bool Boon;
+	public TBool Boon;
 
 	[FieldOffset(34)]
 	public TString Icon;
@@ -30,6 +30,6 @@ public struct SanctumPersistentEffectCategories
 	public TString Name;
 
 	[FieldOffset(50)]
-	public bool Deferral;
+	public TBool Deferral;
 
 }

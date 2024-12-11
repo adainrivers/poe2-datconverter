@@ -25,7 +25,7 @@ public struct BuffVisuals
 	public TArray PreloadGroups;
 
 	[FieldOffset(64)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(65)]
 	public TString BuffName;
@@ -45,7 +45,7 @@ public struct BuffVisuals
 	public TString EPKFile;
 
 	[FieldOffset(121)]
-	public bool HasExtraArt;
+	public TBool HasExtraArt;
 
 	[FieldOffset(122)]
 	public TString ExtraArt;

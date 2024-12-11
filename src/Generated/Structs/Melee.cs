@@ -45,7 +45,7 @@ public struct Melee
 	public TRef MeleeTrailsKey7;
 
 	[FieldOffset(148)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(149)]
 	public TString SurgeEffect_EPKFile;

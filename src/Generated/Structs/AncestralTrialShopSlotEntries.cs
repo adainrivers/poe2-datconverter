@@ -15,15 +15,15 @@ public struct AncestralTrialShopSlotEntries
 	public int Unk002;
 
 	[FieldOffset(12)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(13)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(14)]
 	public int Unk005;
 
 	[FieldOffset(18)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

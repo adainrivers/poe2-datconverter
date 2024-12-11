@@ -25,6 +25,6 @@ public struct HeistPatrolPacks
 	public int Unk005;
 
 	[FieldOffset(36)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

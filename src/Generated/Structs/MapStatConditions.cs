@@ -13,7 +13,7 @@ public struct MapStatConditions
 	public TRef StatsKey;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(25)]
 	public int StatMin;
@@ -22,6 +22,6 @@ public struct MapStatConditions
 	public int StatMax;
 
 	[FieldOffset(33)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

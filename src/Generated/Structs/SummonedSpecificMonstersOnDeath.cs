@@ -22,6 +22,6 @@ public struct SummonedSpecificMonstersOnDeath
 	public int Unk004;
 
 	[FieldOffset(48)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

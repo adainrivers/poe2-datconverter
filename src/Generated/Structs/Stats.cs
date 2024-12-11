@@ -9,13 +9,13 @@ public struct Stats
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool IsLocal;
+	public TBool IsLocal;
 
 	[FieldOffset(10)]
-	public bool IsWeaponLocal;
+	public TBool IsWeaponLocal;
 
 	[FieldOffset(11)]
 	[ReferenceTable("StatSemantics")]
@@ -26,10 +26,10 @@ public struct Stats
 	public TString Text;
 
 	[FieldOffset(23)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(24)]
-	public bool IsVirtual;
+	public TBool IsVirtual;
 
 	[FieldOffset(25)]
 	[ReferenceTable("Stats")]
@@ -40,7 +40,7 @@ public struct Stats
 	public TRef OffHandAlias_StatsKey;
 
 	[FieldOffset(41)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(42)]
 	public int HASH32;
@@ -55,13 +55,13 @@ public struct Stats
 	public TRef Category;
 
 	[FieldOffset(78)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(79)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(80)]
-	public bool IsScalable;
+	public TBool IsScalable;
 
 	[FieldOffset(81)]
 	[ReferenceTable("VirtualStatContextFlags")]

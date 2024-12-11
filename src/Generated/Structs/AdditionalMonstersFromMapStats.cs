@@ -13,7 +13,7 @@ public struct AdditionalMonstersFromMapStats
 	public TArray Unk001;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(33)]
 	public int Unk003;

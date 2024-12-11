@@ -24,37 +24,37 @@ public struct PassiveSkillTrees
 	public float Unk005;
 
 	[FieldOffset(32)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(33)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(34)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(35)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(36)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(37)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(38)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(39)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(40)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(41)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(42)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(43)]
 	[ReferenceTable("ClientStrings")]
@@ -65,6 +65,6 @@ public struct PassiveSkillTrees
 	public TRef UIArt;
 
 	[FieldOffset(75)]
-	public bool Unk019;
+	public TBool Unk019;
 
 }

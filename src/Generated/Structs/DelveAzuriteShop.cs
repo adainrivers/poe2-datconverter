@@ -19,7 +19,7 @@ public struct DelveAzuriteShop
 	public int MinDepth;
 
 	[FieldOffset(28)]
-	public bool IsResonator;
+	public TBool IsResonator;
 
 	[FieldOffset(29)]
 	public int Unk005;

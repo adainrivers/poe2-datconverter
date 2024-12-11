@@ -28,6 +28,6 @@ public struct EssenceStashTabLayout
 	public int Height;
 
 	[FieldOffset(44)]
-	public bool IsUpgradableEssenceSlot;
+	public TBool IsUpgradableEssenceSlot;
 
 }

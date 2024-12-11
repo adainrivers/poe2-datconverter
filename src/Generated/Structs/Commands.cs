@@ -12,7 +12,7 @@ public struct Commands
 	public TString Command;
 
 	[FieldOffset(16)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(17)]
 	public TString EnglishCommand;
@@ -21,6 +21,6 @@ public struct Commands
 	public TString Description;
 
 	[FieldOffset(33)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

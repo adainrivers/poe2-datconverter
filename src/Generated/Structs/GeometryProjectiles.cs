@@ -12,13 +12,13 @@ public struct GeometryProjectiles
 	public TRef Unk001;
 
 	[FieldOffset(20)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(21)]
 	public int Unk003;
 
 	[FieldOffset(25)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(26)]
 	public int Unk005;
@@ -27,7 +27,7 @@ public struct GeometryProjectiles
 	public int Unk006;
 
 	[FieldOffset(34)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(35)]
 	public int Unk008;
@@ -39,7 +39,7 @@ public struct GeometryProjectiles
 	public int Unk010;
 
 	[FieldOffset(47)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(48)]
 	public int Unk012;
@@ -51,19 +51,19 @@ public struct GeometryProjectiles
 	public int Unk014;
 
 	[FieldOffset(60)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(61)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(62)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(63)]
 	public TRef Unk018;
 
 	[FieldOffset(79)]
-	public bool Unk019;
+	public TBool Unk019;
 
 	[FieldOffset(80)]
 	public TRef Unk020;

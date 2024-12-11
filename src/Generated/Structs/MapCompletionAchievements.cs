@@ -29,7 +29,7 @@ public struct MapCompletionAchievements
 	public TArray MapTierAchievementsKeys;
 
 	[FieldOffset(72)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(73)]
 	[ReferenceTable("WorldAreas")]

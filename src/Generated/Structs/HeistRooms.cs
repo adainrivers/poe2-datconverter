@@ -39,9 +39,9 @@ public struct HeistRooms
 	public float Unk009;
 
 	[FieldOffset(84)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(85)]
-	public bool Unk011;
+	public TBool Unk011;
 
 }

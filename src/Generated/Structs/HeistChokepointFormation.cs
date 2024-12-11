@@ -29,7 +29,7 @@ public struct HeistChokepointFormation
 	public int Unk005;
 
 	[FieldOffset(72)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(73)]
 	public int Unk007;

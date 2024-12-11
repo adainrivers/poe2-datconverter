@@ -35,7 +35,7 @@ public struct CharacterPanelStats
 	public TRef CharacterPanelTabsKey;
 
 	[FieldOffset(96)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(97)]
 	[ElementType(typeof(int))]

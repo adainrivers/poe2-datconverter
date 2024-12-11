@@ -9,18 +9,18 @@ public struct ShrineVisualArtVariations
 	public TRef Unk000;
 
 	[FieldOffset(16)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(17)]
 	public TRef Unk002;
 
 	[FieldOffset(33)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(34)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(35)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

@@ -36,7 +36,7 @@ public struct CharacterStartStates
 	public TArray CharacterStartQuestStateKeys;
 
 	[FieldOffset(100)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(101)]
 	public TString InfoText;

@@ -19,7 +19,7 @@ public struct VillageJobTypes
 	public TRef MaxWorkersStat;
 
 	[FieldOffset(40)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(41)]
 	[ReferenceTable("Stats")]

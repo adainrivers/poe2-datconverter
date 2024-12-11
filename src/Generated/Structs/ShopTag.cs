@@ -12,7 +12,7 @@ public struct ShopTag
 	public TString Name;
 
 	[FieldOffset(16)]
-	public bool IsCategory;
+	public TBool IsCategory;
 
 	[FieldOffset(17)]
 	[ReferenceTable("ShopTag")]

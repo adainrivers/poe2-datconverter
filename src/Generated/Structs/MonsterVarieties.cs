@@ -169,7 +169,7 @@ public struct MonsterVarieties
 	//public TArray KillRare_AchievementItemsKeys;
 
 	[FieldOffset(416)]
-	public bool Unk046;
+	public TBool Unk046;
 
 	[FieldOffset(417)]
 	public int Unk047;
@@ -193,7 +193,7 @@ public struct MonsterVarieties
 	public short HASH16;
 
 	[FieldOffset(443)]
-	public bool Unk054;
+	public TBool Unk054;
 
 	[FieldOffset(444)]
 	public TString Unk055;
@@ -253,20 +253,20 @@ public struct MonsterVarieties
 	public TString SinkAnimation_AOFile;
 
 	[FieldOffset(632)]
-	public bool Unk070;
+	public TBool Unk070;
 
 	[FieldOffset(633)]
 	[ElementType(typeof(TRef))]
 	public TArray Unk071;
 
 	[FieldOffset(649)]
-	public bool Unk072;
+	public TBool Unk072;
 
 	[FieldOffset(650)]
-	public bool Unk073;
+	public TBool Unk073;
 
 	[FieldOffset(651)]
-	public bool Unk074;
+	public TBool Unk074;
 
 	[FieldOffset(652)]
 	public int Unk075;
@@ -291,16 +291,16 @@ public struct MonsterVarieties
 	public TRef MonsterConditionalEffectPacksKey;
 
 	[FieldOffset(696)]
-	public bool Unk082;
+	public TBool Unk082;
 
 	[FieldOffset(697)]
-	public bool Unk083;
+	public TBool Unk083;
 
 	[FieldOffset(698)]
 	public int Unk084;
 
 	[FieldOffset(702)]
-	public bool Unk085;
+	public TBool Unk085;
 
 	[FieldOffset(703)]
 	public int Unk086;
@@ -340,12 +340,12 @@ public struct MonsterVarieties
 	public int Unk097;
 
 	[FieldOffset(763)]
-	public bool Unk098;
+	public TBool Unk098;
 
 	[FieldOffset(764)]
-	public bool BossHealthBar;
+	public TBool BossHealthBar;
 
 	[FieldOffset(765)]
-	public bool Unk100;
+	public TBool Unk100;
 
 }

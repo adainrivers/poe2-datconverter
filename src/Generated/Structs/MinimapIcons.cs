@@ -15,13 +15,13 @@ public struct MinimapIcons
 	public int LargemapIconRadius;
 
 	[FieldOffset(16)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(17)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(18)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(19)]
 	public int MinimapIconPointerMaxDistance;

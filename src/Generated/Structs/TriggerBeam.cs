@@ -23,7 +23,7 @@ public struct TriggerBeam
 	public TArray Unk003;
 
 	[FieldOffset(52)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(53)]
 	public int Unk005;
@@ -38,19 +38,19 @@ public struct TriggerBeam
 	public int Unk008;
 
 	[FieldOffset(69)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(70)]
 	[ElementType(typeof(int))]
 	public TArray Unk010;
 
 	[FieldOffset(86)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(87)]
 	public int Unk012;
 
 	[FieldOffset(91)]
-	public bool Unk013;
+	public TBool Unk013;
 
 }

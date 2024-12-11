@@ -17,7 +17,7 @@ public struct NecropolisCraftBases
 	public TRef UniqueCraft;
 
 	[FieldOffset(40)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(41)]
 	public int Unk004;
@@ -34,6 +34,6 @@ public struct NecropolisCraftBases
 	public TRef CraftTag;
 
 	[FieldOffset(85)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

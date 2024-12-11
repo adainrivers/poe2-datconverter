@@ -34,7 +34,7 @@ public struct CurrencyItems
 	public TArray Usage_AchievementItemsKeys;
 
 	[FieldOffset(80)]
-	public bool Scroll;
+	public TBool Scroll;
 
 	[FieldOffset(81)]
 	[ReferenceTable("AchievementItems")]
@@ -73,15 +73,15 @@ public struct CurrencyItems
 	public TArray CombineAchievements;
 
 	[FieldOffset(193)]
-	public bool ChangedForHardmode;
+	public TBool ChangedForHardmode;
 
 	[FieldOffset(194)]
 	public TString DescriptionHardmode;
 
 	[FieldOffset(202)]
-	public bool IsGold;
+	public TBool IsGold;
 
 	[FieldOffset(203)]
-	public bool Unk021;
+	public TBool Unk021;
 
 }

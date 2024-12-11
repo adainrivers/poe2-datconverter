@@ -32,7 +32,7 @@ public struct ItemisedVisualEffect
 	public TArray Unk005;
 
 	[FieldOffset(96)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(97)]
 	[ElementType(typeof(int))]
@@ -43,14 +43,14 @@ public struct ItemisedVisualEffect
 	public TArray Unk008;
 
 	[FieldOffset(129)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(130)]
 	[ElementType(typeof(int))]
 	public TArray Unk010;
 
 	[FieldOffset(146)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(147)]
 	[ElementType(typeof(int))]
@@ -72,7 +72,7 @@ public struct ItemisedVisualEffect
 	public TRef Unk016;
 
 	[FieldOffset(227)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(228)]
 	public TRef Unk018;

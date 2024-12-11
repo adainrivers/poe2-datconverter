@@ -28,7 +28,7 @@ public struct HeistIntroAreas
 	public int Unk006;
 
 	[FieldOffset(48)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(49)]
 	public int Unk008;

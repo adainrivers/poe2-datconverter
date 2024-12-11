@@ -29,9 +29,9 @@ public struct CharacterAudioEvents
 	public TArray JackTheAxe_CharacterTextAudioKeys;
 
 	[FieldOffset(64)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(65)]
-	public bool Unk007;
+	public TBool Unk007;
 
 }

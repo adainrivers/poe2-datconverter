@@ -18,7 +18,7 @@ public struct WorldPopupIconTypes
 	public int Unk003;
 
 	[FieldOffset(24)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(25)]
 	public float Unk005;

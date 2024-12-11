@@ -10,9 +10,9 @@ public struct DivinationCardStashTabLayout
 	public TRef StoredItem;
 
 	[FieldOffset(16)]
-	public bool IsInGame;
+	public TBool IsInGame;
 
 	[FieldOffset(17)]
-	public bool IsEnabled;
+	public TBool IsEnabled;
 
 }

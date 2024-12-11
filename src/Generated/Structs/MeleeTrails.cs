@@ -24,13 +24,13 @@ public struct MeleeTrails
 	public int Unk005;
 
 	[FieldOffset(32)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(33)]
 	public TString AOFile;
 
 	[FieldOffset(41)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(42)]
 	public TString Unk009;

@@ -20,6 +20,6 @@ public struct TriggerSpawners
 	public TArray Unk003;
 
 	[FieldOffset(44)]
-	public bool Unk004;
+	public TBool Unk004;
 
 }

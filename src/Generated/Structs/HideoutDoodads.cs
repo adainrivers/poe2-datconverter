@@ -14,16 +14,16 @@ public struct HideoutDoodads
 	public TArray Variation_AOFiles;
 
 	[FieldOffset(32)]
-	public bool IsNonMasterDoodad;
+	public TBool IsNonMasterDoodad;
 
 	[FieldOffset(33)]
 	public TString InheritsFrom;
 
 	[FieldOffset(41)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(42)]
-	public bool IsCraftingBench;
+	public TBool IsCraftingBench;
 
 	[FieldOffset(43)]
 	[ReferenceTable("HideoutDoodadTags")]
@@ -31,7 +31,7 @@ public struct HideoutDoodads
 	public TArray Tags;
 
 	[FieldOffset(59)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(60)]
 	public TRef Unk008;
@@ -44,13 +44,13 @@ public struct HideoutDoodads
 	public int Unk010;
 
 	[FieldOffset(96)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(97)]
 	public TRef Unk012;
 
 	[FieldOffset(113)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(114)]
 	public TRef Unk014;
@@ -66,9 +66,9 @@ public struct HideoutDoodads
 	public int Unk017;
 
 	[FieldOffset(154)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(155)]
-	public bool Unk019;
+	public TBool Unk019;
 
 }

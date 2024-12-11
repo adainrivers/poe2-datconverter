@@ -30,12 +30,12 @@ public struct UltimatumEncounters
 	public int HASH16;
 
 	[FieldOffset(68)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(69)]
 	public int Unk008;
 
 	[FieldOffset(73)]
-	public bool Unk009;
+	public TBool Unk009;
 
 }

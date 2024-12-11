@@ -33,6 +33,6 @@ public struct HudEnergyShieldVisuals
 	public TString Unk008;
 
 	[FieldOffset(72)]
-	public bool Unk009;
+	public TBool Unk009;
 
 }

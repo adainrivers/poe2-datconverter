@@ -53,7 +53,7 @@ public struct NPCs
 	public TRef DialogueStyle;
 
 	[FieldOffset(142)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(143)]
 	public TRef Unk014;
@@ -62,6 +62,6 @@ public struct NPCs
 	public TString Gender;
 
 	[FieldOffset(167)]
-	public bool Unk016;
+	public TBool Unk016;
 
 }

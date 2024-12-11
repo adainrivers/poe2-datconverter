@@ -12,16 +12,16 @@ public struct WarbandsPackMonsters
 	public int Unk001;
 
 	[FieldOffset(12)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(13)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(14)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(15)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(16)]
 	public int Unk006;

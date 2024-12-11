@@ -31,7 +31,7 @@ public struct DelveStashTabLayout
 	public int SlotSize;
 
 	[FieldOffset(48)]
-	public bool HideIfEmpty;
+	public TBool HideIfEmpty;
 
 	[FieldOffset(49)]
 	public TString Image;

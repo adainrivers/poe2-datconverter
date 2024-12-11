@@ -17,7 +17,7 @@ public struct SentinelStorageLayout
 	public TRef DroneType;
 
 	[FieldOffset(40)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(41)]
 	public TString TabIcon;

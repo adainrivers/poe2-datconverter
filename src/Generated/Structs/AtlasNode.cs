@@ -14,7 +14,7 @@ public struct AtlasNode
 	public TRef ItemVisualIdentityKey;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(33)]
 	[ReferenceTable("Maps")]
@@ -63,10 +63,10 @@ public struct AtlasNode
 	public TString DDSFile;
 
 	[FieldOffset(129)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(130)]
-	public bool NotOnAtlas;
+	public TBool NotOnAtlas;
 
 	[FieldOffset(131)]
 	public int Unk019;

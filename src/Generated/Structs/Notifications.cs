@@ -9,10 +9,10 @@ public struct Notifications
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(10)]
 	public TString Message;
@@ -24,9 +24,9 @@ public struct Notifications
 	public int Unk005;
 
 	[FieldOffset(30)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(31)]
-	public bool Unk007;
+	public TBool Unk007;
 
 }

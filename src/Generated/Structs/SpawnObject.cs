@@ -41,7 +41,7 @@ public struct SpawnObject
 	public int Unk010;
 
 	[FieldOffset(68)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(69)]
 	public TString Unk012;
@@ -50,7 +50,7 @@ public struct SpawnObject
 	public int Unk013;
 
 	[FieldOffset(81)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(82)]
 	public int Unk015;

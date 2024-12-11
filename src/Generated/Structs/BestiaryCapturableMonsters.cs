@@ -18,7 +18,7 @@ public struct BestiaryCapturableMonsters
 	public TRef BestiaryEncountersKey;
 
 	[FieldOffset(48)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(49)]
 	public TString IconSmall;
@@ -35,19 +35,19 @@ public struct BestiaryCapturableMonsters
 	public TRef BestiaryGenusKey;
 
 	[FieldOffset(97)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(98)]
 	[ReferenceTable("BestiaryCapturableMonsters")]
 	public TRef BestiaryCapturableMonstersKey;
 
 	[FieldOffset(106)]
-	public bool IsDisabled;
+	public TBool IsDisabled;
 
 	[FieldOffset(107)]
 	public int Unk011;
 
 	[FieldOffset(111)]
-	public bool Unk012;
+	public TBool Unk012;
 
 }

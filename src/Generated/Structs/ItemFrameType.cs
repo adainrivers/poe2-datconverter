@@ -9,10 +9,10 @@ public struct ItemFrameType
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool DoubleLine;
+	public TBool DoubleLine;
 
 	[FieldOffset(10)]
 	public TString HeaderSingle;
@@ -34,7 +34,7 @@ public struct ItemFrameType
 	public TString Separator;
 
 	[FieldOffset(66)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(67)]
 	[ReferenceTable("Rarity")]

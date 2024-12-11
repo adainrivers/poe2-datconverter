@@ -60,15 +60,15 @@ public struct AtlasInfluenceData
 	public int Unk015;
 
 	[FieldOffset(136)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(137)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(138)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(139)]
-	public bool Unk019;
+	public TBool Unk019;
 
 }

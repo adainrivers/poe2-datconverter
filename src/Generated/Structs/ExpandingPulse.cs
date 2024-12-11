@@ -30,6 +30,6 @@ public struct ExpandingPulse
 	public int Unk006;
 
 	[FieldOffset(68)]
-	public bool Unk007;
+	public TBool Unk007;
 
 }

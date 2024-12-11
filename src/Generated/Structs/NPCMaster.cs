@@ -9,17 +9,17 @@ public struct NPCMaster
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(10)]
 	[ReferenceTable("Mods")]
 	public TRef Signature_ModsKey;
 
 	[FieldOffset(26)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(27)]
 	[ReferenceTable("Tags")]
@@ -50,7 +50,7 @@ public struct NPCMaster
 	public TRef Unk012;
 
 	[FieldOffset(123)]
-	public bool HasAreaMissions;
+	public TBool HasAreaMissions;
 
 	[FieldOffset(124)]
 	[ElementType(typeof(TRef))]

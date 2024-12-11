@@ -26,7 +26,7 @@ public struct GroundEffects
 	public TArray Unk005;
 
 	[FieldOffset(60)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(61)]
 	[ElementType(typeof(TString))]
@@ -55,13 +55,13 @@ public struct GroundEffects
 	public TRef Unk014;
 
 	[FieldOffset(181)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(182)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(183)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(184)]
 	public TRef Unk018;
@@ -70,12 +70,12 @@ public struct GroundEffects
 	public TRef Unk019;
 
 	[FieldOffset(216)]
-	public bool Unk020;
+	public TBool Unk020;
 
 	[FieldOffset(217)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(218)]
-	public bool Unk022;
+	public TBool Unk022;
 
 }

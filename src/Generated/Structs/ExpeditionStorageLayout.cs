@@ -34,7 +34,7 @@ public struct ExpeditionStorageLayout
 	public int Unk008;
 
 	[FieldOffset(52)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(53)]
 	public TRef Unk010;

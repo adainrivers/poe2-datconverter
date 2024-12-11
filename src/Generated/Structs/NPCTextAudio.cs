@@ -23,10 +23,10 @@ public struct NPCTextAudio
 	public TString Stereo_AudioFile;
 
 	[FieldOffset(48)]
-	public bool HasStereo;
+	public TBool HasStereo;
 
 	[FieldOffset(49)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(50)]
 	public TString Video;

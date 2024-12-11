@@ -14,7 +14,7 @@ public struct PlayerConditions
 	public TArray BuffDefinitionsKeys;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(25)]
 	public int BuffStacks;
@@ -29,7 +29,7 @@ public struct PlayerConditions
 	public TArray StatsKeys;
 
 	[FieldOffset(61)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(62)]
 	public int StatValue;
@@ -39,6 +39,6 @@ public struct PlayerConditions
 	public TArray Unk008;
 
 	[FieldOffset(82)]
-	public bool Unk009;
+	public TBool Unk009;
 
 }

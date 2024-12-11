@@ -12,6 +12,6 @@ public struct DamageWhenHitEffects
 	public TRef Unk001;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

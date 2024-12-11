@@ -34,7 +34,7 @@ public struct MonsterPacks
 	public TArray BossMonster_MonsterVarietiesKeys;
 
 	[FieldOffset(60)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(61)]
 	[ElementType(typeof(int))]
@@ -71,23 +71,23 @@ public struct MonsterPacks
 	public int Unk017;
 
 	[FieldOffset(157)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(158)]
 	[ElementType(typeof(int))]
 	public TArray Unk019;
 
 	[FieldOffset(174)]
-	public bool Unk020;
+	public TBool Unk020;
 
 	[FieldOffset(175)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(176)]
-	public bool Unk022;
+	public TBool Unk022;
 
 	[FieldOffset(177)]
-	public bool Unk023;
+	public TBool Unk023;
 
 	[FieldOffset(178)]
 	[ElementType(typeof(TString))]

@@ -12,6 +12,6 @@ public struct GlobalAudioConfig
 	public int Value;
 
 	[FieldOffset(12)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

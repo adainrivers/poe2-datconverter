@@ -9,10 +9,10 @@ public struct AlternateTreeVersions
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(10)]
 	public int Unk003;

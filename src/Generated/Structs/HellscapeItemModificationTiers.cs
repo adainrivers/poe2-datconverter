@@ -9,7 +9,7 @@ public struct HellscapeItemModificationTiers
 	public int Tier;
 
 	[FieldOffset(4)]
-	public bool IsMap;
+	public TBool IsMap;
 
 	[FieldOffset(5)]
 	public int Unk002;

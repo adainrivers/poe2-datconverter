@@ -13,7 +13,7 @@ public struct CraftingBenchSortCategories
 	public TRef Name;
 
 	[FieldOffset(24)]
-	public bool IsVisible;
+	public TBool IsVisible;
 
 	[FieldOffset(25)]
 	[ReferenceTable("CraftingBenchTypes")]

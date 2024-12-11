@@ -24,16 +24,16 @@ public struct Projectiles
 	public int ProjectileSpeed;
 
 	[FieldOffset(60)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(61)]
 	public int Unk006;
 
 	[FieldOffset(65)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(66)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(67)]
 	public TString InheritsFrom;
@@ -48,10 +48,10 @@ public struct Projectiles
 	public int Unk012;
 
 	[FieldOffset(99)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(100)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(101)]
 	[ElementType(typeof(TString))]
@@ -98,7 +98,7 @@ public struct Projectiles
 	public TArray Unk028;
 
 	[FieldOffset(209)]
-	public bool Unk029;
+	public TBool Unk029;
 
 	[FieldOffset(210)]
 	[ElementType(typeof(int))]

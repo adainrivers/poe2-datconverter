@@ -31,13 +31,13 @@ public struct MapDeviceRecipes
 	public int Unk006;
 
 	[FieldOffset(80)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(81)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(82)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(83)]
 	[ReferenceTable("AchievementItems")]
@@ -45,7 +45,7 @@ public struct MapDeviceRecipes
 	public TArray OpenAchievemnts;
 
 	[FieldOffset(99)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(100)]
 	public int Unk012;
@@ -56,6 +56,6 @@ public struct MapDeviceRecipes
 	public TArray Unk013;
 
 	[FieldOffset(120)]
-	public bool Unk014;
+	public TBool Unk014;
 
 }

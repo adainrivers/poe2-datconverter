@@ -12,9 +12,9 @@ public struct PlayerTradeWhisperFormats
 	public TString Whisper;
 
 	[FieldOffset(16)]
-	public bool InStash;
+	public TBool InStash;
 
 	[FieldOffset(17)]
-	public bool IsPriced;
+	public TBool IsPriced;
 
 }

@@ -45,6 +45,6 @@ public struct AwardDisplay
 	public TString Unk012;
 
 	[FieldOffset(96)]
-	public bool Unk013;
+	public TBool Unk013;
 
 }

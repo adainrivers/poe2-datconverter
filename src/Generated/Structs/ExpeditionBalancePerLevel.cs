@@ -9,7 +9,7 @@ public struct ExpeditionBalancePerLevel
 	public int Level;
 
 	[FieldOffset(4)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(5)]
 	public int Unk002;

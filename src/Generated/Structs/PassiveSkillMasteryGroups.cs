@@ -23,7 +23,7 @@ public struct PassiveSkillMasteryGroups
 	public TString ActiveEffectImage;
 
 	[FieldOffset(48)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(49)]
 	[ReferenceTable("SoundEffects")]

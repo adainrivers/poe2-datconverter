@@ -30,7 +30,7 @@ public struct Acts
 	public int Unk007;
 
 	[FieldOffset(48)]
-	public bool IsPostGame;
+	public TBool IsPostGame;
 
 	[FieldOffset(49)]
 	public int Unk009;

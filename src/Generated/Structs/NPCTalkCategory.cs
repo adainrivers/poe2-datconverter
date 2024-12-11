@@ -9,6 +9,6 @@ public struct NPCTalkCategory
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 }

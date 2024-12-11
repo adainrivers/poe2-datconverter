@@ -12,7 +12,7 @@ public struct EssenceType
 	public int EssenceType_001;
 
 	[FieldOffset(12)]
-	public bool IsCorruptedEssence;
+	public TBool IsCorruptedEssence;
 
 	[FieldOffset(13)]
 	[ReferenceTable("Words")]

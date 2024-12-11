@@ -9,13 +9,13 @@ public struct Animation
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(10)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(11)]
 	[ReferenceTable("Animation")]
@@ -26,7 +26,7 @@ public struct Animation
 	public TRef Offhand_AnimationKey;
 
 	[FieldOffset(27)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(28)]
 	public TRef Unk007;
@@ -36,7 +36,7 @@ public struct Animation
 	public TRef Unk008;
 
 	[FieldOffset(52)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(53)]
 	[ReferenceTable("Animation")]

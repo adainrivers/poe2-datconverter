@@ -31,9 +31,9 @@ public struct SkillMorphDisplay
 	public TArray Unk006;
 
 	[FieldOffset(88)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(89)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

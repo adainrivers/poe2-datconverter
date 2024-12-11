@@ -21,6 +21,6 @@ public struct TalkingPetNPCAudio
 	public TString Unk003;
 
 	[FieldOffset(56)]
-	public bool Unk004;
+	public TBool Unk004;
 
 }

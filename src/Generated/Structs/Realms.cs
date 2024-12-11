@@ -16,7 +16,7 @@ public struct Realms
 	public TArray Server;
 
 	[FieldOffset(32)]
-	public bool IsEnabled;
+	public TBool IsEnabled;
 
 	[FieldOffset(33)]
 	[ElementType(typeof(TString))]
@@ -38,7 +38,7 @@ public struct Realms
 	public int Unk008;
 
 	[FieldOffset(85)]
-	public bool IsGammaRealm;
+	public TBool IsGammaRealm;
 
 	[FieldOffset(86)]
 	[ElementType(typeof(TString))]

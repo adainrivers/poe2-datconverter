@@ -102,10 +102,10 @@ public struct ItemVisualIdentity
 	public TArray Corrupt_AchievementItemsKeys;
 
 	[FieldOffset(298)]
-	public bool IsAlternateArt;
+	public TBool IsAlternateArt;
 
 	[FieldOffset(299)]
-	public bool Unk028;
+	public TBool Unk028;
 
 	[FieldOffset(300)]
 	[ReferenceTable("AchievementItems")]
@@ -151,17 +151,17 @@ public struct ItemVisualIdentity
 	public TString Unk042;
 
 	[FieldOffset(420)]
-	public bool IsAtlasOfWorldsMapIcon;
+	public TBool IsAtlasOfWorldsMapIcon;
 
 	[FieldOffset(421)]
-	public bool IsTier16Icon;
+	public TBool IsTier16Icon;
 
 	[FieldOffset(422)]
 	[ElementType(typeof(int))]
 	public TArray Unk045;
 
 	[FieldOffset(438)]
-	public bool Unk046;
+	public TBool Unk046;
 
 	[FieldOffset(439)]
 	[ElementType(typeof(TRef))]
@@ -194,6 +194,6 @@ public struct ItemVisualIdentity
 	public TArray Unk055;
 
 	[FieldOffset(563)]
-	public bool Unk056;
+	public TBool Unk056;
 
 }

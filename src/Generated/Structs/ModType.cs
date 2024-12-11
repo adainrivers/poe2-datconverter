@@ -13,7 +13,7 @@ public struct ModType
 	[ElementType(typeof(TRef))]
 	public TArray ModSellPriceTypesKeys;
 
-	//[FieldOffset(24)]
-	//public bool Unk002;
+	[FieldOffset(24)]
+	public TBool Unk002;
 
 }

@@ -52,6 +52,6 @@ public struct ItemVisualEffect
 	public TArray Shield;
 
 	[FieldOffset(122)]
-	public bool Unk015;
+	public TBool Unk015;
 
 }

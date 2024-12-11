@@ -9,6 +9,6 @@ public struct CrucibleTags
 	public TString Tag;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 }

@@ -15,30 +15,30 @@ public struct MinionType
 	public TRef Unk002;
 
 	[FieldOffset(40)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(41)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(42)]
 	public int Unk005;
 
 	[FieldOffset(46)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(47)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(48)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(49)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(50)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(51)]
-	public bool Unk011;
+	public TBool Unk011;
 
 }

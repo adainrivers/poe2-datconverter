@@ -55,10 +55,10 @@ public struct NPCTalk
 	public TString Script2;
 
 	[FieldOffset(172)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(173)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(174)]
 	[ElementType(typeof(int))]
@@ -79,7 +79,7 @@ public struct NPCTalk
 	public int Unk019;
 
 	[FieldOffset(230)]
-	public bool Unk020;
+	public TBool Unk020;
 
 	[FieldOffset(231)]
 	public TRef Unk021;
@@ -88,7 +88,7 @@ public struct NPCTalk
 	public int Unk022;
 
 	[FieldOffset(251)]
-	public bool Unk023;
+	public TBool Unk023;
 
 	[FieldOffset(252)]
 	public TString DialogueOption2;
@@ -124,7 +124,7 @@ public struct NPCTalk
 	public TRef Unk034;
 
 	[FieldOffset(352)]
-	public bool Unk035;
+	public TBool Unk035;
 
 	[FieldOffset(353)]
 	public int Unk036;

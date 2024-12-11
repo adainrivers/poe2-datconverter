@@ -18,15 +18,15 @@ public struct CurrencyExchange
 	public TRef SubCategory;
 
 	[FieldOffset(48)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(49)]
-	public bool EnabledInChallengeLeague;
+	public TBool EnabledInChallengeLeague;
 
 	[FieldOffset(50)]
 	public int GoldPurchaseFee;
 
 	[FieldOffset(54)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

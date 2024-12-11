@@ -22,10 +22,10 @@ public struct MapStashSpecialTypeEntries
 	public int Unk004;
 
 	[FieldOffset(40)]
-	public bool IsShaperGuardian;
+	public TBool IsShaperGuardian;
 
 	[FieldOffset(41)]
-	public bool IsElderGuardian;
+	public TBool IsElderGuardian;
 
 	[FieldOffset(42)]
 	public TRef Unk007;

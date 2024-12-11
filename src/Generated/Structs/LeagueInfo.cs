@@ -26,7 +26,7 @@ public struct LeagueInfo
 	public TString Description;
 
 	[FieldOffset(64)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(65)]
 	public TString TrailerVideoLink;
@@ -35,10 +35,10 @@ public struct LeagueInfo
 	public TString BackgroundImage;
 
 	[FieldOffset(81)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(82)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(83)]
 	[ElementType(typeof(TString))]

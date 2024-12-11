@@ -9,19 +9,19 @@ public struct AegisVariations
 	public TString Name;
 
 	[FieldOffset(8)]
-	public bool DefendsAgainstPhysical;
+	public TBool DefendsAgainstPhysical;
 
 	[FieldOffset(9)]
-	public bool DefendsAgainstFire;
+	public TBool DefendsAgainstFire;
 
 	[FieldOffset(10)]
-	public bool DefendsAgainstCold;
+	public TBool DefendsAgainstCold;
 
 	[FieldOffset(11)]
-	public bool DefendsAgainstLightning;
+	public TBool DefendsAgainstLightning;
 
 	[FieldOffset(12)]
-	public bool DefendsAgainstChaos;
+	public TBool DefendsAgainstChaos;
 
 	[FieldOffset(13)]
 	public TRef Unk006;

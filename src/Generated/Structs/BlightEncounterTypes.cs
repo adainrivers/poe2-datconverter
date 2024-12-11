@@ -12,7 +12,7 @@ public struct BlightEncounterTypes
 	public TString Icon;
 
 	[FieldOffset(16)]
-	public bool IsGeneric;
+	public TBool IsGeneric;
 
 	[FieldOffset(17)]
 	public int Weight;

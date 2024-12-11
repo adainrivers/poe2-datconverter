@@ -13,7 +13,7 @@ public struct MonsterPackEntries
 	public TRef MonsterPacksKey;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(25)]
 	public int Unk003;

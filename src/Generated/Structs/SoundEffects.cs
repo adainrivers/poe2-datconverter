@@ -15,7 +15,7 @@ public struct SoundEffects
 	public TString SoundFile_2D;
 
 	[FieldOffset(24)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(25)]
 	public TString Unk004;

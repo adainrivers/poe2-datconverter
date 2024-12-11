@@ -21,6 +21,6 @@ public struct ModEquivalencies
 	public TRef ModsKey2;
 
 	[FieldOffset(56)]
-	public bool Unk004;
+	public TBool Unk004;
 
 }

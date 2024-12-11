@@ -49,12 +49,12 @@ public struct MicrotransactionJewelVariations
 	public int Unk013;
 
 	[FieldOffset(104)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(105)]
 	public TRef Unk015;
 
 	[FieldOffset(121)]
-	public bool Unk016;
+	public TBool Unk016;
 
 }

@@ -18,13 +18,13 @@ public struct CurrencyUseEffects
 	public TString SoundFile;
 
 	[FieldOffset(36)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(37)]
 	public TString BK2File2;
 
 	[FieldOffset(45)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(46)]
 	public TRef Unk007;

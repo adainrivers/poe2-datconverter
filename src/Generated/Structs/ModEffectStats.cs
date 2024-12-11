@@ -15,18 +15,18 @@ public struct ModEffectStats
 	public TArray TagsKeys;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(33)]
 	public int Unk003;
 
 	[FieldOffset(37)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(38)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(39)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

@@ -9,12 +9,12 @@ public struct StatisticTrackingMicrotransactions
 	public TRef Unk000;
 
 	[FieldOffset(16)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(17)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(18)]
-	public bool Unk003;
+	public TBool Unk003;
 
 }

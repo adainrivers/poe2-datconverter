@@ -40,30 +40,30 @@ public struct PassiveSkills
 	public TArray Characters;
 
 	[FieldOffset(74)]
-	public bool IsKeystone;
+	public TBool IsKeystone;
 
 	[FieldOffset(75)]
-	public bool IsNotable;
+	public TBool IsNotable;
 
 	[FieldOffset(76)]
 	public TString FlavourText;
 
 	[FieldOffset(84)]
-	public bool IsJustIcon;
+	public TBool IsJustIcon;
 
 	[FieldOffset(85)]
 	[ReferenceTable("AchievementItems")]
 	public TRef AchievementItem;
 
 	[FieldOffset(101)]
-	public bool IsJewelSocket;
+	public TBool IsJewelSocket;
 
 	[FieldOffset(102)]
 	[ReferenceTable("Ascendancy")]
 	public TRef AscendancyKey;
 
 	[FieldOffset(118)]
-	public bool IsAscendancyStartingNode;
+	public TBool IsAscendancyStartingNode;
 
 	[FieldOffset(119)]
 	[ReferenceTable("ReminderText")]
@@ -74,10 +74,10 @@ public struct PassiveSkills
 	public int SkillPointsGranted;
 
 	[FieldOffset(139)]
-	public bool IsMultipleChoice;
+	public TBool IsMultipleChoice;
 
 	[FieldOffset(140)]
-	public bool IsMultipleChoiceOption;
+	public TBool IsMultipleChoiceOption;
 
 	[FieldOffset(141)]
 	public int Stat5Value;
@@ -92,16 +92,16 @@ public struct PassiveSkills
 	public TRef GrantedEffectsPerLevel;
 
 	[FieldOffset(177)]
-	public bool IsAnointmentOnly;
+	public TBool IsAnointmentOnly;
 
 	[FieldOffset(178)]
 	public int Unk026;
 
 	[FieldOffset(182)]
-	public bool IsExpansion;
+	public TBool IsExpansion;
 
 	[FieldOffset(183)]
-	public bool IsProxyPassive;
+	public TBool IsProxyPassive;
 
 	[FieldOffset(184)]
 	[ReferenceTable("PassiveSkillTypes")]
@@ -139,7 +139,7 @@ public struct PassiveSkills
 	public int Unk038;
 
 	[FieldOffset(264)]
-	public bool Unk039;
+	public TBool Unk039;
 
 	[FieldOffset(265)]
 	[ElementType(typeof(TRef))]
@@ -153,7 +153,7 @@ public struct PassiveSkills
 	public TArray Unk042;
 
 	[FieldOffset(301)]
-	public bool Unk043;
+	public TBool Unk043;
 
 	[FieldOffset(302)]
 	public TRef Unk044;

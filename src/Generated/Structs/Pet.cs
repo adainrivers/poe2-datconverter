@@ -22,10 +22,10 @@ public struct Pet
 	public int Unk004;
 
 	[FieldOffset(36)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(37)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(38)]
 	[ElementType(typeof(int))]
@@ -43,12 +43,12 @@ public struct Pet
 	public int Unk010;
 
 	[FieldOffset(90)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(91)]
 	public TRef Unk012;
 
 	[FieldOffset(107)]
-	public bool Unk013;
+	public TBool Unk013;
 
 }

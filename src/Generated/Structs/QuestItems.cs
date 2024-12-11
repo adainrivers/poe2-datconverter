@@ -25,10 +25,10 @@ public struct QuestItems
 	public TArray Unk004;
 
 	[FieldOffset(68)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(69)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(70)]
 	public TRef Unk007;

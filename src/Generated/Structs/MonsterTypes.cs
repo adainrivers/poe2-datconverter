@@ -12,7 +12,7 @@ public struct MonsterTypes
 	public int Unk001;
 
 	[FieldOffset(12)]
-	public bool IsSummoned;
+	public TBool IsSummoned;
 
 	[FieldOffset(13)]
 	public int Armour;
@@ -31,12 +31,12 @@ public struct MonsterTypes
 	public TRef MonsterResistancesKey;
 
 	[FieldOffset(45)]
-	public bool IsLargeAbyssMonster;
+	public TBool IsLargeAbyssMonster;
 
 	[FieldOffset(46)]
-	public bool IsSmallAbyssMonster;
+	public TBool IsSmallAbyssMonster;
 
 	[FieldOffset(47)]
-	public bool Unk010;
+	public TBool Unk010;
 
 }

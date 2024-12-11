@@ -44,7 +44,7 @@ public struct DelveBiomes
 	public TArray AchievementItemsKeys;
 
 	[FieldOffset(128)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(129)]
 	[ElementType(typeof(int))]

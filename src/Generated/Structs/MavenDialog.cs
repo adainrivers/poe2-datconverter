@@ -29,7 +29,7 @@ public struct MavenDialog
 	public TRef TextAudioT5;
 
 	[FieldOffset(88)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(89)]
 	[ReferenceTable("NPCTextAudio")]

@@ -25,15 +25,15 @@ public struct AchievementItems
 	public TRef AchievementsKey;
 
 	[FieldOffset(44)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(45)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(46)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(47)]
-	public bool Unk009;
+	public TBool Unk009;
 
 }

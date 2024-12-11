@@ -19,6 +19,6 @@ public struct NecropolisPackModTiers
 	public TArray TextColours;
 
 	[FieldOffset(40)]
-	public bool SpecialTier;
+	public TBool SpecialTier;
 
 }

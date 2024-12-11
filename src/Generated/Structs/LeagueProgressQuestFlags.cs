@@ -17,6 +17,6 @@ public struct LeagueProgressQuestFlags
 	public TString Boss;
 
 	[FieldOffset(40)]
-	public bool Unk003;
+	public TBool Unk003;
 
 }

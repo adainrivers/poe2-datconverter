@@ -15,21 +15,21 @@ public struct SuicideExplosion
 	public TRef Unk002;
 
 	[FieldOffset(36)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(37)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(38)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(39)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(40)]
 	public int Unk007;
 
 	[FieldOffset(44)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

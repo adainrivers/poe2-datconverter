@@ -74,6 +74,6 @@ public struct RitualRuneTypes
 	public TRef DaemonSpawningDataKey;
 
 	[FieldOffset(216)]
-	public bool Unk018;
+	public TBool Unk018;
 
 }

@@ -19,10 +19,10 @@ public struct DaressoPitFights
 	public TArray Unk003;
 
 	[FieldOffset(44)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(45)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(46)]
 	public int Unk006;
@@ -34,6 +34,6 @@ public struct DaressoPitFights
 	public int Unk008;
 
 	[FieldOffset(58)]
-	public bool Unk009;
+	public TBool Unk009;
 
 }

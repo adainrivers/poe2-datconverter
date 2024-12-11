@@ -15,6 +15,6 @@ public struct AdditionalLifeScaling
 	public TString DatFile;
 
 	[FieldOffset(20)]
-	public bool Unk003;
+	public TBool Unk003;
 
 }

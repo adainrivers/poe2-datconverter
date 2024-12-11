@@ -27,10 +27,10 @@ public struct GeometryChannel
 	public TString Unk006;
 
 	[FieldOffset(80)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(81)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(82)]
 	public TRef Unk009;

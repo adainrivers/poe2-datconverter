@@ -47,7 +47,7 @@ public struct MavenFights
 	public TRef Unk011;
 
 	[FieldOffset(100)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(101)]
 	[ElementType(typeof(int))]

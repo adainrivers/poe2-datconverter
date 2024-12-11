@@ -62,12 +62,12 @@ public struct Maps
 	public int MapSeriesKey;
 
 	[FieldOffset(156)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(157)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(158)]
-	public bool Unk017;
+	public TBool Unk017;
 
 }

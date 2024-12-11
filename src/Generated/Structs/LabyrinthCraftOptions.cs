@@ -26,14 +26,14 @@ public struct LabyrinthCraftOptions
 	public short HASH16;
 
 	[FieldOffset(38)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(39)]
 	[ReferenceTable("LabyrinthCraftOptionTiers")]
 	public TRef Tier;
 
 	[FieldOffset(55)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(56)]
 	[ReferenceTable("AchievementItems")]
@@ -41,7 +41,7 @@ public struct LabyrinthCraftOptions
 	public TArray Achievement;
 
 	[FieldOffset(72)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(73)]
 	public TRef Unk011;

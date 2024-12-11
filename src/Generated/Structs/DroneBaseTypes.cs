@@ -34,6 +34,6 @@ public struct DroneBaseTypes
 	public TRef UseAchievement;
 
 	[FieldOffset(80)]
-	public bool CreatedViaPowerCore;
+	public TBool CreatedViaPowerCore;
 
 }

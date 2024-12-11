@@ -28,7 +28,7 @@ public struct NecropolisCraftingMods
 	public int Unk005;
 
 	[FieldOffset(64)]
-	public bool CorpsesNotConsumed;
+	public TBool CorpsesNotConsumed;
 
 	[FieldOffset(65)]
 	[ReferenceTable("NecropolisCraftItemTypes")]

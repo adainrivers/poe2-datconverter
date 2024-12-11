@@ -21,7 +21,7 @@ public struct MicrotransactionOnKillBeams
 	public TString Unk004;
 
 	[FieldOffset(48)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(49)]
 	public TRef Unk006;

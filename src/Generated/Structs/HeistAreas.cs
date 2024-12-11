@@ -47,10 +47,10 @@ public struct HeistAreas
 	public int Unk010;
 
 	[FieldOffset(124)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(125)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(126)]
 	public TString Blueprint_DDSFile;

@@ -16,10 +16,10 @@ public struct Strongboxes
 	public int Unk002;
 
 	[FieldOffset(24)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(25)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(26)]
 	[ReferenceTable("Stats")]

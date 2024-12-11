@@ -17,7 +17,7 @@ public struct DaemonSpawningData
 	public int Unk002;
 
 	[FieldOffset(28)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(29)]
 	public int Unk004;
@@ -26,12 +26,12 @@ public struct DaemonSpawningData
 	public int Unk005;
 
 	[FieldOffset(37)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(38)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(39)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

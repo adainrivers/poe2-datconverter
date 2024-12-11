@@ -32,7 +32,7 @@ public struct GeometryAttack
 	public int Unk007;
 
 	[FieldOffset(56)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(57)]
 	public int Unk009;
@@ -44,10 +44,10 @@ public struct GeometryAttack
 	public int Unk011;
 
 	[FieldOffset(69)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(70)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(71)]
 	[ElementType(typeof(int))]
@@ -72,10 +72,10 @@ public struct GeometryAttack
 	public int Unk020;
 
 	[FieldOffset(111)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(112)]
-	public bool Unk022;
+	public TBool Unk022;
 
 	[FieldOffset(113)]
 	public int Unk023;
@@ -84,13 +84,13 @@ public struct GeometryAttack
 	public int Unk024;
 
 	[FieldOffset(121)]
-	public bool Unk025;
+	public TBool Unk025;
 
 	[FieldOffset(122)]
 	public int Unk026;
 
 	[FieldOffset(126)]
-	public bool Unk027;
+	public TBool Unk027;
 
 	[FieldOffset(127)]
 	public TRef Unk028;
@@ -103,60 +103,60 @@ public struct GeometryAttack
 	public int Unk030;
 
 	[FieldOffset(163)]
-	public bool Unk031;
+	public TBool Unk031;
 
 	[FieldOffset(164)]
-	public bool Unk032;
+	public TBool Unk032;
 
 	[FieldOffset(165)]
 	public TRef Unk033;
 
 	[FieldOffset(181)]
-	public bool Unk034;
+	public TBool Unk034;
 
 	[FieldOffset(182)]
 	[ElementType(typeof(int))]
 	public TArray Unk035;
 
 	[FieldOffset(198)]
-	public bool Unk036;
+	public TBool Unk036;
 
 	[FieldOffset(199)]
-	public bool Unk037;
+	public TBool Unk037;
 
 	[FieldOffset(200)]
 	public TRef Unk038;
 
 	[FieldOffset(216)]
-	public bool Unk039;
+	public TBool Unk039;
 
 	[FieldOffset(217)]
-	public bool Unk040;
+	public TBool Unk040;
 
 	[FieldOffset(218)]
 	[ElementType(typeof(int))]
 	public TArray Unk041;
 
 	[FieldOffset(234)]
-	public bool Unk042;
+	public TBool Unk042;
 
 	[FieldOffset(235)]
-	public bool Unk043;
+	public TBool Unk043;
 
 	[FieldOffset(236)]
-	public bool Unk044;
+	public TBool Unk044;
 
 	[FieldOffset(237)]
-	public bool Unk045;
+	public TBool Unk045;
 
 	[FieldOffset(238)]
 	public int Unk046;
 
 	[FieldOffset(242)]
-	public bool Unk047;
+	public TBool Unk047;
 
 	[FieldOffset(243)]
-	public bool Unk048;
+	public TBool Unk048;
 
 	[FieldOffset(244)]
 	public int Unk049;
@@ -168,7 +168,7 @@ public struct GeometryAttack
 	public int Unk051;
 
 	[FieldOffset(256)]
-	public bool Unk052;
+	public TBool Unk052;
 
 	[FieldOffset(257)]
 	public TRef Unk053;

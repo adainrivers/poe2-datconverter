@@ -48,7 +48,7 @@ public struct BuffVisualOrbArt
 	public TRef Unk012;
 
 	[FieldOffset(156)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(157)]
 	public int Unk014;

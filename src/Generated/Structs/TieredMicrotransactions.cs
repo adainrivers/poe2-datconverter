@@ -42,16 +42,16 @@ public struct TieredMicrotransactions
 	public TArray Unk008;
 
 	[FieldOffset(132)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(133)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(134)]
 	[ReferenceTable("Stats")]
 	public TRef Unk011;
 
 	[FieldOffset(150)]
-	public bool Unk012;
+	public TBool Unk012;
 
 }

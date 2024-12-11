@@ -24,15 +24,15 @@ public struct AncestralTrialMonsters
 	public TArray Achievement;
 
 	[FieldOffset(68)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(69)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(70)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(71)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

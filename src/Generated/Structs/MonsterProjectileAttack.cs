@@ -13,13 +13,13 @@ public struct MonsterProjectileAttack
 	public TRef Projectile;
 
 	[FieldOffset(20)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(21)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(22)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(23)]
 	public int Unk005;

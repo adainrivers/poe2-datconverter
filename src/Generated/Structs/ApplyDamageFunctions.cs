@@ -14,6 +14,6 @@ public struct ApplyDamageFunctions
 	public TArray StatsKeys;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

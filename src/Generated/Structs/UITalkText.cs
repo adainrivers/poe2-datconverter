@@ -20,7 +20,7 @@ public struct UITalkText
 	public TString Text;
 
 	[FieldOffset(28)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(29)]
 	[ReferenceTable("NPCTextAudio")]

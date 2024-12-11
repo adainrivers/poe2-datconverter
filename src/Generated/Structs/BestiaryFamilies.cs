@@ -27,7 +27,7 @@ public struct BestiaryFamilies
 	public TString FlavourText;
 
 	[FieldOffset(56)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(57)]
 	[ReferenceTable("Tags")]

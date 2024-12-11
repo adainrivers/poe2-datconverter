@@ -13,7 +13,7 @@ public struct MonsterDeathConditions
 	public TArray Unk001;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(25)]
 	public int Unk003;
@@ -23,7 +23,7 @@ public struct MonsterDeathConditions
 	public TArray Unk004;
 
 	[FieldOffset(45)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(46)]
 	public int Unk006;
@@ -32,7 +32,7 @@ public struct MonsterDeathConditions
 	public TRef Unk007;
 
 	[FieldOffset(66)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(67)]
 	[ElementType(typeof(TRef))]
@@ -42,7 +42,7 @@ public struct MonsterDeathConditions
 	public int Unk010;
 
 	[FieldOffset(87)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(88)]
 	[ElementType(typeof(TRef))]

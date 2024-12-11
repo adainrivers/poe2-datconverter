@@ -12,7 +12,7 @@ public struct Shrines
 	public int TimeoutInSeconds;
 
 	[FieldOffset(12)]
-	public bool ChargesShared;
+	public TBool ChargesShared;
 
 	[FieldOffset(13)]
 	public TRef Player_ShrineBuffsKey;
@@ -45,7 +45,7 @@ public struct Shrines
 	public TRef ShrineSoundsKey;
 
 	[FieldOffset(109)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(110)]
 	[ReferenceTable("AchievementItems")]
@@ -53,13 +53,13 @@ public struct Shrines
 	public TArray AchievementItemsKeys;
 
 	[FieldOffset(126)]
-	public bool IsPVPOnly;
+	public TBool IsPVPOnly;
 
 	[FieldOffset(127)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(128)]
-	public bool IsLesserShrine;
+	public TBool IsLesserShrine;
 
 	[FieldOffset(129)]
 	[ReferenceTable("ClientStrings")]
@@ -70,7 +70,7 @@ public struct Shrines
 	public TRef Name;
 
 	[FieldOffset(161)]
-	public bool Unk019;
+	public TBool Unk019;
 
 	[FieldOffset(162)]
 	public TRef Unk020;

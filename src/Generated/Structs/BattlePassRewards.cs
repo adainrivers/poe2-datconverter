@@ -19,7 +19,7 @@ public struct BattlePassRewards
 	public int Unk003;
 
 	[FieldOffset(28)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(29)]
 	public TString Id;
@@ -45,7 +45,7 @@ public struct BattlePassRewards
 	public int Unk011;
 
 	[FieldOffset(81)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(82)]
 	public TString RewardTitle;
@@ -54,7 +54,7 @@ public struct BattlePassRewards
 	public TRef Unk014;
 
 	[FieldOffset(106)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(107)]
 	public int Unk016;
@@ -81,12 +81,12 @@ public struct BattlePassRewards
 	public int Unk023;
 
 	[FieldOffset(139)]
-	public bool Unk024;
+	public TBool Unk024;
 
 	[FieldOffset(140)]
-	public bool Unk025;
+	public TBool Unk025;
 
 	[FieldOffset(141)]
-	public bool Unk026;
+	public TBool Unk026;
 
 }

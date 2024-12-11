@@ -23,29 +23,29 @@ public struct SkillGems
 	public TRef VaalVariant_BaseItemTypesKey;
 
 	[FieldOffset(44)]
-	public bool IsVaalVariant;
+	public TBool IsVaalVariant;
 
 	[FieldOffset(45)]
 	[ReferenceTable("Stats")]
 	public TRef MinionGlobalSkillLevelStat;
 
 	[FieldOffset(61)]
-	public bool IsSupport;
+	public TBool IsSupport;
 
 	[FieldOffset(62)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(63)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(64)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(65)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(66)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(67)]
 	[ReferenceTable("SkillGems")]

@@ -32,7 +32,7 @@ public struct UltimatumItemisedRewards
 	public TString SacrificeText;
 
 	[FieldOffset(68)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(69)]
 	[ReferenceTable("Mods")]

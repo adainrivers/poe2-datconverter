@@ -29,15 +29,15 @@ public struct MonsterBonuses
 	public TArray StatValues;
 
 	[FieldOffset(88)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(89)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(90)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(91)]
-	public bool Unk009;
+	public TBool Unk009;
 
 }

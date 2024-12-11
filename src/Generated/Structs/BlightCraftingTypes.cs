@@ -12,6 +12,6 @@ public struct BlightCraftingTypes
 	public int Unk001;
 
 	[FieldOffset(12)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

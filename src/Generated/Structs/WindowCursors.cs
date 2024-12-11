@@ -27,7 +27,7 @@ public struct WindowCursors
 	public TString Description;
 
 	[FieldOffset(48)]
-	public bool IsEnabled;
+	public TBool IsEnabled;
 
 	[FieldOffset(49)]
 	public int Unk008;

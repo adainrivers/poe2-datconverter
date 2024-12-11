@@ -21,16 +21,16 @@ public struct MonsterMortar
 	public int Unk004;
 
 	[FieldOffset(56)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(57)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(58)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(59)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(60)]
 	public int Unk009;
@@ -42,16 +42,16 @@ public struct MonsterMortar
 	public int Unk011;
 
 	[FieldOffset(72)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(73)]
 	public int Unk013;
 
 	[FieldOffset(77)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(78)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(79)]
 	public TRef Unk016;
@@ -69,7 +69,7 @@ public struct MonsterMortar
 	public float Unk020;
 
 	[FieldOffset(111)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(112)]
 	public TRef Unk022;

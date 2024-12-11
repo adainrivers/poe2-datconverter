@@ -32,7 +32,7 @@ public struct HeistQuestContracts
 	public int Unk006;
 
 	[FieldOffset(76)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(77)]
 	[ReferenceTable("HeistRooms")]
@@ -43,10 +43,10 @@ public struct HeistQuestContracts
 	public TRef WorldAreasKey;
 
 	[FieldOffset(109)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(110)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(111)]
 	public int Unk012;
@@ -55,17 +55,17 @@ public struct HeistQuestContracts
 	public int Unk013;
 
 	[FieldOffset(119)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(120)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(121)]
 	[ReferenceTable("QuestFlags")]
 	public TRef HaveObjective;
 
 	[FieldOffset(137)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(138)]
 	[ReferenceTable("QuestFlags")]
@@ -80,23 +80,23 @@ public struct HeistQuestContracts
 	public TRef HaveObjective2;
 
 	[FieldOffset(186)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(187)]
-	public bool Unk022;
+	public TBool Unk022;
 
 	[FieldOffset(188)]
 	public TString Objective;
 
 	[FieldOffset(196)]
-	public bool Unk024;
+	public TBool Unk024;
 
 	[FieldOffset(197)]
 	[ReferenceTable("BaseItemTypes")]
 	public TRef BaseItemTypesKey;
 
 	[FieldOffset(213)]
-	public bool Unk026;
+	public TBool Unk026;
 
 	[FieldOffset(214)]
 	[ReferenceTable("HeistIntroAreas")]

@@ -9,10 +9,10 @@ public struct CoreLeagues
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(10)]
 	[ReferenceTable("Stats")]
@@ -51,17 +51,17 @@ public struct CoreLeagues
 	public int Unk011;
 
 	[FieldOffset(142)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(143)]
 	[ReferenceTable("Stats")]
 	public TRef Unk013;
 
 	[FieldOffset(159)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(160)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(161)]
 	[ReferenceTable("Stats")]

@@ -27,6 +27,6 @@ public struct QuestAchievements
 	public TArray NPCs;
 
 	[FieldOffset(72)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

@@ -147,7 +147,7 @@ public struct Mods
 	public TArray ModifyMapsAchievements;
 
 	[FieldOffset(382)]
-	public bool IsEssenceOnlyModifier;
+	public TBool IsEssenceOnlyModifier;
 
 	[FieldOffset(383)]
 	public int Stat6Min;
@@ -163,7 +163,7 @@ public struct Mods
 	public int MaxLevel;
 
 	[FieldOffset(411)]
-	public bool Unk041;
+	public TBool Unk041;
 
 	[FieldOffset(412)]
 	[ReferenceTable("ItemClasses")]
@@ -212,7 +212,7 @@ public struct Mods
 	public TArray ImplicitTagsKeys;
 
 	[FieldOffset(524)]
-	public bool Unk054;
+	public TBool Unk054;
 
 	[FieldOffset(525)]
 	public int Unk055;

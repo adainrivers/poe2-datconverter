@@ -61,10 +61,10 @@ public struct CraftingBenchOptions
 	public TString Description;
 
 	[FieldOffset(144)]
-	public bool IsDisabled;
+	public TBool IsDisabled;
 
 	[FieldOffset(145)]
-	public bool IsAreaOption;
+	public TBool IsAreaOption;
 
 	[FieldOffset(146)]
 	[ReferenceTable("RecipeUnlockDisplay")]
@@ -121,7 +121,7 @@ public struct CraftingBenchOptions
 	public TRef Unk031;
 
 	[FieldOffset(314)]
-	public bool Unk032;
+	public TBool Unk032;
 
 	[FieldOffset(315)]
 	public int Unk033;
@@ -139,7 +139,7 @@ public struct CraftingBenchOptions
 	public TRef Unk036;
 
 	[FieldOffset(367)]
-	public bool MapDevice;
+	public TBool MapDevice;
 
 	[FieldOffset(368)]
 	[ElementType(typeof(TRef))]

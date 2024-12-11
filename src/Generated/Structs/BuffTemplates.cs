@@ -35,7 +35,7 @@ public struct BuffTemplates
 	public float Unk007;
 
 	[FieldOffset(96)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(97)]
 	[ReferenceTable("Stats")]
@@ -49,7 +49,7 @@ public struct BuffTemplates
 	public int Unk011;
 
 	[FieldOffset(121)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(122)]
 	[ReferenceTable("Stats")]

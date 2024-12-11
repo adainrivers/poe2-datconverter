@@ -20,10 +20,10 @@ public struct Talismans
 	public int Tier;
 
 	[FieldOffset(40)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(41)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(42)]
 	public TRef Unk006;

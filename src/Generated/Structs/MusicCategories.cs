@@ -15,6 +15,6 @@ public struct MusicCategories
 	public int Order;
 
 	[FieldOffset(20)]
-	public bool Unk003;
+	public TBool Unk003;
 
 }

@@ -16,7 +16,7 @@ public struct Tutorial
 	public TRef ClientString;
 
 	[FieldOffset(32)]
-	public bool IsEnabled;
+	public TBool IsEnabled;
 
 	[FieldOffset(33)]
 	public int Unk004;
@@ -36,10 +36,10 @@ public struct Tutorial
 	public TArray Unk008;
 
 	[FieldOffset(89)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(90)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(91)]
 	public int Unk011;

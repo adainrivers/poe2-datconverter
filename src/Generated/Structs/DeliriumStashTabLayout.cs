@@ -31,6 +31,6 @@ public struct DeliriumStashTabLayout
 	public int SlotSize;
 
 	[FieldOffset(48)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

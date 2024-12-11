@@ -28,7 +28,7 @@ public struct Hideouts
 	public TString HideoutImage;
 
 	[FieldOffset(66)]
-	public bool IsEnabled;
+	public TBool IsEnabled;
 
 	[FieldOffset(67)]
 	public int Weight;
@@ -38,7 +38,7 @@ public struct Hideouts
 	public TRef Rarity;
 
 	[FieldOffset(87)]
-	public bool NotActsArea;
+	public TBool NotActsArea;
 
 	[FieldOffset(88)]
 	public TString Name;
@@ -48,16 +48,16 @@ public struct Hideouts
 	public TArray Unk011;
 
 	[FieldOffset(112)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(113)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(114)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(115)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(116)]
 	public TString ErrorMessage;

@@ -22,7 +22,7 @@ public struct CorpseSinkVariations
 	public int Unk004;
 
 	[FieldOffset(44)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(45)]
 	public int Unk006;
@@ -31,6 +31,6 @@ public struct CorpseSinkVariations
 	public int Unk007;
 
 	[FieldOffset(53)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

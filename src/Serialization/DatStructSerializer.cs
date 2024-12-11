@@ -104,10 +104,17 @@ public class DatStructSerializer
 
         }
 
+        if (fieldType == typeof(TBool))
+        {
+            _jsonWriter.WriteValue(((TBool)value).Value == 1);
+            return;
+
+        }
+
         if (fieldType == typeof(TRef))
         {
-            var tRefValue=(TRef)value;
-            if(tRefValue.RowIndex == Constants.Null)
+            var tRefValue = (TRef)value;
+            if (tRefValue.RowIndex == Constants.Null)
             {
                 _jsonWriter.WriteNull();
                 return;

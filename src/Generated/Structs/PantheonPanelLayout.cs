@@ -15,7 +15,7 @@ public struct PantheonPanelLayout
 	public int Y;
 
 	[FieldOffset(16)]
-	public bool IsMajorGod;
+	public TBool IsMajorGod;
 
 	[FieldOffset(17)]
 	public TString CoverImage;
@@ -76,7 +76,7 @@ public struct PantheonPanelLayout
 	public TRef QuestFlag;
 
 	[FieldOffset(209)]
-	public bool IsDisabled;
+	public TBool IsDisabled;
 
 	[FieldOffset(210)]
 	[ReferenceTable("AchievementItems")]

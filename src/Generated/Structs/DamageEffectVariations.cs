@@ -17,7 +17,7 @@ public struct DamageEffectVariations
 	public TArray Unk002;
 
 	[FieldOffset(40)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(41)]
 	public int Unk004;
@@ -47,13 +47,13 @@ public struct DamageEffectVariations
 	public int Unk012;
 
 	[FieldOffset(77)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(78)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(79)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(80)]
 	public TRef Unk016;

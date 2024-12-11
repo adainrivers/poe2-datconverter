@@ -19,6 +19,6 @@ public struct MysteryBoxes
 	public TString BundleId;
 
 	[FieldOffset(40)]
-	public bool Unk004;
+	public TBool Unk004;
 
 }

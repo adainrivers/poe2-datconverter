@@ -21,13 +21,13 @@ public struct SingleGroundLaser
 	public TString Unk004;
 
 	[FieldOffset(48)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(49)]
 	public int Unk006;
 
 	[FieldOffset(53)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(54)]
 	public int Unk008;
@@ -45,7 +45,7 @@ public struct SingleGroundLaser
 	public int Unk012;
 
 	[FieldOffset(98)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(99)]
 	public int Unk014;

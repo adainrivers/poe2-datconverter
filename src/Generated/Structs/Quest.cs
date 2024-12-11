@@ -21,7 +21,7 @@ public struct Quest
 	public int QuestId;
 
 	[FieldOffset(32)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(33)]
 	[ReferenceTable("QuestType")]
@@ -39,7 +39,7 @@ public struct Quest
 	public TRef TrackerGroup;
 
 	[FieldOffset(85)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(86)]
 	public TRef Unk011;

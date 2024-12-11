@@ -37,7 +37,7 @@ public struct HideoutNPCs
 	public int Unk008;
 
 	[FieldOffset(108)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(109)]
 	public TRef Unk010;

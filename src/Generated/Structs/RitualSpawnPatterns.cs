@@ -16,6 +16,6 @@ public struct RitualSpawnPatterns
 	public TArray SpawnOrder;
 
 	[FieldOffset(28)]
-	public bool Unk003;
+	public TBool Unk003;
 
 }

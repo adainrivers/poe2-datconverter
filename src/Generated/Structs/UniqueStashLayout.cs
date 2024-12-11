@@ -30,10 +30,10 @@ public struct UniqueStashLayout
 	public int OverrideHeight;
 
 	[FieldOffset(64)]
-	public bool ShowIfEmptyChallengeLeague;
+	public TBool ShowIfEmptyChallengeLeague;
 
 	[FieldOffset(65)]
-	public bool ShowIfEmptyStandard;
+	public TBool ShowIfEmptyStandard;
 
 	[FieldOffset(66)]
 	[ReferenceTable("UniqueStashLayout")]
@@ -44,6 +44,6 @@ public struct UniqueStashLayout
 	public TRef BaseVersion;
 
 	[FieldOffset(82)]
-	public bool IsAlternateArt;
+	public TBool IsAlternateArt;
 
 }

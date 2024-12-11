@@ -23,7 +23,7 @@ public struct AreaInfluenceDoodads
 	public int Unk004;
 
 	[FieldOffset(44)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(45)]
 	public TString Unk006;

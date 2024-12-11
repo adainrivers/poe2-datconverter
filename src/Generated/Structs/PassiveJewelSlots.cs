@@ -29,6 +29,6 @@ public struct PassiveJewelSlots
 	public TArray StartIndices;
 
 	[FieldOffset(76)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

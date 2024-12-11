@@ -14,7 +14,7 @@ public struct AtlasNodeDefinition
 	public TRef ItemVisualIdentityKey;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(33)]
 	public int Tier;
@@ -26,6 +26,6 @@ public struct AtlasNodeDefinition
 	public int Unk005;
 
 	[FieldOffset(45)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

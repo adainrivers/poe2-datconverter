@@ -23,6 +23,6 @@ public struct Grandmasters
 	public int CharacterLevel;
 
 	[FieldOffset(44)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

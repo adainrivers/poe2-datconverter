@@ -13,6 +13,6 @@ public struct PassiveSkillOverrideTypes
 	public TRef CounterStat;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

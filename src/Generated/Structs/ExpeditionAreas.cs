@@ -25,7 +25,7 @@ public struct ExpeditionAreas
 	public TArray Unk004;
 
 	[FieldOffset(56)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(57)]
 	[ReferenceTable("NPCTextAudio")]

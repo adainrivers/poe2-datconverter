@@ -21,9 +21,9 @@ public struct ArchnemesisMods
 	public TArray TextStyles;
 
 	[FieldOffset(56)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(57)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

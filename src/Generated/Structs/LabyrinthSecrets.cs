@@ -45,22 +45,22 @@ public struct LabyrinthSecrets
 	public TArray LabyrinthSecretEffectsKeys3;
 
 	[FieldOffset(108)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(109)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(110)]
 	public int Unk012;
 
 	[FieldOffset(114)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(115)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(116)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(117)]
 	public TString Name;
@@ -76,6 +76,6 @@ public struct LabyrinthSecrets
 	public int LabyrinthTierMaximum;
 
 	[FieldOffset(149)]
-	public bool Unk020;
+	public TBool Unk020;
 
 }

@@ -18,10 +18,10 @@ public struct NPCFollowerVariations
 	public TRef MiscAnimatedKey1;
 
 	[FieldOffset(48)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(49)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(50)]
 	public int Unk005;
@@ -36,10 +36,10 @@ public struct NPCFollowerVariations
 	public int Unk008;
 
 	[FieldOffset(66)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(67)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(68)]
 	[ElementType(typeof(int))]
@@ -53,10 +53,10 @@ public struct NPCFollowerVariations
 	public int Unk013;
 
 	[FieldOffset(104)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(105)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(106)]
 	public int Unk016;

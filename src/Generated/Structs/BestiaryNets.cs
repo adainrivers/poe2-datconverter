@@ -28,6 +28,6 @@ public struct BestiaryNets
 	public int Unk006;
 
 	[FieldOffset(40)]
-	public bool IsEnabled;
+	public TBool IsEnabled;
 
 }

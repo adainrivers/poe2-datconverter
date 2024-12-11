@@ -25,9 +25,9 @@ public struct SynthesisBonuses
 	public int Unk005;
 
 	[FieldOffset(36)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(37)]
-	public bool Unk007;
+	public TBool Unk007;
 
 }

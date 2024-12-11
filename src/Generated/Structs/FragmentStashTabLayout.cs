@@ -24,7 +24,7 @@ public struct FragmentStashTabLayout
 	public int Height;
 
 	[FieldOffset(28)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(29)]
 	public int Tab;
@@ -33,7 +33,7 @@ public struct FragmentStashTabLayout
 	public int SlotSize;
 
 	[FieldOffset(37)]
-	public bool HideIfEmpty;
+	public TBool HideIfEmpty;
 
 	[FieldOffset(38)]
 	public int Subtab;
@@ -44,7 +44,7 @@ public struct FragmentStashTabLayout
 	public TArray StoredItems;
 
 	[FieldOffset(58)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(59)]
 	public TString Unk013;

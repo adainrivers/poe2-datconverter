@@ -15,15 +15,15 @@ public struct ItemVisualReplacement
 	public TRef Unk002;
 
 	[FieldOffset(48)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(49)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(50)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(51)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

@@ -9,7 +9,7 @@ public struct GrantedEffects
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool IsSupport;
+	public TBool IsSupport;
 
 	[FieldOffset(9)]
 	[ReferenceTable("ActiveSkillType")]
@@ -35,7 +35,7 @@ public struct GrantedEffects
 	public TArray ExcludedActiveSkillTypes;
 
 	[FieldOffset(69)]
-	public bool SupportsGemsOnly;
+	public TBool SupportsGemsOnly;
 
 	[FieldOffset(70)]
 	public int Unk008;
@@ -45,7 +45,7 @@ public struct GrantedEffects
 	public TArray Unk009;
 
 	[FieldOffset(90)]
-	public bool CannotBeSupported;
+	public TBool CannotBeSupported;
 
 	[FieldOffset(91)]
 	public int Unk011;
@@ -58,10 +58,10 @@ public struct GrantedEffects
 	public TRef ActiveSkill;
 
 	[FieldOffset(115)]
-	public bool IgnoreMinionTypes;
+	public TBool IgnoreMinionTypes;
 
 	[FieldOffset(116)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(117)]
 	[ReferenceTable("ActiveSkillType")]
@@ -77,7 +77,7 @@ public struct GrantedEffects
 	public TRef MultiPartAchievement;
 
 	[FieldOffset(165)]
-	public bool Unk019;
+	public TBool Unk019;
 
 	[FieldOffset(166)]
 	[ReferenceTable("ItemClasses")]
@@ -98,7 +98,7 @@ public struct GrantedEffects
 	public int Unk024;
 
 	[FieldOffset(202)]
-	public bool Unk025;
+	public TBool Unk025;
 
 	[FieldOffset(203)]
 	[ReferenceTable("GrantedEffectStatSets")]

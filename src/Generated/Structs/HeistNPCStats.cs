@@ -10,15 +10,15 @@ public struct HeistNPCStats
 	public TRef StatsKey;
 
 	[FieldOffset(16)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(17)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(18)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(19)]
-	public bool Unk004;
+	public TBool Unk004;
 
 }

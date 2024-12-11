@@ -20,7 +20,7 @@ public struct NearbyMonsterConditions
 	public int Unk003;
 
 	[FieldOffset(32)]
-	public bool IsNegated;
+	public TBool IsNegated;
 
 	[FieldOffset(33)]
 	public int Unk005;
@@ -30,7 +30,7 @@ public struct NearbyMonsterConditions
 	public TArray Unk006;
 
 	[FieldOffset(53)]
-	public bool IsLessThen;
+	public TBool IsLessThen;
 
 	[FieldOffset(54)]
 	public int MinimumHealthPercentage;

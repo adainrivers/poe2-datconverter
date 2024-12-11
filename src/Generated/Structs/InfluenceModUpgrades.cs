@@ -14,6 +14,6 @@ public struct InfluenceModUpgrades
 	public TRef UpgradedMod;
 
 	[FieldOffset(32)]
-	public bool HighestTier;
+	public TBool HighestTier;
 
 }

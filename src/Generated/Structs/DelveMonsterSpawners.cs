@@ -40,34 +40,34 @@ public struct DelveMonsterSpawners
 	public int Unk010;
 
 	[FieldOffset(60)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(61)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(62)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(63)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(64)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(65)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(66)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(67)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(68)]
-	public bool Unk019;
+	public TBool Unk019;
 
 	[FieldOffset(69)]
-	public bool Unk020;
+	public TBool Unk020;
 
 	[FieldOffset(70)]
 	public int Unk021;
@@ -85,10 +85,10 @@ public struct DelveMonsterSpawners
 	public TRef Unk025;
 
 	[FieldOffset(102)]
-	public bool Unk026;
+	public TBool Unk026;
 
 	[FieldOffset(103)]
-	public bool Unk027;
+	public TBool Unk027;
 
 	[FieldOffset(104)]
 	public int Unk028;
@@ -97,6 +97,6 @@ public struct DelveMonsterSpawners
 	public TString Script;
 
 	[FieldOffset(116)]
-	public bool Unk030;
+	public TBool Unk030;
 
 }

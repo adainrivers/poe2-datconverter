@@ -24,7 +24,7 @@ public struct BestiaryRecipes
 	public TRef Category;
 
 	[FieldOffset(56)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(57)]
 	[ReferenceTable("AchievementItems")]
@@ -32,7 +32,7 @@ public struct BestiaryRecipes
 	public TArray Achievements;
 
 	[FieldOffset(73)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(74)]
 	public int Unk008;

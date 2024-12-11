@@ -47,12 +47,12 @@ public struct AncestralTrialDialogue
 	public int Unk012;
 
 	[FieldOffset(100)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(101)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(102)]
-	public bool Unk015;
+	public TBool Unk015;
 
 }

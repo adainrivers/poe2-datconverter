@@ -54,7 +54,7 @@ public struct LakeRooms
 	public TRef Unk013;
 
 	[FieldOffset(148)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(149)]
 	[ReferenceTable("Stats")]
@@ -76,6 +76,6 @@ public struct LakeRooms
 	public TRef Unk019;
 
 	[FieldOffset(221)]
-	public bool Unk020;
+	public TBool Unk020;
 
 }

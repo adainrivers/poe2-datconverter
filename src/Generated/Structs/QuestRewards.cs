@@ -44,10 +44,10 @@ public struct QuestRewards
 	public int RewardStack;
 
 	[FieldOffset(108)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(109)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(110)]
 	[ElementType(typeof(int))]

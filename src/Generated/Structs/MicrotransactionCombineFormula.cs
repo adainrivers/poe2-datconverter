@@ -28,6 +28,6 @@ public struct MicrotransactionCombineFormula
 	public int Unk005;
 
 	[FieldOffset(68)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

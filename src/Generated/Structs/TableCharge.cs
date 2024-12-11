@@ -15,13 +15,13 @@ public struct TableCharge
 	public float Unk002;
 
 	[FieldOffset(12)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(13)]
 	public TRef Unk004;
 
 	[FieldOffset(29)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(30)]
 	[ElementType(typeof(TRef))]
@@ -43,10 +43,10 @@ public struct TableCharge
 	public int Unk011;
 
 	[FieldOffset(78)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(79)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(80)]
 	public TRef Unk014;
@@ -58,7 +58,7 @@ public struct TableCharge
 	public int Unk016;
 
 	[FieldOffset(116)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(117)]
 	public int Unk018;
@@ -82,10 +82,10 @@ public struct TableCharge
 	public int Unk024;
 
 	[FieldOffset(145)]
-	public bool Unk025;
+	public TBool Unk025;
 
 	[FieldOffset(146)]
-	public bool Unk026;
+	public TBool Unk026;
 
 	[FieldOffset(147)]
 	public int Unk027;

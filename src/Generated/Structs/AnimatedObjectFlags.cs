@@ -12,9 +12,9 @@ public struct AnimatedObjectFlags
 	public int Unk001;
 
 	[FieldOffset(12)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(13)]
-	public bool Unk003;
+	public TBool Unk003;
 
 }

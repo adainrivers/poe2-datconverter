@@ -19,10 +19,10 @@ public struct SummonedSpecificMonsters
 	public TRef Unk003;
 
 	[FieldOffset(40)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(41)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(42)]
 	public int Unk006;
@@ -31,7 +31,7 @@ public struct SummonedSpecificMonsters
 	public int Unk007;
 
 	[FieldOffset(50)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(51)]
 	public TRef Unk009;
@@ -43,7 +43,7 @@ public struct SummonedSpecificMonsters
 	public int Unk011;
 
 	[FieldOffset(87)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(88)]
 	public int Unk013;
@@ -52,10 +52,10 @@ public struct SummonedSpecificMonsters
 	public TString Unk014;
 
 	[FieldOffset(100)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(101)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(102)]
 	public int Unk017;

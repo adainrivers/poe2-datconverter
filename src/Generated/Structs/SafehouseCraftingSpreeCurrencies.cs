@@ -13,6 +13,6 @@ public struct SafehouseCraftingSpreeCurrencies
 	public TRef BaseItemTypesKey;
 
 	[FieldOffset(24)]
-	public bool HasSpecificBaseItem;
+	public TBool HasSpecificBaseItem;
 
 }

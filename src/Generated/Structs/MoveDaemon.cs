@@ -54,13 +54,13 @@ public struct MoveDaemon
 	public int Unk015;
 
 	[FieldOffset(76)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(77)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(78)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(79)]
 	public int Unk019;
@@ -81,7 +81,7 @@ public struct MoveDaemon
 	public int Unk024;
 
 	[FieldOffset(103)]
-	public bool Unk025;
+	public TBool Unk025;
 
 	[FieldOffset(104)]
 	public TString Unk026;
@@ -90,10 +90,10 @@ public struct MoveDaemon
 	public int Unk027;
 
 	[FieldOffset(116)]
-	public bool Unk028;
+	public TBool Unk028;
 
 	[FieldOffset(117)]
-	public bool Unk029;
+	public TBool Unk029;
 
 	[FieldOffset(118)]
 	public int Unk030;
@@ -102,6 +102,6 @@ public struct MoveDaemon
 	public int Unk031;
 
 	[FieldOffset(126)]
-	public bool Unk032;
+	public TBool Unk032;
 
 }

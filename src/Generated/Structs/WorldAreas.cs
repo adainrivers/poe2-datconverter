@@ -15,10 +15,10 @@ public struct WorldAreas
 	public int Act;
 
 	[FieldOffset(20)]
-	public bool IsTown;
+	public TBool IsTown;
 
 	[FieldOffset(21)]
-	public bool HasWaypoint;
+	public TBool HasWaypoint;
 
 	[FieldOffset(22)]
 	[ReferenceTable("WorldAreas")]
@@ -88,7 +88,7 @@ public struct WorldAreas
 	public TArray SpawnWeight_Values;
 
 	[FieldOffset(220)]
-	public bool IsMapArea;
+	public TBool IsMapArea;
 
 	[FieldOffset(221)]
 	[ReferenceTable("AchievementItems")]
@@ -116,7 +116,7 @@ public struct WorldAreas
 	public TArray VaalArea;
 
 	[FieldOffset(305)]
-	public bool Unk030;
+	public TBool Unk030;
 
 	[FieldOffset(306)]
 	public int MaxLevel;
@@ -127,7 +127,7 @@ public struct WorldAreas
 	public TArray AreaTypeTags;
 
 	[FieldOffset(326)]
-	public bool IsHideout;
+	public TBool IsHideout;
 
 	[FieldOffset(327)]
 	public TString Inflection;
@@ -144,13 +144,13 @@ public struct WorldAreas
 	public TArray Tags;
 
 	[FieldOffset(359)]
-	public bool IsVaalArea;
+	public TBool IsVaalArea;
 
 	[FieldOffset(360)]
-	public bool IsLabyrinthAirlock;
+	public TBool IsLabyrinthAirlock;
 
 	[FieldOffset(361)]
-	public bool IsLabyrinthArea;
+	public TBool IsLabyrinthArea;
 
 	[FieldOffset(362)]
 	[ReferenceTable("AchievementItems")]
@@ -172,10 +172,10 @@ public struct WorldAreas
 	public TArray WaypointActivation_AchievementItemsKeys;
 
 	[FieldOffset(434)]
-	public bool IsUniqueMapArea;
+	public TBool IsUniqueMapArea;
 
 	[FieldOffset(435)]
-	public bool IsLabyrinthBossArea;
+	public TBool IsLabyrinthBossArea;
 
 	[FieldOffset(436)]
 	[ReferenceTable("NPCTextAudio")]
@@ -203,10 +203,10 @@ public struct WorldAreas
 	public TRef Unk054;
 
 	[FieldOffset(516)]
-	public bool Unk055;
+	public TBool Unk055;
 
 	[FieldOffset(517)]
-	public bool Unk056;
+	public TBool Unk056;
 
 	[FieldOffset(518)]
 	[ReferenceTable("WorldAreas")]

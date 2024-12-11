@@ -14,6 +14,6 @@ public struct AtlasPrimordialAltarChoices
 	public TRef Type;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

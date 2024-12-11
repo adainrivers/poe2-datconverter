@@ -15,7 +15,7 @@ public struct HellscapeModificationInventoryLayout
 	public int Row;
 
 	[FieldOffset(16)]
-	public bool IsMapSlot;
+	public TBool IsMapSlot;
 
 	[FieldOffset(17)]
 	public int Unk004;

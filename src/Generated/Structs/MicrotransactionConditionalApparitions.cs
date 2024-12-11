@@ -26,12 +26,12 @@ public struct MicrotransactionConditionalApparitions
 	public int Unk005;
 
 	[FieldOffset(76)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(77)]
 	public int Unk007;
 
 	[FieldOffset(81)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

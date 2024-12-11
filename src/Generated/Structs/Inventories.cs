@@ -17,16 +17,16 @@ public struct Inventories
 	public TEnum InventoryTypeKey;
 
 	[FieldOffset(16)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(17)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(18)]
 	public int Unk005;
 
 	[FieldOffset(22)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(23)]
 	public int Unk007;

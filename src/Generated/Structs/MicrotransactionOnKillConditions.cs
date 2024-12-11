@@ -24,7 +24,7 @@ public struct MicrotransactionOnKillConditions
 	public int Unk004;
 
 	[FieldOffset(60)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(61)]
 	[ElementType(typeof(int))]
@@ -40,7 +40,7 @@ public struct MicrotransactionOnKillConditions
 	public int Unk009;
 
 	[FieldOffset(89)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(90)]
 	public TString Unk011;

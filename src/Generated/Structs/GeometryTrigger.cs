@@ -60,13 +60,13 @@ public struct GeometryTrigger
 	public int Unk017;
 
 	[FieldOffset(96)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(97)]
 	public int Unk019;
 
 	[FieldOffset(101)]
-	public bool Unk020;
+	public TBool Unk020;
 
 	[FieldOffset(102)]
 	public int Unk021;
@@ -75,7 +75,7 @@ public struct GeometryTrigger
 	public int Unk022;
 
 	[FieldOffset(110)]
-	public bool Unk023;
+	public TBool Unk023;
 
 	[FieldOffset(111)]
 	public int Unk024;
@@ -88,37 +88,37 @@ public struct GeometryTrigger
 	public int Unk026;
 
 	[FieldOffset(135)]
-	public bool Unk027;
+	public TBool Unk027;
 
 	[FieldOffset(136)]
 	public int Unk028;
 
 	[FieldOffset(140)]
-	public bool Unk029;
+	public TBool Unk029;
 
 	[FieldOffset(141)]
-	public bool Unk030;
+	public TBool Unk030;
 
 	[FieldOffset(142)]
 	public int Unk031;
 
 	[FieldOffset(146)]
-	public bool Unk032;
+	public TBool Unk032;
 
 	[FieldOffset(147)]
-	public bool Unk033;
+	public TBool Unk033;
 
 	[FieldOffset(148)]
 	public TRef Unk034;
 
 	[FieldOffset(164)]
-	public bool Unk035;
+	public TBool Unk035;
 
 	[FieldOffset(165)]
-	public bool Unk036;
+	public TBool Unk036;
 
 	[FieldOffset(166)]
-	public bool Unk037;
+	public TBool Unk037;
 
 	[FieldOffset(167)]
 	public int Unk038;
@@ -133,7 +133,7 @@ public struct GeometryTrigger
 	public int Unk041;
 
 	[FieldOffset(183)]
-	public bool Unk042;
+	public TBool Unk042;
 
 	[FieldOffset(184)]
 	public int Unk043;
@@ -160,12 +160,12 @@ public struct GeometryTrigger
 	public int Unk050;
 
 	[FieldOffset(228)]
-	public bool Unk051;
+	public TBool Unk051;
 
 	[FieldOffset(229)]
-	public bool Unk052;
+	public TBool Unk052;
 
 	[FieldOffset(230)]
-	public bool Unk053;
+	public TBool Unk053;
 
 }

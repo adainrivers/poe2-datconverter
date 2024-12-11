@@ -28,7 +28,7 @@ public struct CurrencyStashTabLayout
 	public int Height;
 
 	[FieldOffset(44)]
-	public bool ShowIfEmpty;
+	public TBool ShowIfEmpty;
 
 	[FieldOffset(45)]
 	public int SlotGroup;

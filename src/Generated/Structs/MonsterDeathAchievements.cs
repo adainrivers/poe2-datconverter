@@ -19,7 +19,7 @@ public struct MonsterDeathAchievements
 	public TArray AchievementItemsKeys;
 
 	[FieldOffset(40)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(41)]
 	[ReferenceTable("PlayerConditions")]
@@ -42,10 +42,10 @@ public struct MonsterDeathAchievements
 	public int Unk008;
 
 	[FieldOffset(97)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(98)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(99)]
 	[ElementType(typeof(int))]
@@ -75,7 +75,7 @@ public struct MonsterDeathAchievements
 	public TArray NearbyMonsterConditionsKeys;
 
 	[FieldOffset(199)]
-	public bool Unk018;
+	public TBool Unk018;
 
 	[FieldOffset(200)]
 	[ReferenceTable("MultiPartAchievementConditions")]
@@ -87,7 +87,7 @@ public struct MonsterDeathAchievements
 	public TArray Unk020;
 
 	[FieldOffset(232)]
-	public bool Unk021;
+	public TBool Unk021;
 
 	[FieldOffset(233)]
 	[ElementType(typeof(int))]
@@ -98,6 +98,6 @@ public struct MonsterDeathAchievements
 	public TArray Unk023;
 
 	[FieldOffset(265)]
-	public bool Unk024;
+	public TBool Unk024;
 
 }

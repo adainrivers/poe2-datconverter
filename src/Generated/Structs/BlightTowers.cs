@@ -53,6 +53,6 @@ public struct BlightTowers
 	public TArray StatsKeys2;
 
 	[FieldOffset(132)]
-	public bool Unk013;
+	public TBool Unk013;
 
 }

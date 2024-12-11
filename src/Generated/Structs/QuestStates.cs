@@ -26,7 +26,7 @@ public struct QuestStates
 	public TString Text;
 
 	[FieldOffset(60)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(61)]
 	public TString Message;

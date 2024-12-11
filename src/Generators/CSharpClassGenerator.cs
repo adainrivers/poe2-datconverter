@@ -54,6 +54,10 @@ public static class CSharpClassGenerator
                 {
                     stringBuilder.AppendLine($"\tpublic TableReference {fieldName} {{ get; set; }}");
                 }
+                else if (field.FieldType == typeof(TBool))
+                {
+                    stringBuilder.AppendLine($"\tpublic bool {fieldName} {{ get; set; }}");
+                }
                 else if(field.FieldType == typeof(TEnum))
                 {
                     stringBuilder.AppendLine($"\tpublic {enumType} {fieldName} {{ get; set; }}");

@@ -22,7 +22,7 @@ public struct UniqueMaps
 	public TRef FlavourTextKey;
 
 	[FieldOffset(64)]
-	public bool HasGuildCharacter;
+	public TBool HasGuildCharacter;
 
 	[FieldOffset(65)]
 	public TString GuildCharacter;
@@ -31,6 +31,6 @@ public struct UniqueMaps
 	public TString Name;
 
 	[FieldOffset(81)]
-	public bool IsDropDisabled;
+	public TBool IsDropDisabled;
 
 }

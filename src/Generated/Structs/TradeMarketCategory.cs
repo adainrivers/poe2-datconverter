@@ -25,9 +25,9 @@ public struct TradeMarketCategory
 	public TArray Unk004;
 
 	[FieldOffset(52)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(53)]
-	public bool IsDisabled;
+	public TBool IsDisabled;
 
 }

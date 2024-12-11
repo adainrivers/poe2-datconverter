@@ -9,10 +9,10 @@ public struct SanctumRoomTypes
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(10)]
 	public TRef Unk003;
@@ -21,13 +21,13 @@ public struct SanctumRoomTypes
 	public TRef Unk004;
 
 	[FieldOffset(42)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(43)]
 	public TString Icon;
 
 	[FieldOffset(51)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(52)]
 	public TString Description;
@@ -45,6 +45,6 @@ public struct SanctumRoomTypes
 	public TString Unk011;
 
 	[FieldOffset(100)]
-	public bool Unk012;
+	public TBool Unk012;
 
 }

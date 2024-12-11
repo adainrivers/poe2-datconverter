@@ -28,6 +28,6 @@ public struct EclipseMods
 	public int MaxLevel;
 
 	[FieldOffset(64)]
-	public bool IsPrefix;
+	public TBool IsPrefix;
 
 }

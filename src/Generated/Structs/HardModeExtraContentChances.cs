@@ -15,7 +15,7 @@ public struct HardModeExtraContentChances
 	public int Unk002;
 
 	[FieldOffset(16)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(17)]
 	public int Unk004;

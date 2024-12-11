@@ -31,15 +31,15 @@ public struct BlightStashTabLayout
 	public int SlotSize;
 
 	[FieldOffset(48)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(49)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(50)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(51)]
-	public bool Unk011;
+	public TBool Unk011;
 
 }

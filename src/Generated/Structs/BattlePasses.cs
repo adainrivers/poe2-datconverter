@@ -23,7 +23,7 @@ public struct BattlePasses
 	public int MapCompletionCount;
 
 	[FieldOffset(32)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(33)]
 	public TString Id2;

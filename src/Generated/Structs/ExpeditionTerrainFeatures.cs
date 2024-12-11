@@ -38,7 +38,7 @@ public struct ExpeditionTerrainFeatures
 	public int Unk008;
 
 	[FieldOffset(88)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(89)]
 	[ReferenceTable("AchievementItems")]

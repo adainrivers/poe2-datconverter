@@ -18,7 +18,7 @@ public struct Music
 	public int HASH16;
 
 	[FieldOffset(28)]
-	public bool IsAvailableInHideout;
+	public TBool IsAvailableInHideout;
 
 	[FieldOffset(29)]
 	public TString Name;
@@ -32,7 +32,7 @@ public struct Music
 	public TArray MusicCategories;
 
 	[FieldOffset(61)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(62)]
 	public int Unk009;

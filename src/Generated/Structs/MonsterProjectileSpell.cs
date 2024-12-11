@@ -17,15 +17,15 @@ public struct MonsterProjectileSpell
 	public TRef Animation;
 
 	[FieldOffset(36)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(37)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(38)]
 	public int Unk005;
 
 	[FieldOffset(42)]
-	public bool Unk006;
+	public TBool Unk006;
 
 }

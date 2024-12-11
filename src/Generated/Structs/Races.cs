@@ -30,7 +30,7 @@ public struct Races
 	public TArray Unk006;
 
 	[FieldOffset(64)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(65)]
 	public int Unk008;

@@ -13,37 +13,37 @@ public struct SkillSurgeEffects
 	public TString Unk001;
 
 	[FieldOffset(24)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(25)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(26)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(27)]
 	[ReferenceTable("MiscAnimated")]
 	public TRef MiscAnimated;
 
 	[FieldOffset(43)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(44)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(45)]
 	public int Unk008;
 
 	[FieldOffset(49)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(50)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(51)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(52)]
-	public bool Unk012;
+	public TBool Unk012;
 
 }

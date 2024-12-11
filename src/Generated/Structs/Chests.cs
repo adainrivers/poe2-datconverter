@@ -9,7 +9,7 @@ public struct Chests
 	public TString Id;
 
 	[FieldOffset(8)]
-	public bool Unk001;
+	public TBool Unk001;
 
 	[FieldOffset(9)]
 	public int Unk002;
@@ -22,19 +22,19 @@ public struct Chests
 	public TArray AOFiles;
 
 	[FieldOffset(37)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(38)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(39)]
 	public int Unk007;
 
 	[FieldOffset(43)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(44)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(45)]
 	public int Unk010;
@@ -48,7 +48,7 @@ public struct Chests
 	public TRef BaseItemTypesKey;
 
 	[FieldOffset(81)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(82)]
 	[ReferenceTable("Mods")]
@@ -93,7 +93,7 @@ public struct Chests
 	public TString InheritsFrom;
 
 	[FieldOffset(218)]
-	public bool Unk025;
+	public TBool Unk025;
 
 	[FieldOffset(219)]
 	public TRef Unk026;
@@ -112,7 +112,7 @@ public struct Chests
 	public int Unk030;
 
 	[FieldOffset(267)]
-	public bool Unk031;
+	public TBool Unk031;
 
 	[FieldOffset(268)]
 	public TRef Unk032;
@@ -121,17 +121,17 @@ public struct Chests
 	public TRef Unk033;
 
 	[FieldOffset(300)]
-	public bool Unk034;
+	public TBool Unk034;
 
 	[FieldOffset(301)]
-	public bool Unk035;
+	public TBool Unk035;
 
 	[FieldOffset(302)]
 	[ElementType(typeof(TRef))]
 	public TArray Unk036;
 
 	[FieldOffset(318)]
-	public bool IsHardmode;
+	public TBool IsHardmode;
 
 	[FieldOffset(319)]
 	[ReferenceTable("Stats")]
@@ -139,6 +139,6 @@ public struct Chests
 	public TArray StatsHardmode;
 
 	[FieldOffset(335)]
-	public bool Unk039;
+	public TBool Unk039;
 
 }

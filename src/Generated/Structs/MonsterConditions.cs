@@ -22,10 +22,10 @@ public struct MonsterConditions
 	public TArray Unk004;
 
 	[FieldOffset(72)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(73)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(74)]
 	[ElementType(typeof(TRef))]

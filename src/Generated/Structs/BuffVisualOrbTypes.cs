@@ -24,7 +24,7 @@ public struct BuffVisualOrbTypes
 	public int Unk005;
 
 	[FieldOffset(28)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(29)]
 	public TRef Unk007;
@@ -36,7 +36,7 @@ public struct BuffVisualOrbTypes
 	public int Unk009;
 
 	[FieldOffset(65)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(66)]
 	public float Unk011;

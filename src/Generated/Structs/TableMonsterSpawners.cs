@@ -41,22 +41,22 @@ public struct TableMonsterSpawners
 	public int Unk010;
 
 	[FieldOffset(60)]
-	public bool Unk011;
+	public TBool Unk011;
 
 	[FieldOffset(61)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(62)]
-	public bool Unk013;
+	public TBool Unk013;
 
 	[FieldOffset(63)]
-	public bool Unk014;
+	public TBool Unk014;
 
 	[FieldOffset(64)]
-	public bool Unk015;
+	public TBool Unk015;
 
 	[FieldOffset(65)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(66)]
 	public int Unk017;
@@ -74,19 +74,19 @@ public struct TableMonsterSpawners
 	public TRef Unk021;
 
 	[FieldOffset(98)]
-	public bool Unk022;
+	public TBool Unk022;
 
 	[FieldOffset(99)]
-	public bool Unk023;
+	public TBool Unk023;
 
 	[FieldOffset(100)]
 	public TString Script1;
 
 	[FieldOffset(108)]
-	public bool Unk025;
+	public TBool Unk025;
 
 	[FieldOffset(109)]
-	public bool Unk026;
+	public TBool Unk026;
 
 	[FieldOffset(110)]
 	public TString Script2;

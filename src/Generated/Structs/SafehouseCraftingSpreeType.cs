@@ -22,7 +22,7 @@ public struct SafehouseCraftingSpreeType
 	public TArray Unk003;
 
 	[FieldOffset(56)]
-	public bool Disabled;
+	public TBool Disabled;
 
 	[FieldOffset(57)]
 	public TString ItemClassText;

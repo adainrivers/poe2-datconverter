@@ -26,12 +26,12 @@ public struct MiscEffectPacks
 	public TArray PreloadGroups;
 
 	[FieldOffset(44)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(45)]
 	public TString PlayerOnly_EPKFile;
 
 	[FieldOffset(53)]
-	public bool Unk008;
+	public TBool Unk008;
 
 }

@@ -18,7 +18,7 @@ public struct PassiveSkillTreeUIArt
 	public TString GroupBackgroundLarge;
 
 	[FieldOffset(32)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(33)]
 	public TString PassiveFrameNormal;

@@ -69,6 +69,6 @@ public struct AbyssObjects
 	public int Unk019;
 
 	[FieldOffset(112)]
-	public bool Unk020;
+	public TBool Unk020;
 
 }

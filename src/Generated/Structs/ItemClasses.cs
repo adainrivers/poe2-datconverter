@@ -20,7 +20,7 @@ public struct ItemClasses
 	public TRef ItemClassCategory;
 
 	[FieldOffset(48)]
-	public bool RemovedIfLeavesArea;
+	public TBool RemovedIfLeavesArea;
 
 	[FieldOffset(49)]
 	[ElementType(typeof(int))]
@@ -32,13 +32,13 @@ public struct ItemClasses
 	public TArray IdentifyAchievements;
 
 	[FieldOffset(81)]
-	public bool AllocateToMapOwner;
+	public TBool AllocateToMapOwner;
 
 	[FieldOffset(82)]
-	public bool AlwaysAllocate;
+	public TBool AlwaysAllocate;
 
 	[FieldOffset(83)]
-	public bool CanHaveVeiledMods;
+	public TBool CanHaveVeiledMods;
 
 	[FieldOffset(84)]
 	[ReferenceTable("QuestFlags")]
@@ -48,41 +48,41 @@ public struct ItemClasses
 	public int Unk011;
 
 	[FieldOffset(104)]
-	public bool AlwaysShow;
+	public TBool AlwaysShow;
 
 	[FieldOffset(105)]
-	public bool CanBeCorrupted;
+	public TBool CanBeCorrupted;
 
 	[FieldOffset(106)]
-	public bool CanHaveIncubators;
+	public TBool CanHaveIncubators;
 
 	[FieldOffset(107)]
-	public bool CanHaveInfluence;
+	public TBool CanHaveInfluence;
 
 	[FieldOffset(108)]
-	public bool CanBeDoubleCorrupted;
+	public TBool CanBeDoubleCorrupted;
 
 	[FieldOffset(109)]
-	public bool CanHaveAspects;
+	public TBool CanHaveAspects;
 
 	[FieldOffset(110)]
-	public bool CanTransferSkin;
+	public TBool CanTransferSkin;
 
 	[FieldOffset(111)]
 	[ReferenceTable("ItemStances")]
 	public TRef ItemStance;
 
 	[FieldOffset(127)]
-	public bool CanScourge;
+	public TBool CanScourge;
 
 	[FieldOffset(128)]
-	public bool CanUpgradeRarity;
+	public TBool CanUpgradeRarity;
 
 	[FieldOffset(129)]
-	public bool Unk022;
+	public TBool Unk022;
 
 	[FieldOffset(130)]
-	public bool Unk023;
+	public TBool Unk023;
 
 	[FieldOffset(131)]
 	[ElementType(typeof(int))]
@@ -95,25 +95,25 @@ public struct ItemClasses
 	public TArray Flags;
 
 	[FieldOffset(163)]
-	public bool Unmodifiable;
+	public TBool Unmodifiable;
 
 	[FieldOffset(164)]
-	public bool CanBeFractured;
+	public TBool CanBeFractured;
 
 	[FieldOffset(165)]
 	[ReferenceTable("AchievementItems")]
 	public TRef EquipAchievements;
 
-	//[FieldOffset(181)]
-	//public bool UsedInMapDevice;
+	[FieldOffset(181)]
+	public TBool UsedInMapDevice;
 
-	//[FieldOffset(182)]
-	//public bool Unk030;
+	[FieldOffset(182)]
+	public TBool Unk030;
 
-	//[FieldOffset(183)]
-	//public bool Unk031;
+	[FieldOffset(183)]
+	public TBool Unk031;
 
-	//[FieldOffset(184)]
-	//public bool Unk032;
+	[FieldOffset(184)]
+	public TBool Unk032;
 
 }

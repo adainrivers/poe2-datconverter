@@ -26,19 +26,19 @@ public struct MapDevices
 	public TArray Unk005;
 
 	[FieldOffset(60)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(61)]
 	public int Unk007;
 
 	[FieldOffset(65)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(66)]
 	public int Unk009;
 
 	[FieldOffset(70)]
-	public bool Unk010;
+	public TBool Unk010;
 
 	[FieldOffset(71)]
 	public float Unk011;
@@ -56,12 +56,12 @@ public struct MapDevices
 	public int Unk015;
 
 	[FieldOffset(91)]
-	public bool Unk016;
+	public TBool Unk016;
 
 	[FieldOffset(92)]
-	public bool Unk017;
+	public TBool Unk017;
 
 	[FieldOffset(93)]
-	public bool Unk018;
+	public TBool Unk018;
 
 }

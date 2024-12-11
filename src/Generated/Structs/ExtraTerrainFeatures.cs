@@ -17,7 +17,7 @@ public struct ExtraTerrainFeatures
 	public TArray TdtFiles;
 
 	[FieldOffset(40)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(41)]
 	[ElementType(typeof(TString))]
@@ -36,7 +36,7 @@ public struct ExtraTerrainFeatures
 	public TRef WorldAreasKey;
 
 	[FieldOffset(97)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(98)]
 	public int Unk009;

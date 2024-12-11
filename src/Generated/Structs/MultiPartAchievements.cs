@@ -19,10 +19,10 @@ public struct MultiPartAchievements
 	public int Unk003;
 
 	[FieldOffset(32)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(33)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(34)]
 	public int Unk006;

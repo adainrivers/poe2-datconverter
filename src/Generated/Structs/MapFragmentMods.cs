@@ -23,22 +23,22 @@ public struct MapFragmentMods
 	public int MapFragmentFamilies;
 
 	[FieldOffset(52)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(53)]
-	public bool Unk005;
+	public TBool Unk005;
 
 	[FieldOffset(54)]
-	public bool Unk006;
+	public TBool Unk006;
 
 	[FieldOffset(55)]
-	public bool Unk007;
+	public TBool Unk007;
 
 	[FieldOffset(56)]
-	public bool Unk008;
+	public TBool Unk008;
 
 	[FieldOffset(57)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(58)]
 	public int MinAreaLevel;
@@ -50,6 +50,6 @@ public struct MapFragmentMods
 	public int MapFragmentLimit;
 
 	[FieldOffset(70)]
-	public bool Unk013;
+	public TBool Unk013;
 
 }

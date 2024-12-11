@@ -10,6 +10,6 @@ public struct AfflictionRewardMapMods
 	public TRef ModsKey;
 
 	[FieldOffset(16)]
-	public bool Unk001;
+	public TBool Unk001;
 
 }

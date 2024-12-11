@@ -37,7 +37,7 @@ public struct BetrayalDialogue
 	public TRef BetrayalUpgradesKey;
 
 	[FieldOffset(108)]
-	public bool Unk009;
+	public TBool Unk009;
 
 	[FieldOffset(109)]
 	[ElementType(typeof(int))]
@@ -48,7 +48,7 @@ public struct BetrayalDialogue
 	public TArray Unk011;
 
 	[FieldOffset(141)]
-	public bool Unk012;
+	public TBool Unk012;
 
 	[FieldOffset(142)]
 	[ElementType(typeof(int))]

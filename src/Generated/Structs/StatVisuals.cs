@@ -13,6 +13,6 @@ public struct StatVisuals
 	public TArray EPKFiles;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 }

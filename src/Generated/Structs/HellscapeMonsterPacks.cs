@@ -17,10 +17,10 @@ public struct HellscapeMonsterPacks
 	public TRef Faction;
 
 	[FieldOffset(40)]
-	public bool IsDonutPack;
+	public TBool IsDonutPack;
 
 	[FieldOffset(41)]
-	public bool IsElite;
+	public TBool IsElite;
 
 	[FieldOffset(42)]
 	public int MinLevel;

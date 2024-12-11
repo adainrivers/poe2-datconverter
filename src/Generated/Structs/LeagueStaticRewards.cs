@@ -27,6 +27,6 @@ public struct LeagueStaticRewards
 	public int Unk006;
 
 	[FieldOffset(52)]
-	public bool Unk007;
+	public TBool Unk007;
 
 }

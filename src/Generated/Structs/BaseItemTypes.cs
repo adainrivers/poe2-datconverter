@@ -76,7 +76,7 @@ public struct BaseItemTypes
 	public TRef Equip_AchievementItemsKey;
 
 	[FieldOffset(188)]
-	public bool IsCorrupted;
+	public TBool IsCorrupted;
 
 	[FieldOffset(189)]
 	[ReferenceTable("AchievementItems")]
@@ -93,7 +93,7 @@ public struct BaseItemTypes
 	public TRef FragmentBaseItemTypesKey;
 
 	[FieldOffset(229)]
-	public bool Unk023;
+	public TBool Unk023;
 
 	[FieldOffset(230)]
 	public TRef Unk024;
@@ -102,14 +102,14 @@ public struct BaseItemTypes
 	public TRef Unk025;
 
 	[FieldOffset(262)]
-	public bool Unk026;
+	public TBool Unk026;
 
 	[FieldOffset(263)]
 	[ReferenceTable("TradeMarketCategory")]
 	public TRef TradeMarketCategory;
 
 	[FieldOffset(279)]
-	public bool Unmodifiable;
+	public TBool Unmodifiable;
 
 	[FieldOffset(280)]
 	[ReferenceTable("AchievementItems")]
@@ -121,9 +121,9 @@ public struct BaseItemTypes
 	public TArray Unk030;
 
 	[FieldOffset(312)]
-	public bool IgnoreQuantBonus;
+	public TBool IgnoreQuantBonus;
 
 	[FieldOffset(313)]
-	public bool Unk032;
+	public TBool Unk032;
 
 }

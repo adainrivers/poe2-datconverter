@@ -14,15 +14,15 @@ public struct PassiveJewelNodeModifyingStats
 	public TRef Stat;
 
 	[FieldOffset(32)]
-	public bool Unk002;
+	public TBool Unk002;
 
 	[FieldOffset(33)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(34)]
-	public bool Unk004;
+	public TBool Unk004;
 
 	[FieldOffset(35)]
-	public bool Unk005;
+	public TBool Unk005;
 
 }

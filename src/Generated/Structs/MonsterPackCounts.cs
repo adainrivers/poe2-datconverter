@@ -16,7 +16,7 @@ public struct MonsterPackCounts
 	public TArray Unk002;
 
 	[FieldOffset(36)]
-	public bool Unk003;
+	public TBool Unk003;
 
 	[FieldOffset(37)]
 	[ElementType(typeof(int))]
