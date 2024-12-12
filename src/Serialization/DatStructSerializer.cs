@@ -39,7 +39,7 @@ public class DatStructSerializer
             _jsonWriter.WriteValue(i);
             foreach (var fieldInfo in fields)
             {
-                if (fieldInfo.Name.StartsWith("Unk")) continue;
+                //if (fieldInfo.Name.StartsWith("Unk")) continue;
 
                 _jsonWriter.WritePropertyName(fieldInfo.Name);
                 var value = fieldInfo.GetValue(row);

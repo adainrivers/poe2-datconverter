@@ -29,7 +29,4 @@ public struct Rarity
 	[FieldOffset(32)]
 	public TString Color;
 
-	[FieldOffset(40)]
-	public TString Text;
-
 }

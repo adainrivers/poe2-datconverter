@@ -12,38 +12,41 @@ public struct QuestStaticRewards
 	[FieldOffset(16)]
 	public int Unk001;
 
-	[FieldOffset(20)]
+	[FieldOffset(24)]
 	[ReferenceTable("Stats")]
 	[ElementType(typeof(TRef))]
 	public TArray StatsKeys;
 
-	[FieldOffset(36)]
+	[FieldOffset(40)]
 	[ElementType(typeof(int))]
 	public TArray StatValues;
 
-	[FieldOffset(52)]
+	[FieldOffset(56)]
 	[ReferenceTable("Quest")]
 	public TRef QuestKey;
 
-	[FieldOffset(68)]
+	[FieldOffset(72)]
 	public int Unk005;
 
-	[FieldOffset(72)]
+	[FieldOffset(76)]
 	[ReferenceTable("ClientStrings")]
 	public TRef ClientStringsKey;
 
-	[FieldOffset(88)]
+	[FieldOffset(92)]
 	public int Unk007;
 
-	[FieldOffset(92)]
-	[ElementType(typeof(int))]
-	public TArray StatValuesHardmode;
+    [FieldOffset(96)]
+    public TBool Unk008;
 
-	[FieldOffset(108)]
-	[ReferenceTable("ClientStrings")]
-	public TRef ClientStringHardmode;
+    //[FieldOffset(92)]
+    //[ElementType(typeof(int))]
+    //public TArray StatValuesHardmode;
 
-	[FieldOffset(124)]
-	public TRef Unk010;
+    //[FieldOffset(108)]
+    //[ReferenceTable("ClientStrings")]
+    //public TRef ClientStringHardmode;
+
+    //[FieldOffset(124)]
+    //public TRef Unk010;
 
 }
