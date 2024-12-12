@@ -6,13 +6,14 @@ public static class ReaderFactory
 {
     public static DatReader GetReader(string name, ReadOnlySpan<byte> data)
     {
+        var reader = new DatReader();
         if (TypesFactory.StructsMap.TryGetValue(name, out var type))
         {
-            var reader = new DatReader();
             reader.Read(data, type);
             return reader;
         }
         Console.WriteLine($"Reader not found for {name}");
-        return null;
+        reader.Read(data, null);
+        return reader;
     }
 }

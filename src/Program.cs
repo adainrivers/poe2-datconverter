@@ -12,7 +12,7 @@ internal static class Program
         CSharpClassGenerator.Generate();
         ConvertMetadataFiles();
         ConvertCsdFiles();
-        ConvertDataFiles();
+        ConvertDataFiles(true);
     }
 
     private static void ConvertMetadataFiles()
@@ -58,8 +58,13 @@ internal static class Program
     }
 
 
-    private static void ConvertDataFiles()
+    private static void ConvertDataFiles(bool saveRawData)
     {
+        if (saveRawData && Directory.Exists(Config.RawDataOutputPath))
+        {
+            Directory.Delete(Config.RawDataOutputPath, true);
+        }
+
         Console.WriteLine("Converting data files");
         var dataFilesPath = Path.Combine(Config.ExtractedFilesPath, "data");
         var dataFiles = Directory.GetFiles(dataFilesPath, "*.datc64", SearchOption.TopDirectoryOnly);
@@ -70,10 +75,21 @@ internal static class Program
             var data = File.ReadAllBytes(file);
             var reader = ReaderFactory.GetReader(fileName, data);
             if (reader == null) continue;
-            var table = reader.Rows;
+
+            if (saveRawData)
+            {
+                var outputFolder = Path.Combine(Config.RawDataOutputPath, fileName);
+                Directory.CreateDirectory(outputFolder);
+                if (reader.Data != null) File.WriteAllBytes(Path.Combine(outputFolder, "_dataSection.bin"), reader.Data);
+
+                for (var i = 0; i < reader.RowBytes.Count; i++)
+                {
+                    File.WriteAllBytes(Path.Combine(outputFolder, $"{i}.bin"), reader.RowBytes[i]);
+                }
+            }
 
             var serializer = new DatStructSerializer(reader);
-            var json = serializer.SerializeStructs(table);
+            var json = serializer.SerializeStructs(reader.Rows);
             var outputPath = Path.Combine(Config.DataOutputPath, "data", $"{fileName}.json");
             File.WriteAllText(outputPath, json);
         }

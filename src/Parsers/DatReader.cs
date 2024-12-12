@@ -8,6 +8,7 @@ public class DatReader
     private static readonly byte[] DataSeparator = [0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB, 0xBB];
     private const int RowsStartIndex = 4;
     public byte[] Data { get; private set; }
+    public List<byte[]> RowBytes { get; } = [];
     public List<object> Rows { get; } = [];
 
 
@@ -22,6 +23,13 @@ public class DatReader
         var rowsEndIndex = dataOffset == -1 ? data.Length : dataOffset;
         var rowsData = data[RowsStartIndex..rowsEndIndex];
         var rowLength = rowsData.Length / rowCount;
+        for (var i = 0; i < rowCount; i++)
+        {
+            var rowData = rowsData[(i * rowLength)..((i + 1) * rowLength)];
+            RowBytes.Add(rowData.ToArray());
+        }
+
+        if (underlyingType== null) return;
 
         var size = Marshal.SizeOf(underlyingType);
         if (rowLength < size)
@@ -30,11 +38,9 @@ public class DatReader
             return;
         }
 
-        var arrayFields = underlyingType.GetFields().Where(f => f.FieldType == typeof(TArray)).ToList();
-
         for (var i = 0; i < rowCount; i++)
         {
-            var itemData = rowsData[(i * rowLength)..((i + 1) * rowLength)];
+            var itemData = RowBytes[i].AsSpan();
             var pointer = Unsafe.AsPointer(ref MemoryMarshal.GetReference(itemData));
             var item = Marshal.PtrToStructure(new IntPtr(pointer), underlyingType);
 
