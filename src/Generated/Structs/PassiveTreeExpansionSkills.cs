@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveTreeExpansionSkills
 {
 	[FieldOffset(0)]
 	[ReferenceTable("PassiveSkills")]
-	public TRef PassiveSkillsKey;
+	public TableReference PassiveSkillsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("PassiveSkills")]
-	public TRef Mastery_PassiveSkillsKey;
+	public TableReference Mastery_PassiveSkillsKey;
 
 	[FieldOffset(32)]
 	[ReferenceTable("Tags")]
-	public TRef TagsKey;
+	public TableReference TagsKey;
 
 	[FieldOffset(48)]
 	[ReferenceTable("PassiveTreeExpansionJewelSizes")]
-	public TRef PassiveTreeExpansionJewelSizesKey;
+	public TableReference PassiveTreeExpansionJewelSizesKey;
 
 }

@@ -1,19 +1,17 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemisedNecropolisPacks
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Item;
+	public TableReference Item;
 
 	[FieldOffset(16)]
 	[ReferenceTable("NecropolisPacks")]
-	public TRef Pack;
+	public TableReference Pack;
 
 	[FieldOffset(32)]
-	public TString Description;
+	public StringReference Description;
 
 }

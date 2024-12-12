@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BuffVisualOrbTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public float Unk001;
@@ -27,10 +25,10 @@ public struct BuffVisualOrbTypes
 	public TBool Unk006;
 
 	[FieldOffset(29)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(45)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(61)]
 	public int Unk009;

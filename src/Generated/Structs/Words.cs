@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Words
@@ -11,24 +9,24 @@ public struct Words
 	public TEnum Wordlist;
 
 	[FieldOffset(4)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(12)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray SpawnWeight_Tags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SpawnWeight_Tags;
 
 	[FieldOffset(28)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight_Values;
+	public ArrayReference SpawnWeight_Values;
 
 	[FieldOffset(44)]
 	public int Unk004;
 
 	[FieldOffset(48)]
-	public TString Text2;
+	public StringReference Text2;
 
 	[FieldOffset(56)]
-	public TString Inflection;
+	public StringReference Inflection;
 
 }

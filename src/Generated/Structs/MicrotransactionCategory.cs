@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionCategory
@@ -11,6 +9,6 @@ public struct MicrotransactionCategory
 	public TEnum Id;
 
 	[FieldOffset(4)]
-	public TString Name;
+	public StringReference Name;
 
 }

@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct InfluenceAmbushVariations
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
 	public int Unk001;
@@ -16,7 +14,7 @@ public struct InfluenceAmbushVariations
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(40)]
 	public int Unk004;

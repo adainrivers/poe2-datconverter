@@ -1,44 +1,42 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistAreas
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("WorldAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray WorldAreasKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference WorldAreasKeys;
 
 	[FieldOffset(24)]
 	public int Unk002;
 
 	[FieldOffset(28)]
 	[ReferenceTable("Environments")]
-	public TRef EnvironmentsKey1;
+	public TableReference EnvironmentsKey1;
 
 	[FieldOffset(44)]
 	[ReferenceTable("Environments")]
-	public TRef EnvironmentsKey2;
+	public TableReference EnvironmentsKey2;
 
 	[FieldOffset(60)]
 	[ReferenceTable("HeistJobs")]
-	[ElementType(typeof(TRef))]
-	public TArray HeistJobsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference HeistJobsKeys;
 
 	[FieldOffset(76)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Contract_BaseItemTypesKey;
+	public TableReference Contract_BaseItemTypesKey;
 
 	[FieldOffset(92)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Blueprint_BaseItemTypesKey;
+	public TableReference Blueprint_BaseItemTypesKey;
 
 	[FieldOffset(108)]
-	public TString DGRFile;
+	public StringReference DGRFile;
 
 	[FieldOffset(116)]
 	public int Unk009;
@@ -53,29 +51,29 @@ public struct HeistAreas
 	public TBool Unk012;
 
 	[FieldOffset(126)]
-	public TString Blueprint_DDSFile;
+	public StringReference Blueprint_DDSFile;
 
 	[FieldOffset(134)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements1;
 
 	[FieldOffset(150)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements2;
 
 	[FieldOffset(166)]
 	[ReferenceTable("ClientStrings")]
-	public TRef Reward;
+	public TableReference Reward;
 
 	[FieldOffset(182)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements3;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements3;
 
 	[FieldOffset(198)]
 	[ReferenceTable("ClientStrings")]
-	public TRef RewardHardmode;
+	public TableReference RewardHardmode;
 
 }

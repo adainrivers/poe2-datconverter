@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Flasks
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(24)]
 	[ReferenceTable("FlaskType")]
@@ -28,17 +26,17 @@ public struct Flasks
 
 	[FieldOffset(40)]
 	[ReferenceTable("BuffDefinitions")]
-	public TRef BuffDefinitionsKey;
+	public TableReference BuffDefinitionsKey;
 
 	[FieldOffset(56)]
 	[ElementType(typeof(int))]
-	public TArray BuffStatValues;
+	public ArrayReference BuffStatValues;
 
 	[FieldOffset(72)]
 	public int RecoveryTime2;
 
 	[FieldOffset(76)]
 	[ElementType(typeof(int))]
-	public TArray BuffStatValues2;
+	public ArrayReference BuffStatValues2;
 
 }

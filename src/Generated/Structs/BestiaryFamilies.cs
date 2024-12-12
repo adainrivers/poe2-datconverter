@@ -1,48 +1,46 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BestiaryFamilies
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(24)]
-	public TString IconSmall;
+	public StringReference IconSmall;
 
 	[FieldOffset(32)]
-	public TString Illustration;
+	public StringReference Illustration;
 
 	[FieldOffset(40)]
-	public TString PageArt;
+	public StringReference PageArt;
 
 	[FieldOffset(48)]
-	public TString FlavourText;
+	public StringReference FlavourText;
 
 	[FieldOffset(56)]
 	public TBool Unk007;
 
 	[FieldOffset(57)]
 	[ReferenceTable("Tags")]
-	public TRef TagsKey;
+	public TableReference TagsKey;
 
 	[FieldOffset(73)]
 	public int Unk009;
 
 	[FieldOffset(77)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys;
 
 	[FieldOffset(93)]
 	[ReferenceTable("CurrencyItems")]
-	public TRef CurrencyItemsKey;
+	public TableReference CurrencyItemsKey;
 
 }

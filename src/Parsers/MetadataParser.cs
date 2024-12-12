@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Extractor.Parsers;
+namespace PoE2Converter.Parsers;
 
 public class Metadata : MetaDataNode
 {

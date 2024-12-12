@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BattlePassRewards
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BattlePasses")]
-	public TRef BattlePass;
+	public TableReference BattlePass;
 
 	[FieldOffset(16)]
 	public int RewardTier;
@@ -22,21 +20,21 @@ public struct BattlePassRewards
 	public TBool Unk004;
 
 	[FieldOffset(29)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(37)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray RewardedMTX;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference RewardedMTX;
 
 	[FieldOffset(53)]
 	public int Unk007;
 
 	[FieldOffset(57)]
-	public TString RewardDescription;
+	public StringReference RewardDescription;
 
 	[FieldOffset(65)]
-	public TString Unk009;
+	public StringReference Unk009;
 
 	[FieldOffset(73)]
 	public int Unk010;
@@ -48,10 +46,10 @@ public struct BattlePassRewards
 	public TBool Unk012;
 
 	[FieldOffset(82)]
-	public TString RewardTitle;
+	public StringReference RewardTitle;
 
 	[FieldOffset(90)]
-	public TRef Unk014;
+	public TableReference Unk014;
 
 	[FieldOffset(106)]
 	public TBool Unk015;

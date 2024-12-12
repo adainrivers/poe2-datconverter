@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct KillstreakThresholds
@@ -10,10 +8,10 @@ public struct KillstreakThresholds
 
 	[FieldOffset(4)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(20)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItemsKey;
+	public TableReference AchievementItemsKey;
 
 }

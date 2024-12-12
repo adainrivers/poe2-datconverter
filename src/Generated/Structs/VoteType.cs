@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct VoteType
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(16)]
-	public TString AcceptText;
+	public StringReference AcceptText;
 
 	[FieldOffset(24)]
-	public TString RejectText;
+	public StringReference RejectText;
 
 	[FieldOffset(32)]
 	public int Unk004;

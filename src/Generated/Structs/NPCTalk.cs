@@ -1,58 +1,56 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NPCTalk
 {
 	[FieldOffset(0)]
 	[ReferenceTable("NPCs")]
-	public TRef NPCKey;
+	public TableReference NPCKey;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(20)]
-	public TString DialogueOption;
+	public StringReference DialogueOption;
 
 	[FieldOffset(28)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(44)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(60)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(76)]
-	public TString Script;
+	public StringReference Script;
 
 	[FieldOffset(84)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudio;
+	public TableReference TextAudio;
 
 	[FieldOffset(100)]
 	[ReferenceTable("NPCTalkCategory")]
-	public TRef Category;
+	public TableReference Category;
 
 	[FieldOffset(116)]
 	[ReferenceTable("QuestRewardOffers")]
-	public TRef QuestRewardOffersKey;
+	public TableReference QuestRewardOffersKey;
 
 	[FieldOffset(132)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlag;
+	public TableReference QuestFlag;
 
 	[FieldOffset(148)]
 	[ReferenceTable("NPCTextAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray NPCTextAudioKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NPCTextAudioKeys;
 
 	[FieldOffset(164)]
-	public TString Script2;
+	public StringReference Script2;
 
 	[FieldOffset(172)]
 	public TBool Unk013;
@@ -62,18 +60,18 @@ public struct NPCTalk
 
 	[FieldOffset(174)]
 	[ElementType(typeof(int))]
-	public TArray Unk015;
+	public ArrayReference Unk015;
 
 	[FieldOffset(190)]
 	[ElementType(typeof(int))]
-	public TArray Unk016;
+	public ArrayReference Unk016;
 
 	[FieldOffset(206)]
 	public int Unk017;
 
 	[FieldOffset(210)]
 	[ElementType(typeof(int))]
-	public TArray Unk018;
+	public ArrayReference Unk018;
 
 	[FieldOffset(226)]
 	public int Unk019;
@@ -82,7 +80,7 @@ public struct NPCTalk
 	public TBool Unk020;
 
 	[FieldOffset(231)]
-	public TRef Unk021;
+	public TableReference Unk021;
 
 	[FieldOffset(247)]
 	public int Unk022;
@@ -91,16 +89,16 @@ public struct NPCTalk
 	public TBool Unk023;
 
 	[FieldOffset(252)]
-	public TString DialogueOption2;
+	public StringReference DialogueOption2;
 
 	[FieldOffset(260)]
-	public TRef Unk025;
+	public TableReference Unk025;
 
 	[FieldOffset(276)]
-	public TRef Unk026;
+	public TableReference Unk026;
 
 	[FieldOffset(292)]
-	public TString Unk027;
+	public StringReference Unk027;
 
 	[FieldOffset(300)]
 	public int Unk028;
@@ -115,13 +113,13 @@ public struct NPCTalk
 	public int Unk031;
 
 	[FieldOffset(316)]
-	public TRef Unk032;
+	public TableReference Unk032;
 
 	[FieldOffset(332)]
 	public int Unk033;
 
 	[FieldOffset(336)]
-	public TRef Unk034;
+	public TableReference Unk034;
 
 	[FieldOffset(352)]
 	public TBool Unk035;
@@ -131,6 +129,6 @@ public struct NPCTalk
 
 	[FieldOffset(357)]
 	[ReferenceTable("NPCTalk")]
-	public TRef Unk037;
+	public TableReference Unk037;
 
 }

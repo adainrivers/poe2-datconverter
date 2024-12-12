@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AreaInfluenceDoodads
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey;
+	public TableReference StatsKey;
 
 	[FieldOffset(16)]
 	public int StatValue;
@@ -16,8 +14,8 @@ public struct AreaInfluenceDoodads
 	public float Unk002;
 
 	[FieldOffset(24)]
-	[ElementType(typeof(TString))]
-	public TArray AOFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference AOFiles;
 
 	[FieldOffset(40)]
 	public int Unk004;
@@ -26,10 +24,10 @@ public struct AreaInfluenceDoodads
 	public TBool Unk005;
 
 	[FieldOffset(45)]
-	public TString Unk006;
+	public StringReference Unk006;
 
 	[FieldOffset(53)]
 	[ReferenceTable("Stats")]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 }

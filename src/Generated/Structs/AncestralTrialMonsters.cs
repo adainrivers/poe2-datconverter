@@ -1,27 +1,25 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AncestralTrialMonsters
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Monster;
+	public TableReference Monster;
 
 	[FieldOffset(32)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(48)]
 	public int Unk003;
 
 	[FieldOffset(52)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievement;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievement;
 
 	[FieldOffset(68)]
 	public TBool Unk005;

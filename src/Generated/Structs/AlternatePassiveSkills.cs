@@ -1,28 +1,26 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AlternatePassiveSkills
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("AlternateTreeVersions")]
-	public TRef AlternateTreeVersionsKey;
+	public TableReference AlternateTreeVersionsKey;
 
 	[FieldOffset(24)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(32)]
 	[ElementType(typeof(int))]
-	public TArray PassiveType;
+	public ArrayReference PassiveType;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(64)]
 	public int Stat1Min;
@@ -73,15 +71,15 @@ public struct AlternatePassiveSkills
 	public int RandomMax;
 
 	[FieldOffset(128)]
-	public TString FlavourText;
+	public StringReference FlavourText;
 
 	[FieldOffset(136)]
-	public TString DDSIcon;
+	public StringReference DDSIcon;
 
 	[FieldOffset(144)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 	[FieldOffset(160)]
 	public int Unk024;

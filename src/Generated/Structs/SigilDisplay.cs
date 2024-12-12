@@ -1,31 +1,29 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SigilDisplay
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Stats")]
-	public TRef Active_StatsKey;
+	public TableReference Active_StatsKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Stats")]
-	public TRef Inactive_StatsKey;
+	public TableReference Inactive_StatsKey;
 
 	[FieldOffset(40)]
-	public TString DDSFile;
+	public StringReference DDSFile;
 
 	[FieldOffset(48)]
-	public TString Inactive_ArtFile;
+	public StringReference Inactive_ArtFile;
 
 	[FieldOffset(56)]
-	public TString Active_ArtFile;
+	public StringReference Active_ArtFile;
 
 	[FieldOffset(64)]
-	public TString Frame_ArtFile;
+	public StringReference Frame_ArtFile;
 
 }

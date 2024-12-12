@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Rarity
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int MinMods;
@@ -27,6 +25,6 @@ public struct Rarity
 	public int MaxSuffix;
 
 	[FieldOffset(32)]
-	public TString Color;
+	public StringReference Color;
 
 }

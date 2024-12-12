@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapPurchaseCosts
@@ -10,9 +8,9 @@ public struct MapPurchaseCosts
 
 	[FieldOffset(4)]
 	[ReferenceTable("ItemCosts")]
-	public TRef Cost;
+	public TableReference Cost;
 
 	[FieldOffset(20)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 }

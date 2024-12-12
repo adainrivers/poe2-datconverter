@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LeagueProgressQuestFlags
 {
 	[FieldOffset(0)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlag;
+	public TableReference QuestFlag;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ClientStrings")]
-	public TRef CompletionString;
+	public TableReference CompletionString;
 
 	[FieldOffset(32)]
-	public TString Boss;
+	public StringReference Boss;
 
 	[FieldOffset(40)]
 	public TBool Unk003;

@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistIntroAreas
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("HeistAreas")]
-	public TRef HeistAreasKey;
+	public TableReference HeistAreasKey;
 
 	[FieldOffset(24)]
 	public int Unk002;
@@ -19,7 +17,7 @@ public struct HeistIntroAreas
 	public int Unk003;
 
 	[FieldOffset(32)]
-	public TString DGRFile;
+	public StringReference DGRFile;
 
 	[FieldOffset(40)]
 	public int Unk005;

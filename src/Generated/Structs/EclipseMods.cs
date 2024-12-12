@@ -1,25 +1,23 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct EclipseMods
 {
 	[FieldOffset(0)]
-	public TString Key;
+	public StringReference Key;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray SpawnWeight_TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SpawnWeight_TagsKeys;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight_Values;
+	public ArrayReference SpawnWeight_Values;
 
 	[FieldOffset(40)]
 	[ReferenceTable("Mods")]
-	public TRef ModsKey;
+	public TableReference ModsKey;
 
 	[FieldOffset(56)]
 	public int MinLevel;

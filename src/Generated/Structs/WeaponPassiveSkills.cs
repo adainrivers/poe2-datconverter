@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct WeaponPassiveSkills
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Tier;
 
 	[FieldOffset(12)]
 	[ReferenceTable("Mods")]
-	public TRef Mod;
+	public TableReference Mod;
 
 	[FieldOffset(28)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(44)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(60)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(68)]
 	[ReferenceTable("WeaponPassiveSkillTypes")]
-	public TRef Type;
+	public TableReference Type;
 
 	[FieldOffset(84)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements;
 
 }

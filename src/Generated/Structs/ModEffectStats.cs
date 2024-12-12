@@ -1,18 +1,16 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ModEffectStats
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey;
+	public TableReference StatsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TagsKeys;
 
 	[FieldOffset(32)]
 	public TBool Unk002;

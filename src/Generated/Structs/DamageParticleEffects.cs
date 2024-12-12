@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DamageParticleEffects
@@ -14,15 +12,15 @@ public struct DamageParticleEffects
 	public int Variation;
 
 	[FieldOffset(8)]
-	public TString PETFile;
+	public StringReference PETFile;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ImpactSoundData")]
-	public TRef ImpactSoundData1;
+	public TableReference ImpactSoundData1;
 
 	[FieldOffset(32)]
 	[ReferenceTable("ImpactSoundData")]
-	public TRef ImpactSoundData2;
+	public TableReference ImpactSoundData2;
 
 	[FieldOffset(48)]
 	public int Unk005;

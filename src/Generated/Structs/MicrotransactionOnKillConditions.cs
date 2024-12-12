@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionOnKillConditions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ElementType(typeof(int))]
-	public TArray Unk001;
+	public ArrayReference Unk001;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(56)]
 	public int Unk004;
@@ -28,7 +26,7 @@ public struct MicrotransactionOnKillConditions
 
 	[FieldOffset(61)]
 	[ElementType(typeof(int))]
-	public TArray Unk006;
+	public ArrayReference Unk006;
 
 	[FieldOffset(77)]
 	public int Unk007;
@@ -43,10 +41,10 @@ public struct MicrotransactionOnKillConditions
 	public TBool Unk010;
 
 	[FieldOffset(90)]
-	public TString Unk011;
+	public StringReference Unk011;
 
 	[FieldOffset(98)]
-	[ElementType(typeof(TString))]
-	public TArray Unk012;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk012;
 
 }

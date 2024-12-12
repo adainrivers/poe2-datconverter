@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GiftWrapArtVariations
@@ -16,6 +14,6 @@ public struct GiftWrapArtVariations
 
 	[FieldOffset(12)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Item;
+	public TableReference Item;
 
 }

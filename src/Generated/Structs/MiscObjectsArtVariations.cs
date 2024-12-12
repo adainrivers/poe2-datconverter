@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MiscObjectsArtVariations
 {
 	[FieldOffset(0)]
-	public TString Unk000;
+	public StringReference Unk000;
 
 	[FieldOffset(8)]
 	[ElementType(typeof(int))]
-	public TArray Unk001;
+	public ArrayReference Unk001;
 
 	[FieldOffset(24)]
 	public int Unk002;
@@ -19,6 +17,6 @@ public struct MiscObjectsArtVariations
 	public int Unk003;
 
 	[FieldOffset(32)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 }

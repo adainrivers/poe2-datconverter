@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DelveUpgrades
@@ -13,12 +11,12 @@ public struct DelveUpgrades
 
 	[FieldOffset(8)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray StatValues;
+	public ArrayReference StatValues;
 
 	[FieldOffset(40)]
 	public int Cost;
@@ -28,7 +26,7 @@ public struct DelveUpgrades
 
 	[FieldOffset(48)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItemsKey;
+	public TableReference AchievementItemsKey;
 
 	[FieldOffset(64)]
 	public int Unk007;

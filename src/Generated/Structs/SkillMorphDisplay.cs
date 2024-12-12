@@ -1,34 +1,32 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SkillMorphDisplay
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk001;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk001;
 
 	[FieldOffset(32)]
-	[ElementType(typeof(TString))]
-	public TArray DDSFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference DDSFiles;
 
 	[FieldOffset(48)]
 	public int Unk003;
 
 	[FieldOffset(52)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(68)]
 	public int Unk005;
 
 	[FieldOffset(72)]
 	[ElementType(typeof(float))]
-	public TArray Unk006;
+	public ArrayReference Unk006;
 
 	[FieldOffset(88)]
 	public TBool Unk007;

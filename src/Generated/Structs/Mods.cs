@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Mods
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public short HASH16;
 
 	[FieldOffset(10)]
 	[ReferenceTable("ModType")]
-	public TRef ModTypeKey;
+	public TableReference ModTypeKey;
 
 	[FieldOffset(26)]
 	public int Level;
 
 	[FieldOffset(30)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey1;
+	public TableReference StatsKey1;
 
 	[FieldOffset(46)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey2;
+	public TableReference StatsKey2;
 
 	[FieldOffset(62)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey3;
+	public TableReference StatsKey3;
 
 	[FieldOffset(78)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey4;
+	public TableReference StatsKey4;
 
 	[FieldOffset(94)]
 	[ReferenceTable("ModDomains")]
@@ -40,7 +38,7 @@ public struct Mods
 	public TEnum Domain;
 
 	[FieldOffset(98)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(106)]
 	[ReferenceTable("ModGenerationType")]
@@ -49,8 +47,8 @@ public struct Mods
 
 	[FieldOffset(110)]
 	[ReferenceTable("ModFamily")]
-	[ElementType(typeof(TRef))]
-	public TArray Families;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Families;
 
 	[FieldOffset(126)]
 	public int Stat1Min;
@@ -78,39 +76,39 @@ public struct Mods
 
 	[FieldOffset(158)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray SpawnWeight_TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SpawnWeight_TagsKeys;
 
 	[FieldOffset(174)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight_Values;
+	public ArrayReference SpawnWeight_Values;
 
 	[FieldOffset(190)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TagsKeys;
 
 	[FieldOffset(206)]
 	[ReferenceTable("GrantedEffectsPerLevel")]
-	[ElementType(typeof(TRef))]
-	public TArray GrantedEffectsPerLevelKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference GrantedEffectsPerLevelKeys;
 
 	[FieldOffset(222)]
 	[ElementType(typeof(int))]
-	public TArray Unk024;
+	public ArrayReference Unk024;
 
 	[FieldOffset(238)]
-	public TString MonsterMetadata;
+	public StringReference MonsterMetadata;
 
 	[FieldOffset(246)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterKillAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterKillAchievements;
 
 	[FieldOffset(262)]
 	[ReferenceTable("ModType")]
-	[ElementType(typeof(TRef))]
-	public TArray ChestModType;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ChestModType;
 
 	[FieldOffset(278)]
 	public int Stat5Min;
@@ -120,31 +118,31 @@ public struct Mods
 
 	[FieldOffset(286)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey5;
+	public TableReference StatsKey5;
 
 	[FieldOffset(302)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray FullAreaClear_AchievementItemsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference FullAreaClear_AchievementItemsKey;
 
 	[FieldOffset(318)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKey;
 
 	[FieldOffset(334)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray GenerationWeight_TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference GenerationWeight_TagsKeys;
 
 	[FieldOffset(350)]
 	[ElementType(typeof(int))]
-	public TArray GenerationWeight_Values;
+	public ArrayReference GenerationWeight_Values;
 
 	[FieldOffset(366)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray ModifyMapsAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModifyMapsAchievements;
 
 	[FieldOffset(382)]
 	public TBool IsEssenceOnlyModifier;
@@ -157,7 +155,7 @@ public struct Mods
 
 	[FieldOffset(391)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey6;
+	public TableReference StatsKey6;
 
 	[FieldOffset(407)]
 	public int MaxLevel;
@@ -167,19 +165,19 @@ public struct Mods
 
 	[FieldOffset(412)]
 	[ReferenceTable("ItemClasses")]
-	[ElementType(typeof(TRef))]
-	public TArray CraftingItemClassRestrictions;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CraftingItemClassRestrictions;
 
 	[FieldOffset(428)]
-	public TString MonsterOnDeath;
+	public StringReference MonsterOnDeath;
 
 	[FieldOffset(436)]
 	public int Unk044;
 
 	[FieldOffset(440)]
 	[ReferenceTable("GrantedEffectsPerLevel")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk045;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk045;
 
 	[FieldOffset(456)]
 	public int Heist_SubStatValue1;
@@ -189,11 +187,11 @@ public struct Mods
 
 	[FieldOffset(464)]
 	[ReferenceTable("Stats")]
-	public TRef Heist_StatsKey0;
+	public TableReference Heist_StatsKey0;
 
 	[FieldOffset(480)]
 	[ReferenceTable("Stats")]
-	public TRef Heist_StatsKey1;
+	public TableReference Heist_StatsKey1;
 
 	[FieldOffset(496)]
 	public int Heist_AddStatValue1;
@@ -208,8 +206,8 @@ public struct Mods
 
 	[FieldOffset(508)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray ImplicitTagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ImplicitTagsKeys;
 
 	[FieldOffset(524)]
 	public TBool Unk054;
@@ -264,25 +262,25 @@ public struct Mods
 
 	[FieldOffset(589)]
 	[ReferenceTable("BuffTemplates")]
-	public TRef BuffTemplate;
+	public TableReference BuffTemplate;
 
 	[FieldOffset(605)]
 	[ReferenceTable("Mods")]
-	public TRef ArchnemesisMinionMod;
+	public TableReference ArchnemesisMinionMod;
 
 	[FieldOffset(613)]
 	public int HASH32;
 
 	[FieldOffset(617)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk074;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk074;
 
 	[FieldOffset(633)]
 	public int Unk075;
 
 	[FieldOffset(637)]
 	[ReferenceTable("GrantedEffectsPerLevel")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk076;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk076;
 
 }

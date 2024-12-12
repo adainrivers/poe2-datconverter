@@ -1,17 +1,15 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PlayerConditions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BuffDefinitions")]
-	[ElementType(typeof(TRef))]
-	public TArray BuffDefinitionsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BuffDefinitionsKeys;
 
 	[FieldOffset(24)]
 	public TBool Unk002;
@@ -21,12 +19,12 @@ public struct PlayerConditions
 
 	[FieldOffset(29)]
 	[ReferenceTable("Characters")]
-	public TRef CharactersKey;
+	public TableReference CharactersKey;
 
 	[FieldOffset(45)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(61)]
 	public TBool Unk006;
@@ -35,8 +33,8 @@ public struct PlayerConditions
 	public int StatValue;
 
 	[FieldOffset(66)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk008;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk008;
 
 	[FieldOffset(82)]
 	public TBool Unk009;

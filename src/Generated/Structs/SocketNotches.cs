@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SocketNotches
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
-	public TString RedSocketImage;
+	public StringReference RedSocketImage;
 
 	[FieldOffset(24)]
-	public TString BlueSocketImage;
+	public StringReference BlueSocketImage;
 
 	[FieldOffset(32)]
-	public TString GreenSocketImage;
+	public StringReference GreenSocketImage;
 
 }

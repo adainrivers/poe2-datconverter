@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HideoutDoodads
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
-	[ElementType(typeof(TString))]
-	public TArray Variation_AOFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Variation_AOFiles;
 
 	[FieldOffset(32)]
 	public TBool IsNonMasterDoodad;
 
 	[FieldOffset(33)]
-	public TString InheritsFrom;
+	public StringReference InheritsFrom;
 
 	[FieldOffset(41)]
 	public TBool Unk004;
@@ -27,18 +25,18 @@ public struct HideoutDoodads
 
 	[FieldOffset(43)]
 	[ReferenceTable("HideoutDoodadTags")]
-	[ElementType(typeof(TRef))]
-	public TArray Tags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tags;
 
 	[FieldOffset(59)]
 	public TBool Unk007;
 
 	[FieldOffset(60)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(76)]
 	[ReferenceTable("HideoutDoodadCategory")]
-	public TRef Category;
+	public TableReference Category;
 
 	[FieldOffset(92)]
 	public int Unk010;
@@ -47,17 +45,17 @@ public struct HideoutDoodads
 	public TBool Unk011;
 
 	[FieldOffset(97)]
-	public TRef Unk012;
+	public TableReference Unk012;
 
 	[FieldOffset(113)]
 	public TBool Unk013;
 
 	[FieldOffset(114)]
-	public TRef Unk014;
+	public TableReference Unk014;
 
 	[FieldOffset(130)]
-	[ElementType(typeof(TString))]
-	public TArray Unk015;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk015;
 
 	[FieldOffset(146)]
 	public int Unk016;

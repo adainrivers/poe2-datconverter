@@ -1,34 +1,32 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct UniqueMaps
 {
 	[FieldOffset(0)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef ItemVisualIdentityKey;
+	public TableReference ItemVisualIdentityKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(32)]
 	[ReferenceTable("Words")]
-	public TRef WordsKey;
+	public TableReference WordsKey;
 
 	[FieldOffset(48)]
 	[ReferenceTable("FlavourText")]
-	public TRef FlavourTextKey;
+	public TableReference FlavourTextKey;
 
 	[FieldOffset(64)]
 	public TBool HasGuildCharacter;
 
 	[FieldOffset(65)]
-	public TString GuildCharacter;
+	public StringReference GuildCharacter;
 
 	[FieldOffset(73)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(81)]
 	public TBool IsDropDisabled;

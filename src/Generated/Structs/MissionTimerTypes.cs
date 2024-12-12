@@ -1,31 +1,29 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MissionTimerTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Image;
+	public StringReference Image;
 
 	[FieldOffset(16)]
-	public TString BackgroundImage;
+	public StringReference BackgroundImage;
 
 	[FieldOffset(24)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk003;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk003;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(float))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(56)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(72)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 }

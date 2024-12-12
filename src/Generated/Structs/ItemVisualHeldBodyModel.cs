@@ -1,54 +1,52 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemVisualHeldBodyModel
 {
 	[FieldOffset(0)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef ItemVisualIdentity;
+	public TableReference ItemVisualIdentity;
 
 	[FieldOffset(16)]
-	public TString MarauderAnimatedObject;
+	public StringReference MarauderAnimatedObject;
 
 	[FieldOffset(24)]
-	public TString RangerAnimatedObject;
+	public StringReference RangerAnimatedObject;
 
 	[FieldOffset(32)]
-	public TString WitchAnimatedObject;
+	public StringReference WitchAnimatedObject;
 
 	[FieldOffset(40)]
-	public TString DuelistAnimatedObject;
+	public StringReference DuelistAnimatedObject;
 
 	[FieldOffset(48)]
-	public TString TemplarAnimatedObject;
+	public StringReference TemplarAnimatedObject;
 
 	[FieldOffset(56)]
-	public TString ShadowAnimatedObject;
+	public StringReference ShadowAnimatedObject;
 
 	[FieldOffset(64)]
-	public TString ScionAnimatedObject;
+	public StringReference ScionAnimatedObject;
 
 	[FieldOffset(72)]
-	public TString MarauderBone;
+	public StringReference MarauderBone;
 
 	[FieldOffset(80)]
-	public TString RangerBone;
+	public StringReference RangerBone;
 
 	[FieldOffset(88)]
-	public TString WitchBone;
+	public StringReference WitchBone;
 
 	[FieldOffset(96)]
-	public TString DuelistBone;
+	public StringReference DuelistBone;
 
 	[FieldOffset(104)]
-	public TString TemplarBone;
+	public StringReference TemplarBone;
 
 	[FieldOffset(112)]
-	public TString ShadowBone;
+	public StringReference ShadowBone;
 
 	[FieldOffset(120)]
-	public TString ScionBone;
+	public StringReference ScionBone;
 
 }

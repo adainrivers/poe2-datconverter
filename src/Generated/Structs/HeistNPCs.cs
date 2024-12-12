@@ -1,47 +1,45 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistNPCs
 {
 	[FieldOffset(0)]
 	[ReferenceTable("NPCs")]
-	public TRef NPCsKey;
+	public TableReference NPCsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(32)]
 	[ReferenceTable("HeistJobs")]
-	[ElementType(typeof(TRef))]
-	public TArray SkillLevel_HeistJobsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SkillLevel_HeistJobsKeys;
 
 	[FieldOffset(48)]
-	public TString PortraitFile;
+	public StringReference PortraitFile;
 
 	[FieldOffset(56)]
 	[ReferenceTable("HeistNPCStats")]
-	[ElementType(typeof(TRef))]
-	public TArray HeistNPCStatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference HeistNPCStatsKeys;
 
 	[FieldOffset(72)]
 	[ElementType(typeof(float))]
-	public TArray StatValues;
+	public ArrayReference StatValues;
 
 	[FieldOffset(88)]
 	public float Unk006;
 
 	[FieldOffset(92)]
 	[ElementType(typeof(int))]
-	public TArray SkillLevel_Values;
+	public ArrayReference SkillLevel_Values;
 
 	[FieldOffset(108)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(116)]
-	public TString SilhouetteFile;
+	public StringReference SilhouetteFile;
 
 	[FieldOffset(124)]
 	public int Unk010;
@@ -51,32 +49,32 @@ public struct HeistNPCs
 
 	[FieldOffset(132)]
 	[ReferenceTable("HeistNPCs")]
-	public TRef HeistNPCsKey;
+	public TableReference HeistNPCsKey;
 
 	[FieldOffset(140)]
 	[ElementType(typeof(float))]
-	public TArray StatValues2;
+	public ArrayReference StatValues2;
 
 	[FieldOffset(156)]
 	[ReferenceTable("NPCs")]
-	public TRef Ally_NPCsKey;
+	public TableReference Ally_NPCsKey;
 
 	[FieldOffset(172)]
-	public TString ActiveNPCIcon;
+	public StringReference ActiveNPCIcon;
 
 	[FieldOffset(180)]
 	[ReferenceTable("HeistJobs")]
-	public TRef HeistJobsKey;
+	public TableReference HeistJobsKey;
 
 	[FieldOffset(196)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Equip_AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Equip_AchievementItemsKeys;
 
 	[FieldOffset(212)]
-	public TString AOFile;
+	public StringReference AOFile;
 
 	[FieldOffset(220)]
-	public TRef Unk019;
+	public TableReference Unk019;
 
 }

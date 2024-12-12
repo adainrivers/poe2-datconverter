@@ -1,36 +1,34 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SanctumFloors
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("WorldAreas")]
-	public TRef Area;
+	public TableReference Area;
 
 	[FieldOffset(24)]
 	[ReferenceTable("ClientStrings")]
-	public TRef Title;
+	public TableReference Title;
 
 	[FieldOffset(40)]
-	public TString RoomIcon;
+	public StringReference RoomIcon;
 
 	[FieldOffset(48)]
-	public TString BossIcon;
+	public StringReference BossIcon;
 
 	[FieldOffset(56)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(64)]
 	[ReferenceTable("ClientStrings")]
-	public TRef Summary;
+	public TableReference Summary;
 
 	[FieldOffset(80)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Itemised;
+	public TableReference Itemised;
 
 }

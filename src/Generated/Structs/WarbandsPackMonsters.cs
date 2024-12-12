@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct WarbandsPackMonsters
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Unk001;
@@ -28,46 +26,46 @@ public struct WarbandsPackMonsters
 
 	[FieldOffset(20)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray Tier4_MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tier4_MonsterVarietiesKeys;
 
 	[FieldOffset(36)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray Tier3_MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tier3_MonsterVarietiesKeys;
 
 	[FieldOffset(52)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray Tier2_MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tier2_MonsterVarietiesKeys;
 
 	[FieldOffset(68)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray Tier1_MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tier1_MonsterVarietiesKeys;
 
 	[FieldOffset(84)]
-	public TString Tier1Name;
+	public StringReference Tier1Name;
 
 	[FieldOffset(92)]
-	public TString Tier2Name;
+	public StringReference Tier2Name;
 
 	[FieldOffset(100)]
-	public TString Tier3Name;
+	public StringReference Tier3Name;
 
 	[FieldOffset(108)]
-	public TString Tier4Name;
+	public StringReference Tier4Name;
 
 	[FieldOffset(116)]
-	public TString Tier1Art;
+	public StringReference Tier1Art;
 
 	[FieldOffset(124)]
-	public TString Tier2Art;
+	public StringReference Tier2Art;
 
 	[FieldOffset(132)]
-	public TString Tier3Art;
+	public StringReference Tier3Art;
 
 	[FieldOffset(140)]
-	public TString Tier4Art;
+	public StringReference Tier4Art;
 
 }

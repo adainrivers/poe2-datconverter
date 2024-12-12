@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NPCDialogueStyles
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString HeaderBaseFile;
+	public StringReference HeaderBaseFile;
 
 	[FieldOffset(16)]
-	public TString ButtomFile;
+	public StringReference ButtomFile;
 
 	[FieldOffset(24)]
-	[ElementType(typeof(TString))]
-	public TArray BannerFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference BannerFiles;
 
 	[FieldOffset(40)]
-	[ElementType(typeof(TString))]
-	public TArray HeaderFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference HeaderFiles;
 
 	[FieldOffset(56)]
 	public int Unk005;
@@ -39,22 +37,22 @@ public struct NPCDialogueStyles
 
 	[FieldOffset(76)]
 	[ElementType(typeof(int))]
-	public TArray Unk010;
+	public ArrayReference Unk010;
 
 	[FieldOffset(92)]
 	[ReferenceTable("NPCDialogueStyles")]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(100)]
-	public TString Unk012;
+	public StringReference Unk012;
 
 	[FieldOffset(108)]
 	[ElementType(typeof(int))]
-	public TArray Unk013;
+	public ArrayReference Unk013;
 
 	[FieldOffset(124)]
 	[ElementType(typeof(int))]
-	public TArray Unk014;
+	public ArrayReference Unk014;
 
 	[FieldOffset(140)]
 	public int Unk015;
@@ -66,10 +64,10 @@ public struct NPCDialogueStyles
 	public float Unk017;
 
 	[FieldOffset(152)]
-	public TString Unk018;
+	public StringReference Unk018;
 
 	[FieldOffset(160)]
-	public TString Unk019;
+	public StringReference Unk019;
 
 	[FieldOffset(168)]
 	public int Unk020;

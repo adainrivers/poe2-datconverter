@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Pet
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(24)]
 	public int HASH16;
@@ -29,15 +27,15 @@ public struct Pet
 
 	[FieldOffset(38)]
 	[ElementType(typeof(int))]
-	public TArray Unk007;
+	public ArrayReference Unk007;
 
 	[FieldOffset(54)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(70)]
 	[ReferenceTable("GrantedEffectsPerLevel")]
-	[ElementType(typeof(TRef))]
-	public TArray Skills;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Skills;
 
 	[FieldOffset(86)]
 	public int Unk010;
@@ -46,7 +44,7 @@ public struct Pet
 	public TBool Unk011;
 
 	[FieldOffset(91)]
-	public TRef Unk012;
+	public TableReference Unk012;
 
 	[FieldOffset(107)]
 	public TBool Unk013;

@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Ascendancy
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int ClassNo;
 
 	[FieldOffset(12)]
 	[ReferenceTable("Characters")]
-	[ElementType(typeof(TRef))]
-	public TArray Characters;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Characters;
 
 	[FieldOffset(28)]
-	public TString CoordinateRect;
+	public StringReference CoordinateRect;
 
 	[FieldOffset(36)]
-	public TString RGBFlavourTextColour;
+	public StringReference RGBFlavourTextColour;
 
 	[FieldOffset(44)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(52)]
-	public TString FlavourText;
+	public StringReference FlavourText;
 
 	[FieldOffset(60)]
-	public TString OGGFile;
+	public StringReference OGGFile;
 
 	[FieldOffset(68)]
-	public TString PassiveTreeImage;
+	public StringReference PassiveTreeImage;
 
 	[FieldOffset(76)]
 	public int Unk009;
@@ -41,6 +39,6 @@ public struct Ascendancy
 	public int Unk010;
 
 	[FieldOffset(84)]
-	public TString BackgroundImage;
+	public StringReference BackgroundImage;
 
 }

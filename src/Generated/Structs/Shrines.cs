@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Shrines
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int TimeoutInSeconds;
@@ -15,7 +13,7 @@ public struct Shrines
 	public TBool ChargesShared;
 
 	[FieldOffset(13)]
-	public TRef Player_ShrineBuffsKey;
+	public TableReference Player_ShrineBuffsKey;
 
 	[FieldOffset(29)]
 	public int Unk004;
@@ -24,15 +22,15 @@ public struct Shrines
 	public int Unk005;
 
 	[FieldOffset(37)]
-	public TRef Monster_ShrineBuffsKey;
+	public TableReference Monster_ShrineBuffsKey;
 
 	[FieldOffset(53)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef SummonMonster_MonsterVarietiesKey;
+	public TableReference SummonMonster_MonsterVarietiesKey;
 
 	[FieldOffset(69)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef SummonPlayer_MonsterVarietiesKey;
+	public TableReference SummonPlayer_MonsterVarietiesKey;
 
 	[FieldOffset(85)]
 	public int Unk009;
@@ -42,15 +40,15 @@ public struct Shrines
 
 	[FieldOffset(93)]
 	[ReferenceTable("ShrineSounds")]
-	public TRef ShrineSoundsKey;
+	public TableReference ShrineSoundsKey;
 
 	[FieldOffset(109)]
 	public TBool Unk012;
 
 	[FieldOffset(110)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 	[FieldOffset(126)]
 	public TBool IsPVPOnly;
@@ -63,20 +61,20 @@ public struct Shrines
 
 	[FieldOffset(129)]
 	[ReferenceTable("ClientStrings")]
-	public TRef Description;
+	public TableReference Description;
 
 	[FieldOffset(145)]
 	[ReferenceTable("ClientStrings")]
-	public TRef Name;
+	public TableReference Name;
 
 	[FieldOffset(161)]
 	public TBool Unk019;
 
 	[FieldOffset(162)]
-	public TRef Unk020;
+	public TableReference Unk020;
 
 	[FieldOffset(178)]
 	[ElementType(typeof(int))]
-	public TArray Unk021;
+	public ArrayReference Unk021;
 
 }

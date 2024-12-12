@@ -1,48 +1,46 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LakeRooms
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	[ElementType(typeof(TString))]
-	public TArray ARMFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference ARMFiles;
 
 	[FieldOffset(24)]
-	public TString Script;
+	public StringReference Script;
 
 	[FieldOffset(32)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Stats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Stats;
 
 	[FieldOffset(64)]
 	[ElementType(typeof(int))]
-	public TArray StatsValues;
+	public ArrayReference StatsValues;
 
 	[FieldOffset(80)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(88)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(96)]
 	public int Type;
 
 	[FieldOffset(100)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldArea;
+	public TableReference WorldArea;
 
 	[FieldOffset(116)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(124)]
 	public int Unk011;
@@ -51,29 +49,29 @@ public struct LakeRooms
 	public int MinLevel;
 
 	[FieldOffset(132)]
-	public TRef Unk013;
+	public TableReference Unk013;
 
 	[FieldOffset(148)]
 	public TBool Unk014;
 
 	[FieldOffset(149)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray ExtraStats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ExtraStats;
 
 	[FieldOffset(165)]
 	[ElementType(typeof(int))]
-	public TArray ExtraStatsValues;
+	public ArrayReference ExtraStatsValues;
 
 	[FieldOffset(181)]
-	public TString ReminderText;
+	public StringReference ReminderText;
 
 	[FieldOffset(189)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudio;
+	public TableReference TextAudio;
 
 	[FieldOffset(205)]
-	public TRef Unk019;
+	public TableReference Unk019;
 
 	[FieldOffset(221)]
 	public TBool Unk020;

@@ -1,21 +1,21 @@
 using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct UniqueStashLayout
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Words")]
-	public TRef WordsKey;
+	public TableReference WordsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef ItemVisualIdentityKey;
+	public TableReference ItemVisualIdentityKey;
 
 	[FieldOffset(32)]
 	[ReferenceTable("UniqueStashTypes")]
-	public TRef UniqueStashTypesKey;
+	public TableReference UniqueStashTypesKey;
 
 	[FieldOffset(48)]
 	public int Unk003;
@@ -37,13 +37,13 @@ public struct UniqueStashLayout
 
 	[FieldOffset(66)]
 	[ReferenceTable("UniqueStashLayout")]
-	public TRef RenamedVersion;
+	public TableReference RenamedVersion;
 
-	[FieldOffset(74)]
-	[ReferenceTable("UniqueStashLayout")]
-	public TRef BaseVersion;
+	//[FieldOffset(74)]
+	//[ReferenceTable("UniqueStashLayout")]
+	//public TableReference BaseVersion;
 
-	[FieldOffset(82)]
+	[FieldOffset(80)]
 	public TBool IsAlternateArt;
 
 }

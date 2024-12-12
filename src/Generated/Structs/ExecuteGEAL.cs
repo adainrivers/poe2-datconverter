@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExecuteGEAL
@@ -13,8 +11,8 @@ public struct ExecuteGEAL
 
 	[FieldOffset(8)]
 	[ReferenceTable("MiscAnimated")]
-	[ElementType(typeof(TRef))]
-	public TArray MiscAnimated;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MiscAnimated;
 
 	[FieldOffset(24)]
 	public int Unk003;
@@ -48,7 +46,7 @@ public struct ExecuteGEAL
 
 	[FieldOffset(58)]
 	[ElementType(typeof(int))]
-	public TArray Unk013;
+	public ArrayReference Unk013;
 
 	[FieldOffset(74)]
 	public TBool Unk014;
@@ -57,13 +55,13 @@ public struct ExecuteGEAL
 	public int Unk015;
 
 	[FieldOffset(79)]
-	public TRef Unk016;
+	public TableReference Unk016;
 
 	[FieldOffset(95)]
 	public TBool Unk017;
 
 	[FieldOffset(96)]
-	public TString Script;
+	public StringReference Script;
 
 	[FieldOffset(104)]
 	public TBool Unk019;
@@ -87,19 +85,19 @@ public struct ExecuteGEAL
 	public int Unk025;
 
 	[FieldOffset(123)]
-	[ElementType(typeof(TString))]
-	public TArray MetadataIDs;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference MetadataIDs;
 
 	[FieldOffset(139)]
-	public TString ScriptCommand;
+	public StringReference ScriptCommand;
 
 	[FieldOffset(147)]
 	[ElementType(typeof(int))]
-	public TArray Unk028;
+	public ArrayReference Unk028;
 
 	[FieldOffset(163)]
 	[ElementType(typeof(int))]
-	public TArray Unk029;
+	public ArrayReference Unk029;
 
 	[FieldOffset(179)]
 	public int Unk030;
@@ -109,7 +107,7 @@ public struct ExecuteGEAL
 
 	[FieldOffset(184)]
 	[ElementType(typeof(int))]
-	public TArray Unk032;
+	public ArrayReference Unk032;
 
 	[FieldOffset(200)]
 	public TBool Unk033;

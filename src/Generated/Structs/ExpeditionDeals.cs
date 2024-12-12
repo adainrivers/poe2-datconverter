@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionDeals
@@ -9,25 +7,25 @@ public struct ExpeditionDeals
 	public int Id;
 
 	[FieldOffset(4)]
-	public TString Function;
+	public StringReference Function;
 
 	[FieldOffset(12)]
-	public TString Arguments;
+	public StringReference Arguments;
 
 	[FieldOffset(20)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudio;
+	public TableReference TextAudio;
 
 	[FieldOffset(36)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(44)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray BuyAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BuyAchievements;
 
 	[FieldOffset(60)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(76)]
 	[ReferenceTable("ExpeditionDealFamilies")]

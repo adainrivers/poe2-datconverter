@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BlightEncounterWaves
 {
 	[FieldOffset(0)]
-	public TString MonsterSpawnerId;
+	public StringReference MonsterSpawnerId;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BlightEncounterTypes")]
-	public TRef EncounterType;
+	public TableReference EncounterType;
 
 	[FieldOffset(24)]
 	public int Unk002;

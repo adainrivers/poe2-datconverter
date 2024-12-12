@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SkillTrapVariations
@@ -9,10 +7,10 @@ public struct SkillTrapVariations
 	public int Id;
 
 	[FieldOffset(4)]
-	public TString Metadata;
+	public StringReference Metadata;
 
 	[FieldOffset(12)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated;
+	public TableReference MiscAnimated;
 
 }

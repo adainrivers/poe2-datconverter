@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SummonedSpecificMonsters
@@ -10,13 +8,13 @@ public struct SummonedSpecificMonsters
 
 	[FieldOffset(4)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(20)]
 	public int Unk002;
 
 	[FieldOffset(24)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(40)]
 	public TBool Unk004;
@@ -34,10 +32,10 @@ public struct SummonedSpecificMonsters
 	public TBool Unk008;
 
 	[FieldOffset(51)]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 	[FieldOffset(67)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(83)]
 	public int Unk011;
@@ -49,7 +47,7 @@ public struct SummonedSpecificMonsters
 	public int Unk013;
 
 	[FieldOffset(92)]
-	public TString Unk014;
+	public StringReference Unk014;
 
 	[FieldOffset(100)]
 	public TBool Unk015;

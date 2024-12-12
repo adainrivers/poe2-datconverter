@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SpectreOverrides
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Monster;
+	public TableReference Monster;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Spectre;
+	public TableReference Spectre;
 
 	[FieldOffset(32)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk002;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk002;
 
 }

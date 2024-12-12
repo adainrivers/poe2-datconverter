@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TableMonsterSpawners
 {
 	[FieldOffset(0)]
-	public TString Metadata;
+	public StringReference Metadata;
 
 	[FieldOffset(8)]
 	public int AreaLevel;
 
 	[FieldOffset(12)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray SpawnsMonsters;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SpawnsMonsters;
 
 	[FieldOffset(28)]
 	public int Unk003;
@@ -71,7 +69,7 @@ public struct TableMonsterSpawners
 	public int Unk020;
 
 	[FieldOffset(82)]
-	public TRef Unk021;
+	public TableReference Unk021;
 
 	[FieldOffset(98)]
 	public TBool Unk022;
@@ -80,7 +78,7 @@ public struct TableMonsterSpawners
 	public TBool Unk023;
 
 	[FieldOffset(100)]
-	public TString Script1;
+	public StringReference Script1;
 
 	[FieldOffset(108)]
 	public TBool Unk025;
@@ -89,11 +87,11 @@ public struct TableMonsterSpawners
 	public TBool Unk026;
 
 	[FieldOffset(110)]
-	public TString Script2;
+	public StringReference Script2;
 
 	[FieldOffset(118)]
 	[ElementType(typeof(int))]
-	public TArray Unk028;
+	public ArrayReference Unk028;
 
 	[FieldOffset(134)]
 	public int Unk029;

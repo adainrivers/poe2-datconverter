@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NecropolisCraftBases
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItem;
+	public TableReference BaseItem;
 
 	[FieldOffset(24)]
 	[ReferenceTable("NecropolisUniqueCrafts")]
-	public TRef UniqueCraft;
+	public TableReference UniqueCraft;
 
 	[FieldOffset(40)]
 	public TBool Unk003;
@@ -24,14 +22,14 @@ public struct NecropolisCraftBases
 
 	[FieldOffset(45)]
 	[ReferenceTable("NecropolisCraftItemTypes")]
-	public TRef CraftItemType;
+	public TableReference CraftItemType;
 
 	[FieldOffset(61)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(69)]
 	[ReferenceTable("Stats")]
-	public TRef CraftTag;
+	public TableReference CraftTag;
 
 	[FieldOffset(85)]
 	public TBool Unk008;

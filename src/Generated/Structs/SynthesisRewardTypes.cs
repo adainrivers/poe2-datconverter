@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SynthesisRewardTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
-	public TString ArtFile;
+	public StringReference ArtFile;
 
 	[FieldOffset(24)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItemsKey;
+	public TableReference AchievementItemsKey;
 
 }

@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DamageEffectVariations
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ElementType(typeof(int))]
-	public TArray Unk001;
+	public ArrayReference Unk001;
 
 	[FieldOffset(24)]
-	[ElementType(typeof(TString))]
-	public TArray Unk002;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk002;
 
 	[FieldOffset(40)]
 	public TBool Unk003;
@@ -56,6 +54,6 @@ public struct DamageEffectVariations
 	public TBool Unk015;
 
 	[FieldOffset(80)]
-	public TRef Unk016;
+	public TableReference Unk016;
 
 }

@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DescentStarterChest
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Characters")]
-	public TRef CharactersKey;
+	public TableReference CharactersKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(40)]
-	public TString SocketColours;
+	public StringReference SocketColours;
 
 	[FieldOffset(48)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 }

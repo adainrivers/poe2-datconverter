@@ -1,19 +1,17 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LegionFactions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int SpawnWeight;
 
 	[FieldOffset(12)]
 	[ReferenceTable("LegionBalancePerLevel")]
-	public TRef LegionBalancePerLevelKey;
+	public TableReference LegionBalancePerLevelKey;
 
 	[FieldOffset(28)]
 	public float Unk003;
@@ -23,32 +21,32 @@ public struct LegionFactions
 
 	[FieldOffset(36)]
 	[ReferenceTable("BuffVisuals")]
-	public TRef BuffVisualsKey;
+	public TableReference BuffVisualsKey;
 
 	[FieldOffset(52)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey1;
+	public TableReference MiscAnimatedKey1;
 
 	[FieldOffset(68)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey2;
+	public TableReference MiscAnimatedKey2;
 
 	[FieldOffset(84)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey3;
+	public TableReference MiscAnimatedKey3;
 
 	[FieldOffset(100)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys1;
 
 	[FieldOffset(116)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey4;
+	public TableReference MiscAnimatedKey4;
 
 	[FieldOffset(132)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey5;
+	public TableReference MiscAnimatedKey5;
 
 	[FieldOffset(148)]
 	public float Unk012;
@@ -58,17 +56,17 @@ public struct LegionFactions
 
 	[FieldOffset(156)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys2;
 
 	[FieldOffset(172)]
 	[ReferenceTable("Stats")]
-	public TRef StatsKey;
+	public TableReference StatsKey;
 
 	[FieldOffset(188)]
-	public TString Shard;
+	public StringReference Shard;
 
 	[FieldOffset(196)]
-	public TString RewardJewelArt;
+	public StringReference RewardJewelArt;
 
 }

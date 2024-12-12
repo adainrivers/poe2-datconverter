@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AdditionalLifeScaling
@@ -9,10 +7,10 @@ public struct AdditionalLifeScaling
 	public int IntId;
 
 	[FieldOffset(4)]
-	public TString ID;
+	public StringReference ID;
 
 	[FieldOffset(12)]
-	public TString DatFile;
+	public StringReference DatFile;
 
 	[FieldOffset(20)]
 	public TBool Unk003;

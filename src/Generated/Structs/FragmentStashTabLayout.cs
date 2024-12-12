@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct FragmentStashTabLayout
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int XOffset;
@@ -40,14 +38,14 @@ public struct FragmentStashTabLayout
 
 	[FieldOffset(42)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray StoredItems;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StoredItems;
 
 	[FieldOffset(58)]
 	public TBool Unk012;
 
 	[FieldOffset(59)]
-	public TString Unk013;
+	public StringReference Unk013;
 
 	[FieldOffset(67)]
 	public int Unk014;

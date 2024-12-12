@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterVarieties
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MonsterTypes")]
-	public TRef MonsterTypesKey;
+	public TableReference MonsterTypesKey;
 
 	[FieldOffset(24)]
 	public int Unk002;
@@ -25,29 +23,29 @@ public struct MonsterVarieties
 	public int MaximumAttackDistance;
 
 	[FieldOffset(40)]
-	[ElementType(typeof(TString))]
-	public TArray ACTFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference ACTFiles;
 
 	[FieldOffset(56)]
-	[ElementType(typeof(TString))]
-	public TArray AOFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference AOFiles;
 
 	[FieldOffset(72)]
-	public TString BaseMonsterTypeIndex;
+	public StringReference BaseMonsterTypeIndex;
 
 	[FieldOffset(80)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys;
 
 	[FieldOffset(96)]
 	public int Unk010;
 
 	[FieldOffset(100)]
-	public TString Unk011;
+	public StringReference Unk011;
 
 	[FieldOffset(108)]
-	public TString Unk012;
+	public StringReference Unk012;
 
 	[FieldOffset(116)]
 	public int ModelSizeMultiplier;
@@ -69,8 +67,8 @@ public struct MonsterVarieties
 
 	[FieldOffset(140)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TagsKeys;
 
 	[FieldOffset(156)]
 	public int ExperienceMultiplier;
@@ -95,25 +93,25 @@ public struct MonsterVarieties
 
 	[FieldOffset(184)]
 	[ReferenceTable("GrantedEffects")]
-	[ElementType(typeof(TRef))]
-	public TArray GrantedEffectsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference GrantedEffectsKeys;
 
 	[FieldOffset(200)]
-	public TString AISFile;
+	public StringReference AISFile;
 
 	[FieldOffset(208)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys2;
 
 	[FieldOffset(224)]
-	public TString Stance;
+	public StringReference Stance;
 
 	[FieldOffset(232)]
-	public TRef Unk031;
+	public TableReference Unk031;
 
 	[FieldOffset(272)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(256)]
 	public int DamageMultiplier;
@@ -126,46 +124,46 @@ public struct MonsterVarieties
 
 	[FieldOffset(268)]
 	[ReferenceTable("ItemVisualIdentity")]
-	[ElementType(typeof(TRef))]
-	public TArray Weapon1_ItemVisualIdentityKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Weapon1_ItemVisualIdentityKeys;
 
 	[FieldOffset(284)]
 	[ReferenceTable("ItemVisualIdentity")]
-	[ElementType(typeof(TRef))]
-	public TArray Weapon2_ItemVisualIdentityKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Weapon2_ItemVisualIdentityKeys;
 
 	[FieldOffset(300)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef Back_ItemVisualIdentityKey;
+	public TableReference Back_ItemVisualIdentityKey;
 
 	[FieldOffset(316)]
 	[ReferenceTable("ItemClasses")]
-	public TRef MainHand_ItemClassesKey;
+	public TableReference MainHand_ItemClassesKey;
 
 	[FieldOffset(332)]
 	[ReferenceTable("ItemClasses")]
-	public TRef OffHand_ItemClassesKey;
+	public TableReference OffHand_ItemClassesKey;
 
 	[FieldOffset(348)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef Helmet_ItemVisualIdentityKey;
+	public TableReference Helmet_ItemVisualIdentityKey;
 
 	[FieldOffset(364)]
 	public int Unk042;
 
 	[FieldOffset(368)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray KillSpecificMonsterCount_AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference KillSpecificMonsterCount_AchievementItemsKeys;
 
 	[FieldOffset(384)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Special_ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Special_ModsKeys;
 
 	//[FieldOffset(400)]
 	//[ReferenceTable("AchievementItems")]
-	//[ElementType(typeof(TRef))]
+	//[ElementType(typeof(TableReference))]
 	//public TArray KillRare_AchievementItemsKeys;
 
 	[FieldOffset(416)]
@@ -196,41 +194,41 @@ public struct MonsterVarieties
 	public TBool Unk054;
 
 	[FieldOffset(444)]
-	public TString Unk055;
+	public StringReference Unk055;
 
 	[FieldOffset(452)]
 	[ReferenceTable("AchievementItems")]
-	public TRef KillWhileOnslaughtIsActive_AchievementItemsKey;
+	public TableReference KillWhileOnslaughtIsActive_AchievementItemsKey;
 
 	[FieldOffset(468)]
 	[ReferenceTable("MonsterSegments")]
-	public TRef MonsterSegmentsKey;
+	public TableReference MonsterSegmentsKey;
 
 	[FieldOffset(484)]
 	[ReferenceTable("MonsterArmours")]
-	public TRef MonsterArmoursKey;
+	public TableReference MonsterArmoursKey;
 
 	[FieldOffset(500)]
 	[ReferenceTable("AchievementItems")]
-	public TRef KillWhileTalismanIsActive_AchievementItemsKey;
+	public TableReference KillWhileTalismanIsActive_AchievementItemsKey;
 
 	[FieldOffset(516)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Part1_ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Part1_ModsKeys;
 
 	[FieldOffset(532)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Part2_ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Part2_ModsKeys;
 
 	[FieldOffset(548)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Endgame_ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Endgame_ModsKeys;
 
 	[FieldOffset(564)]
-	public TRef Unk063;
+	public TableReference Unk063;
 
 	[FieldOffset(580)]
 	public int Unk064;
@@ -239,25 +237,25 @@ public struct MonsterVarieties
 	public int Unk065;
 
 	[FieldOffset(588)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk066;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk066;
 
 	[FieldOffset(604)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk067;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk067;
 
 	[FieldOffset(620)]
 	public int Unk068;
 
 	[FieldOffset(624)]
-	public TString SinkAnimation_AOFile;
+	public StringReference SinkAnimation_AOFile;
 
 	[FieldOffset(632)]
 	public TBool Unk070;
 
 	[FieldOffset(633)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk071;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk071;
 
 	[FieldOffset(649)]
 	public TBool Unk072;
@@ -281,14 +279,14 @@ public struct MonsterVarieties
 	public int Unk078;
 
 	[FieldOffset(668)]
-	public TString EPKFile;
+	public StringReference EPKFile;
 
 	[FieldOffset(676)]
 	public int Unk080;
 
 	[FieldOffset(680)]
 	[ReferenceTable("MonsterConditionalEffectPacks")]
-	public TRef MonsterConditionalEffectPacksKey;
+	public TableReference MonsterConditionalEffectPacksKey;
 
 	[FieldOffset(696)]
 	public TBool Unk082;
@@ -321,8 +319,8 @@ public struct MonsterVarieties
 	public int Unk091;
 
 	[FieldOffset(727)]
-	[ElementType(typeof(TString))]
-	public TArray AddonMonsterTypeIndex;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference AddonMonsterTypeIndex;
 
 	[FieldOffset(743)]
 	public int Unk093;

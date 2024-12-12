@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IncursionBrackets
@@ -10,15 +8,15 @@ public struct IncursionBrackets
 
 	[FieldOffset(4)]
 	[ReferenceTable("WorldAreas")]
-	public TRef Incursion_WorldAreasKey;
+	public TableReference Incursion_WorldAreasKey;
 
 	[FieldOffset(20)]
 	[ReferenceTable("WorldAreas")]
-	public TRef Template_WorldAreasKey;
+	public TableReference Template_WorldAreasKey;
 
 	[FieldOffset(36)]
 	[ElementType(typeof(float))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(52)]
 	public float Unk004;

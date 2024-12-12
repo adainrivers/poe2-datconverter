@@ -1,12 +1,12 @@
 using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AbyssObjects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int MinLevel;
@@ -21,15 +21,15 @@ public struct AbyssObjects
 	public int Unk004;
 
 	[FieldOffset(24)]
-	public TString MetadataFile;
+	public StringReference MetadataFile;
 
 	[FieldOffset(32)]
 	public int Unk006;
 
 	[FieldOffset(36)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray DaemonSpawners;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference DaemonSpawners;
 
 	[FieldOffset(52)]
 	public int Unk008;
@@ -39,7 +39,7 @@ public struct AbyssObjects
 
 	[FieldOffset(60)]
 	[ReferenceTable("WorldAreas")]
-	public TRef AbyssalDepths;
+	public TableReference AbyssalDepths;
 
 	[FieldOffset(76)]
 	public int Unk011;

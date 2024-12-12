@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterSpawnerGroupsPerLevel
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MonsterSpawnerGroups")]
-	public TRef MonsterSpawnerGroupsKey;
+	public TableReference MonsterSpawnerGroupsKey;
 
 	[FieldOffset(16)]
 	public int MinLevel;

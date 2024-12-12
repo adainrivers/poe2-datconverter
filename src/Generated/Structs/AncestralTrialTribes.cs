@@ -1,57 +1,55 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AncestralTrialTribes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(24)]
-	public TString Portrait;
+	public StringReference Portrait;
 
 	[FieldOffset(32)]
-	public TString TribeIcon;
+	public StringReference TribeIcon;
 
 	[FieldOffset(40)]
-	public TString TribeName;
+	public StringReference TribeName;
 
 	[FieldOffset(48)]
-	public TString FavourTracker;
+	public StringReference FavourTracker;
 
 	[FieldOffset(56)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk006;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk006;
 
 	[FieldOffset(72)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(80)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(96)]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 	[FieldOffset(112)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(128)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(144)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk012;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk012;
 
 	[FieldOffset(160)]
-	public TRef Unk013;
+	public TableReference Unk013;
 
 	[FieldOffset(176)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk014;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk014;
 
 	[FieldOffset(192)]
 	public int Unk015;
@@ -66,6 +64,6 @@ public struct AncestralTrialTribes
 	public int Unk018;
 
 	[FieldOffset(208)]
-	public TRef Unk019;
+	public TableReference Unk019;
 
 }

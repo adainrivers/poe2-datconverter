@@ -1,9 +1,7 @@
-﻿using Extractor.Parsers;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.CompilerServices;
 
-namespace Extractor;
-public struct TArray
+namespace PoE2Converter.Models;
+public struct ArrayReference
 {
     public long Count;
     public long Offset;

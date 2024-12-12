@@ -1,32 +1,30 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterBonuses
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk001;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk001;
 
 	[FieldOffset(24)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(56)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(72)]
 	[ElementType(typeof(int))]
-	public TArray StatValues;
+	public ArrayReference StatValues;
 
 	[FieldOffset(88)]
 	public TBool Unk006;

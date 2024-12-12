@@ -1,22 +1,20 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LabyrinthNodeOverrides
 {
 	[FieldOffset(0)]
-	public TString Id1;
+	public StringReference Id1;
 
 	[FieldOffset(8)]
-	public TString Id2;
+	public StringReference Id2;
 
 	[FieldOffset(16)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(32)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 }

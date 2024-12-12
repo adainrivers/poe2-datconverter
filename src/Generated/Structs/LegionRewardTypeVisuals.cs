@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LegionRewardTypeVisuals
@@ -10,19 +8,19 @@ public struct LegionRewardTypeVisuals
 
 	[FieldOffset(4)]
 	[ReferenceTable("MinimapIcons")]
-	public TRef MinimapIconsKey;
+	public TableReference MinimapIconsKey;
 
 	[FieldOffset(20)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(28)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey;
+	public TableReference MiscAnimatedKey;
 
 	[FieldOffset(44)]
 	public float Unk004;
 
 	[FieldOffset(48)]
-	public TString Id;
+	public StringReference Id;
 
 }

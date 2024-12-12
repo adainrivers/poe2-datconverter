@@ -1,17 +1,15 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct RitualSetKillAchievements
 {
 	[FieldOffset(0)]
 	[ReferenceTable("AchievementItems")]
-	public TRef Achievement;
+	public TableReference Achievement;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray KillBosses;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference KillBosses;
 
 }

@@ -1,60 +1,58 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DelveFeatures
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight;
+	public ArrayReference SpawnWeight;
 
 	[FieldOffset(32)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(48)]
-	public TString Image;
+	public StringReference Image;
 
 	[FieldOffset(56)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 	[FieldOffset(72)]
 	[ElementType(typeof(int))]
-	public TArray Unk006;
+	public ArrayReference Unk006;
 
 	[FieldOffset(88)]
 	[ElementType(typeof(int))]
-	public TArray MinDepth;
+	public ArrayReference MinDepth;
 
 	[FieldOffset(104)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(112)]
 	public int Unk009;
 
 	[FieldOffset(116)]
 	[ElementType(typeof(int))]
-	public TArray Unk010;
+	public ArrayReference Unk010;
 
 	[FieldOffset(132)]
 	[ElementType(typeof(int))]
-	public TArray Unk011;
+	public ArrayReference Unk011;
 
 	[FieldOffset(148)]
 	[ElementType(typeof(int))]
-	public TArray Unk012;
+	public ArrayReference Unk012;
 
 	[FieldOffset(164)]
 	[ElementType(typeof(int))]
-	public TArray Unk013;
+	public ArrayReference Unk013;
 
 }

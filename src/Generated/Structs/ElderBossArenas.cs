@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ElderBossArenas
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(20)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 }

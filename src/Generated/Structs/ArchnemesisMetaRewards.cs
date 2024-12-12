@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ArchnemesisMetaRewards
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString RewardText;
+	public StringReference RewardText;
 
 	[FieldOffset(16)]
 	public int RewardGroup;
 
 	[FieldOffset(20)]
-	public TString ScriptArgument;
+	public StringReference ScriptArgument;
 
 	[FieldOffset(28)]
 	public int MinLevel;

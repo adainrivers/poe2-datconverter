@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionAreas
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef Area;
+	public TableReference Area;
 
 	[FieldOffset(16)]
 	public int PosX;
@@ -17,23 +15,23 @@ public struct ExpeditionAreas
 
 	[FieldOffset(24)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray Tags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tags;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(56)]
 	public TBool Unk005;
 
 	[FieldOffset(57)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudio;
+	public TableReference TextAudio;
 
 	[FieldOffset(73)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray CompletionAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CompletionAchievements;
 
 }

@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PantheonPanelLayout
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int X;
@@ -18,70 +16,70 @@ public struct PantheonPanelLayout
 	public TBool IsMajorGod;
 
 	[FieldOffset(17)]
-	public TString CoverImage;
+	public StringReference CoverImage;
 
 	[FieldOffset(25)]
-	public TString GodName2;
+	public StringReference GodName2;
 
 	[FieldOffset(33)]
-	public TString SelectionImage;
+	public StringReference SelectionImage;
 
 	[FieldOffset(41)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Effect1_StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Effect1_StatsKeys;
 
 	[FieldOffset(57)]
 	[ElementType(typeof(int))]
-	public TArray Effect1_Values;
+	public ArrayReference Effect1_Values;
 
 	[FieldOffset(73)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Effect2_StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Effect2_StatsKeys;
 
 	[FieldOffset(89)]
-	public TString GodName3;
+	public StringReference GodName3;
 
 	[FieldOffset(97)]
 	[ElementType(typeof(int))]
-	public TArray Effect3_Values;
+	public ArrayReference Effect3_Values;
 
 	[FieldOffset(113)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Effect3_StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Effect3_StatsKeys;
 
 	[FieldOffset(129)]
-	public TString GodName4;
+	public StringReference GodName4;
 
 	[FieldOffset(137)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Effect4_StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Effect4_StatsKeys;
 
 	[FieldOffset(153)]
 	[ElementType(typeof(int))]
-	public TArray Effect4_Values;
+	public ArrayReference Effect4_Values;
 
 	[FieldOffset(169)]
-	public TString GodName1;
+	public StringReference GodName1;
 
 	[FieldOffset(177)]
 	[ElementType(typeof(int))]
-	public TArray Effect2_Values;
+	public ArrayReference Effect2_Values;
 
 	[FieldOffset(193)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlag;
+	public TableReference QuestFlag;
 
 	[FieldOffset(209)]
 	public TBool IsDisabled;
 
 	[FieldOffset(210)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItems;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItems;
 
 	[FieldOffset(226)]
 	public int LeagueQuestFlag1;
@@ -94,14 +92,14 @@ public struct PantheonPanelLayout
 
 	[FieldOffset(238)]
 	[ReferenceTable("QuestFlags")]
-	public TRef DowngradeFlag1;
+	public TableReference DowngradeFlag1;
 
 	[FieldOffset(254)]
 	[ReferenceTable("QuestFlags")]
-	public TRef DowngradeFlag2;
+	public TableReference DowngradeFlag2;
 
 	[FieldOffset(270)]
 	[ReferenceTable("QuestFlags")]
-	public TRef DowngradeFlag3;
+	public TableReference DowngradeFlag3;
 
 }

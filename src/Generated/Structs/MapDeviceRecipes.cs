@@ -1,31 +1,29 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapDeviceRecipes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray RecipeItems;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference RecipeItems;
 
 	[FieldOffset(24)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldArea;
+	public TableReference WorldArea;
 
 	[FieldOffset(40)]
 	[ReferenceTable("MicrotransactionPortalVariations")]
-	public TRef MicrotransactionPortalVariation;
+	public TableReference MicrotransactionPortalVariation;
 
 	[FieldOffset(56)]
 	public int AreaLevel;
 
 	[FieldOffset(60)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(76)]
 	public int Unk006;
@@ -41,8 +39,8 @@ public struct MapDeviceRecipes
 
 	[FieldOffset(83)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray OpenAchievemnts;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference OpenAchievemnts;
 
 	[FieldOffset(99)]
 	public TBool Unk011;
@@ -52,8 +50,8 @@ public struct MapDeviceRecipes
 
 	[FieldOffset(104)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk013;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk013;
 
 	[FieldOffset(120)]
 	public TBool Unk014;

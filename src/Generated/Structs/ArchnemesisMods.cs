@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ArchnemesisMods
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Mods")]
-	public TRef Mod;
+	public TableReference Mod;
 
 	[FieldOffset(16)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(24)]
 	[ReferenceTable("ArchnemesisModVisuals")]
-	public TRef Visual;
+	public TableReference Visual;
 
 	[FieldOffset(40)]
-	[ElementType(typeof(TString))]
-	public TArray TextStyles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference TextStyles;
 
 	[FieldOffset(56)]
 	public TBool Unk004;

@@ -1,22 +1,20 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AchievementItemRewards
 {
 	[FieldOffset(0)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItemsKey;
+	public TableReference AchievementItemsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(32)]
-	public TString Message;
+	public StringReference Message;
 
 	[FieldOffset(40)]
-	public TString Id;
+	public StringReference Id;
 
 }

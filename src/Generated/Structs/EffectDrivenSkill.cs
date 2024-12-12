@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct EffectDrivenSkill
@@ -9,12 +7,12 @@ public struct EffectDrivenSkill
 	public int Unk000;
 
 	[FieldOffset(4)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk001;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk001;
 
 	[FieldOffset(20)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(36)]
 	public int Unk003;
@@ -33,7 +31,7 @@ public struct EffectDrivenSkill
 
 	[FieldOffset(47)]
 	[ElementType(typeof(int))]
-	public TArray Unk008;
+	public ArrayReference Unk008;
 
 	[FieldOffset(63)]
 	public int Unk009;

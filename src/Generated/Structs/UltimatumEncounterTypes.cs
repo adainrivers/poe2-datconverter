@@ -1,18 +1,16 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct UltimatumEncounterTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString ProgressBarText;
+	public StringReference ProgressBarText;
 
 	[FieldOffset(24)]
 	public TBool Unk003;
@@ -22,14 +20,14 @@ public struct UltimatumEncounterTypes
 
 	[FieldOffset(26)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray NormalAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NormalAchievements;
 
 	[FieldOffset(42)]
 	[ReferenceTable("AchievementItems")]
-	public TRef InscribedAchievement;
+	public TableReference InscribedAchievement;
 
 	[FieldOffset(58)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 }

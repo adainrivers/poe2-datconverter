@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Strongboxes
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Chests")]
-	public TRef ChestsKey;
+	public TableReference ChestsKey;
 
 	[FieldOffset(16)]
 	public int SpawnWeight;
@@ -23,7 +21,7 @@ public struct Strongboxes
 
 	[FieldOffset(26)]
 	[ReferenceTable("Stats")]
-	public TRef SpawnWeightIncrease;
+	public TableReference SpawnWeightIncrease;
 
 	[FieldOffset(42)]
 	public int SpawnWeightHardmode;

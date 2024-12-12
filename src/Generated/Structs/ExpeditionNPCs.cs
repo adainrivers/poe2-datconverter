@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionNPCs
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("NPCs")]
-	[ElementType(typeof(TRef))]
-	public TArray NPCs;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NPCs;
 
 	[FieldOffset(24)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef RerollItem;
+	public TableReference RerollItem;
 
 	[FieldOffset(40)]
 	public int Unk003;
@@ -25,39 +23,39 @@ public struct ExpeditionNPCs
 
 	[FieldOffset(48)]
 	[ReferenceTable("QuestFlags")]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(64)]
 	[ReferenceTable("ExpeditionFactions")]
-	public TRef Faction;
+	public TableReference Faction;
 
 	[FieldOffset(80)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef Reroll;
+	public TableReference Reroll;
 
 	[FieldOffset(96)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef AllBombsPlaced;
+	public TableReference AllBombsPlaced;
 
 	[FieldOffset(112)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef BombPlacedRemnant;
+	public TableReference BombPlacedRemnant;
 
 	[FieldOffset(128)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef BombPlacedTreasure;
+	public TableReference BombPlacedTreasure;
 
 	[FieldOffset(144)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef BombPlacedMonsters;
+	public TableReference BombPlacedMonsters;
 
 	[FieldOffset(160)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef BombPlacedGeneric;
+	public TableReference BombPlacedGeneric;
 
 	[FieldOffset(176)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef EncounterComplete;
+	public TableReference EncounterComplete;
 
 	[FieldOffset(192)]
 	public int Unk014;

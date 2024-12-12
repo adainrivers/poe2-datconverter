@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistJobs
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString RequiredSkillIcon;
+	public StringReference RequiredSkillIcon;
 
 	[FieldOffset(24)]
-	public TString SkillIcon;
+	public StringReference SkillIcon;
 
 	[FieldOffset(32)]
 	public float Unk004;
@@ -24,32 +22,32 @@ public struct HeistJobs
 	public int Unk005;
 
 	[FieldOffset(40)]
-	public TString MapIcon;
+	public StringReference MapIcon;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	public TRef Level_StatsKey;
+	public TableReference Level_StatsKey;
 
 	[FieldOffset(64)]
 	[ReferenceTable("Stats")]
-	public TRef Alert_StatsKey;
+	public TableReference Alert_StatsKey;
 
 	[FieldOffset(80)]
 	[ReferenceTable("Stats")]
-	public TRef Alarm_StatsKey;
+	public TableReference Alarm_StatsKey;
 
 	[FieldOffset(96)]
 	[ReferenceTable("Stats")]
-	public TRef Cost_StatsKey;
+	public TableReference Cost_StatsKey;
 
 	[FieldOffset(112)]
 	[ReferenceTable("Stats")]
-	public TRef ExperienceGain_StatsKey;
+	public TableReference ExperienceGain_StatsKey;
 
 	[FieldOffset(128)]
-	public TString ConsoleBlueprintLegend;
+	public StringReference ConsoleBlueprintLegend;
 
 	[FieldOffset(136)]
-	public TString Description;
+	public StringReference Description;
 
 }

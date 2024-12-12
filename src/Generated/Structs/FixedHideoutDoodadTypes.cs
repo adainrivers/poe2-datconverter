@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct FixedHideoutDoodadTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("HideoutDoodads")]
-	[ElementType(typeof(TRef))]
-	public TArray HideoutDoodadsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference HideoutDoodadsKeys;
 
 	[FieldOffset(24)]
 	[ReferenceTable("HideoutDoodads")]
-	public TRef BaseTypeHideoutDoodadsKey;
+	public TableReference BaseTypeHideoutDoodadsKey;
 
 	[FieldOffset(40)]
 	public int Unk003;
@@ -27,12 +25,12 @@ public struct FixedHideoutDoodadTypes
 	public TBool Unk005;
 
 	[FieldOffset(49)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(65)]
 	public int Unk007;
 
 	[FieldOffset(69)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 }

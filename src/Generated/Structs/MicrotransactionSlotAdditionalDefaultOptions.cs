@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionSlotAdditionalDefaultOptions
@@ -12,9 +10,9 @@ public struct MicrotransactionSlotAdditionalDefaultOptions
 	public int Unk001;
 
 	[FieldOffset(8)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(16)]
-	public TString Unk003;
+	public StringReference Unk003;
 
 }

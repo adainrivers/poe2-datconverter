@@ -1,28 +1,26 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct VillageJobTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(16)]
-	public TString StateText;
+	public StringReference StateText;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Stats")]
-	public TRef MaxWorkersStat;
+	public TableReference MaxWorkersStat;
 
 	[FieldOffset(40)]
 	public TBool Unk004;
 
 	[FieldOffset(41)]
 	[ReferenceTable("Stats")]
-	public TRef JobSpeedStat;
+	public TableReference JobSpeedStat;
 
 }

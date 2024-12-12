@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Environments
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Base_ENVFile;
+	public StringReference Base_ENVFile;
 
 	[FieldOffset(16)]
-	[ElementType(typeof(TString))]
-	public TArray Corrupted_ENVFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Corrupted_ENVFiles;
 
 	[FieldOffset(32)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk003;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk003;
 
 	[FieldOffset(48)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk004;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk004;
 
 	[FieldOffset(64)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(80)]
 	[ReferenceTable("EnvironmentTransitions")]
-	public TRef EnvironmentTransitionsKey;
+	public TableReference EnvironmentTransitionsKey;
 
 	[FieldOffset(96)]
 	[ReferenceTable("PreloadGroups")]
-	public TRef PreloadGroup;
+	public TableReference PreloadGroup;
 
 }

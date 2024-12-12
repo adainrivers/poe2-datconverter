@@ -1,27 +1,25 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct QuestRewardOffers
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Quest")]
-	public TRef QuestKey;
+	public TableReference QuestKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlag;
+	public TableReference QuestFlag;
 
 	[FieldOffset(40)]
 	public int Unk003;
 
 	[FieldOffset(44)]
 	[ReferenceTable("ClientStrings")]
-	public TRef RewardWindowTake;
+	public TableReference RewardWindowTake;
 
 	[FieldOffset(60)]
 	public TBool Unk005;
@@ -31,7 +29,7 @@ public struct QuestRewardOffers
 
 	[FieldOffset(62)]
 	[ReferenceTable("ClientStrings")]
-	public TRef RewardWindowTitle;
+	public TableReference RewardWindowTitle;
 
 	[FieldOffset(78)]
 	public TBool Unk008;
@@ -46,6 +44,6 @@ public struct QuestRewardOffers
 	public TBool Unk011;
 
 	[FieldOffset(82)]
-	public TRef Unk012;
+	public TableReference Unk012;
 
 }

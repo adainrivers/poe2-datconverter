@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SkillMineVariations
@@ -13,6 +11,6 @@ public struct SkillMineVariations
 
 	[FieldOffset(8)]
 	[ReferenceTable("MiscObjects")]
-	public TRef MiscObject;
+	public TableReference MiscObject;
 
 }

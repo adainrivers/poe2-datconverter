@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapConnections
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MapPins")]
-	public TRef MapPinsKey0;
+	public TableReference MapPinsKey0;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MapPins")]
-	public TRef MapPinsKey1;
+	public TableReference MapPinsKey1;
 
 	[FieldOffset(32)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(48)]
-	public TString RestrictedAreaText;
+	public StringReference RestrictedAreaText;
 
 	[FieldOffset(56)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(72)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(88)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(104)]
 	[ElementType(typeof(int))]
-	public TArray Unk007;
+	public ArrayReference Unk007;
 
 }

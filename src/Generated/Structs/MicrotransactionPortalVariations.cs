@@ -1,41 +1,39 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionPortalVariations
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
 	public int Id;
 
 	[FieldOffset(20)]
-	public TString AOFile;
+	public StringReference AOFile;
 
 	[FieldOffset(28)]
-	public TString MapAOFile;
+	public StringReference MapAOFile;
 
 	[FieldOffset(36)]
 	public float Unk004;
 
 	[FieldOffset(40)]
 	[ReferenceTable("MiscObjects")]
-	public TRef MiscObject;
+	public TableReference MiscObject;
 
 	[FieldOffset(56)]
-	public TString PortalEffect;
+	public StringReference PortalEffect;
 
 	[FieldOffset(64)]
 	public float Unk007;
 
 	[FieldOffset(68)]
-	public TString Unk008;
+	public StringReference Unk008;
 
 	[FieldOffset(76)]
-	public TString PortalEffectLarge;
+	public StringReference PortalEffectLarge;
 
 	[FieldOffset(84)]
 	public int Unk010;
@@ -44,6 +42,6 @@ public struct MicrotransactionPortalVariations
 	public int Unk011;
 
 	[FieldOffset(92)]
-	public TString Script;
+	public StringReference Script;
 
 }

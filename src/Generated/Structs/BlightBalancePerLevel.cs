@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BlightBalancePerLevel
@@ -13,7 +11,7 @@ public struct BlightBalancePerLevel
 
 	[FieldOffset(8)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(24)]
 	public int Unk003;

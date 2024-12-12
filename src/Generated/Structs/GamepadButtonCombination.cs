@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GamepadButtonCombination
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("GamepadButton")]
-	public TRef Button1;
+	public TableReference Button1;
 
 	[FieldOffset(24)]
 	[ReferenceTable("GamepadButton")]
-	public TRef Button2;
+	public TableReference Button2;
 
 	[FieldOffset(40)]
 	public int Unk003;

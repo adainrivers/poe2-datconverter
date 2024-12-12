@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SkillGems
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
 	public int StrengthRequirementPercent;
@@ -20,14 +18,14 @@ public struct SkillGems
 
 	[FieldOffset(28)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef VaalVariant_BaseItemTypesKey;
+	public TableReference VaalVariant_BaseItemTypesKey;
 
 	[FieldOffset(44)]
 	public TBool IsVaalVariant;
 
 	[FieldOffset(45)]
 	[ReferenceTable("Stats")]
-	public TRef MinionGlobalSkillLevelStat;
+	public TableReference MinionGlobalSkillLevelStat;
 
 	[FieldOffset(61)]
 	public TBool IsSupport;
@@ -49,27 +47,27 @@ public struct SkillGems
 
 	[FieldOffset(67)]
 	[ReferenceTable("SkillGems")]
-	public TRef AwakenedVariant;
+	public TableReference AwakenedVariant;
 
 	[FieldOffset(75)]
 	[ReferenceTable("SkillGems")]
-	public TRef RegularVariant;
+	public TableReference RegularVariant;
 
 	[FieldOffset(83)]
 	public int Unk015;
 
 	[FieldOffset(87)]
 	[ReferenceTable("ItemExperienceTypes")]
-	public TRef ItemExperienceType;
+	public TableReference ItemExperienceType;
 
 	[FieldOffset(103)]
 	[ReferenceTable("MicrotransactionSkillGemEffectSlotTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray MtxSlotTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MtxSlotTypes;
 
 	[FieldOffset(119)]
 	[ReferenceTable("GemEffects")]
-	[ElementType(typeof(TRef))]
-	public TArray GemEffects;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference GemEffects;
 
 }

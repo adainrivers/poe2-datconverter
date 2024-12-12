@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SingleGroundLaser
@@ -9,16 +7,16 @@ public struct SingleGroundLaser
 	public int Id;
 
 	[FieldOffset(4)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(20)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(36)]
 	public int Unk003;
 
 	[FieldOffset(40)]
-	public TString Unk004;
+	public StringReference Unk004;
 
 	[FieldOffset(48)]
 	public TBool Unk005;
@@ -36,10 +34,10 @@ public struct SingleGroundLaser
 	public int Unk009;
 
 	[FieldOffset(62)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(78)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(94)]
 	public int Unk012;

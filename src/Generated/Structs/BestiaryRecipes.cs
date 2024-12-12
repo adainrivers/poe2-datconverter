@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BestiaryRecipes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
 	[ReferenceTable("BestiaryRecipeComponent")]
-	[ElementType(typeof(TRef))]
-	public TArray BestiaryRecipeComponentKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BestiaryRecipeComponentKeys;
 
 	[FieldOffset(32)]
-	public TString Notes;
+	public StringReference Notes;
 
 	[FieldOffset(40)]
 	[ReferenceTable("BestiaryRecipeCategories")]
-	public TRef Category;
+	public TableReference Category;
 
 	[FieldOffset(56)]
 	public TBool Unk005;
 
 	[FieldOffset(57)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements;
 
 	[FieldOffset(73)]
 	public TBool Unk007;
@@ -45,6 +43,6 @@ public struct BestiaryRecipes
 
 	[FieldOffset(86)]
 	[ReferenceTable("Mods")]
-	public TRef FlaskMod;
+	public TableReference FlaskMod;
 
 }

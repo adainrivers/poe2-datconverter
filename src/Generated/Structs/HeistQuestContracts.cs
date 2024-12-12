@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistQuestContracts
 {
 	[FieldOffset(0)]
 	[ReferenceTable("HeistContracts")]
-	public TRef HeistContractsKey;
+	public TableReference HeistContractsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("HeistObjectives")]
-	public TRef HeistObjectivesKey;
+	public TableReference HeistObjectivesKey;
 
 	[FieldOffset(32)]
 	[ReferenceTable("HeistNPCs")]
-	[ElementType(typeof(TRef))]
-	public TArray HeistNPCsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference HeistNPCsKey;
 
 	[FieldOffset(48)]
 	[ReferenceTable("HeistJobs")]
-	public TRef HeistJobsKey;
+	public TableReference HeistJobsKey;
 
 	[FieldOffset(64)]
 	public int Unk004;
@@ -36,11 +34,11 @@ public struct HeistQuestContracts
 
 	[FieldOffset(77)]
 	[ReferenceTable("HeistRooms")]
-	public TRef HeistRoomsKey1;
+	public TableReference HeistRoomsKey1;
 
 	[FieldOffset(93)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(109)]
 	public TBool Unk010;
@@ -62,22 +60,22 @@ public struct HeistQuestContracts
 
 	[FieldOffset(121)]
 	[ReferenceTable("QuestFlags")]
-	public TRef HaveObjective;
+	public TableReference HaveObjective;
 
 	[FieldOffset(137)]
 	public TBool Unk017;
 
 	[FieldOffset(138)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestActive;
+	public TableReference QuestActive;
 
 	[FieldOffset(154)]
 	[ReferenceTable("QuestFlags")]
-	public TRef HaveQuest;
+	public TableReference HaveQuest;
 
 	[FieldOffset(170)]
 	[ReferenceTable("QuestFlags")]
-	public TRef HaveObjective2;
+	public TableReference HaveObjective2;
 
 	[FieldOffset(186)]
 	public TBool Unk021;
@@ -86,30 +84,30 @@ public struct HeistQuestContracts
 	public TBool Unk022;
 
 	[FieldOffset(188)]
-	public TString Objective;
+	public StringReference Objective;
 
 	[FieldOffset(196)]
 	public TBool Unk024;
 
 	[FieldOffset(197)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(213)]
 	public TBool Unk026;
 
 	[FieldOffset(214)]
 	[ReferenceTable("HeistIntroAreas")]
-	public TRef HeistIntroAreasKey;
+	public TableReference HeistIntroAreasKey;
 
 	[FieldOffset(230)]
 	public int Unk028;
 
 	[FieldOffset(234)]
 	[ReferenceTable("HeistRooms")]
-	public TRef HeistRoomsKey2;
+	public TableReference HeistRoomsKey2;
 
 	[FieldOffset(250)]
-	public TString Unk030;
+	public StringReference Unk030;
 
 }

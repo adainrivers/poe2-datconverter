@@ -1,8 +1,7 @@
 ﻿using System.Reflection;
 using System.Text;
-using Extractor.Generated;
 
-namespace Extractor.Generators;
+namespace PoE2Converter.Generators;
 public static class CSharpClassGenerator
 {
     public static void Generate()
@@ -37,20 +36,24 @@ public static class CSharpClassGenerator
                 if (fieldName == type.Name) fieldName = $"{fieldName}_{fieldIndex:000}";
 
                 stringBuilder.AppendLine($"\t[JsonProperty(\"{fieldName}\")]");
-                if (field.FieldType == typeof(TArray))
+                if (field.FieldType == typeof(ArrayReference))
                 {
                     var elementType = field.GetCustomAttribute<ElementTypeAttribute>()?.Type ?? typeof(int);
                     var columnType = elementType.Name;
-                    if(columnType == "TRef") columnType = "TableReference";
+                    if(columnType == "TableReference") columnType = "TableReference";
                     if(columnType == "TString") columnType = "string";
                     if(columnType == "TEnum") columnType = enumType;
                     stringBuilder.AppendLine($"\tpublic List<{columnType}> {fieldName} {{ get; set; }} = new();");
                 }
-                else if (field.FieldType == typeof(TString))
+                else if (field.FieldType == typeof(StringReference))
                 {
                     stringBuilder.AppendLine($"\tpublic string {fieldName} {{ get; set; }}");
                 }
-                else if (field.FieldType == typeof(TRef))
+                else if (field.FieldType == typeof(TableReference))
+                {
+                    stringBuilder.AppendLine($"\tpublic TableReference {fieldName} {{ get; set; }}");
+                }
+                else if (field.FieldType == typeof(RowReference))
                 {
                     stringBuilder.AppendLine($"\tpublic TableReference {fieldName} {{ get; set; }}");
                 }

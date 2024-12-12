@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct RelicInventoryLayout
@@ -15,6 +13,6 @@ public struct RelicInventoryLayout
 	public int Unk002;
 
 	[FieldOffset(12)]
-	public TString Requirement;
+	public StringReference Requirement;
 
 }

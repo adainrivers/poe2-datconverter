@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DescentExiles
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Characters")]
-	public TRef CharactersKey;
+	public TableReference CharactersKey;
 
 	[FieldOffset(40)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(56)]
 	public int Unk004;

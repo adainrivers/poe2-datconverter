@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IncursionChestRewards
 {
 	[FieldOffset(0)]
 	[ReferenceTable("IncursionRooms")]
-	public TRef IncursionRoomsKey;
+	public TableReference IncursionRoomsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("IncursionChests")]
-	[ElementType(typeof(TRef))]
-	public TArray IncursionChestsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference IncursionChestsKeys;
 
 	[FieldOffset(32)]
-	public TString ChestMarkerMetadata;
+	public StringReference ChestMarkerMetadata;
 
 	[FieldOffset(40)]
 	public int Unk003;

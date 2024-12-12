@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Stats
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public TBool Unk001;
@@ -23,7 +21,7 @@ public struct Stats
 	public TEnum Semantics;
 
 	[FieldOffset(15)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(23)]
 	public TBool Unk006;
@@ -33,11 +31,11 @@ public struct Stats
 
 	[FieldOffset(25)]
 	[ReferenceTable("Stats")]
-	public TRef MainHandAlias_StatsKey;
+	public TableReference MainHandAlias_StatsKey;
 
 	[FieldOffset(33)]
 	[ReferenceTable("Stats")]
-	public TRef OffHandAlias_StatsKey;
+	public TableReference OffHandAlias_StatsKey;
 
 	[FieldOffset(41)]
 	public TBool Unk010;
@@ -47,12 +45,12 @@ public struct Stats
 
 	[FieldOffset(46)]
 	[ReferenceTable("ActiveSkills")]
-	[ElementType(typeof(TString))]
-	public TArray BelongsActiveSkillsKey;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference BelongsActiveSkillsKey;
 
 	[FieldOffset(62)]
 	[ReferenceTable("PassiveSkillStatCategories")]
-	public TRef Category;
+	public TableReference Category;
 
 	[FieldOffset(78)]
 	public TBool Unk014;
@@ -65,11 +63,11 @@ public struct Stats
 
 	[FieldOffset(81)]
 	[ReferenceTable("VirtualStatContextFlags")]
-	[ElementType(typeof(TRef))]
-	public TArray ContextFlags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ContextFlags;
 
 	[FieldOffset(97)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk018;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk018;
 
 }

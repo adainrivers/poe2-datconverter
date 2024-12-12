@@ -1,25 +1,23 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterConditions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(24)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(40)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(56)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk004;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk004;
 
 	[FieldOffset(72)]
 	public TBool Unk005;
@@ -28,12 +26,12 @@ public struct MonsterConditions
 	public TBool Unk006;
 
 	[FieldOffset(74)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk007;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk007;
 
 	[FieldOffset(90)]
-	[ElementType(typeof(TString))]
-	public TArray Unk008;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk008;
 
 	[FieldOffset(106)]
 	public int Unk009;

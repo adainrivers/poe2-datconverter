@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Breachstones
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseType;
+	public TableReference BaseType;
 
 	[FieldOffset(16)]
 	public int MapTierEquivalent;
@@ -17,10 +15,10 @@ public struct Breachstones
 
 	[FieldOffset(24)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef UpgradesTo;
+	public TableReference UpgradesTo;
 
 	[FieldOffset(40)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef UpgradeCurrency;
+	public TableReference UpgradeCurrency;
 
 }

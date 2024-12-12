@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AncestralTrialDialogue
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(32)]
 	public int Unk002;
 
 	[FieldOffset(36)]
 	[ReferenceTable("NPCTextAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray TextAudio;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TextAudio;
 
 	[FieldOffset(52)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(68)]
 	public int Unk005;

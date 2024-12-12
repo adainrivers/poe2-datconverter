@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GeometryTrigger
@@ -9,10 +7,10 @@ public struct GeometryTrigger
 	public int Unk000;
 
 	[FieldOffset(4)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(20)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(36)]
 	public int Unk003;
@@ -81,8 +79,8 @@ public struct GeometryTrigger
 	public int Unk024;
 
 	[FieldOffset(115)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk025;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk025;
 
 	[FieldOffset(131)]
 	public int Unk026;
@@ -109,7 +107,7 @@ public struct GeometryTrigger
 	public TBool Unk033;
 
 	[FieldOffset(148)]
-	public TRef Unk034;
+	public TableReference Unk034;
 
 	[FieldOffset(164)]
 	public TBool Unk035;
@@ -142,7 +140,7 @@ public struct GeometryTrigger
 	public int Unk044;
 
 	[FieldOffset(192)]
-	public TRef Unk045;
+	public TableReference Unk045;
 
 	[FieldOffset(208)]
 	public int Unk046;

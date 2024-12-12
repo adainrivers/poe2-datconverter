@@ -1,55 +1,53 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemVisualEffect
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString DaggerEPKFile;
+	public StringReference DaggerEPKFile;
 
 	[FieldOffset(16)]
-	public TString BowEPKFile;
+	public StringReference BowEPKFile;
 
 	[FieldOffset(24)]
-	public TString OneHandedMaceEPKFile;
+	public StringReference OneHandedMaceEPKFile;
 
 	[FieldOffset(32)]
-	public TString OneHandedSwordEPKFile;
+	public StringReference OneHandedSwordEPKFile;
 
 	[FieldOffset(40)]
-	public TString Unk005;
+	public StringReference Unk005;
 
 	[FieldOffset(48)]
-	public TString TwoHandedSwordEPKFile;
+	public StringReference TwoHandedSwordEPKFile;
 
 	[FieldOffset(56)]
-	public TString TwoHandedStaffEPKFile;
+	public StringReference TwoHandedStaffEPKFile;
 
 	[FieldOffset(64)]
 	public short HASH16;
 
 	[FieldOffset(66)]
-	public TString TwoHandedMaceEPKFile;
+	public StringReference TwoHandedMaceEPKFile;
 
 	[FieldOffset(74)]
-	public TString OneHandedAxeEPKFile;
+	public StringReference OneHandedAxeEPKFile;
 
 	[FieldOffset(82)]
-	public TString TwoHandedAxeEPKFile;
+	public StringReference TwoHandedAxeEPKFile;
 
 	[FieldOffset(90)]
-	public TString ClawEPKFile;
+	public StringReference ClawEPKFile;
 
 	[FieldOffset(98)]
-	public TString PETFile;
+	public StringReference PETFile;
 
 	[FieldOffset(106)]
-	[ElementType(typeof(TString))]
-	public TArray Shield;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Shield;
 
 	[FieldOffset(122)]
 	public TBool Unk015;

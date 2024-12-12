@@ -1,4 +1,4 @@
-﻿namespace Extractor;
+﻿namespace PoE2Converter;
 
 internal static class Config
 {

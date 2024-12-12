@@ -1,29 +1,27 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct CraftingBenchUnlockCategories
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Unk001;
 
 	[FieldOffset(12)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(28)]
-	public TString UnlockType;
+	public StringReference UnlockType;
 
 	[FieldOffset(36)]
 	[ReferenceTable("CraftingItemClassCategories")]
-	[ElementType(typeof(TRef))]
-	public TArray CraftingItemClassCategories;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CraftingItemClassCategories;
 
 	[FieldOffset(52)]
-	public TString ObtainingDescription;
+	public StringReference ObtainingDescription;
 
 }

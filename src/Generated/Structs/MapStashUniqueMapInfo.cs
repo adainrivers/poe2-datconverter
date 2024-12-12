@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapStashUniqueMapInfo
 {
 	[FieldOffset(0)]
 	[ReferenceTable("UniqueMaps")]
-	public TRef UniqueMap;
+	public TableReference UniqueMap;
 
 	[FieldOffset(16)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItem;
+	public TableReference BaseItem;
 
 }

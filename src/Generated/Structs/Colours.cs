@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Colours
 {
 	[FieldOffset(0)]
-	public TString Item;
+	public StringReference Item;
 
 	[FieldOffset(8)]
 	public int Red;
@@ -18,6 +16,6 @@ public struct Colours
 	public int Blue;
 
 	[FieldOffset(20)]
-	public TString RgbCode;
+	public StringReference RgbCode;
 
 }

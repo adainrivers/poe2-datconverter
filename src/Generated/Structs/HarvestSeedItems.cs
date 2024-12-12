@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HarvestSeedItems
@@ -10,10 +8,10 @@ public struct HarvestSeedItems
 
 	[FieldOffset(4)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItem;
+	public TableReference BaseItem;
 
 	[FieldOffset(20)]
 	[ReferenceTable("Stats")]
-	public TRef DropStat;
+	public TableReference DropStat;
 
 }

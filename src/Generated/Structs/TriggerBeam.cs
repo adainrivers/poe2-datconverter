@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TriggerBeam
@@ -10,17 +8,17 @@ public struct TriggerBeam
 
 	[FieldOffset(4)]
 	[ReferenceTable("MiscBeams")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk001;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk001;
 
 	[FieldOffset(20)]
 	[ReferenceTable("MiscBeams")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk002;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk002;
 
 	[FieldOffset(36)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(52)]
 	public TBool Unk004;
@@ -42,7 +40,7 @@ public struct TriggerBeam
 
 	[FieldOffset(70)]
 	[ElementType(typeof(int))]
-	public TArray Unk010;
+	public ArrayReference Unk010;
 
 	[FieldOffset(86)]
 	public TBool Unk011;

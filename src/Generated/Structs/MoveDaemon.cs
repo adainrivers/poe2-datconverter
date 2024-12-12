@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MoveDaemon
@@ -24,7 +22,7 @@ public struct MoveDaemon
 	public int Unk005;
 
 	[FieldOffset(24)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(40)]
 	public int Unk007;
@@ -84,7 +82,7 @@ public struct MoveDaemon
 	public TBool Unk025;
 
 	[FieldOffset(104)]
-	public TString Unk026;
+	public StringReference Unk026;
 
 	[FieldOffset(112)]
 	public int Unk027;

@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct VillageUpgradeCategories
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString ScriptArgs;
+	public StringReference ScriptArgs;
 
 	[FieldOffset(16)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(24)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(32)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(40)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 }

@@ -1,6 +1,6 @@
-using Extractor.Generated;
+using PoE2Converter.Generated;
 
-namespace Extractor.Parsers;
+namespace PoE2Converter.Parsers;
 
 public static class ReaderFactory
 {
@@ -9,11 +9,11 @@ public static class ReaderFactory
         var reader = new DatReader();
         if (TypesFactory.StructsMap.TryGetValue(name, out var type))
         {
-            reader.Read(data, type);
+            reader.Read(data, type, name);
             return reader;
         }
-        Console.WriteLine($"Reader not found for {name}");
-        reader.Read(data, null);
+        Console.WriteLine($"{name}: Row data structure doesn't exist");
+        reader.Read(data, null, name);
         return reader;
     }
 }

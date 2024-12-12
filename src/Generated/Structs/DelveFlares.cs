@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DelveFlares
@@ -9,16 +7,16 @@ public struct DelveFlares
 	public int Unk000;
 
 	[FieldOffset(4)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(20)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(36)]
 	public int Unk003;
 
 	[FieldOffset(40)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(56)]
 	public int Unk005;

@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ComponentAttributeRequirements
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TString BaseItemTypesKey;
+	public StringReference BaseItemTypesKey;
 
 	[FieldOffset(8)]
 	public int ReqStr;

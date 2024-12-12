@@ -1,34 +1,32 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionObjectEffects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ElementType(typeof(int))]
-	public TArray Unk001;
+	public ArrayReference Unk001;
 
 	[FieldOffset(24)]
-	public TString Script;
+	public StringReference Script;
 
 	[FieldOffset(32)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(48)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(64)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(80)]
 	[ElementType(typeof(int))]
-	public TArray Unk006;
+	public ArrayReference Unk006;
 
 	[FieldOffset(96)]
 	public int Unk007;

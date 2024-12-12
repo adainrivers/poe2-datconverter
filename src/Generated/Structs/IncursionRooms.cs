@@ -1,15 +1,13 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IncursionRooms
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	public int Tier;
@@ -19,42 +17,42 @@ public struct IncursionRooms
 
 	[FieldOffset(24)]
 	[ReferenceTable("IncursionRooms")]
-	public TRef RoomUpgrade_IncursionRoomsKey;
+	public TableReference RoomUpgrade_IncursionRoomsKey;
 
 	[FieldOffset(32)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Mods;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Mods;
 
 	[FieldOffset(48)]
-	public TString PresentARMFile;
+	public StringReference PresentARMFile;
 
 	[FieldOffset(56)]
 	public int HASH16;
 
 	[FieldOffset(60)]
 	[ReferenceTable("IncursionArchitect")]
-	public TRef IncursionArchitectKey;
+	public TableReference IncursionArchitectKey;
 
 	[FieldOffset(76)]
-	public TString PastARMFile;
+	public StringReference PastARMFile;
 
 	[FieldOffset(84)]
-	public TString TSIFile;
+	public StringReference TSIFile;
 
 	[FieldOffset(92)]
-	public TString UIIcon;
+	public StringReference UIIcon;
 
 	[FieldOffset(100)]
-	public TString FlavourText;
+	public StringReference FlavourText;
 
 	[FieldOffset(108)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(116)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 	[FieldOffset(132)]
 	public int Unk015;
@@ -64,18 +62,18 @@ public struct IncursionRooms
 
 	[FieldOffset(140)]
 	[ReferenceTable("IncursionRooms")]
-	public TRef RoomUpgradeFrom_IncursionRoomsKey;
+	public TableReference RoomUpgradeFrom_IncursionRoomsKey;
 
 	[FieldOffset(148)]
 	[ReferenceTable("FlavourText")]
-	public TRef ItemisedFlavourText;
+	public TableReference ItemisedFlavourText;
 
 	[FieldOffset(164)]
-	public TString Unk019;
+	public StringReference Unk019;
 
 	[FieldOffset(172)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk020;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk020;
 
 }

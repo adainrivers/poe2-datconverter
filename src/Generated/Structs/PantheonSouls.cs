@@ -1,39 +1,37 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PantheonSouls
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldArea;
+	public TableReference WorldArea;
 
 	[FieldOffset(16)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef CapturedVessel;
+	public TableReference CapturedVessel;
 
 	[FieldOffset(32)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlagUpgrade;
+	public TableReference QuestFlagUpgrade;
 
 	[FieldOffset(48)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray CapturedMonster;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CapturedMonster;
 
 	[FieldOffset(64)]
 	[ReferenceTable("PantheonPanelLayout")]
-	public TRef PanelLayout;
+	public TableReference PanelLayout;
 
 	[FieldOffset(80)]
-	public TString CapturedMonsterDescription;
+	public StringReference CapturedMonsterDescription;
 
 	[FieldOffset(88)]
 	public int Unk006;
 
 	[FieldOffset(92)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlagDowngrade;
+	public TableReference QuestFlagDowngrade;
 
 }

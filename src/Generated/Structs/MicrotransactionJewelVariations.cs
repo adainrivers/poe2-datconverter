@@ -1,34 +1,32 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionJewelVariations
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(20)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(28)]
-	public TString Unk003;
+	public StringReference Unk003;
 
 	[FieldOffset(36)]
 	public int Unk004;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(56)]
-	public TString Unk006;
+	public StringReference Unk006;
 
 	[FieldOffset(64)]
-	public TString Unk007;
+	public StringReference Unk007;
 
 	[FieldOffset(72)]
 	public int Unk008;
@@ -37,13 +35,13 @@ public struct MicrotransactionJewelVariations
 	public int Unk009;
 
 	[FieldOffset(80)]
-	public TString Unk010;
+	public StringReference Unk010;
 
 	[FieldOffset(88)]
 	public int Unk011;
 
 	[FieldOffset(92)]
-	public TString Unk012;
+	public StringReference Unk012;
 
 	[FieldOffset(100)]
 	public int Unk013;
@@ -52,7 +50,7 @@ public struct MicrotransactionJewelVariations
 	public TBool Unk014;
 
 	[FieldOffset(105)]
-	public TRef Unk015;
+	public TableReference Unk015;
 
 	[FieldOffset(121)]
 	public TBool Unk016;

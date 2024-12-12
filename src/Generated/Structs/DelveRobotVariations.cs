@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DelveRobotVariations
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString AOFile;
+	public StringReference AOFile;
 
 	[FieldOffset(16)]
-	[ElementType(typeof(TString))]
-	public TArray Unk002;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk002;
 
 	[FieldOffset(32)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(48)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 }

@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Extractor.Parsers;
+namespace PoE2Converter.Parsers;
 
 public class Csd
 {

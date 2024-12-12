@@ -1,18 +1,16 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SanctumDeferredRewardCategories
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Item;
+	public TableReference Item;
 
 	[FieldOffset(16)]
-	public TString NamePlural;
+	public StringReference NamePlural;
 
 	[FieldOffset(24)]
-	public TString ScriptReward;
+	public StringReference ScriptReward;
 
 }

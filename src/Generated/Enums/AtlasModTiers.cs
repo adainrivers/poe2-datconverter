@@ -1,4 +1,4 @@
-namespace Extractor.Generated.Enums;
+namespace PoE2Converter.Generated.Enums;
 
 public enum AtlasModTiers
 {

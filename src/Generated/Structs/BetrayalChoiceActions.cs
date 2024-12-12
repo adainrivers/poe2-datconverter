@@ -1,19 +1,17 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BetrayalChoiceActions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BetrayalChoices")]
-	public TRef BetrayalChoicesKey;
+	public TableReference BetrayalChoicesKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("ClientStrings")]
-	public TRef ClientStringsKey;
+	public TableReference ClientStringsKey;
 
 }

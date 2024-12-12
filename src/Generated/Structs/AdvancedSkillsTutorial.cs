@@ -1,39 +1,37 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AdvancedSkillsTutorial
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("SkillGemInfo")]
-	[ElementType(typeof(TRef))]
-	public TArray SkillGemInfoKey1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SkillGemInfoKey1;
 
 	[FieldOffset(24)]
 	[ReferenceTable("SkillGemInfo")]
-	[ElementType(typeof(TRef))]
-	public TArray SkillGemInfoKey2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SkillGemInfoKey2;
 
 	[FieldOffset(40)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(48)]
-	public TString International_BK2File;
+	public StringReference International_BK2File;
 
 	[FieldOffset(56)]
 	[ReferenceTable("SkillGems")]
-	public TRef SkillGemsKey;
+	public TableReference SkillGemsKey;
 
 	[FieldOffset(72)]
-	public TString China_BK2File;
+	public StringReference China_BK2File;
 
 	[FieldOffset(80)]
 	[ReferenceTable("Characters")]
-	[ElementType(typeof(TRef))]
-	public TArray CharactersKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CharactersKey;
 
 }

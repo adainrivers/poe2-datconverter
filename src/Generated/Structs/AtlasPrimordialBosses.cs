@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasPrimordialBosses
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Unk001;
@@ -22,36 +20,36 @@ public struct AtlasPrimordialBosses
 
 	[FieldOffset(24)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef InfluenceComplete;
+	public TableReference InfluenceComplete;
 
 	[FieldOffset(40)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef MiniBossInvitation;
+	public TableReference MiniBossInvitation;
 
 	[FieldOffset(56)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BossInvitation;
+	public TableReference BossInvitation;
 
 	[FieldOffset(72)]
 	[ReferenceTable("QuestFlags")]
-	public TRef PickUpKey;
+	public TableReference PickUpKey;
 
 	[FieldOffset(88)]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 	[FieldOffset(104)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(120)]
 	[ReferenceTable("Tags")]
-	public TRef Tag;
+	public TableReference Tag;
 
 	[FieldOffset(136)]
 	[ReferenceTable("MiscObjects")]
-	public TRef Altar;
+	public TableReference Altar;
 
 	[FieldOffset(152)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef AltarActivated;
+	public TableReference AltarActivated;
 
 }

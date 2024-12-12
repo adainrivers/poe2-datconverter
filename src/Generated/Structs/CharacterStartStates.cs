@@ -1,47 +1,45 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct CharacterStartStates
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Characters")]
-	public TRef CharactersKey;
+	public TableReference CharactersKey;
 
 	[FieldOffset(32)]
 	public int Level;
 
 	[FieldOffset(36)]
 	[ReferenceTable("PassiveSkills")]
-	[ElementType(typeof(TRef))]
-	public TArray PassiveSkillsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference PassiveSkillsKeys;
 
 	[FieldOffset(52)]
 	[ReferenceTable("CharacterStartStateSet")]
-	public TRef CharacterStartStateSetKey;
+	public TableReference CharacterStartStateSetKey;
 
 	[FieldOffset(68)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(84)]
 	[ReferenceTable("CharacterStartQuestState")]
-	[ElementType(typeof(TRef))]
-	public TArray CharacterStartQuestStateKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CharacterStartQuestStateKeys;
 
 	[FieldOffset(100)]
 	public TBool Unk008;
 
 	[FieldOffset(101)]
-	public TString InfoText;
+	public StringReference InfoText;
 
 	[FieldOffset(109)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 }

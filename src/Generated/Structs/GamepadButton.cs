@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GamepadButton
 {
 	[FieldOffset(0)]
-	public TString Unk000;
+	public StringReference Unk000;
 
 	[FieldOffset(8)]
-	public TString Unk001;
+	public StringReference Unk001;
 
 	[FieldOffset(16)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(24)]
-	public TString Unk003;
+	public StringReference Unk003;
 
 	[FieldOffset(32)]
-	public TString Unk004;
+	public StringReference Unk004;
 
 }

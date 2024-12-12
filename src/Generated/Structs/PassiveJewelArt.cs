@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveJewelArt
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
-	public TString Unk001;
+	public StringReference Unk001;
 
 	[FieldOffset(24)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(32)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 }

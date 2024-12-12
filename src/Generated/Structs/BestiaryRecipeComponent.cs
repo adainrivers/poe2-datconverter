@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BestiaryRecipeComponent
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int MinLevel;
 
 	[FieldOffset(12)]
 	[ReferenceTable("BestiaryFamilies")]
-	public TRef BestiaryFamiliesKey;
+	public TableReference BestiaryFamiliesKey;
 
 	[FieldOffset(28)]
 	[ReferenceTable("BestiaryGroups")]
-	public TRef BestiaryGroupsKey;
+	public TableReference BestiaryGroupsKey;
 
 	[FieldOffset(44)]
 	[ReferenceTable("Mods")]
-	public TRef ModsKey;
+	public TableReference ModsKey;
 
 	[FieldOffset(60)]
 	[ReferenceTable("BestiaryCapturableMonsters")]
-	public TRef BestiaryCapturableMonstersKey;
+	public TableReference BestiaryCapturableMonstersKey;
 
 	[FieldOffset(76)]
 	[ReferenceTable("Rarity")]
-	public TRef BeastRarity;
+	public TableReference BeastRarity;
 
 	[FieldOffset(92)]
 	[ReferenceTable("BestiaryGenus")]
-	public TRef BestiaryGenusKey;
+	public TableReference BestiaryGenusKey;
 
 }

@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Notifications
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public TBool Unk001;
@@ -15,10 +13,10 @@ public struct Notifications
 	public TBool Unk002;
 
 	[FieldOffset(10)]
-	public TString Message;
+	public StringReference Message;
 
 	[FieldOffset(18)]
-	public TString Unk004;
+	public StringReference Unk004;
 
 	[FieldOffset(26)]
 	public int Unk005;

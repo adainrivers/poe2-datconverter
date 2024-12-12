@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct UltimatumTrialMasterAudio
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Variant;
@@ -19,7 +17,7 @@ public struct UltimatumTrialMasterAudio
 
 	[FieldOffset(20)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudio;
+	public TableReference TextAudio;
 
 	[FieldOffset(36)]
 	public int RoundsMin;

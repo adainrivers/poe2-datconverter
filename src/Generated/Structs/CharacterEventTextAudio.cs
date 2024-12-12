@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct CharacterEventTextAudio
 {
 	[FieldOffset(0)]
 	[ReferenceTable("CharacterAudioEvents")]
-	public TRef Event;
+	public TableReference Event;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Characters")]
-	public TRef Character;
+	public TableReference Character;
 
 	[FieldOffset(32)]
 	[ReferenceTable("CharacterTextAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray TextAudio;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TextAudio;
 
 }

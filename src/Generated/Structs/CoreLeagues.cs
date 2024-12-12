@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct CoreLeagues
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public TBool Unk001;
@@ -16,36 +14,36 @@ public struct CoreLeagues
 
 	[FieldOffset(10)]
 	[ReferenceTable("Stats")]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(26)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk004;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk004;
 
 	[FieldOffset(42)]
 	[ReferenceTable("Stats")]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(58)]
 	[ReferenceTable("Stats")]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(74)]
 	[ReferenceTable("Stats")]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(90)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk008;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk008;
 
 	[FieldOffset(106)]
 	[ReferenceTable("Stats")]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 	[FieldOffset(122)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(138)]
 	public int Unk011;
@@ -55,7 +53,7 @@ public struct CoreLeagues
 
 	[FieldOffset(143)]
 	[ReferenceTable("Stats")]
-	public TRef Unk013;
+	public TableReference Unk013;
 
 	[FieldOffset(159)]
 	public TBool Unk014;
@@ -65,7 +63,7 @@ public struct CoreLeagues
 
 	[FieldOffset(161)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk016;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk016;
 
 }

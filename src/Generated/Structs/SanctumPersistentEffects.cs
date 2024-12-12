@@ -1,27 +1,25 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SanctumPersistentEffects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Stats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Stats;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray StatValues;
+	public ArrayReference StatValues;
 
 	[FieldOffset(40)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(48)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(56)]
 	public int Unk005;
@@ -31,20 +29,20 @@ public struct SanctumPersistentEffects
 
 	[FieldOffset(61)]
 	[ReferenceTable("SanctumPersistentEffectCategories")]
-	public TRef EffectCategory;
+	public TableReference EffectCategory;
 
 	[FieldOffset(77)]
 	[ReferenceTable("SanctumPersistentEffects")]
-	public TRef NextEffect;
+	public TableReference NextEffect;
 
 	[FieldOffset(85)]
-	public TString Unk009;
+	public StringReference Unk009;
 
 	[FieldOffset(93)]
-	public TString BoonDesc;
+	public StringReference BoonDesc;
 
 	[FieldOffset(101)]
-	public TString CurseDesc;
+	public StringReference CurseDesc;
 
 	[FieldOffset(109)]
 	public int Unk012;
@@ -56,17 +54,17 @@ public struct SanctumPersistentEffects
 	public TBool Unk014;
 
 	[FieldOffset(118)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk015;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk015;
 
 	[FieldOffset(134)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray Guard;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Guard;
 
 	[FieldOffset(150)]
 	[ReferenceTable("SanctumPersistentEffects")]
-	public TRef FirstEffect;
+	public TableReference FirstEffect;
 
 	[FieldOffset(158)]
 	public int Unk018;

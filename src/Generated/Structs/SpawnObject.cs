@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SpawnObject
@@ -9,12 +7,12 @@ public struct SpawnObject
 	public int Unk000;
 
 	[FieldOffset(4)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk001;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk001;
 
 	[FieldOffset(20)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(36)]
 	public int Unk003;
@@ -44,7 +42,7 @@ public struct SpawnObject
 	public TBool Unk011;
 
 	[FieldOffset(69)]
-	public TString Unk012;
+	public StringReference Unk012;
 
 	[FieldOffset(77)]
 	public int Unk013;

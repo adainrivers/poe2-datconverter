@@ -1,51 +1,49 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BuffVisualOrbArt
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated;
+	public TableReference MiscAnimated;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(40)]
-	[ElementType(typeof(TString))]
-	public TArray Unk003;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk003;
 
 	[FieldOffset(56)]
-	public TString Unk004;
+	public StringReference Unk004;
 
 	[FieldOffset(64)]
-	public TString Unk005;
+	public StringReference Unk005;
 
 	[FieldOffset(72)]
-	public TString Unk006;
+	public StringReference Unk006;
 
 	[FieldOffset(80)]
-	public TString Unk007;
+	public StringReference Unk007;
 
 	[FieldOffset(88)]
 	public int Unk008;
 
 	[FieldOffset(92)]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 	[FieldOffset(108)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(124)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(140)]
-	public TRef Unk012;
+	public TableReference Unk012;
 
 	[FieldOffset(156)]
 	public TBool Unk013;

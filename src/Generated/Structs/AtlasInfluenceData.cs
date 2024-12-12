@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasInfluenceData
 {
 	[FieldOffset(0)]
 	[ReferenceTable("AtlasInfluenceOutcomes")]
-	public TRef InfluencePack;
+	public TableReference InfluencePack;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MonsterPacks")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterPacks;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterPacks;
 
 	[FieldOffset(32)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk003;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk003;
 
 	[FieldOffset(64)]
 	public int Unk004;
@@ -36,7 +34,7 @@ public struct AtlasInfluenceData
 
 	[FieldOffset(80)]
 	[ElementType(typeof(int))]
-	public TArray Unk008;
+	public ArrayReference Unk008;
 
 	[FieldOffset(96)]
 	public int Unk009;
@@ -45,7 +43,7 @@ public struct AtlasInfluenceData
 	public int Unk010;
 
 	[FieldOffset(104)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(120)]
 	public int Unk012;

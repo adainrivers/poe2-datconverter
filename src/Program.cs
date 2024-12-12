@@ -1,9 +1,4 @@
-﻿using Extractor.Generators;
-using Extractor.Parsers;
-using Extractor.Serialization;
-using Newtonsoft.Json;
-
-namespace Extractor;
+﻿namespace PoE2Converter;
 
 internal static class Program
 {

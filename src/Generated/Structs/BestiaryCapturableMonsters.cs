@@ -1,45 +1,43 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BestiaryCapturableMonsters
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("BestiaryGroups")]
-	public TRef BestiaryGroupsKey;
+	public TableReference BestiaryGroupsKey;
 
 	[FieldOffset(32)]
 	[ReferenceTable("BestiaryEncounters")]
-	public TRef BestiaryEncountersKey;
+	public TableReference BestiaryEncountersKey;
 
 	[FieldOffset(48)]
 	public TBool Unk003;
 
 	[FieldOffset(49)]
-	public TString IconSmall;
+	public StringReference IconSmall;
 
 	[FieldOffset(57)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(65)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Boss_MonsterVarietiesKey;
+	public TableReference Boss_MonsterVarietiesKey;
 
 	[FieldOffset(81)]
 	[ReferenceTable("BestiaryGenus")]
-	public TRef BestiaryGenusKey;
+	public TableReference BestiaryGenusKey;
 
 	[FieldOffset(97)]
 	public TBool Unk008;
 
 	[FieldOffset(98)]
 	[ReferenceTable("BestiaryCapturableMonsters")]
-	public TRef BestiaryCapturableMonstersKey;
+	public TableReference BestiaryCapturableMonstersKey;
 
 	[FieldOffset(106)]
 	public TBool IsDisabled;

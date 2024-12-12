@@ -1,27 +1,25 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AlternateQualityTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Item;
+	public TableReference Item;
 
 	[FieldOffset(32)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray MapStats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MapStats;
 
 	[FieldOffset(64)]
 	public int Unk005;
@@ -34,6 +32,6 @@ public struct AlternateQualityTypes
 
 	[FieldOffset(71)]
 	[ReferenceTable("Mods")]
-	public TRef CatalystMod;
+	public TableReference CatalystMod;
 
 }

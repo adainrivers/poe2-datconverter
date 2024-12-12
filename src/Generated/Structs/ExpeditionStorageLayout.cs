@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionStorageLayout
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef StoredItem;
+	public TableReference StoredItem;
 
 	[FieldOffset(24)]
 	public int XOffset;
@@ -37,6 +35,6 @@ public struct ExpeditionStorageLayout
 	public TBool Unk009;
 
 	[FieldOffset(53)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 }

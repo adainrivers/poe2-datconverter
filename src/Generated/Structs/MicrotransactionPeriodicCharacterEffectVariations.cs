@@ -1,19 +1,17 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionPeriodicCharacterEffectVariations
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString AOFile;
+	public StringReference AOFile;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MiscObjects")]
-	public TRef MiscObject;
+	public TableReference MiscObject;
 
 	[FieldOffset(32)]
 	public int Unk003;

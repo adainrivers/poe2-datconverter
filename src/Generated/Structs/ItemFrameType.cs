@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemFrameType
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public TBool Unk001;
@@ -15,37 +13,37 @@ public struct ItemFrameType
 	public TBool DoubleLine;
 
 	[FieldOffset(10)]
-	public TString HeaderSingle;
+	public StringReference HeaderSingle;
 
 	[FieldOffset(18)]
-	public TString HeaderDouble;
+	public StringReference HeaderDouble;
 
 	[FieldOffset(26)]
-	public TString HardmodeHeaderSingle;
+	public StringReference HardmodeHeaderSingle;
 
 	[FieldOffset(34)]
-	public TString HardmodeHeaderDouble;
+	public StringReference HardmodeHeaderDouble;
 
 	[FieldOffset(42)]
 	[ElementType(typeof(int))]
-	public TArray Color;
+	public ArrayReference Color;
 
 	[FieldOffset(58)]
-	public TString Separator;
+	public StringReference Separator;
 
 	[FieldOffset(66)]
 	public TBool Unk009;
 
 	[FieldOffset(67)]
 	[ReferenceTable("Rarity")]
-	public TRef Rarity;
+	public TableReference Rarity;
 
 	[FieldOffset(83)]
 	[ReferenceTable("ClientStrings")]
-	public TRef DisplayString;
+	public TableReference DisplayString;
 
 	[FieldOffset(99)]
-	public TString ColorMarkup;
+	public StringReference ColorMarkup;
 
 	[FieldOffset(107)]
 	public int Unk013;

@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapSeries
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString BaseIcon_DDSFile;
+	public StringReference BaseIcon_DDSFile;
 
 	[FieldOffset(24)]
-	public TString Infected_DDSFile;
+	public StringReference Infected_DDSFile;
 
 	[FieldOffset(32)]
-	public TString Shaper_DDSFile;
+	public StringReference Shaper_DDSFile;
 
 	[FieldOffset(40)]
-	public TString Elder_DDSFile;
+	public StringReference Elder_DDSFile;
 
 	[FieldOffset(48)]
-	public TString Drawn_DDSFile;
+	public StringReference Drawn_DDSFile;
 
 	[FieldOffset(56)]
-	public TString Delirious_DDSFile;
+	public StringReference Delirious_DDSFile;
 
 	[FieldOffset(64)]
-	public TString UberBlight_DDSFile;
+	public StringReference UberBlight_DDSFile;
 
 	[FieldOffset(72)]
-	public TString Purple_DDSFile;
+	public StringReference Purple_DDSFile;
 
 }

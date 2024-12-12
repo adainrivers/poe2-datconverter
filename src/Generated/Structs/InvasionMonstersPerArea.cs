@@ -1,30 +1,28 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct InvasionMonstersPerArea
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(20)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(36)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterVarietiesKeys1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterVarietiesKeys1;
 
 	[FieldOffset(52)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterVarietiesKeys2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterVarietiesKeys2;
 
 	[FieldOffset(68)]
 	public int Unk005;

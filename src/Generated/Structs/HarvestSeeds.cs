@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HarvestSeeds
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Monster;
+	public TableReference Monster;
 
 	[FieldOffset(24)]
 	public int Tier;
@@ -20,21 +18,21 @@ public struct HarvestSeeds
 
 	[FieldOffset(32)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(48)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements;
 
 	[FieldOffset(64)]
-	public TString SeedAnimation;
+	public StringReference SeedAnimation;
 
 	[FieldOffset(72)]
 	public int Unk007;
 
 	[FieldOffset(76)]
-	public TString HatchAnimation;
+	public StringReference HatchAnimation;
 
 	[FieldOffset(84)]
 	public int SeedType;

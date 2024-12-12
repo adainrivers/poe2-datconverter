@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Realms
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	[ElementType(typeof(TString))]
-	public TArray Server;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Server;
 
 	[FieldOffset(32)]
 	public TBool IsEnabled;
 
 	[FieldOffset(33)]
-	[ElementType(typeof(TString))]
-	public TArray Server2;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Server2;
 
 	[FieldOffset(49)]
-	public TString ShortName;
+	public StringReference ShortName;
 
 	[FieldOffset(57)]
 	[ReferenceTable("Realms")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk006;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk006;
 
 	[FieldOffset(73)]
 	[ReferenceTable("Realms")]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(81)]
 	public int Unk008;
@@ -41,7 +39,7 @@ public struct Realms
 	public TBool IsGammaRealm;
 
 	[FieldOffset(86)]
-	[ElementType(typeof(TString))]
-	public TArray SpeedtestUrl;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference SpeedtestUrl;
 
 }

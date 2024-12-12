@@ -1,85 +1,83 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DescentRewardChests
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys1;
 
 	[FieldOffset(24)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys2;
 
 	[FieldOffset(40)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys3;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys3;
 
 	[FieldOffset(56)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys4;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys4;
 
 	[FieldOffset(72)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys5;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys5;
 
 	[FieldOffset(88)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys6;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys6;
 
 	[FieldOffset(104)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys7;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys7;
 
 	[FieldOffset(120)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys8;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys8;
 
 	[FieldOffset(136)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys9;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys9;
 
 	[FieldOffset(152)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys10;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys10;
 
 	[FieldOffset(168)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys11;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys11;
 
 	[FieldOffset(184)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys12;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys12;
 
 	[FieldOffset(200)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(216)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys13;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys13;
 
 	[FieldOffset(232)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray BaseItemTypesKeys14;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BaseItemTypesKeys14;
 
 }

@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapFragmentMods
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys;
 
 	[FieldOffset(32)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKey;
 
 	[FieldOffset(48)]
 	public int MapFragmentFamilies;

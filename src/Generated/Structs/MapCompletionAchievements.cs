@@ -1,43 +1,41 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapCompletionAchievements
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MapStatConditions")]
-	[ElementType(typeof(TRef))]
-	public TArray MapStatConditionsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MapStatConditionsKeys;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(40)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 	[FieldOffset(56)]
 	[ReferenceTable("MapTierAchievements")]
-	[ElementType(typeof(TRef))]
-	public TArray MapTierAchievementsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MapTierAchievementsKeys;
 
 	[FieldOffset(72)]
 	public TBool Unk005;
 
 	[FieldOffset(73)]
 	[ReferenceTable("WorldAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray WorldAreasKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference WorldAreasKeys;
 
 	[FieldOffset(89)]
 	[ElementType(typeof(int))]
-	public TArray Unk007;
+	public ArrayReference Unk007;
 
 }

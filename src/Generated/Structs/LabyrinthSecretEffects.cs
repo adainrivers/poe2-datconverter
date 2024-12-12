@@ -1,30 +1,28 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LabyrinthSecretEffects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("BuffDefinitions")]
-	public TRef Buff_BuffDefinitionsKey;
+	public TableReference Buff_BuffDefinitionsKey;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray Buff_StatValues;
+	public ArrayReference Buff_StatValues;
 
 	[FieldOffset(56)]
-	public TString OTFile;
+	public StringReference OTFile;
 
 	[FieldOffset(64)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 }

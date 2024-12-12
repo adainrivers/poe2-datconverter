@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemNoteCode
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItem;
+	public TableReference BaseItem;
 
 	[FieldOffset(16)]
-	public TString Code;
+	public StringReference Code;
 
 	[FieldOffset(24)]
 	public int Order1;

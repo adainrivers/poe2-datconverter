@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasMemoryLine
 {
 	[FieldOffset(0)]
-	public TString League;
+	public StringReference League;
 
 	[FieldOffset(8)]
-	public TString League2;
+	public StringReference League2;
 
 	[FieldOffset(16)]
-	public TString StartPointArt;
+	public StringReference StartPointArt;
 
 	[FieldOffset(24)]
-	public TString MidPointArt;
+	public StringReference MidPointArt;
 
 	[FieldOffset(32)]
-	public TString EndPointArt;
+	public StringReference EndPointArt;
 
 	[FieldOffset(40)]
-	public TString PathArt;
+	public StringReference PathArt;
 
 }

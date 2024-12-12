@@ -1,17 +1,15 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveTreeExpansionJewels
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("PassiveTreeExpansionJewelSizes")]
-	public TRef PassiveTreeExpansionJewelSizesKey;
+	public TableReference PassiveTreeExpansionJewelSizesKey;
 
 	[FieldOffset(32)]
 	public int MinNodes;
@@ -21,15 +19,15 @@ public struct PassiveTreeExpansionJewels
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray SmallIndices;
+	public ArrayReference SmallIndices;
 
 	[FieldOffset(56)]
 	[ElementType(typeof(int))]
-	public TArray NotableIndices;
+	public ArrayReference NotableIndices;
 
 	[FieldOffset(72)]
 	[ElementType(typeof(int))]
-	public TArray SocketIndices;
+	public ArrayReference SocketIndices;
 
 	[FieldOffset(88)]
 	public int TotalIndices;

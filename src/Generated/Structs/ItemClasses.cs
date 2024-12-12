@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemClasses
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	[ReferenceTable("TradeMarketCategory")]
-	public TRef TradeMarketCategory;
+	public TableReference TradeMarketCategory;
 
 	[FieldOffset(32)]
 	[ReferenceTable("ItemClassCategories")]
-	public TRef ItemClassCategory;
+	public TableReference ItemClassCategory;
 
 	[FieldOffset(48)]
 	public TBool RemovedIfLeavesArea;
 
 	[FieldOffset(49)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(65)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray IdentifyAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference IdentifyAchievements;
 
 	[FieldOffset(81)]
 	public TBool AllocateToMapOwner;
@@ -42,7 +40,7 @@ public struct ItemClasses
 
 	[FieldOffset(84)]
 	[ReferenceTable("QuestFlags")]
-	public TRef PickedUpQuest;
+	public TableReference PickedUpQuest;
 
 	[FieldOffset(100)]
 	public int Unk011;
@@ -70,7 +68,7 @@ public struct ItemClasses
 
 	[FieldOffset(111)]
 	[ReferenceTable("ItemStances")]
-	public TRef ItemStance;
+	public TableReference ItemStance;
 
 	[FieldOffset(127)]
 	public TBool CanScourge;
@@ -86,13 +84,13 @@ public struct ItemClasses
 
 	[FieldOffset(131)]
 	[ElementType(typeof(int))]
-	public TArray MaxInventoryDimensions;
+	public ArrayReference MaxInventoryDimensions;
 
 	[FieldOffset(147)]
 	[ReferenceTable("ItemClassFlags")]
 	[EnumName("ItemClassFlags")]
 	[ElementType(typeof(TEnum))]
-	public TArray Flags;
+	public ArrayReference Flags;
 
 	[FieldOffset(163)]
 	public TBool Unmodifiable;
@@ -102,7 +100,7 @@ public struct ItemClasses
 
 	[FieldOffset(165)]
 	[ReferenceTable("AchievementItems")]
-	public TRef EquipAchievements;
+	public TableReference EquipAchievements;
 
 	//[FieldOffset(181)]
 	//public TBool UsedInMapDevice;

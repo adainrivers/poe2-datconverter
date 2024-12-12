@@ -1,15 +1,15 @@
 using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct WorldAreas
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	public int Act;
@@ -22,8 +22,8 @@ public struct WorldAreas
 
 	[FieldOffset(22)]
 	[ReferenceTable("WorldAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray Connections_WorldAreasKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Connections_WorldAreasKeys;
 
 	[FieldOffset(38)]
 	public int AreaLevel;
@@ -38,82 +38,82 @@ public struct WorldAreas
 	public int Unk009;
 
 	[FieldOffset(52)]
-	public TString LoadingScreen_DDSFile;
+	public StringReference LoadingScreen_DDSFile;
 
 	[FieldOffset(60)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(76)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk012;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk012;
 
 	[FieldOffset(92)]
 	public int Unk013;
 
 	[FieldOffset(96)]
 	[ReferenceTable("Topologies")]
-	[ElementType(typeof(TRef))]
-	public TArray TopologiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TopologiesKeys;
 
 	[FieldOffset(112)]
 	[ReferenceTable("WorldAreas")]
-	public TRef ParentTown_WorldAreasKey;
+	public TableReference ParentTown_WorldAreasKey;
 
 	[FieldOffset(120)]
 	public int Unk016;
 
 	[FieldOffset(124)]
-	public TRef Unk017;
+	public TableReference Unk017;
 
 	[FieldOffset(140)]
-	public TRef Unk018;
+	public TableReference Unk018;
 
 	[FieldOffset(156)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray Bosses_MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Bosses_MonsterVarietiesKeys;
 
 	[FieldOffset(172)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray Monsters_MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Monsters_MonsterVarietiesKeys;
 
 	[FieldOffset(188)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray SpawnWeight_TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SpawnWeight_TagsKeys;
 
 	[FieldOffset(204)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight_Values;
+	public ArrayReference SpawnWeight_Values;
 
 	[FieldOffset(220)]
 	public TBool IsMapArea;
 
 	[FieldOffset(221)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray FullClear_AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference FullClear_AchievementItemsKeys;
 
 	[FieldOffset(237)]
-	public TRef Unk025;
+	public TableReference Unk025;
 
 	[FieldOffset(253)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItemsKey;
+	public TableReference AchievementItemsKey;
 
 	[FieldOffset(269)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys;
 
 	[FieldOffset(285)]
 	public int Unk028;
 
 	[FieldOffset(289)]
 	[ReferenceTable("WorldAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray VaalArea;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference VaalArea;
 
 	[FieldOffset(305)]
 	public TBool Unk030;
@@ -123,14 +123,14 @@ public struct WorldAreas
 
 	[FieldOffset(310)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray AreaTypeTags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AreaTypeTags;
 
 	[FieldOffset(326)]
 	public TBool IsHideout;
 
 	[FieldOffset(327)]
-	public TString Inflection;
+	public StringReference Inflection;
 
 	[FieldOffset(335)]
 	public int Unk035;
@@ -140,8 +140,8 @@ public struct WorldAreas
 
 	[FieldOffset(343)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray Tags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tags;
 
 	[FieldOffset(359)]
 	public TBool IsVaalArea;
@@ -154,22 +154,22 @@ public struct WorldAreas
 
 	[FieldOffset(362)]
 	[ReferenceTable("AchievementItems")]
-	public TRef TwinnedFullClear_AchievementItemsKey;
+	public TableReference TwinnedFullClear_AchievementItemsKey;
 
 	[FieldOffset(378)]
 	[ReferenceTable("AchievementItems")]
-	public TRef Enter_AchievementItemsKey;
+	public TableReference Enter_AchievementItemsKey;
 
 	[FieldOffset(394)]
-	public TString TSIFile;
+	public StringReference TSIFile;
 
 	[FieldOffset(402)]
-	public TRef Unk044;
+	public TableReference Unk044;
 
 	[FieldOffset(418)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray WaypointActivation_AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference WaypointActivation_AchievementItemsKeys;
 
 	[FieldOffset(434)]
 	public TBool IsUniqueMapArea;
@@ -179,28 +179,28 @@ public struct WorldAreas
 
 	[FieldOffset(436)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef FirstEntry_NPCTextAudioKey;
+	public TableReference FirstEntry_NPCTextAudioKey;
 
 	[FieldOffset(452)]
 	[ReferenceTable("SoundEffects")]
-	public TRef FirstEntry_SoundEffectsKey;
+	public TableReference FirstEntry_SoundEffectsKey;
 
 	[FieldOffset(468)]
 	[ReferenceTable("NPCs")]
-	public TString FirstEntry_NPCsKey;
+	public StringReference FirstEntry_NPCsKey;
 
 	[FieldOffset(476)]
 	public int Unk051;
 
 	[FieldOffset(480)]
 	[ReferenceTable("Environments")]
-	public TRef EnvironmentsKey;
+	public TableReference EnvironmentsKey;
 
 	[FieldOffset(496)]
 	public int Unk053;
 
 	[FieldOffset(500)]
-	public TRef Unk054;
+	public TableReference Unk054;
 
 	[FieldOffset(516)]
 	public TBool Unk055;
@@ -210,39 +210,39 @@ public struct WorldAreas
 
 	[FieldOffset(518)]
 	[ReferenceTable("WorldAreas")]
-	public TRef Unk057;
+	public TableReference Unk057;
 
 	[FieldOffset(526)]
 	public int Unk058;
 
 	[FieldOffset(530)]
 	[ElementType(typeof(int))]
-	public TArray Unk059;
+	public ArrayReference Unk059;
 
 	[FieldOffset(546)]
 	[ReferenceTable("WorldAreaLeagueChances")]
-	public TRef LeagueChance1;
+	public TableReference LeagueChance1;
 
 	[FieldOffset(562)]
 	public int Unk061;
 
 	[FieldOffset(566)]
 	[ReferenceTable("WorldAreaLeagueChances")]
-	public TRef LeagueChance2;
+	public TableReference LeagueChance2;
 
 	[FieldOffset(582)]
-	public TRef Unk063;
+	public TableReference Unk063;
 
 	[FieldOffset(598)]
 	[ReferenceTable("Rulesets")]
-	public TRef Ruleset;
+	public TableReference Ruleset;
 
 	[FieldOffset(614)]
 	public int Unk065;
 
 	[FieldOffset(618)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlag;
+	public TableReference QuestFlag;
 
 	[FieldOffset(634)]
 	public int Unk067;

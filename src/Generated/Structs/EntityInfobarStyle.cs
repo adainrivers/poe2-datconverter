@@ -1,42 +1,40 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct EntityInfobarStyle
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString FrameLeft;
+	public StringReference FrameLeft;
 
 	[FieldOffset(16)]
-	public TString FrameMiddle;
+	public StringReference FrameMiddle;
 
 	[FieldOffset(24)]
-	public TString FrameRepeat;
+	public StringReference FrameRepeat;
 
 	[FieldOffset(32)]
-	public TString FrameRight;
+	public StringReference FrameRight;
 
 	[FieldOffset(40)]
-	public TString EntityLeft;
+	public StringReference EntityLeft;
 
 	[FieldOffset(48)]
-	public TString EntityMiddle;
+	public StringReference EntityMiddle;
 
 	[FieldOffset(56)]
-	public TString EntityRepeat;
+	public StringReference EntityRepeat;
 
 	[FieldOffset(64)]
-	public TString EntityRight;
+	public StringReference EntityRight;
 
 	[FieldOffset(72)]
-	public TString EntityStats;
+	public StringReference EntityStats;
 
 	[FieldOffset(80)]
-	public TString EntityStatsSmall;
+	public StringReference EntityStatsSmall;
 
 	[FieldOffset(88)]
 	public int Unk011;
@@ -45,18 +43,18 @@ public struct EntityInfobarStyle
 	public int Unk012;
 
 	[FieldOffset(96)]
-	public TString LifeBar;
+	public StringReference LifeBar;
 
 	[FieldOffset(104)]
-	public TString LifeBarLeft;
+	public StringReference LifeBarLeft;
 
 	[FieldOffset(112)]
-	public TString LifeBarMiddle;
+	public StringReference LifeBarMiddle;
 
 	[FieldOffset(120)]
-	public TString LifeBarRepeat;
+	public StringReference LifeBarRepeat;
 
 	[FieldOffset(128)]
-	public TString LifeBarRight;
+	public StringReference LifeBarRight;
 
 }

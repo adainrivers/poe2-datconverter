@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionConditionalApparitionEvents
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
 	public int Unk001;
@@ -15,7 +13,7 @@ public struct MicrotransactionConditionalApparitionEvents
 	public int Unk002;
 
 	[FieldOffset(24)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(40)]
 	public TBool Unk004;
@@ -27,10 +25,10 @@ public struct MicrotransactionConditionalApparitionEvents
 	public int Unk006;
 
 	[FieldOffset(49)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(65)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(81)]
 	public int Unk009;

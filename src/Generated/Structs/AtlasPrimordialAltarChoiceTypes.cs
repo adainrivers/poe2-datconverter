@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasPrimordialAltarChoiceTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString TopIconEater;
+	public StringReference TopIconEater;
 
 	[FieldOffset(16)]
-	public TString BottomIconEater;
+	public StringReference BottomIconEater;
 
 	[FieldOffset(24)]
-	public TString TopIconExarch;
+	public StringReference TopIconExarch;
 
 	[FieldOffset(32)]
-	public TString BottomIconExarch;
+	public StringReference BottomIconExarch;
 
 	[FieldOffset(40)]
-	public TString Text;
+	public StringReference Text;
 
 }

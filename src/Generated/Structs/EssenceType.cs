@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct EssenceType
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int EssenceType_001;
@@ -16,9 +14,9 @@ public struct EssenceType
 
 	[FieldOffset(13)]
 	[ReferenceTable("Words")]
-	public TRef WordsKey;
+	public TableReference WordsKey;
 
 	[FieldOffset(29)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 }

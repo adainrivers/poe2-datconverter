@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct CloneShot
@@ -10,18 +8,18 @@ public struct CloneShot
 
 	[FieldOffset(4)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(20)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated1;
+	public TableReference MiscAnimated1;
 
 	[FieldOffset(36)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated2;
+	public TableReference MiscAnimated2;
 
 	[FieldOffset(52)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated3;
+	public TableReference MiscAnimated3;
 
 }

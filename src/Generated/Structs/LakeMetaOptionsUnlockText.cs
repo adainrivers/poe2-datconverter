@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LakeMetaOptionsUnlockText
@@ -9,6 +7,6 @@ public struct LakeMetaOptionsUnlockText
 	public int Id;
 
 	[FieldOffset(4)]
-	public TString Text;
+	public StringReference Text;
 
 }

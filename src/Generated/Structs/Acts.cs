@@ -1,18 +1,16 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Acts
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Part;
 
 	[FieldOffset(12)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(20)]
 	public int Unk003;
@@ -21,10 +19,10 @@ public struct Acts
 	public int ActNumber;
 
 	[FieldOffset(28)]
-	public TString WorldPanelImage;
+	public StringReference WorldPanelImage;
 
 	[FieldOffset(36)]
-	public TString WorldPanelImageEpilogue;
+	public StringReference WorldPanelImageEpilogue;
 
 	[FieldOffset(44)]
 	public int Unk007;
@@ -37,7 +35,7 @@ public struct Acts
 
 	[FieldOffset(53)]
 	[ReferenceTable("QuestFlags")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk010;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk010;
 
 }

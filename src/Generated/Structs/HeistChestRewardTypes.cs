@@ -1,25 +1,23 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistChestRewardTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Art;
+	public StringReference Art;
 
 	[FieldOffset(16)]
-	public TString RewardTypeName;
+	public StringReference RewardTypeName;
 
 	[FieldOffset(24)]
 	[ReferenceTable("HeistChestRewardTypes")]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(32)]
-	public TString RewardRoomName;
+	public StringReference RewardRoomName;
 
 	[FieldOffset(40)]
 	public int MinLevel;
@@ -31,12 +29,12 @@ public struct HeistChestRewardTypes
 	public int Weight;
 
 	[FieldOffset(52)]
-	public TString RewardRoomName2;
+	public StringReference RewardRoomName2;
 
 	[FieldOffset(60)]
 	[ReferenceTable("HeistJobs")]
-	[ElementType(typeof(TRef))]
-	public TArray HeistJobsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference HeistJobsKey;
 
 	[FieldOffset(76)]
 	public int Unk010;

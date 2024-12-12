@@ -1,39 +1,37 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExtraTerrainFeatures
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	[ElementType(typeof(TString))]
-	public TArray ArmFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference ArmFiles;
 
 	[FieldOffset(24)]
-	[ElementType(typeof(TString))]
-	public TArray TdtFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference TdtFiles;
 
 	[FieldOffset(40)]
 	public TBool Unk003;
 
 	[FieldOffset(41)]
-	[ElementType(typeof(TString))]
-	public TArray Unk004;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk004;
 
 	[FieldOffset(57)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(73)]
 	[ReferenceTable("ExtraTerrainFeatures")]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(81)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(97)]
 	public TBool Unk008;

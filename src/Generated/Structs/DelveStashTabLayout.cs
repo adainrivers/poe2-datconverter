@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DelveStashTabLayout
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef StoredItem;
+	public TableReference StoredItem;
 
 	[FieldOffset(24)]
 	public int XOffset;
@@ -34,6 +32,6 @@ public struct DelveStashTabLayout
 	public TBool HideIfEmpty;
 
 	[FieldOffset(49)]
-	public TString Image;
+	public StringReference Image;
 
 }

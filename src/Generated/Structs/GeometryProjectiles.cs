@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GeometryProjectiles
@@ -9,7 +7,7 @@ public struct GeometryProjectiles
 	public int Unk000;
 
 	[FieldOffset(4)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(20)]
 	public TBool Unk002;
@@ -60,13 +58,13 @@ public struct GeometryProjectiles
 	public TBool Unk017;
 
 	[FieldOffset(63)]
-	public TRef Unk018;
+	public TableReference Unk018;
 
 	[FieldOffset(79)]
 	public TBool Unk019;
 
 	[FieldOffset(80)]
-	public TRef Unk020;
+	public TableReference Unk020;
 
 	[FieldOffset(96)]
 	public int Unk021;

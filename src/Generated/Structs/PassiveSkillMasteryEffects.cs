@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveSkillMasteryEffects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public short HASH16;
 
 	[FieldOffset(10)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Stats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Stats;
 
 	[FieldOffset(26)]
 	public int Stat1Value;
@@ -27,9 +25,9 @@ public struct PassiveSkillMasteryEffects
 
 	[FieldOffset(38)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItem;
+	public TableReference AchievementItem;
 
 	[FieldOffset(54)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 }

@@ -1,54 +1,52 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BetrayalTargets
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BetrayalRanks")]
-	public TRef BetrayalRanksKey;
+	public TableReference BetrayalRanksKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(40)]
 	[ReferenceTable("BetrayalJobs")]
-	public TRef BetrayalJobsKey;
+	public TableReference BetrayalJobsKey;
 
 	[FieldOffset(56)]
-	public TString Art;
+	public StringReference Art;
 
 	[FieldOffset(64)]
 	public TBool Unk005;
 
 	[FieldOffset(65)]
 	[ReferenceTable("ItemClasses")]
-	public TRef ItemClasses;
+	public TableReference ItemClasses;
 
 	[FieldOffset(81)]
-	public TString FullName;
+	public StringReference FullName;
 
 	[FieldOffset(89)]
-	public TString Safehouse_ARMFile;
+	public StringReference Safehouse_ARMFile;
 
 	[FieldOffset(97)]
-	public TString ShortName;
+	public StringReference ShortName;
 
 	[FieldOffset(105)]
 	public int Unk010;
 
 	[FieldOffset(109)]
 	[ReferenceTable("AchievementItems")]
-	public TRef SafehouseLeader_AcheivementItemsKey;
+	public TableReference SafehouseLeader_AcheivementItemsKey;
 
 	[FieldOffset(125)]
 	[ReferenceTable("AchievementItems")]
-	public TRef Level3_AchievementItemsKey;
+	public TableReference Level3_AchievementItemsKey;
 
 	[FieldOffset(141)]
 	public int Unk013;
@@ -60,9 +58,9 @@ public struct BetrayalTargets
 	public int Unk015;
 
 	[FieldOffset(153)]
-	public TRef Unk016;
+	public TableReference Unk016;
 
 	[FieldOffset(169)]
-	public TString ScriptArgument;
+	public StringReference ScriptArgument;
 
 }

@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct RecipeUnlockDisplay
@@ -9,21 +7,21 @@ public struct RecipeUnlockDisplay
 	public int RecipeId;
 
 	[FieldOffset(4)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(12)]
 	[ReferenceTable("CraftingItemClassCategories")]
-	[ElementType(typeof(TRef))]
-	public TArray CraftingItemClassCategoriesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CraftingItemClassCategoriesKeys;
 
 	[FieldOffset(28)]
-	public TString UnlockDescription;
+	public StringReference UnlockDescription;
 
 	[FieldOffset(36)]
 	public int Rank;
 
 	[FieldOffset(40)]
 	[ReferenceTable("WorldAreas")]
-	public TRef UnlockArea;
+	public TableReference UnlockArea;
 
 }

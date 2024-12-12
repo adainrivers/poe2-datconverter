@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistJobsExperiencePerLevel
 {
 	[FieldOffset(0)]
 	[ReferenceTable("HeistJobs")]
-	public TRef HeistJobsKey;
+	public TableReference HeistJobsKey;
 
 	[FieldOffset(16)]
 	public int Tier;
@@ -20,7 +18,7 @@ public struct HeistJobsExperiencePerLevel
 
 	[FieldOffset(28)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKey;
 
 }

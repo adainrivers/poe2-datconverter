@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveSkills
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Icon_DDSFile;
+	public StringReference Icon_DDSFile;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Stats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Stats;
 
 	[FieldOffset(32)]
 	public int Stat1Value;
@@ -32,12 +30,12 @@ public struct PassiveSkills
 	public short PassiveSkillGraphId;
 
 	[FieldOffset(50)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(58)]
 	[ReferenceTable("Characters")]
-	[ElementType(typeof(TRef))]
-	public TArray Characters;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Characters;
 
 	[FieldOffset(74)]
 	public TBool IsKeystone;
@@ -46,29 +44,29 @@ public struct PassiveSkills
 	public TBool IsNotable;
 
 	[FieldOffset(76)]
-	public TString FlavourText;
+	public StringReference FlavourText;
 
 	[FieldOffset(84)]
 	public TBool IsJustIcon;
 
 	[FieldOffset(85)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItem;
+	public TableReference AchievementItem;
 
 	[FieldOffset(101)]
 	public TBool IsJewelSocket;
 
 	[FieldOffset(102)]
 	[ReferenceTable("Ascendancy")]
-	public TRef AscendancyKey;
+	public TableReference AscendancyKey;
 
 	[FieldOffset(118)]
 	public TBool IsAscendancyStartingNode;
 
 	[FieldOffset(119)]
 	[ReferenceTable("ReminderText")]
-	[ElementType(typeof(TRef))]
-	public TArray ReminderStrings;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ReminderStrings;
 
 	[FieldOffset(135)]
 	public int SkillPointsGranted;
@@ -84,12 +82,12 @@ public struct PassiveSkills
 
 	[FieldOffset(145)]
 	[ReferenceTable("BuffTemplates")]
-	[ElementType(typeof(TRef))]
-	public TArray PassiveSkillBuffs;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference PassiveSkillBuffs;
 
 	[FieldOffset(161)]
 	[ReferenceTable("GrantedEffectsPerLevel")]
-	public TRef GrantedEffectsPerLevel;
+	public TableReference GrantedEffectsPerLevel;
 
 	[FieldOffset(177)]
 	public TBool IsAnointmentOnly;
@@ -110,18 +108,18 @@ public struct PassiveSkills
 
 	[FieldOffset(188)]
 	[ReferenceTable("PassiveSkillMasteryGroups")]
-	public TRef MasteryGroup;
+	public TableReference MasteryGroup;
 
 	[FieldOffset(204)]
 	[ReferenceTable("AtlasPassiveSkillTreeGroupType")]
-	public TRef Group;
+	public TableReference Group;
 
 	[FieldOffset(220)]
 	[ReferenceTable("SoundEffects")]
-	public TRef SoundEffect;
+	public TableReference SoundEffect;
 
 	[FieldOffset(236)]
-	public TString Unk033;
+	public StringReference Unk033;
 
 	[FieldOffset(244)]
 	public int Unk034;
@@ -142,23 +140,23 @@ public struct PassiveSkills
 	public TBool Unk039;
 
 	[FieldOffset(265)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk040;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk040;
 
 	[FieldOffset(281)]
 	public int Unk041;
 
 	[FieldOffset(285)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk042;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk042;
 
 	[FieldOffset(301)]
 	public TBool Unk043;
 
 	[FieldOffset(302)]
-	public TRef Unk044;
+	public TableReference Unk044;
 
 	[FieldOffset(318)]
-	public TRef Unk045;
+	public TableReference Unk045;
 
 }

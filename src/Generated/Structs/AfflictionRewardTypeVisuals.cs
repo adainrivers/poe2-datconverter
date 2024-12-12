@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AfflictionRewardTypeVisuals
@@ -11,9 +9,9 @@ public struct AfflictionRewardTypeVisuals
 	public TEnum AfflictionRewardTypes;
 
 	[FieldOffset(4)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(12)]
-	public TString Name;
+	public StringReference Name;
 
 }

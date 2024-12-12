@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct JobRaidBrackets
@@ -13,7 +11,7 @@ public struct JobRaidBrackets
 
 	[FieldOffset(8)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldArea;
+	public TableReference WorldArea;
 
 	[FieldOffset(24)]
 	public int Unk003;

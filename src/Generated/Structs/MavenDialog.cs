@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MavenDialog
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioT1;
+	public TableReference TextAudioT1;
 
 	[FieldOffset(24)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioT2;
+	public TableReference TextAudioT2;
 
 	[FieldOffset(40)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioT3;
+	public TableReference TextAudioT3;
 
 	[FieldOffset(56)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioT4;
+	public TableReference TextAudioT4;
 
 	[FieldOffset(72)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioT5;
+	public TableReference TextAudioT5;
 
 	[FieldOffset(88)]
 	public TBool Unk006;
 
 	[FieldOffset(89)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioT6;
+	public TableReference TextAudioT6;
 
 }

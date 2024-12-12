@@ -1,39 +1,37 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveSkillTreeTutorial
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Characters")]
-	public TRef CharactersKey;
+	public TableReference CharactersKey;
 
 	[FieldOffset(24)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(40)]
-	public TString ChoiceA_Description;
+	public StringReference ChoiceA_Description;
 
 	[FieldOffset(48)]
-	public TString ChoiceB_Description;
+	public StringReference ChoiceB_Description;
 
 	[FieldOffset(56)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(72)]
-	public TString ChoiceA_PassiveTreeURL;
+	public StringReference ChoiceA_PassiveTreeURL;
 
 	[FieldOffset(80)]
-	public TString ChoiceB_PassiveTreeURL;
+	public StringReference ChoiceB_PassiveTreeURL;
 
 	[FieldOffset(88)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(104)]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 }

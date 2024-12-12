@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NecropolisCraftItemTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString ExorciseIcon;
+	public StringReference ExorciseIcon;
 
 	[FieldOffset(16)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(24)]
 	public int Unk003;
 
 	[FieldOffset(28)]
-	public TString IllustratuionIcon;
+	public StringReference IllustratuionIcon;
 
 	[FieldOffset(36)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioLong;
+	public TableReference TextAudioLong;
 
 	[FieldOffset(52)]
 	[ReferenceTable("AchievementItems")]
-	public TRef Achievements;
+	public TableReference Achievements;
 
 	[FieldOffset(68)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudioShort;
+	public TableReference TextAudioShort;
 
 	[FieldOffset(84)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 }

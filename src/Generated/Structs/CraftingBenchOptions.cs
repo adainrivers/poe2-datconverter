@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct CraftingBenchOptions
 {
 	[FieldOffset(0)]
 	[ReferenceTable("HideoutNPCs")]
-	public TRef HideoutNPCsKey;
+	public TableReference HideoutNPCsKey;
 
 	[FieldOffset(16)]
 	public int Order;
 
 	[FieldOffset(20)]
 	[ReferenceTable("Mods")]
-	public TRef AddMod;
+	public TableReference AddMod;
 
 	[FieldOffset(36)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray Cost_BaseItemTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Cost_BaseItemTypes;
 
 	[FieldOffset(52)]
 	[ElementType(typeof(int))]
-	public TArray Cost_Values;
+	public ArrayReference Cost_Values;
 
 	[FieldOffset(68)]
 	public int RequiredLevel;
 
 	[FieldOffset(72)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(80)]
 	[ReferenceTable("CraftingBenchCustomActions")]
@@ -38,14 +36,14 @@ public struct CraftingBenchOptions
 
 	[FieldOffset(84)]
 	[ReferenceTable("ItemClasses")]
-	[ElementType(typeof(TRef))]
-	public TArray ItemClasses;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ItemClasses;
 
 	[FieldOffset(100)]
 	public int Links;
 
 	[FieldOffset(104)]
-	public TString SocketColours;
+	public StringReference SocketColours;
 
 	[FieldOffset(112)]
 	public int Sockets;
@@ -55,10 +53,10 @@ public struct CraftingBenchOptions
 
 	[FieldOffset(120)]
 	[ElementType(typeof(int))]
-	public TArray Unk013;
+	public ArrayReference Unk013;
 
 	[FieldOffset(136)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(144)]
 	public TBool IsDisabled;
@@ -69,22 +67,22 @@ public struct CraftingBenchOptions
 	[FieldOffset(146)]
 	[ReferenceTable("RecipeUnlockDisplay")]
 	[ElementType(typeof(int))]
-	public TArray RecipeIds;
+	public ArrayReference RecipeIds;
 
 	[FieldOffset(162)]
 	public int Tier;
 
 	[FieldOffset(166)]
 	[ReferenceTable("CraftingItemClassCategories")]
-	[ElementType(typeof(TRef))]
-	public TArray CraftingItemClassCategories;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CraftingItemClassCategories;
 
 	[FieldOffset(182)]
 	public int Unk020;
 
 	[FieldOffset(186)]
 	[ReferenceTable("CraftingBenchUnlockCategories")]
-	public TRef UnlockCategory;
+	public TableReference UnlockCategory;
 
 	[FieldOffset(202)]
 	public int UnveilsRequired;
@@ -93,12 +91,12 @@ public struct CraftingBenchOptions
 	public int UnveilsRequired2;
 
 	[FieldOffset(210)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk024;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk024;
 
 	[FieldOffset(226)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk025;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk025;
 
 	[FieldOffset(242)]
 	public int Unk026;
@@ -107,18 +105,18 @@ public struct CraftingBenchOptions
 	public int Unk027;
 
 	[FieldOffset(250)]
-	public TRef Unk028;
+	public TableReference Unk028;
 
 	[FieldOffset(266)]
 	[ReferenceTable("Mods")]
-	public TRef AddEnchantment;
+	public TableReference AddEnchantment;
 
 	[FieldOffset(282)]
 	[ReferenceTable("CraftingBenchSortCategories")]
-	public TRef SortCategory;
+	public TableReference SortCategory;
 
 	[FieldOffset(298)]
-	public TRef Unk031;
+	public TableReference Unk031;
 
 	[FieldOffset(314)]
 	public TBool Unk032;
@@ -128,26 +126,26 @@ public struct CraftingBenchOptions
 
 	[FieldOffset(319)]
 	[ReferenceTable("Stats")]
-	public TRef Unk034;
+	public TableReference Unk034;
 
 	[FieldOffset(335)]
 	[ReferenceTable("Stats")]
-	public TRef Unk035;
+	public TableReference Unk035;
 
 	[FieldOffset(351)]
 	[ReferenceTable("Stats")]
-	public TRef Unk036;
+	public TableReference Unk036;
 
 	[FieldOffset(367)]
 	public TBool MapDevice;
 
 	[FieldOffset(368)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk038;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk038;
 
 	[FieldOffset(384)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray Tags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tags;
 
 }

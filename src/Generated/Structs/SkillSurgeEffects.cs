@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SkillSurgeEffects
 {
 	[FieldOffset(0)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffectsKey;
+	public TableReference GrantedEffectsKey;
 
 	[FieldOffset(16)]
-	public TString Unk001;
+	public StringReference Unk001;
 
 	[FieldOffset(24)]
 	public TBool Unk002;
@@ -23,7 +21,7 @@ public struct SkillSurgeEffects
 
 	[FieldOffset(27)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated;
+	public TableReference MiscAnimated;
 
 	[FieldOffset(43)]
 	public TBool Unk006;

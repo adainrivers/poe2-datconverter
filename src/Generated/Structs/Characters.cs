@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Characters
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString AOFile;
+	public StringReference AOFile;
 
 	[FieldOffset(24)]
-	public TString ACTFile;
+	public StringReference ACTFile;
 
 	[FieldOffset(32)]
 	public int BaseMaxLife;
@@ -36,7 +34,7 @@ public struct Characters
 	public int MaxAttackDistance;
 
 	[FieldOffset(56)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(64)]
 	public int IntegerId;
@@ -51,18 +49,18 @@ public struct Characters
 	public int BaseIntelligence;
 
 	[FieldOffset(80)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk015;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk015;
 
 	[FieldOffset(96)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(104)]
 	[ReferenceTable("SkillGems")]
-	public TRef StartSkillGem;
+	public TableReference StartSkillGem;
 
 	[FieldOffset(120)]
-	public TRef Unk018;
+	public TableReference Unk018;
 
 	[FieldOffset(136)]
 	public int Unk019;
@@ -74,40 +72,40 @@ public struct Characters
 	public int CharacterSize;
 
 	[FieldOffset(148)]
-	public TString IntroSoundFile;
+	public StringReference IntroSoundFile;
 
 	[FieldOffset(156)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray StartWeapons;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StartWeapons;
 
 	[FieldOffset(172)]
-	public TString Gender;
+	public StringReference Gender;
 
 	[FieldOffset(180)]
-	public TString TraitDescription;
+	public StringReference TraitDescription;
 
 	[FieldOffset(188)]
-	public TRef Unk026;
+	public TableReference Unk026;
 
 	[FieldOffset(204)]
-	public TRef Unk027;
+	public TableReference Unk027;
 
 	[FieldOffset(220)]
-	public TRef Unk028;
+	public TableReference Unk028;
 
 	[FieldOffset(236)]
-	public TRef Unk029;
+	public TableReference Unk029;
 
 	[FieldOffset(252)]
 	public int Unk030;
 
 	[FieldOffset(256)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk031;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk031;
 
 	[FieldOffset(272)]
-	public TString PassiveTreeImage;
+	public StringReference PassiveTreeImage;
 
 	[FieldOffset(280)]
 	public int Unk033;
@@ -116,38 +114,38 @@ public struct Characters
 	public int Unk034;
 
 	[FieldOffset(288)]
-	public TString TencentVideo;
+	public StringReference TencentVideo;
 
 	[FieldOffset(296)]
-	public TString AttrsAsId;
+	public StringReference AttrsAsId;
 
 	[FieldOffset(304)]
-	public TString LoginScreen;
+	public StringReference LoginScreen;
 
 	[FieldOffset(312)]
-	public TString PlayerCritter;
+	public StringReference PlayerCritter;
 
 	[FieldOffset(320)]
-	public TString PlayerEffect;
+	public StringReference PlayerEffect;
 
 	[FieldOffset(328)]
-	public TString AfterImage;
+	public StringReference AfterImage;
 
 	[FieldOffset(336)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Mirage;
+	public TableReference Mirage;
 
 	[FieldOffset(352)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef CloneImmobile;
+	public TableReference CloneImmobile;
 
 	[FieldOffset(368)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef ReplicateClone;
+	public TableReference ReplicateClone;
 
 	[FieldOffset(384)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef LightningClone;
+	public TableReference LightningClone;
 
 	[FieldOffset(400)]
 	public float Unk045;
@@ -156,50 +154,50 @@ public struct Characters
 	public float Unk046;
 
 	[FieldOffset(408)]
-	public TString SkillTreeBackground;
+	public StringReference SkillTreeBackground;
 
 	[FieldOffset(416)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Clone;
+	public TableReference Clone;
 
 	[FieldOffset(432)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Double;
+	public TableReference Double;
 
 	[FieldOffset(448)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MirageWarrior;
+	public TableReference MirageWarrior;
 
 	[FieldOffset(464)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef DoubleTwo;
+	public TableReference DoubleTwo;
 
 	[FieldOffset(480)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef DarkExile;
+	public TableReference DarkExile;
 
 	[FieldOffset(496)]
-	public TString Attr;
+	public StringReference Attr;
 
 	[FieldOffset(504)]
-	public TString AttrLowercase;
+	public StringReference AttrLowercase;
 
 	[FieldOffset(512)]
-	public TString Script;
+	public StringReference Script;
 
 	[FieldOffset(520)]
-	public TRef Unk056;
+	public TableReference Unk056;
 
 	[FieldOffset(536)]
 	public int Unk057;
 
 	[FieldOffset(540)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Unk058;
+	public TableReference Unk058;
 
 	[FieldOffset(556)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Unk059;
+	public TableReference Unk059;
 
 	[FieldOffset(572)]
 	public int Unk060;

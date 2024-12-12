@@ -1,17 +1,15 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DaemonSpawningData
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterVarieties;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterVarieties;
 
 	[FieldOffset(24)]
 	public int Unk002;

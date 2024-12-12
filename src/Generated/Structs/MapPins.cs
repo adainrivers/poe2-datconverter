@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapPins
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public ulong Unk001;
@@ -24,24 +22,24 @@ public struct MapPins
 	public int Unk005;
 
 	[FieldOffset(40)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(48)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(56)]
 	public ulong Unk008;
 
 	[FieldOffset(64)]
 	[ElementType(typeof(int))]
-	public TArray Unk009;
+	public ArrayReference Unk009;
 
 	[FieldOffset(80)]
 	public int Unk010;
 
 	[FieldOffset(84)]
 	[ElementType(typeof(int))]
-	public TArray Unk011;
+	public ArrayReference Unk011;
 
 	[FieldOffset(100)]
 	public int Unk012;
@@ -50,12 +48,12 @@ public struct MapPins
 	public int Unk013;
 
 	[FieldOffset(108)]
-	public TString Unk014;
+	public StringReference Unk014;
 
 	[FieldOffset(116)]
-	public TString Unk015;
+	public StringReference Unk015;
 
 	[FieldOffset(124)]
-	public TString Unk016;
+	public StringReference Unk016;
 
 }

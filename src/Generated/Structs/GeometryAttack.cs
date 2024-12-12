@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GeometryAttack
@@ -9,12 +7,12 @@ public struct GeometryAttack
 	public int Unk000;
 
 	[FieldOffset(4)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk001;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk001;
 
 	[FieldOffset(20)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk002;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk002;
 
 	[FieldOffset(36)]
 	public int Unk003;
@@ -51,7 +49,7 @@ public struct GeometryAttack
 
 	[FieldOffset(71)]
 	[ElementType(typeof(int))]
-	public TArray Unk014;
+	public ArrayReference Unk014;
 
 	[FieldOffset(87)]
 	public int Unk015;
@@ -93,11 +91,11 @@ public struct GeometryAttack
 	public TBool Unk027;
 
 	[FieldOffset(127)]
-	public TRef Unk028;
+	public TableReference Unk028;
 
 	[FieldOffset(143)]
 	[ElementType(typeof(int))]
-	public TArray Unk029;
+	public ArrayReference Unk029;
 
 	[FieldOffset(159)]
 	public int Unk030;
@@ -109,14 +107,14 @@ public struct GeometryAttack
 	public TBool Unk032;
 
 	[FieldOffset(165)]
-	public TRef Unk033;
+	public TableReference Unk033;
 
 	[FieldOffset(181)]
 	public TBool Unk034;
 
 	[FieldOffset(182)]
 	[ElementType(typeof(int))]
-	public TArray Unk035;
+	public ArrayReference Unk035;
 
 	[FieldOffset(198)]
 	public TBool Unk036;
@@ -125,7 +123,7 @@ public struct GeometryAttack
 	public TBool Unk037;
 
 	[FieldOffset(200)]
-	public TRef Unk038;
+	public TableReference Unk038;
 
 	[FieldOffset(216)]
 	public TBool Unk039;
@@ -135,7 +133,7 @@ public struct GeometryAttack
 
 	[FieldOffset(218)]
 	[ElementType(typeof(int))]
-	public TArray Unk041;
+	public ArrayReference Unk041;
 
 	[FieldOffset(234)]
 	public TBool Unk042;
@@ -171,9 +169,9 @@ public struct GeometryAttack
 	public TBool Unk052;
 
 	[FieldOffset(257)]
-	public TRef Unk053;
+	public TableReference Unk053;
 
 	[FieldOffset(273)]
-	public TRef Unk054;
+	public TableReference Unk054;
 
 }

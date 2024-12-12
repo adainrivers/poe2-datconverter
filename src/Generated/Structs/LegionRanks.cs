@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LegionRanks
@@ -22,7 +20,7 @@ public struct LegionRanks
 
 	[FieldOffset(20)]
 	[ReferenceTable("LegionBalancePerLevel")]
-	public TRef LegionBalancePerLevelKey;
+	public TableReference LegionBalancePerLevelKey;
 
 	[FieldOffset(36)]
 	public int Unk006;

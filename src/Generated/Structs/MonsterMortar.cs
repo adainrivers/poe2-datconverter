@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterMortar
@@ -9,13 +7,13 @@ public struct MonsterMortar
 	public int Id;
 
 	[FieldOffset(4)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(20)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(36)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(52)]
 	public int Unk004;
@@ -54,7 +52,7 @@ public struct MonsterMortar
 	public TBool Unk015;
 
 	[FieldOffset(79)]
-	public TRef Unk016;
+	public TableReference Unk016;
 
 	[FieldOffset(95)]
 	public int Unk017;
@@ -72,9 +70,9 @@ public struct MonsterMortar
 	public TBool Unk021;
 
 	[FieldOffset(112)]
-	public TRef Unk022;
+	public TableReference Unk022;
 
 	[FieldOffset(128)]
-	public TString Unk023;
+	public StringReference Unk023;
 
 }

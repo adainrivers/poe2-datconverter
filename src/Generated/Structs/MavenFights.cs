@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MavenFights
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int WitnessesRequired;
@@ -22,7 +20,7 @@ public struct MavenFights
 
 	[FieldOffset(24)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemType;
+	public TableReference BaseItemType;
 
 	[FieldOffset(40)]
 	public int Unk006;
@@ -32,35 +30,35 @@ public struct MavenFights
 
 	[FieldOffset(48)]
 	[ReferenceTable("QuestFlags")]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(64)]
 	public int Unk009;
 
 	[FieldOffset(68)]
 	[ReferenceTable("WorldAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray WitnessAreas;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference WitnessAreas;
 
 	[FieldOffset(84)]
 	[ReferenceTable("QuestFlags")]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(100)]
 	public TBool Unk012;
 
 	[FieldOffset(101)]
 	[ElementType(typeof(int))]
-	public TArray Unk013;
+	public ArrayReference Unk013;
 
 	[FieldOffset(117)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements1;
 
 	[FieldOffset(133)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements2;
 
 }

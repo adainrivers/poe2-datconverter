@@ -1,43 +1,41 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionFactions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString FactionFlag;
+	public StringReference FactionFlag;
 
 	[FieldOffset(24)]
 	public int Unk003;
 
 	[FieldOffset(28)]
-	public TString FactionIcon;
+	public StringReference FactionIcon;
 
 	[FieldOffset(36)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarieties;
+	public TableReference MonsterVarieties;
 
 	[FieldOffset(52)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef Progress1;
+	public TableReference Progress1;
 
 	[FieldOffset(68)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef Progress2Vaal;
+	public TableReference Progress2Vaal;
 
 	[FieldOffset(84)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef Progress3Final;
+	public TableReference Progress3Final;
 
 	[FieldOffset(100)]
 	[ReferenceTable("Tags")]
-	public TRef Tags;
+	public TableReference Tags;
 
 }

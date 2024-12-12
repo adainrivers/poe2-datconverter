@@ -1,30 +1,28 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExplodingStormBuffs
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BuffDefinitions")]
-	public TRef BuffDefinitionsKey1;
+	public TableReference BuffDefinitionsKey1;
 
 	[FieldOffset(24)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray StatValues;
+	public ArrayReference StatValues;
 
 	[FieldOffset(56)]
 	public int Unk004;
 
 	[FieldOffset(60)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(76)]
 	public int Unk006;
@@ -37,23 +35,23 @@ public struct ExplodingStormBuffs
 
 	[FieldOffset(88)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Friendly_MonsterVarietiesKey;
+	public TableReference Friendly_MonsterVarietiesKey;
 
 	[FieldOffset(104)]
 	[ReferenceTable("MiscObjects")]
-	public TRef MiscObjectsKey;
+	public TableReference MiscObjectsKey;
 
 	[FieldOffset(120)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey;
+	public TableReference MiscAnimatedKey;
 
 	[FieldOffset(136)]
 	[ReferenceTable("BuffVisuals")]
-	public TRef BuffVisualsKey;
+	public TableReference BuffVisualsKey;
 
 	[FieldOffset(152)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Enemy_MonsterVarietiesKey;
+	public TableReference Enemy_MonsterVarietiesKey;
 
 	[FieldOffset(168)]
 	public int Unk014;
@@ -66,7 +64,7 @@ public struct ExplodingStormBuffs
 
 	[FieldOffset(180)]
 	[ReferenceTable("BuffDefinitions")]
-	public TRef BuffDefinitionsKey2;
+	public TableReference BuffDefinitionsKey2;
 
 	[FieldOffset(196)]
 	public TBool IsOnlySpawningNearPlayer;

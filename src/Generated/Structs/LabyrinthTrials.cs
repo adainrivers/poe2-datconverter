@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LabyrinthTrials
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreas;
+	public TableReference WorldAreas;
 
 	[FieldOffset(16)]
 	public int Unk001;
@@ -20,13 +18,13 @@ public struct LabyrinthTrials
 
 	[FieldOffset(28)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey;
+	public TableReference NPCTextAudioKey;
 
 	[FieldOffset(44)]
-	public TString Unk005;
+	public StringReference Unk005;
 
 	[FieldOffset(52)]
-	public TString Unk006;
+	public StringReference Unk006;
 
 	[FieldOffset(60)]
 	public int Unk007;

@@ -1,28 +1,26 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TormentSpirits
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Spirit_ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Spirit_ModsKeys;
 
 	[FieldOffset(32)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Touched_ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Touched_ModsKeys;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Possessed_ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Possessed_ModsKeys;
 
 	[FieldOffset(64)]
 	public int MinZoneLevel;
@@ -35,19 +33,19 @@ public struct TormentSpirits
 
 	[FieldOffset(76)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef SummonedMonster_MonsterVarietiesKey;
+	public TableReference SummonedMonster_MonsterVarietiesKey;
 
 	[FieldOffset(92)]
 	public int Unk008;
 
 	[FieldOffset(96)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys0;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys0;
 
 	[FieldOffset(112)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys1;
 
 }

@@ -1,45 +1,43 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TieredMicrotransactions
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef MTX;
+	public TableReference MTX;
 
 	[FieldOffset(16)]
 	[ElementType(typeof(int))]
-	public TArray TierThresholds;
+	public ArrayReference TierThresholds;
 
 	[FieldOffset(32)]
 	[ReferenceTable("Stats")]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(48)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(64)]
 	[ReferenceTable("Stats")]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(80)]
 	public int TierCount;
 
 	[FieldOffset(84)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk006;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk006;
 
 	[FieldOffset(100)]
 	[ElementType(typeof(int))]
-	public TArray Unk007;
+	public ArrayReference Unk007;
 
 	[FieldOffset(116)]
 	[ElementType(typeof(int))]
-	public TArray Unk008;
+	public ArrayReference Unk008;
 
 	[FieldOffset(132)]
 	public TBool Unk009;
@@ -49,7 +47,7 @@ public struct TieredMicrotransactions
 
 	[FieldOffset(134)]
 	[ReferenceTable("Stats")]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(150)]
 	public TBool Unk012;

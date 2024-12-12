@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HellscapeModificationInventoryLayout
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Column;
@@ -28,17 +26,17 @@ public struct HellscapeModificationInventoryLayout
 
 	[FieldOffset(29)]
 	[ReferenceTable("Stats")]
-	public TRef Stat;
+	public TableReference Stat;
 
 	[FieldOffset(45)]
 	public int StatValue;
 
 	[FieldOffset(49)]
 	[ReferenceTable("HellscapePassives")]
-	public TRef UnlockedWith;
+	public TableReference UnlockedWith;
 
 	[FieldOffset(65)]
 	[ReferenceTable("Quest")]
-	public TRef Quest;
+	public TableReference Quest;
 
 }

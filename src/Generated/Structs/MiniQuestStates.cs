@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MiniQuestStates
@@ -10,11 +8,11 @@ public struct MiniQuestStates
 
 	[FieldOffset(4)]
 	[ElementType(typeof(int))]
-	public TArray Unk001;
+	public ArrayReference Unk001;
 
 	[FieldOffset(20)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(36)]
 	public int Unk003;

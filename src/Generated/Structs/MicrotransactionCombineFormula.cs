@@ -1,28 +1,26 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionCombineFormula
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Result_BaseItemTypesKey;
+	public TableReference Result_BaseItemTypesKey;
 
 	[FieldOffset(24)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray Ingredients_BaseItemTypesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Ingredients_BaseItemTypesKeys;
 
 	[FieldOffset(40)]
-	public TString BK2File;
+	public StringReference BK2File;
 
 	[FieldOffset(48)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(64)]
 	public int Unk005;

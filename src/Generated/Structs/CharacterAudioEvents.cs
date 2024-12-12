@@ -1,16 +1,14 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct CharacterAudioEvents
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("QuestFlags")]
-	public TRef Event;
+	public TableReference Event;
 
 	[FieldOffset(24)]
 	public int Unk002;
@@ -20,13 +18,13 @@ public struct CharacterAudioEvents
 
 	[FieldOffset(32)]
 	[ReferenceTable("CharacterTextAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray Goddess_CharacterTextAudioKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Goddess_CharacterTextAudioKeys;
 
 	[FieldOffset(48)]
 	[ReferenceTable("CharacterTextAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray JackTheAxe_CharacterTextAudioKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference JackTheAxe_CharacterTextAudioKeys;
 
 	[FieldOffset(64)]
 	public TBool Unk006;

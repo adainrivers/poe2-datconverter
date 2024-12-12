@@ -1,37 +1,35 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HideoutNPCs
 {
 	[FieldOffset(0)]
 	[ReferenceTable("NPCs")]
-	public TRef Hideout_NPCsKey;
+	public TableReference Hideout_NPCsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("NPCs")]
-	[ElementType(typeof(TRef))]
-	public TArray Regular_NPCsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Regular_NPCsKeys;
 
 	[FieldOffset(32)]
 	[ReferenceTable("HideoutDoodads")]
-	public TRef HideoutDoodadsKey;
+	public TableReference HideoutDoodadsKey;
 
 	[FieldOffset(48)]
 	public int NPCMasterKey;
 
 	[FieldOffset(52)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(68)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(84)]
 	public int Unk006;
 
 	[FieldOffset(88)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(104)]
 	public int Unk008;
@@ -40,6 +38,6 @@ public struct HideoutNPCs
 	public TBool Unk009;
 
 	[FieldOffset(109)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 }

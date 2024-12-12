@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AfflictionFixedMods
@@ -10,9 +8,9 @@ public struct AfflictionFixedMods
 
 	[FieldOffset(4)]
 	[ReferenceTable("Mods")]
-	public TRef Mod;
+	public TableReference Mod;
 
 	[FieldOffset(20)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 }

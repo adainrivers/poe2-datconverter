@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasPrimordialBossInfluence
 {
 	[FieldOffset(0)]
 	[ReferenceTable("AtlasPrimordialBosses")]
-	public TRef Boss;
+	public TableReference Boss;
 
 	[FieldOffset(16)]
 	public int Progress;
@@ -22,13 +20,13 @@ public struct AtlasPrimordialBossInfluence
 	public int Unk004;
 
 	[FieldOffset(32)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(48)]
 	public float Unk006;
 
 	[FieldOffset(52)]
 	[ReferenceTable("QuestFlags")]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 }

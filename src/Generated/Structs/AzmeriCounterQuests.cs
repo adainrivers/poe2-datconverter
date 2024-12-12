@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AzmeriCounterQuests
 {
 	[FieldOffset(0)]
-	public TString Unk000;
+	public StringReference Unk000;
 
 	[FieldOffset(8)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(24)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(40)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(56)]
 	public int Unk004;

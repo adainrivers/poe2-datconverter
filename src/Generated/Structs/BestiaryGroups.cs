@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BestiaryGroups
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
-	public TString Illustration;
+	public StringReference Illustration;
 
 	[FieldOffset(24)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(32)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(40)]
-	public TString IconSmall;
+	public StringReference IconSmall;
 
 	[FieldOffset(48)]
 	[ReferenceTable("BestiaryFamilies")]
-	public TRef BestiaryFamiliesKey;
+	public TableReference BestiaryFamiliesKey;
 
 	[FieldOffset(64)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 }

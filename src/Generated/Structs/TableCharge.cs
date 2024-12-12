@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TableCharge
@@ -18,17 +16,17 @@ public struct TableCharge
 	public TBool Unk003;
 
 	[FieldOffset(13)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(29)]
 	public TBool Unk005;
 
 	[FieldOffset(30)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk006;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk006;
 
 	[FieldOffset(46)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(62)]
 	public int Unk008;
@@ -49,10 +47,10 @@ public struct TableCharge
 	public TBool Unk013;
 
 	[FieldOffset(80)]
-	public TRef Unk014;
+	public TableReference Unk014;
 
 	[FieldOffset(96)]
-	public TRef Unk015;
+	public TableReference Unk015;
 
 	[FieldOffset(112)]
 	public int Unk016;

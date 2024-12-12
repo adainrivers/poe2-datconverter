@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasPrimordialBossOptions
@@ -12,35 +10,35 @@ public struct AtlasPrimordialBossOptions
 	public int Unk001;
 
 	[FieldOffset(8)]
-	public TString DefaultIcon;
+	public StringReference DefaultIcon;
 
 	[FieldOffset(16)]
-	public TString HoverIcon;
+	public StringReference HoverIcon;
 
 	[FieldOffset(24)]
-	public TString HighlightIcon;
+	public StringReference HighlightIcon;
 
 	[FieldOffset(32)]
-	public TString EmptyIcon;
+	public StringReference EmptyIcon;
 
 	[FieldOffset(40)]
 	[ReferenceTable("ClientStrings")]
-	public TRef Description;
+	public TableReference Description;
 
 	[FieldOffset(56)]
 	[ReferenceTable("ClientStrings")]
-	public TRef DescriptionActive;
+	public TableReference DescriptionActive;
 
 	[FieldOffset(72)]
-	public TString ProgressTracker;
+	public StringReference ProgressTracker;
 
 	[FieldOffset(80)]
-	public TString ProgressTrackerFill;
+	public StringReference ProgressTrackerFill;
 
 	[FieldOffset(88)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(96)]
-	public TString MapDeviceTrackerFill;
+	public StringReference MapDeviceTrackerFill;
 
 }

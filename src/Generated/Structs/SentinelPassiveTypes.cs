@@ -1,22 +1,20 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SentinelPassiveTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString DefaultIcon;
+	public StringReference DefaultIcon;
 
 	[FieldOffset(16)]
-	public TString ActiveIcon;
+	public StringReference ActiveIcon;
 
 	[FieldOffset(24)]
 	[ReferenceTable("DroneTypes")]
-	public TRef DroneType;
+	public TableReference DroneType;
 
 	[FieldOffset(40)]
 	public int Unk004;

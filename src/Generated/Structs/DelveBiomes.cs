@@ -1,53 +1,51 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DelveBiomes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	[ReferenceTable("WorldAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray WorldAreasKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference WorldAreasKeys;
 
 	[FieldOffset(32)]
-	public TString UIImage;
+	public StringReference UIImage;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight_Depth;
+	public ArrayReference SpawnWeight_Depth;
 
 	[FieldOffset(56)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight_Values;
+	public ArrayReference SpawnWeight_Values;
 
 	[FieldOffset(72)]
 	[ElementType(typeof(int))]
-	public TArray Unk006;
+	public ArrayReference Unk006;
 
 	[FieldOffset(88)]
 	[ElementType(typeof(int))]
-	public TArray Unk007;
+	public ArrayReference Unk007;
 
 	[FieldOffset(104)]
-	public TString Art2D;
+	public StringReference Art2D;
 
 	[FieldOffset(112)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 	[FieldOffset(128)]
 	public TBool Unk010;
 
 	[FieldOffset(129)]
 	[ElementType(typeof(int))]
-	public TArray Unk011;
+	public ArrayReference Unk011;
 
 }

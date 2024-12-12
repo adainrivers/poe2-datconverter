@@ -1,53 +1,51 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct VillageUpgrades
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
 	public int Tier;
 
 	[FieldOffset(20)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(28)]
 	public int Unk003;
 
 	[FieldOffset(32)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk004;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk004;
 
 	[FieldOffset(48)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(64)]
 	public int Unk006;
 
 	[FieldOffset(68)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray RuneItem;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference RuneItem;
 
 	[FieldOffset(84)]
 	[ElementType(typeof(int))]
-	public TArray Unk008;
+	public ArrayReference Unk008;
 
 	[FieldOffset(100)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Stats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Stats;
 
 	[FieldOffset(116)]
 	[ElementType(typeof(int))]
-	public TArray StatsValues;
+	public ArrayReference StatsValues;
 
 	[FieldOffset(132)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef UpgradeTextAudio;
+	public TableReference UpgradeTextAudio;
 
 }

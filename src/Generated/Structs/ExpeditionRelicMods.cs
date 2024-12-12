@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionRelicMods
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Mods")]
-	public TRef Mod;
+	public TableReference Mod;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ExpeditionRelicModCategories")]
 	[EnumName("ExpeditionRelicModCategories")]
 	[ElementType(typeof(TEnum))]
-	public TArray Categories;
+	public ArrayReference Categories;
 
 	[FieldOffset(32)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray DestroyAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference DestroyAchievements;
 
 }

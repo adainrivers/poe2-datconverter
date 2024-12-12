@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DelveDynamite
@@ -10,14 +8,14 @@ public struct DelveDynamite
 
 	[FieldOffset(4)]
 	[ReferenceTable("Projectiles")]
-	public TRef ProjectilesKey;
+	public TableReference ProjectilesKey;
 
 	[FieldOffset(20)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(36)]
 	[ReferenceTable("MiscObjects")]
-	public TRef Dynamite_MiscObjectsKey;
+	public TableReference Dynamite_MiscObjectsKey;
 
 	[FieldOffset(52)]
 	public int Unk004;
@@ -42,7 +40,7 @@ public struct DelveDynamite
 
 	[FieldOffset(80)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey;
+	public TableReference MiscAnimatedKey;
 
 	[FieldOffset(96)]
 	public int Unk012;

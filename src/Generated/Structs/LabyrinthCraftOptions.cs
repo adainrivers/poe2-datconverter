@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LabyrinthCraftOptions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("LabyrinthCraftOptionFamily")]
@@ -14,13 +12,13 @@ public struct LabyrinthCraftOptions
 	public TEnum CraftFamily;
 
 	[FieldOffset(12)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(20)]
-	public TString Script;
+	public StringReference Script;
 
 	[FieldOffset(28)]
-	public TString ScriptArgument;
+	public StringReference ScriptArgument;
 
 	[FieldOffset(36)]
 	public short HASH16;
@@ -30,21 +28,21 @@ public struct LabyrinthCraftOptions
 
 	[FieldOffset(39)]
 	[ReferenceTable("LabyrinthCraftOptionTiers")]
-	public TRef Tier;
+	public TableReference Tier;
 
 	[FieldOffset(55)]
 	public TBool Unk008;
 
 	[FieldOffset(56)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievement;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievement;
 
 	[FieldOffset(72)]
 	public TBool Unk010;
 
 	[FieldOffset(73)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(89)]
 	public int Unk012;

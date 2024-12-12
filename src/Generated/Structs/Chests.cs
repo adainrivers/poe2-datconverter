@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Chests
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public TBool Unk001;
@@ -15,11 +13,11 @@ public struct Chests
 	public int Unk002;
 
 	[FieldOffset(13)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(21)]
-	[ElementType(typeof(TString))]
-	public TArray AOFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference AOFiles;
 
 	[FieldOffset(37)]
 	public TBool Unk005;
@@ -40,70 +38,70 @@ public struct Chests
 	public int Unk010;
 
 	[FieldOffset(49)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk011;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk011;
 
 	[FieldOffset(65)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(81)]
 	public TBool Unk013;
 
 	[FieldOffset(82)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKeys;
 
 	[FieldOffset(98)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TagsKeys;
 
 	[FieldOffset(114)]
 	[ReferenceTable("ChestEffects")]
-	public TRef ChestEffectsKey;
+	public TableReference ChestEffectsKey;
 
 	[FieldOffset(130)]
 	public int MinLevel;
 
 	[FieldOffset(134)]
-	public TString Unk018;
+	public StringReference Unk018;
 
 	[FieldOffset(142)]
 	public int MaxLevel;
 
 	[FieldOffset(146)]
 	[ReferenceTable("AchievementItems")]
-	public TRef Corrupt_AchievementItemsKey;
+	public TableReference Corrupt_AchievementItemsKey;
 
 	[FieldOffset(162)]
 	[ReferenceTable("AchievementItems")]
-	public TRef CurrencyUse_AchievementItemsKey;
+	public TableReference CurrencyUse_AchievementItemsKey;
 
 	[FieldOffset(178)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Encounter_AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Encounter_AchievementItemsKeys;
 
 	[FieldOffset(194)]
-	public TRef Unk023;
+	public TableReference Unk023;
 
 	[FieldOffset(210)]
-	public TString InheritsFrom;
+	public StringReference InheritsFrom;
 
 	[FieldOffset(218)]
 	public TBool Unk025;
 
 	[FieldOffset(219)]
-	public TRef Unk026;
+	public TableReference Unk026;
 
 	[FieldOffset(235)]
 	[ElementType(typeof(int))]
-	public TArray Unk027;
+	public ArrayReference Unk027;
 
 	[FieldOffset(251)]
-	public TString Unk028;
+	public StringReference Unk028;
 
 	[FieldOffset(259)]
 	public int Unk029;
@@ -115,10 +113,10 @@ public struct Chests
 	public TBool Unk031;
 
 	[FieldOffset(268)]
-	public TRef Unk032;
+	public TableReference Unk032;
 
 	[FieldOffset(284)]
-	public TRef Unk033;
+	public TableReference Unk033;
 
 	[FieldOffset(300)]
 	public TBool Unk034;
@@ -127,16 +125,16 @@ public struct Chests
 	public TBool Unk035;
 
 	[FieldOffset(302)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk036;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk036;
 
 	[FieldOffset(318)]
 	public TBool IsHardmode;
 
 	[FieldOffset(319)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsHardmode;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsHardmode;
 
 	[FieldOffset(335)]
 	public TBool Unk039;

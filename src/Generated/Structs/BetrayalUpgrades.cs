@@ -1,51 +1,49 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BetrayalUpgrades
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ModsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModsKey;
 
 	[FieldOffset(40)]
-	public TString ArtFile;
+	public StringReference ArtFile;
 
 	[FieldOffset(48)]
 	public int BetrayalUpgradeSlotsKey;
 
 	[FieldOffset(52)]
 	[ElementType(typeof(int))]
-	public TArray Unk006;
+	public ArrayReference Unk006;
 
 	[FieldOffset(68)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef ItemVisualIdentityKey0;
+	public TableReference ItemVisualIdentityKey0;
 
 	[FieldOffset(84)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef ItemVisualIdentityKey1;
+	public TableReference ItemVisualIdentityKey1;
 
 	[FieldOffset(100)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffectsKey;
+	public TableReference GrantedEffectsKey;
 
 	[FieldOffset(116)]
 	public int Unk010;
 
 	[FieldOffset(120)]
 	[ReferenceTable("ItemClasses")]
-	public TRef ItemClassesKey;
+	public TableReference ItemClassesKey;
 
 }

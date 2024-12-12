@@ -1,39 +1,37 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterDeathAchievements
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterVarietiesKeys;
 
 	[FieldOffset(24)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray AchievementItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AchievementItemsKeys;
 
 	[FieldOffset(40)]
 	public TBool Unk003;
 
 	[FieldOffset(41)]
 	[ReferenceTable("PlayerConditions")]
-	[ElementType(typeof(TRef))]
-	public TArray PlayerConditionsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference PlayerConditionsKeys;
 
 	[FieldOffset(57)]
 	[ReferenceTable("MonsterDeathConditions")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterDeathConditionsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterDeathConditionsKeys;
 
 	[FieldOffset(73)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk006;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk006;
 
 	[FieldOffset(89)]
 	public int Unk007;
@@ -49,53 +47,53 @@ public struct MonsterDeathAchievements
 
 	[FieldOffset(99)]
 	[ElementType(typeof(int))]
-	public TArray Unk011;
+	public ArrayReference Unk011;
 
 	[FieldOffset(115)]
 	[ElementType(typeof(int))]
-	public TArray Unk012;
+	public ArrayReference Unk012;
 
 	[FieldOffset(131)]
-	[ElementType(typeof(TString))]
-	public TArray Unk013;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk013;
 
 	[FieldOffset(147)]
 	[ElementType(typeof(int))]
-	public TArray Unk014;
+	public ArrayReference Unk014;
 
 	[FieldOffset(163)]
-	public TRef Unk015;
+	public TableReference Unk015;
 
 	[FieldOffset(179)]
 	public int Unk016;
 
 	[FieldOffset(183)]
 	[ReferenceTable("NearbyMonsterConditions")]
-	[ElementType(typeof(TRef))]
-	public TArray NearbyMonsterConditionsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NearbyMonsterConditionsKeys;
 
 	[FieldOffset(199)]
 	public TBool Unk018;
 
 	[FieldOffset(200)]
 	[ReferenceTable("MultiPartAchievementConditions")]
-	[ElementType(typeof(TRef))]
-	public TArray MultiPartAchievementConditionsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MultiPartAchievementConditionsKeys;
 
 	[FieldOffset(216)]
 	[ElementType(typeof(int))]
-	public TArray Unk020;
+	public ArrayReference Unk020;
 
 	[FieldOffset(232)]
 	public TBool Unk021;
 
 	[FieldOffset(233)]
 	[ElementType(typeof(int))]
-	public TArray Unk022;
+	public ArrayReference Unk022;
 
 	[FieldOffset(249)]
 	[ElementType(typeof(int))]
-	public TArray Unk023;
+	public ArrayReference Unk023;
 
 	[FieldOffset(265)]
 	public TBool Unk024;

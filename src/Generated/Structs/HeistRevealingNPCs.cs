@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistRevealingNPCs
 {
 	[FieldOffset(0)]
 	[ReferenceTable("NPCs")]
-	public TRef NPCsKey;
+	public TableReference NPCsKey;
 
 	[FieldOffset(16)]
-	public TString PortraitFile;
+	public StringReference PortraitFile;
 
 	[FieldOffset(24)]
 	[ReferenceTable("NPCAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray NPCAudioKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NPCAudioKey;
 
 	[FieldOffset(40)]
 	public int Unk003;

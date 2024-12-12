@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AzmeriFeatureRooms
@@ -12,14 +10,14 @@ public struct AzmeriFeatureRooms
 	public int Unk001;
 
 	[FieldOffset(8)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(16)]
-	public TString Unk003;
+	public StringReference Unk003;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(40)]
 	public TBool Unk005;

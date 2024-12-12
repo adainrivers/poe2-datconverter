@@ -1,30 +1,28 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GemTags
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Tag;
+	public StringReference Tag;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Stats")]
-	public TRef Stat1;
+	public TableReference Stat1;
 
 	[FieldOffset(32)]
 	[ReferenceTable("Stats")]
-	public TRef Stat2;
+	public TableReference Stat2;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	public TRef Stat3;
+	public TableReference Stat3;
 
 	[FieldOffset(64)]
 	[ReferenceTable("Stats")]
-	public TRef Stat4;
+	public TableReference Stat4;
 
 }

@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AlternatePassiveAdditions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("AlternateTreeVersions")]
-	public TRef AlternateTreeVersionsKey;
+	public TableReference AlternateTreeVersionsKey;
 
 	[FieldOffset(24)]
 	public int SpawnWeight;
 
 	[FieldOffset(28)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(44)]
 	public int Stat1Min;
@@ -40,7 +38,7 @@ public struct AlternatePassiveAdditions
 
 	[FieldOffset(68)]
 	[ElementType(typeof(int))]
-	public TArray PassiveType;
+	public ArrayReference PassiveType;
 
 	[FieldOffset(84)]
 	public int Unk011;

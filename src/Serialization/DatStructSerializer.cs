@@ -1,10 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Reflection;
-using Extractor.Parsers;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+﻿using System.Reflection;
 
-namespace Extractor.Serialization;
+namespace PoE2Converter.Serialization;
 
 public class DatStructSerializer
 {
@@ -46,7 +42,7 @@ public class DatStructSerializer
                 _jsonWriter.WritePropertyName(fieldInfo.Name);
                 var value = fieldInfo.GetValue(row);
 
-                if (fieldInfo.FieldType == typeof(TArray))
+                if (fieldInfo.FieldType == typeof(ArrayReference))
                 {
                     if (value == null)
                     {
@@ -55,7 +51,7 @@ public class DatStructSerializer
                     }
 
                     var elementType = fieldInfo.GetCustomAttribute<ElementTypeAttribute>()?.Type ?? typeof(int);
-                    var array = (TArray)value;
+                    var array = (ArrayReference)value;
                     var values = array.GetValues(_reader, elementType);
                     if (values == null)
                     {
@@ -93,9 +89,9 @@ public class DatStructSerializer
             _jsonWriter.WriteNull();
             return;
         }
-        if (fieldType == typeof(TString))
+        if (fieldType == typeof(StringReference))
         {
-            _jsonWriter.WriteValue(((TString)value).GetValue(overrideReader ?? _reader));
+            _jsonWriter.WriteValue(((StringReference)value).GetValue(overrideReader ?? _reader));
             return;
         }
 
@@ -113,10 +109,10 @@ public class DatStructSerializer
 
         }
 
-        if (fieldType == typeof(TRef))
+        if (fieldType == typeof(TableReference))
         {
-            var tRefValue = (TRef)value;
-            if (tRefValue.RowIndex == Constants.Null || tRefValue.RowIndex < 0)
+            var tableReferenceValue = (TableReference)value;
+            if (tableReferenceValue.RowIndex == Constants.Null || tableReferenceValue.RowIndex < 0)
             {
                 _jsonWriter.WriteNull();
                 return;
@@ -124,20 +120,58 @@ public class DatStructSerializer
             var tableName = attributes?.Where(a => a.GetType() == typeof(ReferenceTableAttribute)).Cast<ReferenceTableAttribute>().FirstOrDefault()?.TableName;
             _jsonWriter.WriteStartObject();
             _jsonWriter.WritePropertyName("RowIndex");
-            _jsonWriter.WriteValue(tRefValue.RowIndex);
+            _jsonWriter.WriteValue(tableReferenceValue.RowIndex);
             _jsonWriter.WritePropertyName("TableName");
             _jsonWriter.WriteValue(tableName);
             if (tableName != null && _allResults.TryGetValue(tableName, out var tableReader))
             {
-                if (tableReader.Rows.Count > tRefValue.RowIndex)
+                if (tableReader.Rows.Count > tableReferenceValue.RowIndex)
                 {
-                    var refRow = tableReader.Rows[(int)tRefValue.RowIndex];
-                    var idField = refRow.GetType().GetField("Id");
+                    var refRow = tableReader.Rows[(int)tableReferenceValue.RowIndex];
+                    var fieldName = "Id";
+                    if (tableName == "Words")
+                    {
+                        fieldName = "Text";
+                    }
+                    var idField = refRow.GetType().GetField(fieldName);
                     if (idField != null)
                     {
-                        _jsonWriter.WritePropertyName("Id");
+                        _jsonWriter.WritePropertyName(fieldName);
                         WriteFieldValue(idField.FieldType, idField.GetValue(refRow), null, tableReader);
                     }
+                }
+            }
+
+            _jsonWriter.WriteEndObject();
+            return;
+        }
+
+        if (fieldType == typeof(RowReference))
+        {
+            var rowReferenceValue = (RowReference)value;
+            if (rowReferenceValue.RowIndex == Constants.Null || rowReferenceValue.RowIndex < 0)
+            {
+                _jsonWriter.WriteNull();
+                return;
+            }
+            _jsonWriter.WriteStartObject();
+            _jsonWriter.WritePropertyName("RowIndex");
+            _jsonWriter.WriteValue(rowReferenceValue.RowIndex);
+            _jsonWriter.WritePropertyName("TableName");
+            _jsonWriter.WriteValue(_reader.Name);
+            if (_reader.Rows.Count > rowReferenceValue.RowIndex)
+            {
+                var refRow = _reader.Rows[(int)rowReferenceValue.RowIndex];
+                var fieldName = "Id";
+                if (_reader.Name == "Words")
+                {
+                    fieldName = "Text";
+                }
+                var idField = refRow.GetType().GetField(fieldName);
+                if (idField != null)
+                {
+                    _jsonWriter.WritePropertyName(fieldName);
+                    WriteFieldValue(idField.FieldType, idField.GetValue(refRow), null, _reader);
                 }
             }
 

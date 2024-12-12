@@ -1,22 +1,20 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Achievements
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
 	[ReferenceTable("AchievementSetsDisplay")]
 	public int SetId;
 
 	[FieldOffset(20)]
-	public TString Objective;
+	public StringReference Objective;
 
 	[FieldOffset(28)]
 	public short HASH16;
@@ -40,7 +38,7 @@ public struct Achievements
 	public TBool ShowItemCompletionsAsOne;
 
 	[FieldOffset(39)]
-	public TString Unk011;
+	public StringReference Unk011;
 
 	[FieldOffset(47)]
 	public TBool SoftcoreOnly;
@@ -52,12 +50,12 @@ public struct Achievements
 	public TBool Unk014;
 
 	[FieldOffset(50)]
-	public TString Unk015;
+	public StringReference Unk015;
 
 	[FieldOffset(58)]
-	public TString Unk016;
+	public StringReference Unk016;
 
 	[FieldOffset(66)]
-	public TString Unk017;
+	public StringReference Unk017;
 
 }

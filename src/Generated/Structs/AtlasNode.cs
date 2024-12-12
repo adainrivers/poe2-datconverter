@@ -1,33 +1,31 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasNode
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef ItemVisualIdentityKey;
+	public TableReference ItemVisualIdentityKey;
 
 	[FieldOffset(32)]
 	public TBool Unk002;
 
 	[FieldOffset(33)]
 	[ReferenceTable("Maps")]
-	public TRef MapsKey;
+	public TableReference MapsKey;
 
 	[FieldOffset(49)]
 	[ReferenceTable("FlavourText")]
-	public TRef FlavourTextKey;
+	public TableReference FlavourTextKey;
 
 	[FieldOffset(65)]
 	[ReferenceTable("AtlasNode")]
-	[ElementType(typeof(TRef))]
-	public TArray AtlasNodeKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AtlasNodeKeys;
 
 	[FieldOffset(81)]
 	public int Tier0;
@@ -60,7 +58,7 @@ public struct AtlasNode
 	public float Unk015;
 
 	[FieldOffset(121)]
-	public TString DDSFile;
+	public StringReference DDSFile;
 
 	[FieldOffset(129)]
 	public TBool Unk017;
@@ -82,7 +80,7 @@ public struct AtlasNode
 
 	[FieldOffset(147)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray DivCards;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference DivCards;
 
 }

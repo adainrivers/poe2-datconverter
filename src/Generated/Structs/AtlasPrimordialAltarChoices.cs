@@ -1,17 +1,15 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AtlasPrimordialAltarChoices
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Mods")]
-	public TRef Mod;
+	public TableReference Mod;
 
 	[FieldOffset(16)]
 	[ReferenceTable("AtlasPrimordialAltarChoiceTypes")]
-	public TRef Type;
+	public TableReference Type;
 
 	[FieldOffset(32)]
 	public TBool Unk002;

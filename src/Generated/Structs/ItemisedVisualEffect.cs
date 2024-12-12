@@ -1,80 +1,78 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemisedVisualEffect
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef EffectBaseType;
+	public TableReference EffectBaseType;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ItemVisualEffect")]
-	public TRef VisualEffect;
+	public TableReference VisualEffect;
 
 	[FieldOffset(32)]
 	[ReferenceTable("ItemVisualIdentity")]
-	public TRef VisualIdentity;
+	public TableReference VisualIdentity;
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Stats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Stats;
 
 	[FieldOffset(64)]
 	[ReferenceTable("ItemClasses")]
-	[ElementType(typeof(TRef))]
-	public TArray ItemClasses;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ItemClasses;
 
 	[FieldOffset(80)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk005;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk005;
 
 	[FieldOffset(96)]
 	public TBool Unk006;
 
 	[FieldOffset(97)]
 	[ElementType(typeof(int))]
-	public TArray Unk007;
+	public ArrayReference Unk007;
 
 	[FieldOffset(113)]
 	[ElementType(typeof(int))]
-	public TArray Unk008;
+	public ArrayReference Unk008;
 
 	[FieldOffset(129)]
 	public TBool Unk009;
 
 	[FieldOffset(130)]
 	[ElementType(typeof(int))]
-	public TArray Unk010;
+	public ArrayReference Unk010;
 
 	[FieldOffset(146)]
 	public TBool Unk011;
 
 	[FieldOffset(147)]
 	[ElementType(typeof(int))]
-	public TArray Unk012;
+	public ArrayReference Unk012;
 
 	[FieldOffset(163)]
 	[ElementType(typeof(int))]
-	public TArray Unk013;
+	public ArrayReference Unk013;
 
 	[FieldOffset(179)]
 	[ElementType(typeof(int))]
-	public TArray Unk014;
+	public ArrayReference Unk014;
 
 	[FieldOffset(195)]
 	[ElementType(typeof(int))]
-	public TArray Unk015;
+	public ArrayReference Unk015;
 
 	[FieldOffset(211)]
-	public TRef Unk016;
+	public TableReference Unk016;
 
 	[FieldOffset(227)]
 	public TBool Unk017;
 
 	[FieldOffset(228)]
-	public TRef Unk018;
+	public TableReference Unk018;
 
 }

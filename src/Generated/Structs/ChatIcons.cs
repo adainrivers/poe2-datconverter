@@ -1,14 +1,12 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ChatIcons
 {
 	[FieldOffset(0)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(8)]
-	public TString Image;
+	public StringReference Image;
 
 }

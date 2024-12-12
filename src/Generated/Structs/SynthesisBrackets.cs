@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SynthesisBrackets
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey1;
+	public TableReference WorldAreasKey1;
 
 	[FieldOffset(16)]
 	public int MinLevel;
@@ -17,7 +15,7 @@ public struct SynthesisBrackets
 
 	[FieldOffset(24)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey2;
+	public TableReference WorldAreasKey2;
 
 	[FieldOffset(40)]
 	public int Unk004;

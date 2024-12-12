@@ -1,28 +1,26 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SanctumDefenceIcons
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Stats")]
-	public TRef Stat;
+	public TableReference Stat;
 
 	[FieldOffset(24)]
-	public TString DefenceIcon;
+	public StringReference DefenceIcon;
 
 	[FieldOffset(32)]
-	public TString DefenceBrokenIcon;
+	public StringReference DefenceBrokenIcon;
 
 	[FieldOffset(40)]
 	[ReferenceTable("Stats")]
-	public TRef BrokenStat;
+	public TableReference BrokenStat;
 
 	[FieldOffset(56)]
-	public TString Description;
+	public StringReference Description;
 
 }

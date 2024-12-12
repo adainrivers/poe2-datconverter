@@ -1,31 +1,29 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Archetypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Characters")]
-	public TRef CharactersKey;
+	public TableReference CharactersKey;
 
 	[FieldOffset(24)]
-	public TString PassiveSkillTreeURL;
+	public StringReference PassiveSkillTreeURL;
 
 	[FieldOffset(32)]
-	public TString AscendancyClassName;
+	public StringReference AscendancyClassName;
 
 	[FieldOffset(40)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(48)]
-	public TString UIImageFile;
+	public StringReference UIImageFile;
 
 	[FieldOffset(56)]
-	public TString TutorialVideo_BKFile;
+	public StringReference TutorialVideo_BKFile;
 
 	[FieldOffset(64)]
 	public int Unk007;
@@ -37,7 +35,7 @@ public struct Archetypes
 	public float Unk009;
 
 	[FieldOffset(76)]
-	public TString BackgroundImageFile;
+	public StringReference BackgroundImageFile;
 
 	[FieldOffset(84)]
 	public TBool IsTemporary;
@@ -46,7 +44,7 @@ public struct Archetypes
 	public TBool Unk012;
 
 	[FieldOffset(86)]
-	public TString ArchetypeImage;
+	public StringReference ArchetypeImage;
 
 	[FieldOffset(94)]
 	public TBool Unk014;

@@ -1,17 +1,15 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DroneBaseTypes
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseType;
+	public TableReference BaseType;
 
 	[FieldOffset(16)]
 	[ReferenceTable("DroneTypes")]
-	public TRef Type;
+	public TableReference Type;
 
 	[FieldOffset(32)]
 	public int Charges;
@@ -24,14 +22,14 @@ public struct DroneBaseTypes
 
 	[FieldOffset(44)]
 	[ReferenceTable("BuffVisuals")]
-	public TRef Visual;
+	public TableReference Visual;
 
 	[FieldOffset(60)]
 	public int Empowerment;
 
 	[FieldOffset(64)]
 	[ReferenceTable("AchievementItems")]
-	public TRef UseAchievement;
+	public TableReference UseAchievement;
 
 	[FieldOffset(80)]
 	public TBool CreatedViaPowerCore;

@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TalkingPetAudioEvents
 {
 	[FieldOffset(0)]
-	public TString Event;
+	public StringReference Event;
 
 	[FieldOffset(8)]
 	public int Unk001;
@@ -19,11 +17,11 @@ public struct TalkingPetAudioEvents
 
 	[FieldOffset(20)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(36)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(52)]
 	public int Unk006;

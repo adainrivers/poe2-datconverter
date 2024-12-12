@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct UltimatumModifiers
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("UltimatumModifierTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray Types;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Types;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray ExtraMods;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ExtraMods;
 
 	[FieldOffset(40)]
 	[ReferenceTable("UltimatumModifierTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray TypesFiltered;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TypesFiltered;
 
 	[FieldOffset(56)]
 	[ReferenceTable("DaemonSpawningData")]
-	public TRef DaemonSpawningData;
+	public TableReference DaemonSpawningData;
 
 	[FieldOffset(72)]
 	[ReferenceTable("UltimatumModifiers")]
-	public TRef PreviousTier;
+	public TableReference PreviousTier;
 
 	[FieldOffset(80)]
 	public TBool Unk006;
@@ -38,30 +36,30 @@ public struct UltimatumModifiers
 	public int Radius;
 
 	[FieldOffset(85)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(93)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(101)]
 	public int HASH16;
 
 	[FieldOffset(105)]
 	[ReferenceTable("UltimatumModifierTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray TypesExtra;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TypesExtra;
 
 	[FieldOffset(121)]
 	public int MonsterTypesApplyingRuin;
 
 	[FieldOffset(125)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated;
+	public TableReference MiscAnimated;
 
 	[FieldOffset(141)]
 	[ReferenceTable("BuffTemplates")]
-	[ElementType(typeof(TRef))]
-	public TArray BuffTemplates;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BuffTemplates;
 
 	[FieldOffset(157)]
 	public int Tier;
@@ -70,26 +68,26 @@ public struct UltimatumModifiers
 	public int Unk016;
 
 	[FieldOffset(165)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(173)]
-	[ElementType(typeof(TString))]
-	public TArray MonsterSpawners;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference MonsterSpawners;
 
 	[FieldOffset(189)]
 	public TBool Unk019;
 
 	[FieldOffset(190)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Achievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Achievements;
 
 	[FieldOffset(206)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef TextAudio;
+	public TableReference TextAudio;
 
 	[FieldOffset(222)]
 	[ReferenceTable("Mods")]
-	public TRef UniqueMapMod;
+	public TableReference UniqueMapMod;
 
 }

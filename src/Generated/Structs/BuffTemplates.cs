@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BuffTemplates
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BuffDefinitions")]
-	public TRef BuffDefinitionsKey;
+	public TableReference BuffDefinitionsKey;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray Buff_StatValues;
+	public ArrayReference Buff_StatValues;
 
 	[FieldOffset(40)]
 	public int AuraRadius;
 
 	[FieldOffset(44)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 	[FieldOffset(60)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(76)]
 	[ReferenceTable("BuffVisuals")]
-	public TRef BuffVisualsKey;
+	public TableReference BuffVisualsKey;
 
 	[FieldOffset(92)]
 	public float Unk007;
@@ -39,8 +37,8 @@ public struct BuffTemplates
 
 	[FieldOffset(97)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKey;
 
 	[FieldOffset(113)]
 	public int Unk010;
@@ -53,6 +51,6 @@ public struct BuffTemplates
 
 	[FieldOffset(122)]
 	[ReferenceTable("Stats")]
-	public TRef Unk013;
+	public TableReference Unk013;
 
 }

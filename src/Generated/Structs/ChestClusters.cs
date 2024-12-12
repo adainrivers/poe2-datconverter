@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ChestClusters
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Chests")]
-	[ElementType(typeof(TRef))]
-	public TArray ChestsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ChestsKeys;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(40)]
 	public int Unk003;

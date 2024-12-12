@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SentinelTaggedMonsterStats
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Stats")]
-	public TRef TaggedStat;
+	public TableReference TaggedStat;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Stats")]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(32)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk002;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk002;
 
 	[FieldOffset(48)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(64)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 }

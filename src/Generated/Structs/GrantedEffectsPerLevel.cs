@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GrantedEffectsPerLevel
 {
 	[FieldOffset(0)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffect;
+	public TableReference GrantedEffect;
 
 	[FieldOffset(16)]
 	public int Level;
@@ -52,12 +50,12 @@ public struct GrantedEffectsPerLevel
 
 	[FieldOffset(68)]
 	[ElementType(typeof(int))]
-	public TArray CostAmounts;
+	public ArrayReference CostAmounts;
 
 	[FieldOffset(84)]
 	[ReferenceTable("CostTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray CostTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference CostTypes;
 
 	[FieldOffset(100)]
 	public int ManaReservationFlat;

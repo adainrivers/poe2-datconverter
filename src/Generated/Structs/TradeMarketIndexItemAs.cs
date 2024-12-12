@@ -1,14 +1,12 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TradeMarketIndexItemAs
 {
 	[FieldOffset(0)]
-	public TRef Item;
+	public TableReference Item;
 
 	[FieldOffset(16)]
-	public TRef IndexAs;
+	public TableReference IndexAs;
 
 }

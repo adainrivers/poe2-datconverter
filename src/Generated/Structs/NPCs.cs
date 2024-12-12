@@ -1,65 +1,63 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NPCs
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString Metadata;
+	public StringReference Metadata;
 
 	[FieldOffset(24)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(40)]
 	[ReferenceTable("NPCMaster")]
-	public TRef NPCMasterKey;
+	public TableReference NPCMasterKey;
 
 	[FieldOffset(56)]
-	public TString ShortName;
+	public StringReference ShortName;
 
 	[FieldOffset(64)]
 	public int Unk006;
 
 	[FieldOffset(68)]
 	[ReferenceTable("NPCAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray NPCAudios1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NPCAudios1;
 
 	[FieldOffset(84)]
 	[ReferenceTable("NPCAudio")]
-	[ElementType(typeof(TRef))]
-	public TArray NPCAudios2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NPCAudios2;
 
 	[FieldOffset(100)]
 	public short HASH16;
 
 	[FieldOffset(102)]
 	[ReferenceTable("NPCs")]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(110)]
 	[ReferenceTable("NPCPortraits")]
-	public TRef Portrait;
+	public TableReference Portrait;
 
 	[FieldOffset(126)]
 	[ReferenceTable("NPCDialogueStyles")]
-	public TRef DialogueStyle;
+	public TableReference DialogueStyle;
 
 	[FieldOffset(142)]
 	public TBool Unk013;
 
 	[FieldOffset(143)]
-	public TRef Unk014;
+	public TableReference Unk014;
 
 	[FieldOffset(159)]
-	public TString Gender;
+	public StringReference Gender;
 
 	[FieldOffset(167)]
 	public TBool Unk016;

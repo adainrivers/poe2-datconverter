@@ -1,32 +1,30 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterConditionalEffectPacks
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MiscEffectPacks")]
-	[ElementType(typeof(TRef))]
-	public TArray MiscEffectPack1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MiscEffectPack1;
 
 	[FieldOffset(24)]
 	[ReferenceTable("MiscEffectPacks")]
-	[ElementType(typeof(TRef))]
-	public TArray MiscEffectPack2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MiscEffectPack2;
 
 	[FieldOffset(40)]
 	[ReferenceTable("MiscEffectPacks")]
-	[ElementType(typeof(TRef))]
-	public TArray MiscEffectPack3;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MiscEffectPack3;
 
 	[FieldOffset(56)]
 	[ReferenceTable("MiscEffectPacks")]
-	[ElementType(typeof(TRef))]
-	public TArray MiscEffectPack4;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MiscEffectPack4;
 
 	[FieldOffset(72)]
 	public int Unk005;

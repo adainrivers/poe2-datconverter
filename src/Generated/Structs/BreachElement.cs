@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BreachElement
 {
 	[FieldOffset(0)]
-	public TString Element;
+	public StringReference Element;
 
 	[FieldOffset(8)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(24)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseBreachstone;
+	public TableReference BaseBreachstone;
 
 	[FieldOffset(40)]
 	[ReferenceTable("Stats")]
-	public TRef BossMapMod;
+	public TableReference BossMapMod;
 
 	[FieldOffset(56)]
 	[ReferenceTable("Stats")]
-	public TRef DuplicateBoss;
+	public TableReference DuplicateBoss;
 
 }

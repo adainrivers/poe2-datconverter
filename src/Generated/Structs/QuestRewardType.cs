@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct QuestRewardType
 {
     [FieldOffset(0)]
-    public TString Id;
+    public StringReference Id;
 
     [FieldOffset(8)] 
-    public TString Icon;
+    public StringReference Icon;
 
     [FieldOffset(16)]
-    public TString Name;
+    public StringReference Name;
 
     [FieldOffset(24)]
-    public TString Description;
+    public StringReference Description;
 
     [FieldOffset(32)]
-    public TRef SomeRef;
+    public TableReference SomeRef;
 }

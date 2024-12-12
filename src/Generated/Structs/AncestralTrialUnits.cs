@@ -1,25 +1,23 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AncestralTrialUnits
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	[ReferenceTable("AncestralTrialTribes")]
-	public TRef Tribe;
+	public TableReference Tribe;
 
 	[FieldOffset(32)]
-	public TString Image;
+	public StringReference Image;
 
 	[FieldOffset(40)]
-	public TString TotemImage;
+	public StringReference TotemImage;
 
 	[FieldOffset(48)]
 	public int HASH16;
@@ -28,7 +26,7 @@ public struct AncestralTrialUnits
 	public int Unk006;
 
 	[FieldOffset(56)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(64)]
 	public int Unk008;
@@ -38,6 +36,6 @@ public struct AncestralTrialUnits
 
 	[FieldOffset(72)]
 	[ReferenceTable("AncestralTrialUnitPositions")]
-	public TRef Position;
+	public TableReference Position;
 
 }

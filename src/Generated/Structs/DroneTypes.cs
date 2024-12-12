@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct DroneTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("QuestFlags")]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(24)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(40)]
-	public TString DeployText;
+	public StringReference DeployText;
 
 	[FieldOffset(48)]
-	public TString Unk004;
+	public StringReference Unk004;
 
 	[FieldOffset(56)]
 	[ReferenceTable("Stats")]
-	public TRef UnlockedStat;
+	public TableReference UnlockedStat;
 
 	[FieldOffset(72)]
-	public TString SocketableText;
+	public StringReference SocketableText;
 
 	[FieldOffset(80)]
-	public TString NotPoweredText;
+	public StringReference NotPoweredText;
 
 }

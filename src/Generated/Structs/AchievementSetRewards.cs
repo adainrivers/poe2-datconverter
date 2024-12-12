@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AchievementSetRewards
@@ -14,22 +12,22 @@ public struct AchievementSetRewards
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray Rewards;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Rewards;
 
 	[FieldOffset(24)]
 	public int TotemPieceEveryNAchievements;
 
 	[FieldOffset(28)]
-	public TString Message;
+	public StringReference Message;
 
 	[FieldOffset(36)]
-	public TString NotificationIcon;
+	public StringReference NotificationIcon;
 
 	[FieldOffset(44)]
-	public TString HideoutName;
+	public StringReference HideoutName;
 
 	[FieldOffset(52)]
-	public TString Id;
+	public StringReference Id;
 
 }

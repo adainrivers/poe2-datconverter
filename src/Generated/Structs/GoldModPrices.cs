@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GoldModPrices
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Mods")]
-	public TRef Id;
+	public TableReference Id;
 
 	[FieldOffset(16)]
 	public int Value;
@@ -23,18 +21,18 @@ public struct GoldModPrices
 
 	[FieldOffset(32)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray Tags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Tags;
 
 	[FieldOffset(48)]
 	[ElementType(typeof(int))]
-	public TArray SpawnWeight;
+	public ArrayReference SpawnWeight;
 
 	[FieldOffset(64)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(80)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk008;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk008;
 
 }

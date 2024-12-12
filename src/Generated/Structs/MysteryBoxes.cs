@@ -1,22 +1,20 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MysteryBoxes
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
-	public TString BK2File;
+	public StringReference BK2File;
 
 	[FieldOffset(24)]
-	public TString BoxId;
+	public StringReference BoxId;
 
 	[FieldOffset(32)]
-	public TString BundleId;
+	public StringReference BundleId;
 
 	[FieldOffset(40)]
 	public TBool Unk004;

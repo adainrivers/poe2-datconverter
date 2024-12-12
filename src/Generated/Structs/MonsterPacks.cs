@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterPacks
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Unk001;
 
 	[FieldOffset(12)]
 	[ReferenceTable("WorldAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray WorldAreasKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference WorldAreasKeys;
 
 	[FieldOffset(28)]
 	public int Unk003;
@@ -30,24 +28,24 @@ public struct MonsterPacks
 
 	[FieldOffset(44)]
 	[ReferenceTable("MonsterVarieties")]
-	[ElementType(typeof(TRef))]
-	public TArray BossMonster_MonsterVarietiesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BossMonster_MonsterVarietiesKeys;
 
 	[FieldOffset(60)]
 	public TBool Unk008;
 
 	[FieldOffset(61)]
 	[ElementType(typeof(int))]
-	public TArray Unk009;
+	public ArrayReference Unk009;
 
 	[FieldOffset(77)]
-	[ElementType(typeof(TString))]
-	public TArray Unk010;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk010;
 
 	[FieldOffset(93)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray TagsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference TagsKeys;
 
 	[FieldOffset(109)]
 	public int MinLevel;
@@ -57,15 +55,15 @@ public struct MonsterPacks
 
 	[FieldOffset(117)]
 	[ReferenceTable("Tags")]
-	[ElementType(typeof(TRef))]
-	public TArray WorldAreas2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference WorldAreas2;
 
 	[FieldOffset(133)]
 	public int Unk015;
 
 	[FieldOffset(137)]
 	[ReferenceTable("PackFormation")]
-	public TRef PackFormation;
+	public TableReference PackFormation;
 
 	[FieldOffset(153)]
 	public int Unk017;
@@ -75,7 +73,7 @@ public struct MonsterPacks
 
 	[FieldOffset(158)]
 	[ElementType(typeof(int))]
-	public TArray Unk019;
+	public ArrayReference Unk019;
 
 	[FieldOffset(174)]
 	public TBool Unk020;
@@ -90,11 +88,11 @@ public struct MonsterPacks
 	public TBool Unk023;
 
 	[FieldOffset(178)]
-	[ElementType(typeof(TString))]
-	public TArray Unk024;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk024;
 
 	[FieldOffset(194)]
 	[ReferenceTable("NecropolisPacks")]
-	public TRef NecropolisPack;
+	public TableReference NecropolisPack;
 
 }

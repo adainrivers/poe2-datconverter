@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MonsterProjectileSpell
@@ -10,11 +8,11 @@ public struct MonsterProjectileSpell
 
 	[FieldOffset(4)]
 	[ReferenceTable("Projectiles")]
-	public TRef Projectile;
+	public TableReference Projectile;
 
 	[FieldOffset(20)]
 	[ReferenceTable("Animation")]
-	public TRef Animation;
+	public TableReference Animation;
 
 	[FieldOffset(36)]
 	public TBool Unk003;

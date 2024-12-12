@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct StatisticTrackingMicrotransactionsStatistics
@@ -39,7 +37,7 @@ public struct StatisticTrackingMicrotransactionsStatistics
 	public int Unk010;
 
 	[FieldOffset(41)]
-	public TString Unk011;
+	public StringReference Unk011;
 
 	[FieldOffset(49)]
 	public TBool Unk012;

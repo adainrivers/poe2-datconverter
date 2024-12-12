@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct StashTabAffinities
@@ -11,12 +9,12 @@ public struct StashTabAffinities
 	public TEnum SpecializedStash;
 
 	[FieldOffset(4)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(12)]
 	[ReferenceTable("StashId")]
 	[EnumName("StashId")]
 	[ElementType(typeof(TEnum))]
-	public TArray ShowInStashes;
+	public ArrayReference ShowInStashes;
 
 }

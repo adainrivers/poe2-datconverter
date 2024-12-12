@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ActiveSettings
 {
 	[FieldOffset(0)]
-	public TString Unk000;
+	public StringReference Unk000;
 
 	[FieldOffset(8)]
 	public int Unk001;
@@ -15,16 +13,16 @@ public struct ActiveSettings
 	public int Unk002;
 
 	[FieldOffset(16)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(32)]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(48)]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 	[FieldOffset(64)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(80)]
 	public int Unk007;

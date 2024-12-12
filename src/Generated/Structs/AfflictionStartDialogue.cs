@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AfflictionStartDialogue
 {
 	[FieldOffset(0)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey;
+	public TableReference NPCTextAudioKey;
 
 	[FieldOffset(32)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk002;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk002;
 
 }

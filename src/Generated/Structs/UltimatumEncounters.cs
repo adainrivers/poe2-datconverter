@@ -1,30 +1,28 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct UltimatumEncounters
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
 	[ReferenceTable("UltimatumModifierTypes")]
-	[ElementType(typeof(TRef))]
-	public TArray ModTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModTypes;
 
 	[FieldOffset(32)]
-	public TString BossARMFile;
+	public StringReference BossARMFile;
 
 	[FieldOffset(40)]
 	[ReferenceTable("UltimatumEncounterTypes")]
-	public TRef Type;
+	public TableReference Type;
 
 	[FieldOffset(56)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(64)]
 	public int HASH16;

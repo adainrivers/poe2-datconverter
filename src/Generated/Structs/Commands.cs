@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Commands
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Command;
+	public StringReference Command;
 
 	[FieldOffset(16)]
 	public TBool Unk002;
 
 	[FieldOffset(17)]
-	public TString EnglishCommand;
+	public StringReference EnglishCommand;
 
 	[FieldOffset(25)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(33)]
 	public TBool Unk005;

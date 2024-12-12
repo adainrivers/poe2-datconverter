@@ -1,45 +1,43 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveSkillOverrides
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
-	public TString NodeIcon;
+	public StringReference NodeIcon;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Stats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Stats;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray StatValues;
+	public ArrayReference StatValues;
 
 	[FieldOffset(56)]
 	public int HASH16;
 
 	[FieldOffset(60)]
-	public TString PassiveBG;
+	public StringReference PassiveBG;
 
 	[FieldOffset(68)]
 	[ReferenceTable("GrantedEffectsPerLevel")]
-	public TRef Effect;
+	public TableReference Effect;
 
 	[FieldOffset(84)]
 	[ReferenceTable("PassiveSkillOverrideTypes")]
-	public TRef Type;
+	public TableReference Type;
 
 	[FieldOffset(100)]
 	[ReferenceTable("PassiveOverrideLimits")]
-	public TRef Limit;
+	public TableReference Limit;
 
 	[FieldOffset(116)]
 	public int RequiresAdjacent;
@@ -49,6 +47,6 @@ public struct PassiveSkillOverrides
 
 	[FieldOffset(124)]
 	[ReferenceTable("PassiveSkills")]
-	public TRef AllocatedPassiveSkill;
+	public TableReference AllocatedPassiveSkill;
 
 }

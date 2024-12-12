@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GrantedEffects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public TBool IsSupport;
 
 	[FieldOffset(9)]
 	[ReferenceTable("ActiveSkillType")]
-	[ElementType(typeof(TRef))]
-	public TArray AllowedActiveSkillTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AllowedActiveSkillTypes;
 
 	[FieldOffset(25)]
-	public TString SupportGemLetter;
+	public StringReference SupportGemLetter;
 
 	[FieldOffset(33)]
 	[ReferenceTable("Attributes")]
@@ -26,13 +24,13 @@ public struct GrantedEffects
 
 	[FieldOffset(37)]
 	[ReferenceTable("ActiveSkillType")]
-	[ElementType(typeof(TRef))]
-	public TArray AddedActiveSkillTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AddedActiveSkillTypes;
 
 	[FieldOffset(53)]
 	[ReferenceTable("ActiveSkillType")]
-	[ElementType(typeof(TRef))]
-	public TArray ExcludedActiveSkillTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ExcludedActiveSkillTypes;
 
 	[FieldOffset(69)]
 	public TBool SupportsGemsOnly;
@@ -42,7 +40,7 @@ public struct GrantedEffects
 
 	[FieldOffset(74)]
 	[ElementType(typeof(int))]
-	public TArray Unk009;
+	public ArrayReference Unk009;
 
 	[FieldOffset(90)]
 	public TBool CannotBeSupported;
@@ -55,7 +53,7 @@ public struct GrantedEffects
 
 	[FieldOffset(99)]
 	[ReferenceTable("ActiveSkills")]
-	public TRef ActiveSkill;
+	public TableReference ActiveSkill;
 
 	[FieldOffset(115)]
 	public TBool IgnoreMinionTypes;
@@ -65,28 +63,28 @@ public struct GrantedEffects
 
 	[FieldOffset(117)]
 	[ReferenceTable("ActiveSkillType")]
-	[ElementType(typeof(TRef))]
-	public TArray AddedMinionActiveSkillTypes;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference AddedMinionActiveSkillTypes;
 
 	[FieldOffset(133)]
 	[ReferenceTable("Animation")]
-	public TRef Animation;
+	public TableReference Animation;
 
 	[FieldOffset(149)]
 	[ReferenceTable("MultiPartAchievements")]
-	public TRef MultiPartAchievement;
+	public TableReference MultiPartAchievement;
 
 	[FieldOffset(165)]
 	public TBool Unk019;
 
 	[FieldOffset(166)]
 	[ReferenceTable("ItemClasses")]
-	[ElementType(typeof(TRef))]
-	public TArray SupportWeaponRestrictions;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SupportWeaponRestrictions;
 
 	[FieldOffset(182)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef RegularVariant;
+	public TableReference RegularVariant;
 
 	[FieldOffset(190)]
 	public int Unk022;
@@ -102,10 +100,10 @@ public struct GrantedEffects
 
 	[FieldOffset(203)]
 	[ReferenceTable("GrantedEffectStatSets")]
-	public TRef StatSet;
+	public TableReference StatSet;
 
 	[FieldOffset(219)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk027;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk027;
 
 }

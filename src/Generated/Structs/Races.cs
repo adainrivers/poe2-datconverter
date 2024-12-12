@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Races
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Mods")]
-	[ElementType(typeof(TRef))]
-	public TArray Mods;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Mods;
 
 	[FieldOffset(24)]
-	public TString Unk002;
+	public StringReference Unk002;
 
 	[FieldOffset(32)]
-	public TString Unk003;
+	public StringReference Unk003;
 
 	[FieldOffset(40)]
 	public int Unk004;
@@ -26,8 +24,8 @@ public struct Races
 	public int Unk005;
 
 	[FieldOffset(48)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk006;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk006;
 
 	[FieldOffset(64)]
 	public TBool Unk007;
@@ -37,10 +35,10 @@ public struct Races
 
 	[FieldOffset(69)]
 	[ElementType(typeof(int))]
-	public TArray Unk009;
+	public ArrayReference Unk009;
 
 	[FieldOffset(85)]
 	[ElementType(typeof(int))]
-	public TArray Unk010;
+	public ArrayReference Unk010;
 
 }

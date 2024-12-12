@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct InfluenceTags
 {
 	[FieldOffset(0)]
 	[ReferenceTable("ItemClasses")]
-	public TRef ItemClass;
+	public TableReference ItemClass;
 
 	[FieldOffset(16)]
 	[ReferenceTable("InfluenceTypes")]
@@ -16,6 +14,6 @@ public struct InfluenceTags
 
 	[FieldOffset(20)]
 	[ReferenceTable("Tags")]
-	public TRef Tag;
+	public TableReference Tag;
 
 }

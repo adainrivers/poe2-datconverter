@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BattlePasses
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("LeagueCategory")]
@@ -14,10 +12,10 @@ public struct BattlePasses
 	public TEnum LeagueCategory;
 
 	[FieldOffset(12)]
-	public TString International_BK2File;
+	public StringReference International_BK2File;
 
 	[FieldOffset(20)]
-	public TString China_BK2File;
+	public StringReference China_BK2File;
 
 	[FieldOffset(28)]
 	public int MapCompletionCount;
@@ -26,6 +24,6 @@ public struct BattlePasses
 	public TBool Unk005;
 
 	[FieldOffset(33)]
-	public TString Id2;
+	public StringReference Id2;
 
 }

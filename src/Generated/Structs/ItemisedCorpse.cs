@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ItemisedCorpse
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItem;
+	public TableReference BaseItem;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVariety;
+	public TableReference MonsterVariety;
 
 	[FieldOffset(32)]
-	public TString MonsterAbilities;
+	public StringReference MonsterAbilities;
 
 	[FieldOffset(40)]
 	[ReferenceTable("CorpseTypeTags")]
-	public TRef MonsterCategory;
+	public TableReference MonsterCategory;
 
 }

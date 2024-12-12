@@ -1,8 +1,6 @@
 using System.Reflection;
-using Extractor.Generated.Enums;
-using Extractor.Generated.Structs;
 
-namespace Extractor.Generated;
+namespace PoE2Converter.Generated;
 
 public static class TypesFactory
 {
@@ -14,10 +12,10 @@ public static class TypesFactory
         {
             switch (type.Namespace)
             {
-                case "Extractor.Generated.Structs":
+                case "PoE2Converter.Generated.Structs":
                     StructsMap[type.Name] = type;
                     break;
-                case "Extractor.Generated.Enums" when type.IsEnum:
+                case "PoE2Converter.Generated.Enums" when type.IsEnum:
                     Enums.Add(type);
                     break;
             }

@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MicrotransactionSlot
@@ -11,13 +9,13 @@ public struct MicrotransactionSlot
 	public TEnum Id;
 
 	[FieldOffset(4)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(20)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(28)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(44)]
 	public int Unk004;

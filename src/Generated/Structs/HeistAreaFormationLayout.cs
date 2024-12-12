@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistAreaFormationLayout
 {
 	[FieldOffset(0)]
 	[ReferenceTable("HeistAreas")]
-	public TRef HeistAreasKey;
+	public TableReference HeistAreasKey;
 
 	[FieldOffset(16)]
 	public int Unk001;

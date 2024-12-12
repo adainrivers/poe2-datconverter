@@ -1,22 +1,20 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapStashSpecialTypeEntries
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Unk001;
 
 	[FieldOffset(12)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef MapItem;
+	public TableReference MapItem;
 
 	[FieldOffset(28)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(36)]
 	public int Unk004;
@@ -28,12 +26,12 @@ public struct MapStashSpecialTypeEntries
 	public TBool IsElderGuardian;
 
 	[FieldOffset(42)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(58)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(74)]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 }

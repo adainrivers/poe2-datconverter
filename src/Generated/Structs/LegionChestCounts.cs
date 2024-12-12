@@ -1,17 +1,15 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LegionChestCounts
 {
 	[FieldOffset(0)]
 	[ReferenceTable("LegionFactions")]
-	public TRef LegionFactionsKey;
+	public TableReference LegionFactionsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("LegionRanks")]
-	public TRef LegionRanksKey;
+	public TableReference LegionRanksKey;
 
 	[FieldOffset(32)]
 	public int Unk002;

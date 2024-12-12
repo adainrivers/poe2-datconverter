@@ -1,30 +1,28 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GeometryChannel
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(24)]
-	public TRef Unk002;
+	public TableReference Unk002;
 
 	[FieldOffset(40)]
-	public TRef Unk003;
+	public TableReference Unk003;
 
 	[FieldOffset(56)]
-	public TString Unk004;
+	public StringReference Unk004;
 
 	[FieldOffset(64)]
-	public TString Unk005;
+	public StringReference Unk005;
 
 	[FieldOffset(72)]
-	public TString Unk006;
+	public StringReference Unk006;
 
 	[FieldOffset(80)]
 	public TBool Unk007;
@@ -33,13 +31,13 @@ public struct GeometryChannel
 	public TBool Unk008;
 
 	[FieldOffset(82)]
-	public TRef Unk009;
+	public TableReference Unk009;
 
 	[FieldOffset(98)]
-	public TRef Unk010;
+	public TableReference Unk010;
 
 	[FieldOffset(114)]
-	public TString EPKFile;
+	public StringReference EPKFile;
 
 	[FieldOffset(122)]
 	public int Unk012;

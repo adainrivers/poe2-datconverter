@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NPCAudio
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ElementType(typeof(int))]
-	public TArray Unk001;
+	public ArrayReference Unk001;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(40)]
 	public int VolumePercentage;
@@ -32,7 +30,7 @@ public struct NPCAudio
 	public int Unk007;
 
 	[FieldOffset(60)]
-	public TRef Unk008;
+	public TableReference Unk008;
 
 	[FieldOffset(76)]
 	public int Unk009;

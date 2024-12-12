@@ -1,38 +1,36 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LeagueInfo
 {
 	[FieldOffset(0)]
 	[ReferenceTable("LeagueInfoPanelVersions")]
-	public TRef PanelVersion;
+	public TableReference PanelVersion;
 
 	[FieldOffset(16)]
-	public TString PanelId;
+	public StringReference PanelId;
 
 	[FieldOffset(24)]
-	public TString PanelImage;
+	public StringReference PanelImage;
 
 	[FieldOffset(32)]
-	public TString HeaderImage;
+	public StringReference HeaderImage;
 
 	[FieldOffset(40)]
-	[ElementType(typeof(TString))]
-	public TArray Screenshots;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Screenshots;
 
 	[FieldOffset(56)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(64)]
 	public TBool Unk006;
 
 	[FieldOffset(65)]
-	public TString TrailerVideoLink;
+	public StringReference TrailerVideoLink;
 
 	[FieldOffset(73)]
-	public TString BackgroundImage;
+	public StringReference BackgroundImage;
 
 	[FieldOffset(81)]
 	public TBool Unk009;
@@ -41,10 +39,10 @@ public struct LeagueInfo
 	public TBool Unk010;
 
 	[FieldOffset(83)]
-	[ElementType(typeof(TString))]
-	public TArray PanelItems;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference PanelItems;
 
 	[FieldOffset(99)]
-	public TString Unk012;
+	public StringReference Unk012;
 
 }

@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NPCTextAudio
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("Characters")]
-	[ElementType(typeof(TRef))]
-	public TArray Characters;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Characters;
 
 	[FieldOffset(24)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(32)]
-	public TString Mono_AudioFile;
+	public StringReference Mono_AudioFile;
 
 	[FieldOffset(40)]
-	public TString Stereo_AudioFile;
+	public StringReference Stereo_AudioFile;
 
 	[FieldOffset(48)]
 	public TBool HasStereo;
@@ -29,7 +27,7 @@ public struct NPCTextAudio
 	public TBool Unk006;
 
 	[FieldOffset(50)]
-	public TString Video;
+	public StringReference Video;
 
 	[FieldOffset(58)]
 	public int Unk008;
@@ -42,10 +40,10 @@ public struct NPCTextAudio
 
 	[FieldOffset(70)]
 	[ReferenceTable("NPCs")]
-	[ElementType(typeof(TRef))]
-	public TArray NPCs;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference NPCs;
 
 	[FieldOffset(86)]
-	public TRef Unk012;
+	public TableReference Unk012;
 
 }

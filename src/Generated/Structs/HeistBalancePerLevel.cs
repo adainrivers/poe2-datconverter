@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistBalancePerLevel
@@ -28,23 +26,23 @@ public struct HeistBalancePerLevel
 
 	[FieldOffset(28)]
 	[ReferenceTable("HeistValueScaling")]
-	public TRef HeistValueScalingKey1;
+	public TableReference HeistValueScalingKey1;
 
 	[FieldOffset(44)]
 	[ReferenceTable("HeistValueScaling")]
-	public TRef HeistValueScalingKey2;
+	public TableReference HeistValueScalingKey2;
 
 	[FieldOffset(60)]
 	[ReferenceTable("HeistValueScaling")]
-	public TRef HeistValueScalingKey3;
+	public TableReference HeistValueScalingKey3;
 
 	[FieldOffset(76)]
 	[ReferenceTable("HeistValueScaling")]
-	public TRef HeistValueScalingKey4;
+	public TableReference HeistValueScalingKey4;
 
 	[FieldOffset(92)]
 	[ReferenceTable("HeistValueScaling")]
-	public TRef HeistValueScalingKey5;
+	public TableReference HeistValueScalingKey5;
 
 	[FieldOffset(108)]
 	public float Unk012;
@@ -60,11 +58,11 @@ public struct HeistBalancePerLevel
 
 	[FieldOffset(124)]
 	[ReferenceTable("HeistValueScaling")]
-	public TRef HeistValueScalingKey6;
+	public TableReference HeistValueScalingKey6;
 
 	[FieldOffset(140)]
 	[ReferenceTable("HeistValueScaling")]
-	public TRef HeistValueScalingKey7;
+	public TableReference HeistValueScalingKey7;
 
 	[FieldOffset(156)]
 	public float Unk018;

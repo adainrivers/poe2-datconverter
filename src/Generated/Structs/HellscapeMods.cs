@@ -1,25 +1,23 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HellscapeMods
 {
 	[FieldOffset(0)]
 	[ReferenceTable("Mods")]
-	public TRef Mod;
+	public TableReference Mod;
 
 	[FieldOffset(16)]
 	[ElementType(typeof(int))]
-	public TArray TiersWhitelist;
+	public ArrayReference TiersWhitelist;
 
 	[FieldOffset(32)]
 	[ReferenceTable("AchievementItems")]
-	public TRef TransformAchievement;
+	public TableReference TransformAchievement;
 
 	[FieldOffset(48)]
 	[ReferenceTable("ModFamily")]
-	[ElementType(typeof(TRef))]
-	public TArray ModFamilies;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ModFamilies;
 
 }

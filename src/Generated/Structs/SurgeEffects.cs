@@ -1,28 +1,26 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SurgeEffects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef Unk001;
+	public TableReference Unk001;
 
 	[FieldOffset(24)]
 	[ElementType(typeof(float))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(40)]
 	[ReferenceTable("MiscAnimated")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk003;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk003;
 
 	[FieldOffset(56)]
-	[ElementType(typeof(TString))]
-	public TArray Unk004;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk004;
 
 }

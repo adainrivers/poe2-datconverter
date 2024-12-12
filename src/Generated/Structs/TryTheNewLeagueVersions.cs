@@ -1,14 +1,12 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct TryTheNewLeagueVersions
 {
 	[FieldOffset(0)]
-	public TString League;
+	public StringReference League;
 
 	[FieldOffset(8)]
-	public TString Logo;
+	public StringReference Logo;
 
 }

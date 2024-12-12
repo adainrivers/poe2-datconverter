@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BlightCraftingRecipes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BlightCraftingItems")]
-	[ElementType(typeof(TRef))]
-	public TArray BlightCraftingItemsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BlightCraftingItemsKeys;
 
 	[FieldOffset(24)]
 	[ReferenceTable("BlightCraftingResults")]
-	public TRef BlightCraftingResultsKey;
+	public TableReference BlightCraftingResultsKey;
 
 	[FieldOffset(40)]
 	[ReferenceTable("BlightCraftingTypes")]
-	public TRef BlightCraftingTypesKey;
+	public TableReference BlightCraftingTypesKey;
 
 }

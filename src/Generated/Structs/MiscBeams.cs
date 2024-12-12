@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MiscBeams
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimated;
+	public TableReference MiscAnimated;
 
 	[FieldOffset(24)]
 	public int Unk002;
 
 	[FieldOffset(28)]
 	[ReferenceTable("PreloadGroups")]
-	[ElementType(typeof(TRef))]
-	public TArray PreloadGroupsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference PreloadGroupsKeys;
 
 	[FieldOffset(44)]
 	public int Unk004;

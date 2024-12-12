@@ -1,29 +1,27 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct MapDevices
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("MiscObjects")]
-	public TRef MiscObject;
+	public TableReference MiscObject;
 
 	[FieldOffset(24)]
 	public int Unk002;
 
 	[FieldOffset(28)]
-	public TString Unk003;
+	public StringReference Unk003;
 
 	[FieldOffset(36)]
-	public TString Unk004;
+	public StringReference Unk004;
 
 	[FieldOffset(44)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(60)]
 	public TBool Unk006;

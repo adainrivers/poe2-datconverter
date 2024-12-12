@@ -1,36 +1,36 @@
 using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct QuestStaticRewards
 {
 	[FieldOffset(0)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlag;
+	public TableReference QuestFlag;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(24)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray StatValues;
+	public ArrayReference StatValues;
 
 	[FieldOffset(56)]
 	[ReferenceTable("Quest")]
-	public TRef QuestKey;
+	public TableReference QuestKey;
 
 	[FieldOffset(72)]
 	public int Unk005;
 
 	[FieldOffset(76)]
 	[ReferenceTable("ClientStrings")]
-	public TRef ClientStringsKey;
+	public TableReference ClientStringsKey;
 
 	[FieldOffset(92)]
 	public int Unk007;
@@ -44,9 +44,9 @@ public struct QuestStaticRewards
 
     //[FieldOffset(108)]
     //[ReferenceTable("ClientStrings")]
-    //public TRef ClientStringHardmode;
+    //public TableReference ClientStringHardmode;
 
     //[FieldOffset(124)]
-    //public TRef Unk010;
+    //public TableReference Unk010;
 
 }

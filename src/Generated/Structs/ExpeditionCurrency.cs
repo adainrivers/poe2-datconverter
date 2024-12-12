@@ -1,23 +1,21 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionCurrency
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemType;
+	public TableReference BaseItemType;
 
 	[FieldOffset(16)]
 	public int Tier;
 
 	[FieldOffset(20)]
 	[ReferenceTable("ExpeditionNPCs")]
-	public TRef NPC;
+	public TableReference NPC;
 
 	[FieldOffset(36)]
 	[ReferenceTable("SoundEffects")]
-	public TRef LootSound;
+	public TableReference LootSound;
 
 }

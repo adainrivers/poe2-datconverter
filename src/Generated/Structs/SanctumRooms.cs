@@ -1,29 +1,27 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SanctumRooms
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString ArmFile;
+	public StringReference ArmFile;
 
 	[FieldOffset(16)]
 	[ReferenceTable("SanctumRoomTypes")]
-	public TRef RoomType;
+	public TableReference RoomType;
 
 	[FieldOffset(32)]
-	public TString Script;
+	public StringReference Script;
 
 	[FieldOffset(40)]
 	[ReferenceTable("SanctumFloors")]
-	public TRef Floor;
+	public TableReference Floor;
 
 	[FieldOffset(56)]
 	[ReferenceTable("WorldAreas")]
-	public TRef Area;
+	public TableReference Area;
 
 }

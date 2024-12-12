@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SafehouseBYOCrafting
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BetrayalJobs")]
-	public TRef BetrayalJobsKey;
+	public TableReference BetrayalJobsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("BetrayalTargets")]
-	public TRef BetrayalTargetsKey;
+	public TableReference BetrayalTargetsKey;
 
 	[FieldOffset(32)]
 	public int Rank;
 
 	[FieldOffset(36)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(44)]
-	public TString ServerCommand;
+	public StringReference ServerCommand;
 
 	[FieldOffset(52)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk005;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk005;
 
 	[FieldOffset(68)]
-	public TString Description2;
+	public StringReference Description2;
 
 	[FieldOffset(76)]
-	public TString ServerCommand2;
+	public StringReference ServerCommand2;
 
 }

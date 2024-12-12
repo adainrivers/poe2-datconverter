@@ -1,19 +1,17 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Tutorial
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString UIFile;
+	public StringReference UIFile;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ClientStrings")]
-	public TRef ClientString;
+	public TableReference ClientString;
 
 	[FieldOffset(32)]
 	public TBool IsEnabled;
@@ -23,17 +21,17 @@ public struct Tutorial
 
 	[FieldOffset(37)]
 	[ElementType(typeof(int))]
-	public TArray Unk005;
+	public ArrayReference Unk005;
 
 	[FieldOffset(53)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(69)]
 	public int Unk007;
 
 	[FieldOffset(73)]
 	[ElementType(typeof(int))]
-	public TArray Unk008;
+	public ArrayReference Unk008;
 
 	[FieldOffset(89)]
 	public TBool Unk009;

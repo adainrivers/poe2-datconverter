@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AchievementItems
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Unk001;
@@ -15,14 +13,14 @@ public struct AchievementItems
 	public int Unk002;
 
 	[FieldOffset(16)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(24)]
 	public int CompletionsRequired;
 
 	[FieldOffset(28)]
 	[ReferenceTable("Achievements")]
-	public TRef AchievementsKey;
+	public TableReference AchievementsKey;
 
 	[FieldOffset(44)]
 	public TBool Unk006;

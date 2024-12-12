@@ -1,18 +1,16 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Music
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString SoundFile;
+	public StringReference SoundFile;
 
 	[FieldOffset(16)]
-	public TString BankFile;
+	public StringReference BankFile;
 
 	[FieldOffset(24)]
 	public int HASH16;
@@ -21,15 +19,15 @@ public struct Music
 	public TBool IsAvailableInHideout;
 
 	[FieldOffset(29)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(37)]
-	public TString Unk006;
+	public StringReference Unk006;
 
 	[FieldOffset(45)]
 	[ReferenceTable("MusicCategories")]
-	[ElementType(typeof(TRef))]
-	public TArray MusicCategories;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MusicCategories;
 
 	[FieldOffset(61)]
 	public TBool Unk008;

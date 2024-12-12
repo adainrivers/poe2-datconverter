@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct IndexableSkillGems
@@ -10,22 +8,22 @@ public struct IndexableSkillGems
 
 	[FieldOffset(4)]
 	[ReferenceTable("SkillGems")]
-	[ElementType(typeof(TRef))]
-	public TArray SkillGem1;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SkillGem1;
 
 	[FieldOffset(20)]
-	public TString Name1;
+	public StringReference Name1;
 
 	[FieldOffset(28)]
 	[ReferenceTable("SkillGems")]
-	[ElementType(typeof(TRef))]
-	public TArray SkillGem2;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference SkillGem2;
 
 	[FieldOffset(44)]
-	public TString Name2;
+	public StringReference Name2;
 
 	[FieldOffset(52)]
 	[ReferenceTable("IndexableSkillGems")]
-	public TRef Unk005;
+	public TableReference Unk005;
 
 }

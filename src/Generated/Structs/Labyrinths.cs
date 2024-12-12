@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Labyrinths
@@ -9,20 +7,20 @@ public struct Labyrinths
 	public int Tier;
 
 	[FieldOffset(4)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(12)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef OfferingItem;
+	public TableReference OfferingItem;
 
 	[FieldOffset(28)]
 	[ReferenceTable("QuestFlags")]
-	public TRef QuestFlag;
+	public TableReference QuestFlag;
 
 	[FieldOffset(44)]
 	[ReferenceTable("LabyrinthTrials")]
-	[ElementType(typeof(TRef))]
-	public TArray RequiredTrials;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference RequiredTrials;
 
 	[FieldOffset(60)]
 	public int AreaLevel;
@@ -32,15 +30,15 @@ public struct Labyrinths
 
 	[FieldOffset(68)]
 	[ReferenceTable("Words")]
-	public TRef JewelReward;
+	public TableReference JewelReward;
 
 	[FieldOffset(84)]
 	[ElementType(typeof(int))]
-	public TArray Unk008;
+	public ArrayReference Unk008;
 
 	[FieldOffset(100)]
 	[ElementType(typeof(int))]
-	public TArray Unk009;
+	public ArrayReference Unk009;
 
 	[FieldOffset(116)]
 	public int MinLevel;
@@ -53,6 +51,6 @@ public struct Labyrinths
 
 	[FieldOffset(128)]
 	[ReferenceTable("ClientStrings")]
-	public TRef CraftingFontDescription;
+	public TableReference CraftingFontDescription;
 
 }

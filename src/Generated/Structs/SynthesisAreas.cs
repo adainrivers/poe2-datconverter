@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SynthesisAreas
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int MinLevel;
@@ -19,25 +17,25 @@ public struct SynthesisAreas
 
 	[FieldOffset(20)]
 	[ReferenceTable("Topologies")]
-	public TRef TopologiesKey;
+	public TableReference TopologiesKey;
 
 	[FieldOffset(36)]
 	[ReferenceTable("MonsterPacks")]
-	[ElementType(typeof(TRef))]
-	public TArray MonsterPacksKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MonsterPacksKeys;
 
 	[FieldOffset(52)]
-	public TString ArtFile;
+	public StringReference ArtFile;
 
 	[FieldOffset(60)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(68)]
 	[ReferenceTable("SynthesisAreaSize")]
-	public TRef SynthesisAreaSizeKey;
+	public TableReference SynthesisAreaSizeKey;
 
 	[FieldOffset(84)]
 	[ReferenceTable("AchievementItems")]
-	public TRef AchievementItemsKey;
+	public TableReference AchievementItemsKey;
 
 }

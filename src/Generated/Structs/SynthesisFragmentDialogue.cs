@@ -1,35 +1,33 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct SynthesisFragmentDialogue
 {
 	[FieldOffset(0)]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey1;
+	public TableReference NPCTextAudioKey1;
 
 	[FieldOffset(32)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey2;
+	public TableReference NPCTextAudioKey2;
 
 	[FieldOffset(48)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey3;
+	public TableReference NPCTextAudioKey3;
 
 	[FieldOffset(64)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey4;
+	public TableReference NPCTextAudioKey4;
 
 	[FieldOffset(80)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey5;
+	public TableReference NPCTextAudioKey5;
 
 	[FieldOffset(96)]
 	[ReferenceTable("NPCTextAudio")]
-	public TRef NPCTextAudioKey6;
+	public TableReference NPCTextAudioKey6;
 
 }

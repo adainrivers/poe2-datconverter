@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Quest
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Act;
 
 	[FieldOffset(12)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(20)]
-	public TString Icon_DDSFile;
+	public StringReference Icon_DDSFile;
 
 	[FieldOffset(28)]
 	public int QuestId;
@@ -25,23 +23,23 @@ public struct Quest
 
 	[FieldOffset(33)]
 	[ReferenceTable("QuestType")]
-	public TRef Type;
+	public TableReference Type;
 
 	[FieldOffset(49)]
 	[ElementType(typeof(int))]
-	public TArray Unk007;
+	public ArrayReference Unk007;
 
 	[FieldOffset(65)]
 	public int Unk008;
 
 	[FieldOffset(69)]
 	[ReferenceTable("QuestTrackerGroup")]
-	public TRef TrackerGroup;
+	public TableReference TrackerGroup;
 
 	[FieldOffset(85)]
 	public TBool Unk010;
 
 	[FieldOffset(86)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 }

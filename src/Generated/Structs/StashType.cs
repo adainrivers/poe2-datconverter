@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct StashType
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("StashId")]
@@ -14,7 +12,7 @@ public struct StashType
 	public TEnum StashId;
 
 	[FieldOffset(12)]
-	public TString Id2;
+	public StringReference Id2;
 
 	[FieldOffset(20)]
 	public int Unk003;
@@ -26,6 +24,6 @@ public struct StashType
 	public int Unk005;
 
 	[FieldOffset(32)]
-	public TString Icon;
+	public StringReference Icon;
 
 }

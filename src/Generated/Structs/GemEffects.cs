@@ -1,46 +1,44 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GemEffects
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffect;
+	public TableReference GrantedEffect;
 
 	[FieldOffset(32)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffectHardmode;
+	public TableReference GrantedEffectHardmode;
 
 	[FieldOffset(48)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffect2;
+	public TableReference GrantedEffect2;
 
 	[FieldOffset(64)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffect2Hardmode;
+	public TableReference GrantedEffect2Hardmode;
 
 	[FieldOffset(80)]
-	public TString SupportText;
+	public StringReference SupportText;
 
 	[FieldOffset(88)]
-	public TString SupportName;
+	public StringReference SupportName;
 
 	[FieldOffset(96)]
 	[ReferenceTable("GemTags")]
-	[ElementType(typeof(TRef))]
-	public TArray GemTags;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference GemTags;
 
 	[FieldOffset(112)]
 	[ReferenceTable("Mods")]
-	public TRef Consumed_ModsKey;
+	public TableReference Consumed_ModsKey;
 
 	[FieldOffset(128)]
 	public int ItemColor;

@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct NPCFollowerVariations
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey0;
+	public TableReference MiscAnimatedKey0;
 
 	[FieldOffset(32)]
 	[ReferenceTable("MiscAnimated")]
-	public TRef MiscAnimatedKey1;
+	public TableReference MiscAnimatedKey1;
 
 	[FieldOffset(48)]
 	public TBool Unk003;
@@ -43,11 +41,11 @@ public struct NPCFollowerVariations
 
 	[FieldOffset(68)]
 	[ElementType(typeof(int))]
-	public TArray Unk011;
+	public ArrayReference Unk011;
 
 	[FieldOffset(84)]
 	[ElementType(typeof(int))]
-	public TArray Unk012;
+	public ArrayReference Unk012;
 
 	[FieldOffset(100)]
 	public int Unk013;

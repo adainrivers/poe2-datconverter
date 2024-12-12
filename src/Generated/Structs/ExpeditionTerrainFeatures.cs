@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpeditionTerrainFeatures
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("ExtraTerrainFeatures")]
-	public TRef ExtraFeature;
+	public TableReference ExtraFeature;
 
 	[FieldOffset(24)]
 	[ReferenceTable("ExpeditionFactions")]
-	public TRef ExpeditionFaction;
+	public TableReference ExpeditionFaction;
 
 	[FieldOffset(40)]
 	public int MinLevel;
@@ -27,12 +25,12 @@ public struct ExpeditionTerrainFeatures
 
 	[FieldOffset(52)]
 	[ReferenceTable("WorldAreas")]
-	public TRef Area;
+	public TableReference Area;
 
 	[FieldOffset(68)]
 	[ReferenceTable("ExpeditionAreas")]
-	[ElementType(typeof(TRef))]
-	public TArray ExpeditionAreas;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference ExpeditionAreas;
 
 	[FieldOffset(84)]
 	public int Unk008;
@@ -42,7 +40,7 @@ public struct ExpeditionTerrainFeatures
 
 	[FieldOffset(89)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray UnearthAchievements;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference UnearthAchievements;
 
 }

@@ -1,33 +1,31 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LabyrinthSectionLayout
 {
 	[FieldOffset(0)]
 	[ReferenceTable("LabyrinthSection")]
-	public TRef LabyrinthSectionKey;
+	public TableReference LabyrinthSectionKey;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(20)]
 	[ReferenceTable("LabyrinthSectionLayout")]
-	[ElementType(typeof(TRef))]
-	public TArray LabyrinthSectionLayoutKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference LabyrinthSectionLayoutKeys;
 
 	[FieldOffset(36)]
 	[ReferenceTable("LabyrinthSecrets")]
-	public TRef LabyrinthSecretsKey0;
+	public TableReference LabyrinthSecretsKey0;
 
 	[FieldOffset(52)]
 	[ReferenceTable("LabyrinthSecrets")]
-	public TRef LabyrinthSecretsKey1;
+	public TableReference LabyrinthSecretsKey1;
 
 	[FieldOffset(68)]
 	[ReferenceTable("LabyrinthAreas")]
-	public TRef LabyrinthAreasKey;
+	public TableReference LabyrinthAreasKey;
 
 	[FieldOffset(84)]
 	public float Float0;
@@ -37,7 +35,7 @@ public struct LabyrinthSectionLayout
 
 	[FieldOffset(92)]
 	[ReferenceTable("LabyrinthNodeOverrides")]
-	[ElementType(typeof(TRef))]
-	public TArray LabyrinthNodeOverridesKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference LabyrinthNodeOverridesKeys;
 
 }

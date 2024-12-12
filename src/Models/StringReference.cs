@@ -1,9 +1,8 @@
-﻿using Extractor.Parsers;
-using System.Text;
+﻿using System.Text;
 
-namespace Extractor;
+namespace PoE2Converter.Models;
 
-public struct TString
+public struct StringReference
 {
     public long Offset;
 

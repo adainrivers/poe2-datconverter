@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BlightTowersPerLevel
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BlightTowers")]
-	public TRef BlightTowersKey;
+	public TableReference BlightTowersKey;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(20)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef MonsterVarietiesKey;
+	public TableReference MonsterVarietiesKey;
 
 	[FieldOffset(36)]
 	public int Cost;

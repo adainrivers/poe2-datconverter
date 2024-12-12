@@ -1,19 +1,17 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct AlternateSkillTargetingBehaviours
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Unk001;
 
 	[FieldOffset(12)]
 	[ReferenceTable("ClientStrings")]
-	public TRef ClientStrings;
+	public TableReference ClientStrings;
 
 	[FieldOffset(28)]
 	public int Unk003;
@@ -26,6 +24,6 @@ public struct AlternateSkillTargetingBehaviours
 
 	[FieldOffset(40)]
 	[ElementType(typeof(int))]
-	public TArray Unk006;
+	public ArrayReference Unk006;
 
 }

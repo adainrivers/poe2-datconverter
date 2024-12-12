@@ -1,29 +1,27 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistChokepointFormation
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MonsterVarieties")]
-	public TRef Unk000;
+	public TableReference Unk000;
 
 	[FieldOffset(16)]
 	public int Unk001;
 
 	[FieldOffset(20)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(36)]
 	[ReferenceTable("GrantedEffects")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk003;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk003;
 
 	[FieldOffset(52)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef Unk004;
+	public TableReference Unk004;
 
 	[FieldOffset(68)]
 	public int Unk005;

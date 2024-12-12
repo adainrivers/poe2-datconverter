@@ -1,26 +1,24 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ClientStrings
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(16)]
-	public TString XBoxText;
+	public StringReference XBoxText;
 
 	[FieldOffset(24)]
-	public TString XBoxText2;
+	public StringReference XBoxText2;
 
 	[FieldOffset(32)]
 	public int HASH32;
 
 	[FieldOffset(36)]
-	public TString PlaystationText;
+	public StringReference PlaystationText;
 
 }

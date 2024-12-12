@@ -1,22 +1,20 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BetrayalJobs
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Text;
+	public StringReference Text;
 
 	[FieldOffset(16)]
 	[ReferenceTable("ExtraTerrainFeatures")]
-	public TRef ExtraTerrainFeaturesKey;
+	public TableReference ExtraTerrainFeaturesKey;
 
 	[FieldOffset(32)]
-	public TString Art;
+	public StringReference Art;
 
 	[FieldOffset(40)]
 	public int Unk004;
@@ -26,21 +24,21 @@ public struct BetrayalJobs
 
 	[FieldOffset(48)]
 	[ReferenceTable("WorldAreas")]
-	public TRef WorldAreasKey;
+	public TableReference WorldAreasKey;
 
 	[FieldOffset(64)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray Completion_AchievementItemsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Completion_AchievementItemsKey;
 
 	[FieldOffset(80)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray OpenChests_AchievementItemsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference OpenChests_AchievementItemsKey;
 
 	[FieldOffset(96)]
 	[ReferenceTable("AchievementItems")]
-	[ElementType(typeof(TRef))]
-	public TArray MissionCompletion_AcheivementItemsKey;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference MissionCompletion_AcheivementItemsKey;
 
 }

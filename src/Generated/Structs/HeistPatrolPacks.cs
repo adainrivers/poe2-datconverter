@@ -1,13 +1,11 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistPatrolPacks
 {
 	[FieldOffset(0)]
 	[ReferenceTable("MonsterPacks")]
-	public TRef MonsterPacksKey;
+	public TableReference MonsterPacksKey;
 
 	[FieldOffset(16)]
 	public int Unk001;

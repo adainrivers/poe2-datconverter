@@ -1,15 +1,13 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct LeagueFlag
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Image;
+	public StringReference Image;
 
 	[FieldOffset(16)]
 	public TBool IsHC;
@@ -18,7 +16,7 @@ public struct LeagueFlag
 	public TBool IsSSF;
 
 	[FieldOffset(18)]
-	public TString Banner;
+	public StringReference Banner;
 
 	[FieldOffset(26)]
 	public TBool IsRuthless;

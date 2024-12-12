@@ -1,7 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 
-namespace Extractor.Parsers;
+namespace PoE2Converter.Parsers;
 
 public class DatReader
 {
@@ -11,9 +10,12 @@ public class DatReader
     public List<byte[]> RowBytes { get; } = [];
     public List<object> Rows { get; } = [];
 
+    public string Name { get; private set; }
 
-    public unsafe void Read(ReadOnlySpan<byte> data, Type underlyingType)
+
+    public unsafe void Read(ReadOnlySpan<byte> data, Type underlyingType, string name)
     {
+        Name = name;
         var rowCount = BitConverter.ToInt32(data[..4]);
         if (rowCount == 0) return;
 

@@ -1,21 +1,19 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct VillageExports
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(16)]
 	public int Unk002;
 
 	[FieldOffset(20)]
-	public TString Icon;
+	public StringReference Icon;
 
 	[FieldOffset(28)]
 	public int Unk004;
@@ -24,17 +22,17 @@ public struct VillageExports
 	public int Unk005;
 
 	[FieldOffset(36)]
-	public TString Icon2;
+	public StringReference Icon2;
 
 	[FieldOffset(44)]
-	public TString Name2;
+	public StringReference Name2;
 
 	[FieldOffset(52)]
-	public TString IconCombined;
+	public StringReference IconCombined;
 
 	[FieldOffset(60)]
 	[ReferenceTable("VillageExports")]
-	public TRef Result;
+	public TableReference Result;
 
 	[FieldOffset(68)]
 	public int Unk010;

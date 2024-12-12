@@ -1,15 +1,13 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct BuffDefinitions
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	public TString Description;
+	public StringReference Description;
 
 	[FieldOffset(16)]
 	public TBool Invisible;
@@ -18,12 +16,12 @@ public struct BuffDefinitions
 	public TBool Removable;
 
 	[FieldOffset(18)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(26)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(42)]
 	public TBool Unk006;
@@ -36,11 +34,11 @@ public struct BuffDefinitions
 
 	[FieldOffset(48)]
 	[ReferenceTable("Stats")]
-	public TRef Maximum_StatsKey;
+	public TableReference Maximum_StatsKey;
 
 	[FieldOffset(64)]
 	[ReferenceTable("Stats")]
-	public TRef Current_StatsKey;
+	public TableReference Current_StatsKey;
 
 	[FieldOffset(80)]
 	public TBool Unk011;
@@ -50,7 +48,7 @@ public struct BuffDefinitions
 
 	[FieldOffset(85)]
 	[ReferenceTable("BuffVisuals")]
-	public TRef BuffVisualsKey;
+	public TableReference BuffVisualsKey;
 
 	[FieldOffset(101)]
 	public TBool Unk014;
@@ -80,7 +78,7 @@ public struct BuffDefinitions
 	public TBool Unk022;
 
 	[FieldOffset(116)]
-	public TString Id2;
+	public StringReference Id2;
 
 	[FieldOffset(124)]
 	public TBool IsRecovery;
@@ -89,7 +87,7 @@ public struct BuffDefinitions
 	public TBool Unk025;
 
 	[FieldOffset(126)]
-	public TRef Unk026;
+	public TableReference Unk026;
 
 	[FieldOffset(142)]
 	public TBool Unk027;
@@ -108,7 +106,7 @@ public struct BuffDefinitions
 
 	[FieldOffset(153)]
 	[ElementType(typeof(int))]
-	public TArray Unk032;
+	public ArrayReference Unk032;
 
 	[FieldOffset(169)]
 	public TBool Unk033;
@@ -117,31 +115,31 @@ public struct BuffDefinitions
 	public TBool Unk034;
 
 	[FieldOffset(171)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk035;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk035;
 
 	[FieldOffset(187)]
 	public TBool Unk036;
 
 	[FieldOffset(188)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk037;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk037;
 
 	[FieldOffset(204)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray BinaryStats;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference BinaryStats;
 
 	[FieldOffset(220)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk039;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk039;
 
 	[FieldOffset(236)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk040;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk040;
 
 	[FieldOffset(252)]
 	public TBool Unk041;
@@ -160,19 +158,19 @@ public struct BuffDefinitions
 
 	[FieldOffset(257)]
 	[ReferenceTable("Stats")]
-	public TRef Unk046;
+	public TableReference Unk046;
 
 	[FieldOffset(273)]
 	[ElementType(typeof(int))]
-	public TArray Unk047;
+	public ArrayReference Unk047;
 
 	[FieldOffset(289)]
-	public TString Unk048;
+	public StringReference Unk048;
 
 	[FieldOffset(297)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray Unk049;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk049;
 
 	[FieldOffset(313)]
 	public TBool Unk050;

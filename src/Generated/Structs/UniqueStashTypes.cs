@@ -1,12 +1,10 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct UniqueStashTypes
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	public int Order;
@@ -24,13 +22,13 @@ public struct UniqueStashTypes
 	public int Unk005;
 
 	[FieldOffset(28)]
-	public TString Name;
+	public StringReference Name;
 
 	[FieldOffset(36)]
 	public int StandardCount;
 
 	[FieldOffset(40)]
-	public TString Image;
+	public StringReference Image;
 
 	[FieldOffset(48)]
 	public int ChallengeLeagueCount;

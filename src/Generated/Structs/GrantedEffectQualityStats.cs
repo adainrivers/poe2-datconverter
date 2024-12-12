@@ -1,29 +1,27 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct GrantedEffectQualityStats
 {
 	[FieldOffset(0)]
 	[ReferenceTable("GrantedEffects")]
-	public TRef GrantedEffectsKey;
+	public TableReference GrantedEffectsKey;
 
 	[FieldOffset(16)]
 	[ReferenceTable("Stats")]
-	[ElementType(typeof(TRef))]
-	public TArray StatsKeys;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference StatsKeys;
 
 	[FieldOffset(32)]
 	[ElementType(typeof(int))]
-	public TArray StatsValuesPermille;
+	public ArrayReference StatsValuesPermille;
 
 	[FieldOffset(48)]
 	[ElementType(typeof(int))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(64)]
 	[ElementType(typeof(int))]
-	public TArray Unk004;
+	public ArrayReference Unk004;
 
 }

@@ -1,20 +1,18 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Talismans
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef BaseItemTypesKey;
+	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
 	public int SpawnWeight;
 
 	[FieldOffset(20)]
 	[ReferenceTable("Mods")]
-	public TRef ModsKey;
+	public TableReference ModsKey;
 
 	[FieldOffset(36)]
 	public int Tier;
@@ -26,10 +24,10 @@ public struct Talismans
 	public TBool Unk005;
 
 	[FieldOffset(42)]
-	public TRef Unk006;
+	public TableReference Unk006;
 
 	[FieldOffset(58)]
-	public TRef Unk007;
+	public TableReference Unk007;
 
 	[FieldOffset(74)]
 	public int Unk008;

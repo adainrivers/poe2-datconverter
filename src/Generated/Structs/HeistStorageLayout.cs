@@ -1,29 +1,27 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct HeistStorageLayout
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef StoredItem;
+	public TableReference StoredItem;
 
 	[FieldOffset(24)]
 	public TBool Unk002;
 
 	[FieldOffset(25)]
-	public TString ButtonFile;
+	public StringReference ButtonFile;
 
 	[FieldOffset(33)]
 	public int SlotSize;
 
 	[FieldOffset(37)]
 	[ReferenceTable("HeistJobs")]
-	public TRef HeistJobsKey;
+	public TableReference HeistJobsKey;
 
 	[FieldOffset(53)]
 	public int Width;
@@ -45,6 +43,6 @@ public struct HeistStorageLayout
 
 	[FieldOffset(77)]
 	[ReferenceTable("ItemClasses")]
-	public TRef ItemClass;
+	public TableReference ItemClass;
 
 }

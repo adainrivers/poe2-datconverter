@@ -1,6 +1,4 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct ExpandingPulse
@@ -9,19 +7,19 @@ public struct ExpandingPulse
 	public int IntId;
 
 	[FieldOffset(4)]
-	public TString StringId;
+	public StringReference StringId;
 
 	[FieldOffset(12)]
 	[ElementType(typeof(int))]
-	public TArray Unk002;
+	public ArrayReference Unk002;
 
 	[FieldOffset(28)]
 	[ElementType(typeof(float))]
-	public TArray Unk003;
+	public ArrayReference Unk003;
 
 	[FieldOffset(44)]
-	[ElementType(typeof(TRef))]
-	public TArray Unk004;
+	[ElementType(typeof(TableReference))]
+	public ArrayReference Unk004;
 
 	[FieldOffset(60)]
 	public int Unk005;

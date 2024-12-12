@@ -1,24 +1,22 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct Projectiles
 {
 	[FieldOffset(0)]
-	public TString Id;
+	public StringReference Id;
 
 	[FieldOffset(8)]
-	[ElementType(typeof(TString))]
-	public TArray AOFiles;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference AOFiles;
 
 	[FieldOffset(24)]
-	[ElementType(typeof(TString))]
-	public TArray LoopAnimationIds;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference LoopAnimationIds;
 
 	[FieldOffset(40)]
-	[ElementType(typeof(TString))]
-	public TArray ImpactAnimationIds;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference ImpactAnimationIds;
 
 	[FieldOffset(56)]
 	public int ProjectileSpeed;
@@ -36,13 +34,13 @@ public struct Projectiles
 	public TBool Unk008;
 
 	[FieldOffset(67)]
-	public TString InheritsFrom;
+	public StringReference InheritsFrom;
 
 	[FieldOffset(75)]
 	public int Unk010;
 
 	[FieldOffset(79)]
-	public TRef Unk011;
+	public TableReference Unk011;
 
 	[FieldOffset(95)]
 	public int Unk012;
@@ -54,11 +52,11 @@ public struct Projectiles
 	public TBool Unk014;
 
 	[FieldOffset(101)]
-	[ElementType(typeof(TString))]
-	public TArray Stuck_AOFile;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Stuck_AOFile;
 
 	[FieldOffset(117)]
-	public TString Bounce_AOFile;
+	public StringReference Bounce_AOFile;
 
 	[FieldOffset(125)]
 	public int Unk017;
@@ -73,10 +71,10 @@ public struct Projectiles
 	public int Unk020;
 
 	[FieldOffset(141)]
-	public TRef Unk021;
+	public TableReference Unk021;
 
 	[FieldOffset(157)]
-	public TRef Unk022;
+	public TableReference Unk022;
 
 	[FieldOffset(173)]
 	public int Unk023;
@@ -94,18 +92,18 @@ public struct Projectiles
 	public int Unk027;
 
 	[FieldOffset(193)]
-	[ElementType(typeof(TString))]
-	public TArray Unk028;
+	[ElementType(typeof(StringReference))]
+	public ArrayReference Unk028;
 
 	[FieldOffset(209)]
 	public TBool Unk029;
 
 	[FieldOffset(210)]
 	[ElementType(typeof(int))]
-	public TArray Unk030;
+	public ArrayReference Unk030;
 
 	[FieldOffset(226)]
 	[ReferenceTable("Projectiles")]
-	public TRef Unk031;
+	public TableReference Unk031;
 
 }

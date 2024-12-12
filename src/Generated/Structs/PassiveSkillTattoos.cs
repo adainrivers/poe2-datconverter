@@ -1,27 +1,25 @@
-using System;
-using System.Runtime.InteropServices;
-namespace Extractor.Generated.Structs;
+namespace PoE2Converter.Generated.Structs;
 
 [StructLayout(LayoutKind.Explicit, Pack = 1)]
 public struct PassiveSkillTattoos
 {
 	[FieldOffset(0)]
 	[ReferenceTable("BaseItemTypes")]
-	public TRef Tattoo;
+	public TableReference Tattoo;
 
 	[FieldOffset(16)]
 	[ReferenceTable("PassiveSkillOverrides")]
-	public TRef Override;
+	public TableReference Override;
 
 	[FieldOffset(32)]
 	[ReferenceTable("PassiveSkillTattooTargetSets")]
-	public TRef Set;
+	public TableReference Set;
 
 	[FieldOffset(48)]
 	public int Tribe;
 
 	[FieldOffset(52)]
 	[ReferenceTable("PassiveSkillOverrideTypes")]
-	public TRef OverrideType;
+	public TableReference OverrideType;
 
 }
