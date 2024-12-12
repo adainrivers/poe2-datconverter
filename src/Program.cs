@@ -12,7 +12,7 @@ internal static class Program
         CSharpClassGenerator.Generate();
         ConvertMetadataFiles();
         ConvertCsdFiles();
-        ConvertDataFiles(true);
+        ConvertDataFiles(false);
     }
 
     private static void ConvertMetadataFiles()

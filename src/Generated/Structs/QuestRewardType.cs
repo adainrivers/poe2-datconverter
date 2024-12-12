@@ -10,4 +10,13 @@ public struct QuestRewardType
 
     [FieldOffset(8)] 
     public TString Icon;
+
+    [FieldOffset(16)]
+    public TString Name;
+
+    [FieldOffset(24)]
+    public TString Description;
+
+    [FieldOffset(32)]
+    public TRef SomeRef;
 }
