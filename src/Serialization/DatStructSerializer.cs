@@ -9,12 +9,14 @@ namespace Extractor.Serialization;
 public class DatStructSerializer
 {
     private readonly DatReader _reader;
+    private readonly Dictionary<string, DatReader> _allResults;
     private readonly StringWriter _writer;
     private readonly JsonTextWriter _jsonWriter;
 
-    public DatStructSerializer(DatReader reader)
+    public DatStructSerializer(DatReader reader, Dictionary<string, DatReader> allResults)
     {
         _reader = reader;
+        _allResults = allResults;
         _writer = new StringWriter();
         _jsonWriter = new JsonTextWriter(_writer);
         _jsonWriter.Formatting = Formatting.Indented;
@@ -84,7 +86,7 @@ public class DatStructSerializer
         return _writer.ToString();
     }
 
-    private void WriteFieldValue(Type fieldType, object value, IEnumerable<Attribute> attributes = null)
+    private void WriteFieldValue(Type fieldType, object value, IEnumerable<Attribute> attributes = null, DatReader overrideReader = null)
     {
         if (value == null)
         {
@@ -93,7 +95,7 @@ public class DatStructSerializer
         }
         if (fieldType == typeof(TString))
         {
-            _jsonWriter.WriteValue(((TString)value).GetValue(_reader));
+            _jsonWriter.WriteValue(((TString)value).GetValue(overrideReader ?? _reader));
             return;
         }
 
@@ -114,7 +116,7 @@ public class DatStructSerializer
         if (fieldType == typeof(TRef))
         {
             var tRefValue = (TRef)value;
-            if (tRefValue.RowIndex == Constants.Null)
+            if (tRefValue.RowIndex == Constants.Null || tRefValue.RowIndex < 0)
             {
                 _jsonWriter.WriteNull();
                 return;
@@ -125,6 +127,20 @@ public class DatStructSerializer
             _jsonWriter.WriteValue(tRefValue.RowIndex);
             _jsonWriter.WritePropertyName("TableName");
             _jsonWriter.WriteValue(tableName);
+            if (tableName != null && _allResults.TryGetValue(tableName, out var tableReader))
+            {
+                if (tableReader.Rows.Count > tRefValue.RowIndex)
+                {
+                    var refRow = tableReader.Rows[(int)tRefValue.RowIndex];
+                    var idField = refRow.GetType().GetField("Id");
+                    if (idField != null)
+                    {
+                        _jsonWriter.WritePropertyName("Id");
+                        WriteFieldValue(idField.FieldType, idField.GetValue(refRow), null, tableReader);
+                    }
+                }
+            }
+
             _jsonWriter.WriteEndObject();
             return;
         }

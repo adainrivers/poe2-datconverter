@@ -68,6 +68,7 @@ internal static class Program
         Console.WriteLine("Converting data files");
         var dataFilesPath = Path.Combine(Config.ExtractedFilesPath, "data");
         var dataFiles = Directory.GetFiles(dataFilesPath, "*.datc64", SearchOption.TopDirectoryOnly);
+        var results = new Dictionary<string, DatReader>(StringComparer.OrdinalIgnoreCase);
         foreach (var file in dataFiles)
         {
             var fileName = Path.GetFileNameWithoutExtension(file);
@@ -75,6 +76,7 @@ internal static class Program
             var data = File.ReadAllBytes(file);
             var reader = ReaderFactory.GetReader(fileName, data);
             if (reader == null) continue;
+            results[fileName] = reader;
 
             if (saveRawData)
             {
@@ -87,8 +89,10 @@ internal static class Program
                     File.WriteAllBytes(Path.Combine(outputFolder, $"{i}.bin"), reader.RowBytes[i]);
                 }
             }
-
-            var serializer = new DatStructSerializer(reader);
+        }
+        foreach (var (fileName, reader) in results)
+        {
+            var serializer = new DatStructSerializer(reader, results);
             var json = serializer.SerializeStructs(reader.Rows);
             var outputPath = Path.Combine(Config.DataOutputPath, "data", $"{fileName}.json");
             File.WriteAllText(outputPath, json);
