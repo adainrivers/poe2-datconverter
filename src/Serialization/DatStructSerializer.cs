@@ -146,39 +146,6 @@ public class DatStructSerializer
             return;
         }
 
-        if (fieldType == typeof(RowReference))
-        {
-            var rowReferenceValue = (RowReference)value;
-            if (rowReferenceValue.RowIndex == Constants.Null || rowReferenceValue.RowIndex < 0)
-            {
-                _jsonWriter.WriteNull();
-                return;
-            }
-            _jsonWriter.WriteStartObject();
-            _jsonWriter.WritePropertyName("RowIndex");
-            _jsonWriter.WriteValue(rowReferenceValue.RowIndex);
-            _jsonWriter.WritePropertyName("TableName");
-            _jsonWriter.WriteValue(_reader.Name);
-            if (_reader.Rows.Count > rowReferenceValue.RowIndex)
-            {
-                var refRow = _reader.Rows[(int)rowReferenceValue.RowIndex];
-                var fieldName = "Id";
-                if (_reader.Name == "Words")
-                {
-                    fieldName = "Text";
-                }
-                var idField = refRow.GetType().GetField(fieldName);
-                if (idField != null)
-                {
-                    _jsonWriter.WritePropertyName(fieldName);
-                    WriteFieldValue(idField.FieldType, idField.GetValue(refRow), null, _reader);
-                }
-            }
-
-            _jsonWriter.WriteEndObject();
-            return;
-        }
-
         _jsonWriter.WriteValue(value);
     }
 }

@@ -41,7 +41,7 @@ public static class CSharpClassGenerator
                     var elementType = field.GetCustomAttribute<ElementTypeAttribute>()?.Type ?? typeof(int);
                     var columnType = elementType.Name;
                     if(columnType == "TableReference") columnType = "TableReference";
-                    if(columnType == "TString") columnType = "string";
+                    if(columnType == "StringReference") columnType = "string";
                     if(columnType == "TEnum") columnType = enumType;
                     stringBuilder.AppendLine($"\tpublic List<{columnType}> {fieldName} {{ get; set; }} = new();");
                 }
@@ -50,10 +50,6 @@ public static class CSharpClassGenerator
                     stringBuilder.AppendLine($"\tpublic string {fieldName} {{ get; set; }}");
                 }
                 else if (field.FieldType == typeof(TableReference))
-                {
-                    stringBuilder.AppendLine($"\tpublic TableReference {fieldName} {{ get; set; }}");
-                }
-                else if (field.FieldType == typeof(RowReference))
                 {
                     stringBuilder.AppendLine($"\tpublic TableReference {fieldName} {{ get; set; }}");
                 }
