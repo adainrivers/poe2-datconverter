@@ -8,6 +8,12 @@ internal static class Program
         ConvertMetadataFiles();
         ConvertCsdFiles();
         ConvertDataFiles(false);
+        var languages = Directory.GetDirectories(Path.Combine(Config.ExtractedFilesPath, "data")).Select(d => d.Split("\\")[^1]);
+        foreach (var language in languages)
+        {
+            ConvertDataFiles(false, language);
+
+        }
     }
 
     private static void ConvertMetadataFiles()
@@ -53,15 +59,21 @@ internal static class Program
     }
 
 
-    private static void ConvertDataFiles(bool saveRawData)
+    private static void ConvertDataFiles(bool saveRawData, string language = null)
     {
         if (saveRawData && Directory.Exists(Config.RawDataOutputPath))
         {
             Directory.Delete(Config.RawDataOutputPath, true);
         }
 
+        if (language != null) Directory.CreateDirectory(Path.Combine(Config.DataOutputPath, "data", language));
+
         Console.WriteLine("Converting data files");
         var dataFilesPath = Path.Combine(Config.ExtractedFilesPath, "data");
+        if (language != null)
+        {
+            dataFilesPath = Path.Combine(dataFilesPath, language);
+        }
         var dataFiles = Directory.GetFiles(dataFilesPath, "*.datc64", SearchOption.TopDirectoryOnly);
         var results = new Dictionary<string, DatReader>(StringComparer.OrdinalIgnoreCase);
         foreach (var file in dataFiles)
@@ -75,7 +87,7 @@ internal static class Program
 
             if (saveRawData)
             {
-                var outputFolder = Path.Combine(Config.RawDataOutputPath, fileName);
+                var outputFolder = language == null ? Path.Combine(Config.RawDataOutputPath, fileName) : Path.Combine(Config.RawDataOutputPath, language, fileName);
                 Directory.CreateDirectory(outputFolder);
                 if (reader.Data != null) File.WriteAllBytes(Path.Combine(outputFolder, "_dataSection.bin"), reader.Data);
 
@@ -89,7 +101,7 @@ internal static class Program
         {
             var serializer = new DatStructSerializer(reader, results);
             var json = serializer.SerializeStructs(reader.Rows);
-            var outputPath = Path.Combine(Config.DataOutputPath, "data", $"{fileName}.json");
+            var outputPath = language == null ? Path.Combine(Config.DataOutputPath, "data", $"{fileName}.json") : Path.Combine(Config.DataOutputPath, "data", language, $"{fileName}.json");
             File.WriteAllText(outputPath, json);
         }
     }
