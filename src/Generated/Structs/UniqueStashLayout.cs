@@ -17,19 +17,10 @@ public struct UniqueStashLayout
 	[ReferenceTable("UniqueStashTypes")]
 	public TableReference UniqueStashTypesKey;
 
-	[FieldOffset(48)]
-	public int Unk003;
+    [FieldOffset(48)]
+    public TableReference SomeRef01;
 
-	[FieldOffset(52)]
-	public int Unk004;
-
-	[FieldOffset(56)]
-	public int OverrideWidth;
-
-	[FieldOffset(60)]
-	public int OverrideHeight;
-
-	[FieldOffset(64)]
+    [FieldOffset(64)]
 	public TBool ShowIfEmptyChallengeLeague;
 
 	[FieldOffset(65)]
