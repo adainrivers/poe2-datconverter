@@ -11,18 +11,30 @@ public struct WeaponTypes
 	public int Critical;
 
 	[FieldOffset(20)]
-	public int Speed;
+	public int Unk02;
 
 	[FieldOffset(24)]
-	public int DamageMin;
+	public int Unk03;
 
 	[FieldOffset(28)]
-	public int DamageMax;
+	public int Unk04;
 
 	[FieldOffset(32)]
 	public int RangeMax;
 
 	[FieldOffset(36)]
-	public int Unk006;
+	public int Speed;
+
+    [FieldOffset(40)]
+    public int DamageMin;
+
+    [FieldOffset(44)]
+    public int DamageMax;
+
+    [FieldOffset(48)]
+    public int Unk009;
+
+    [FieldOffset(52)]
+    public int ReloadTime;
 
 }
