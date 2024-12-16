@@ -119,9 +119,9 @@ public struct BaseItemTypes
 	public ArrayReference Unk030;
 
 	[FieldOffset(312)]
-	public TBool IgnoreQuantBonus;
+	public TableReference Unk031;
 
-	[FieldOffset(313)]
+    [FieldOffset(313)]
 	public TBool Unk032;
 
 }
