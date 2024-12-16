@@ -8,36 +8,36 @@ public struct ArmourTypes
 	public TableReference BaseItemTypesKey;
 
 	[FieldOffset(16)]
-	public int ArmourMin;
+	public int Armour;
 
 	[FieldOffset(20)]
-	public int ArmourMax;
+	public int EvasionRating;
 
 	[FieldOffset(24)]
-	public int EvasionMin;
+	public int EnergyShield;
 
 	[FieldOffset(28)]
-	public int EvasionMax;
+	public int Unk02;
 
 	[FieldOffset(32)]
-	public int EnergyShieldMin;
+	public int Unk03;
 
 	[FieldOffset(36)]
-	public int EnergyShieldMax;
+	public int Unk04;
 
-	[FieldOffset(40)]
-	public int IncreasedMovementSpeed;
+	//[FieldOffset(40)]
+	//public int IncreasedMovementSpeed;
 
-	[FieldOffset(44)]
-	public int WardMin;
+	//[FieldOffset(44)]
+	//public int WardMin;
 
-	[FieldOffset(48)]
-	public int WardMax;
+	//[FieldOffset(48)]
+	//public int WardMax;
 
-	[FieldOffset(52)]
-	public int Unk010;
+	//[FieldOffset(52)]
+	//public int Unk010;
 
-	[FieldOffset(56)]
-	public int Unk011;
+	//[FieldOffset(56)]
+	//public int Unk011;
 
 }

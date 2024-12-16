@@ -98,7 +98,7 @@ public struct ActiveSkills
 	public StringReference AIFile;
 
 	[FieldOffset(222)]
-	[ElementType(typeof(TableReference))]
+    [ElementType(typeof(TableReference))]
 	public ArrayReference Unk025;
 
 	[FieldOffset(238)]
@@ -113,5 +113,33 @@ public struct ActiveSkills
 	[FieldOffset(241)]
 	[ReferenceTable("ActiveSkills")]
 	public TableReference TransfigureBase;
+
+    [FieldOffset(257)]
+    public long Unk030;
+
+    [FieldOffset(265)]
+	[ReferenceTable("CharacterAudioEvents")]
+    public TableReference AudioEvent;
+
+    [FieldOffset(281)]
+    public long Unk032;
+
+    [FieldOffset(289)]
+	public TableReference Unk033;
+
+    [FieldOffset(305)]
+	public TableReference Unk034;
+
+	[FieldOffset(321)]
+	public StringReference Unk035;
+
+	[FieldOffset(329)]
+	public TBool Unk036;
+
+	[FieldOffset(330)]
+	public int Unk037;
+
+    [FieldOffset(334)]
+    public StringReference CsdPath;
 
 }

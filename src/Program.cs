@@ -8,12 +8,12 @@ internal static class Program
         ConvertMetadataFiles();
         ConvertCsdFiles();
         ConvertDataFiles(false);
-        //var languages = Directory.GetDirectories(Path.Combine(Config.ExtractedFilesPath, "data")).Select(d => d.Split("\\")[^1]);
-        //foreach (var language in languages)
-        //{
-        //    ConvertDataFiles(false, language);
+        var languages = Directory.GetDirectories(Path.Combine(Config.ExtractedFilesPath, "data")).Select(d => d.Split("\\")[^1]);
+        foreach (var language in languages)
+        {
+            ConvertDataFiles(false, language);
 
-        //}
+        }
     }
 
     private static void ConvertMetadataFiles()
