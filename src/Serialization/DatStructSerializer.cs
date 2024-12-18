@@ -125,10 +125,9 @@ public class DatStructSerializer
             }
             var tableName = attributes?.Where(a => a.GetType() == typeof(ReferenceTableAttribute)).Cast<ReferenceTableAttribute>().FirstOrDefault()?.TableName;
             _jsonWriter.WriteStartObject();
-            _jsonWriter.WritePropertyName("RowIndex");
-            _jsonWriter.WriteValue(tableReferenceValue.RowIndex);
             _jsonWriter.WritePropertyName("TableName");
             _jsonWriter.WriteValue(tableName);
+            var foundId = false;
             if (tableName != null && _allResults.TryGetValue(tableName, out var tableReader))
             {
                 if (tableReader.Rows.Count > tableReferenceValue.RowIndex)
@@ -144,8 +143,15 @@ public class DatStructSerializer
                     {
                         _jsonWriter.WritePropertyName(fieldName);
                         WriteFieldValue(idField.FieldType, idField.GetValue(refRow), null, tableReader);
+                        foundId = true;
                     }
                 }
+            }
+
+            if (_includeRowIndex || !foundId)
+            {
+                _jsonWriter.WritePropertyName("RowIndex");
+                _jsonWriter.WriteValue(tableReferenceValue.RowIndex);
             }
 
             _jsonWriter.WriteEndObject();
