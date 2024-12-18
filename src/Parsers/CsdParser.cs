@@ -72,17 +72,16 @@ public static class CsdParser
                     break;
                 line = lines[i];
                 var parts = line.Split(' ', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
-                if (parts[0] != "1" && parts[0] != "2")
-                    continue;
+                if (!int.TryParse(parts[0], out var partsCount)) continue;
+                if (partsCount is <= 0 or >= 5) continue;
 
                 result.Entries.Add(current);
-                var partsCount = int.Parse(parts[0]);
 
-                current.Ids.Add(parts[1]);
-                if (partsCount == 2)
+                for (var partNumber = 1; partNumber <= partsCount; partNumber++)
                 {
-                    current.Ids.Add(parts[2]);
+                    current.Ids.Add(parts[partNumber]);
                 }
+
 
                 i++;
                 var count = int.Parse(lines[i].Trim());
@@ -94,12 +93,11 @@ public static class CsdParser
                     var subEntry = new CsdSubEntry
                     {
                         Operator = parts[0],
-                        Description = parts[1]
+                        Description = parts.Length == 1 ? "" : parts[1].Replace("\\n","\n")
                     };
 
                     if (parts.Length > 2)
                     {
-
                         var parameters = parts[2].Split(' ', StringSplitOptions.TrimEntries | StringSplitOptions.RemoveEmptyEntries);
                         var isCanonical = parameters.FirstOrDefault(p => p == "canonical_line") != null;
                         if (isCanonical)
