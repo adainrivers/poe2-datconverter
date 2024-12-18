@@ -1,22 +1,35 @@
-﻿namespace PoE2Converter;
+﻿using PoE2Converter.Parsers;
+
+namespace PoE2Converter;
 
 internal static class Program
 {
+    private const bool UpdateRepo = false;
     private static void Main()
     {
         CSharpClassGenerator.Generate();
         ConvertMetadataFiles();
         ConvertCsdFiles();
         ConvertDataFiles(false);
-        var languages = Directory.GetDirectories(Path.Combine(Config.ExtractedFilesPath, "data")).Select(d => d.Split("\\")[^1]);
+        if (!UpdateRepo) return;
+
+        if (Directory.Exists(Path.Combine(Config.RepoDataOutputPath, "data"))) Directory.Delete(Path.Combine(Config.RepoDataOutputPath, "data"), true);
+        if (Directory.Exists(Path.Combine(Config.RepoDataOutputPath, "csd"))) Directory.Delete(Path.Combine(Config.RepoDataOutputPath, "csd"), true);
+        if (Directory.Exists(Path.Combine(Config.RepoDataOutputPath, "xt"))) Directory.Delete(Path.Combine(Config.RepoDataOutputPath, "xt"), true);
+
+        ConvertMetadataFiles(true);
+        ConvertCsdFiles(true);
+        ConvertDataFiles(false, null, true);
+        var languages = Directory.GetDirectories(Path.Combine(Config.ExtractedFilesPath, "data"))
+            .Select(d => d.Split("\\")[^1]);
         foreach (var language in languages)
         {
-            ConvertDataFiles(false, language);
+            ConvertDataFiles(false, language, true);
 
         }
     }
 
-    private static void ConvertMetadataFiles()
+    private static void ConvertMetadataFiles(bool updateRepo = false)
     {
         Console.WriteLine("Converting metadata files");
         var files = Directory.GetFiles(Config.GetExtractedFilePath("metadata"), "*.it", SearchOption.AllDirectories);
@@ -35,38 +48,43 @@ internal static class Program
 
         foreach (var (path, metadata) in metadataMap)
         {
-            var outputPath = Path.Combine(Config.DataOutputPath, "xt", path + ".json");
-            var directory = Path.GetDirectoryName(outputPath);
-            Directory.CreateDirectory(directory!);
             var json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
-            File.WriteAllText(outputPath, json);
+            WriteFile(json, Config.DataOutputPath, "xt", path + ".json");
+
+            if (updateRepo) WriteFile(json, Config.RepoDataOutputPath, "xt", path + ".json");
         }
     }
 
-    private static void ConvertCsdFiles()
+    private static void ConvertCsdFiles(bool updateRepo = false)
     {
         Console.WriteLine("Converting csd files");
         var files = Directory.GetFiles(Config.GetExtractedFilePath("metadata"), "*.csd", SearchOption.AllDirectories);
         var csdMap = files.Select(CsdParser.Parse).ToDictionary(csd => csd.Path);
         foreach (var (path, csd) in csdMap)
         {
-            var outputPath = Path.Combine(Config.DataOutputPath, "csd", path + ".json");
-            var directory = Path.GetDirectoryName(outputPath);
-            Directory.CreateDirectory(directory!);
             var json = JsonConvert.SerializeObject(csd, Formatting.Indented);
-            File.WriteAllText(outputPath, json);
+            WriteFile(json, Config.DataOutputPath, "csd", path + ".json");
+
+            if (updateRepo) WriteFile(json, Config.RepoDataOutputPath, "csd", path + ".json");
         }
     }
 
+    private static void WriteFile(string json, string basePath, params string[] pathParts)
+    {
+        basePath = pathParts.Aggregate(basePath, Path.Combine);
+        var directory = Path.GetDirectoryName(basePath);
+        Directory.CreateDirectory(directory!);
+        File.WriteAllText(basePath, json);
+    }
 
-    private static void ConvertDataFiles(bool saveRawData, string language = null)
+
+    private static void ConvertDataFiles(bool saveRawData, string language = null, bool updateRepo = false)
     {
         if (saveRawData && Directory.Exists(Config.RawDataOutputPath))
         {
             Directory.Delete(Config.RawDataOutputPath, true);
         }
 
-        if (language != null) Directory.CreateDirectory(Path.Combine(Config.DataOutputPath, "data", language));
 
         Console.WriteLine("Converting data files");
         var dataFilesPath = Path.Combine(Config.ExtractedFilesPath, "data");
@@ -99,10 +117,30 @@ internal static class Program
         }
         foreach (var (fileName, reader) in results)
         {
-            var serializer = new DatStructSerializer(reader, results);
+            var serializer = new DatStructSerializer(reader, results, true);
             var json = serializer.SerializeStructs(reader.Rows);
-            var outputPath = language == null ? Path.Combine(Config.DataOutputPath, "data", $"{fileName}.json") : Path.Combine(Config.DataOutputPath, "data", language, $"{fileName}.json");
-            File.WriteAllText(outputPath, json);
+            if (language == null)
+            {
+                WriteFile(json, Config.DataOutputPath, "data", $"{fileName}.json");
+            }
+            else
+            {
+                WriteFile(json, Config.DataOutputPath, "data", language, $"{fileName}.json");
+            }
+
+            if (updateRepo)
+            {
+                serializer = new DatStructSerializer(reader, results, false);
+                json = serializer.SerializeStructs(reader.Rows);
+                if (language == null)
+                {
+                    WriteFile(json, Config.RepoDataOutputPath, "data", $"{fileName}.json");
+                }
+                else
+                {
+                    WriteFile(json, Config.RepoDataOutputPath, "data", language, $"{fileName}.json");
+                }
+            }
         }
     }
 }

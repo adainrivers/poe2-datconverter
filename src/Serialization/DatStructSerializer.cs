@@ -6,13 +6,15 @@ public class DatStructSerializer
 {
     private readonly DatReader _reader;
     private readonly Dictionary<string, DatReader> _allResults;
+    private readonly bool _includeRowIndex;
     private readonly StringWriter _writer;
     private readonly JsonTextWriter _jsonWriter;
 
-    public DatStructSerializer(DatReader reader, Dictionary<string, DatReader> allResults)
+    public DatStructSerializer(DatReader reader, Dictionary<string, DatReader> allResults, bool includeRowIndex)
     {
         _reader = reader;
         _allResults = allResults;
+        _includeRowIndex = includeRowIndex;
         _writer = new StringWriter();
         _jsonWriter = new JsonTextWriter(_writer);
         _jsonWriter.Formatting = Formatting.Indented;
@@ -33,8 +35,12 @@ public class DatStructSerializer
         {
             var row = rows[i];
             _jsonWriter.WriteStartObject();
-            _jsonWriter.WritePropertyName("RowIndex");
-            _jsonWriter.WriteValue(i);
+            if (_includeRowIndex)
+            {
+                _jsonWriter.WritePropertyName("RowIndex");
+                _jsonWriter.WriteValue(i);
+            }
+
             foreach (var fieldInfo in fields)
             {
                 //if (fieldInfo.Name.StartsWith("Unk")) continue;

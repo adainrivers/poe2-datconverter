@@ -3,7 +3,8 @@
 internal static class Config
 {
     public const string ExtractedFilesPath = @"F:\PoE2\Extracted";
-    public const string DataOutputPath = @"F:\PoE2\Data";
+    public const string DataOutputPath = @"F:\PoE2\PoEData";
+    public const string RepoDataOutputPath = @"F:\PoE2\DataRepo";
     public const string RawDataOutputPath = @"F:\PoE2\RawData";
     public const string ModelsOutputPath = @"F:\PoE2\Development\PoE2\GameModels";
 
