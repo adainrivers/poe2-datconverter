@@ -39,6 +39,12 @@ public struct Ascendancy
 	public int Unk010;
 
 	[FieldOffset(84)]
-	public StringReference BackgroundImage;
+	public int Unk011;
+
+    [FieldOffset(88)]
+    public int Unk012;
+
+    [FieldOffset(92)]
+	public TBool Unk013;
 
 }

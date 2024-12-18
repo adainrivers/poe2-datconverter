@@ -113,7 +113,7 @@ public struct Characters
 	public int Unk033;
 
 	[FieldOffset(284)]
-	public StringReference Unk034;
+	public StringReference PassiveTreeImageAgain;
 
 	[FieldOffset(292)]
 	public StringReference TencentVideo;
