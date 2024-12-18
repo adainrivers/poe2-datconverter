@@ -59,150 +59,168 @@ public struct Characters
 	[ReferenceTable("SkillGems")]
 	public TableReference StartSkillGem;
 
-	[FieldOffset(120)]
-	public TableReference Unk018;
+	//[FieldOffset(120)]
+	//public TableReference Unk018;
 
 	[FieldOffset(136)]
-	public int Unk019;
+    public int Unk019;
 
-	[FieldOffset(140)]
-	public int Unk020;
 
-	[FieldOffset(144)]
-	public int CharacterSize;
+	[FieldOffset(152)]
+	public int Unk20;
 
-	[FieldOffset(148)]
-	public StringReference IntroSoundFile;
+    [FieldOffset(156)]
+    public int Unk21;
 
-	[FieldOffset(156)]
+    [FieldOffset(160)]
+    public StringReference IntroSoundFile;
+
+    //[FieldOffset(156)]
+    //[ReferenceTable("BaseItemTypes")]
+    //[ElementType(typeof(TableReference))]
+    //public ArrayReference StartWeapons;
+
+    [FieldOffset(168)]
 	[ReferenceTable("BaseItemTypes")]
 	[ElementType(typeof(TableReference))]
 	public ArrayReference StartWeapons;
 
-	[FieldOffset(172)]
-	public StringReference Gender;
+    [FieldOffset(184)]
+    public StringReference Gender;
 
-	[FieldOffset(180)]
+    [FieldOffset(192)]
 	public StringReference TraitDescription;
 
-	[FieldOffset(188)]
-	public TableReference Unk026;
-
-	[FieldOffset(204)]
+	[FieldOffset(200)]
 	public TableReference Unk027;
 
-	[FieldOffset(220)]
+	[FieldOffset(216)]
 	public TableReference Unk028;
 
-	[FieldOffset(236)]
-	public TableReference Unk029;
+	[FieldOffset(232)]
+	public long Unk029;
 
-	[FieldOffset(252)]
-	public int Unk030;
+    [FieldOffset(240)]
+    public StringReference PassiveTreeImage;
 
-	[FieldOffset(256)]
-	[ElementType(typeof(TableReference))]
-	public ArrayReference Unk031;
+    [FieldOffset(248)]
+    public TableReference Unk030;
 
-	[FieldOffset(272)]
-	public StringReference PassiveTreeImage;
+    [FieldOffset(264)]
+	public TableReference Unk031;
 
 	[FieldOffset(280)]
 	public int Unk033;
 
 	[FieldOffset(284)]
-	public int Unk034;
+	public StringReference Unk034;
 
-	[FieldOffset(288)]
+	[FieldOffset(292)]
 	public StringReference TencentVideo;
 
-	[FieldOffset(296)]
+	[FieldOffset(300)]
 	public StringReference AttrsAsId;
 
-	[FieldOffset(304)]
+	[FieldOffset(308)]
 	public StringReference LoginScreen;
 
-	[FieldOffset(312)]
+	[FieldOffset(316)]
 	public StringReference PlayerCritter;
 
-	[FieldOffset(320)]
+	[FieldOffset(324)]
 	public StringReference PlayerEffect;
 
-	[FieldOffset(328)]
+	[FieldOffset(332)]
 	public StringReference AfterImage;
 
-	[FieldOffset(336)]
+	[FieldOffset(340)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference Mirage;
 
-	[FieldOffset(352)]
+	[FieldOffset(356)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference CloneImmobile;
 
-	[FieldOffset(368)]
+	[FieldOffset(372)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference ReplicateClone;
 
-	[FieldOffset(384)]
+	[FieldOffset(388)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference LightningClone;
 
-	[FieldOffset(400)]
+	[FieldOffset(404)]
 	public float Unk045;
 
-	[FieldOffset(404)]
+	[FieldOffset(408)]
 	public float Unk046;
 
-	[FieldOffset(408)]
+	[FieldOffset(412)]
 	public StringReference SkillTreeBackground;
 
-	[FieldOffset(416)]
+	[FieldOffset(420)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference Clone;
 
-	[FieldOffset(432)]
+	[FieldOffset(436)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference Double;
 
-	[FieldOffset(448)]
+	[FieldOffset(454)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference MirageWarrior;
 
-	[FieldOffset(464)]
+	[FieldOffset(468)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference DoubleTwo;
 
-	[FieldOffset(480)]
+	[FieldOffset(484)]
 	[ReferenceTable("MonsterVarieties")]
 	public TableReference DarkExile;
 
-	[FieldOffset(496)]
+	[FieldOffset(500)]
 	public StringReference Attr;
 
-	[FieldOffset(504)]
+	[FieldOffset(508)]
 	public StringReference AttrLowercase;
 
-	[FieldOffset(512)]
+	[FieldOffset(516)]
 	public StringReference Script;
 
-	[FieldOffset(520)]
+	[FieldOffset(524)]
 	public TableReference Unk056;
 
-	[FieldOffset(536)]
+	[FieldOffset(540)]
 	public int Unk057;
 
-	[FieldOffset(540)]
-	[ReferenceTable("MonsterVarieties")]
-	public TableReference Unk058;
+	[FieldOffset(544)]
+	public float Unk058;
+
+    [FieldOffset(548)]
+    public float Unk059;
+
+	[FieldOffset(552)]
+    public float Unk060;
 
 	[FieldOffset(556)]
-	[ReferenceTable("MonsterVarieties")]
-	public TableReference Unk059;
+    public long Unk061;
 
-	[FieldOffset(572)]
-	public int Unk060;
+    [FieldOffset(564)]
+	public int Unk062;
 
-	[FieldOffset(576)]
-	public float Unk061;
+    [FieldOffset(568)]
+	public TableReference Unk063;
+
+    [FieldOffset(584)]
+	public long Unk064;
+    
+    [FieldOffset(592)]
+	public long Unk065;
+    
+    [FieldOffset(600)]
+    public float Unk066;
+
+    [FieldOffset(604)]
+	public long Unk067;
 
 }
