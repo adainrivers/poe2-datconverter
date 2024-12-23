@@ -119,16 +119,20 @@ internal static class Program
         {
             var serializer = new DatStructSerializer(reader, results, true);
             var json = serializer.SerializeStructs(reader.Rows);
-            if (language == null)
-            {
-                WriteFile(json, Config.DataOutputPath, "data", $"{fileName}.json");
-            }
-            else
-            {
-                WriteFile(json, Config.DataOutputPath, "data", language, $"{fileName}.json");
-            }
 
             if (updateRepo)
+            {
+                if (language == null)
+                {
+                    WriteFile(json, Config.DataOutputPath, "data", $"{fileName}.json");
+                }
+                else
+                {
+                    WriteFile(json, Config.DataOutputPath, "data", language, $"{fileName}.json");
+                }
+            }
+
+            else
             {
                 serializer = new DatStructSerializer(reader, results, false);
                 json = serializer.SerializeStructs(reader.Rows);
