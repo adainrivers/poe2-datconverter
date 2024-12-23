@@ -1,4 +1,5 @@
-﻿using PoE2Converter.Parsers;
+﻿using System.Collections.Concurrent;
+using PoE2Converter.Parsers;
 
 namespace PoE2Converter;
 
@@ -93,7 +94,7 @@ internal static class Program
             dataFilesPath = Path.Combine(dataFilesPath, language);
         }
         var dataFiles = Directory.GetFiles(dataFilesPath, "*.datc64", SearchOption.TopDirectoryOnly);
-        var results = new Dictionary<string, DatReader>(StringComparer.OrdinalIgnoreCase);
+        var results = new ConcurrentDictionary<string, DatReader>(StringComparer.OrdinalIgnoreCase);
         foreach (var file in dataFiles)
         {
             var fileName = Path.GetFileNameWithoutExtension(file);
@@ -115,12 +116,17 @@ internal static class Program
                 }
             }
         }
-        foreach (var (fileName, reader) in results)
+
+        var parallelResults = results.AsParallel();
+
+        Parallel.ForEach(parallelResults, entry =>
         {
+            var fileName = entry.Key;
+            var reader = entry.Value;
             var serializer = new DatStructSerializer(reader, results, true);
             var json = serializer.SerializeStructs(reader.Rows);
 
-            if (updateRepo)
+            if (!updateRepo)
             {
                 if (language == null)
                 {
@@ -145,6 +151,6 @@ internal static class Program
                     WriteFile(json, Config.RepoDataOutputPath, "data", language, $"{fileName}.json");
                 }
             }
-        }
+        });
     }
 }

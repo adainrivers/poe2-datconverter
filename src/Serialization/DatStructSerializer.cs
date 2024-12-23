@@ -1,16 +1,17 @@
-﻿using System.Reflection;
+﻿using System.Collections.Concurrent;
+using System.Reflection;
 
 namespace PoE2Converter.Serialization;
 
 public class DatStructSerializer
 {
     private readonly DatReader _reader;
-    private readonly Dictionary<string, DatReader> _allResults;
+    private readonly ConcurrentDictionary<string, DatReader> _allResults;
     private readonly bool _includeRowIndex;
     private readonly StringWriter _writer;
     private readonly JsonTextWriter _jsonWriter;
 
-    public DatStructSerializer(DatReader reader, Dictionary<string, DatReader> allResults, bool includeRowIndex)
+    public DatStructSerializer(DatReader reader, ConcurrentDictionary<string, DatReader> allResults, bool includeRowIndex)
     {
         _reader = reader;
         _allResults = allResults;
