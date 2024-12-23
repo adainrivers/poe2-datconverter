@@ -10,35 +10,36 @@ public struct GrantedEffectStatSetsPerLevel
 	[FieldOffset(16)]
 	public int GemLevel;
 
-	[FieldOffset(20)]
-	public float PlayerLevelReq;
+	//[FieldOffset(20)]
+	//public float PlayerLevelReq;
 
-	[FieldOffset(24)]
-	public int SpellCritChance;
+	//[FieldOffset(24)]
+	//public int SpellCritChance;
+
+	//[FieldOffset(28)]
+	//public int AttackCritChance;
+
+	//[FieldOffset(32)]
+	//public int BaseMultiplier;
+
+	//[FieldOffset(36)]
+	//public int DamageEffectiveness;
 
 	[FieldOffset(28)]
-	public int AttackCritChance;
-
-	[FieldOffset(32)]
-	public int BaseMultiplier;
-
-	[FieldOffset(36)]
-	public int DamageEffectiveness;
-
-	[FieldOffset(40)]
 	[ElementType(typeof(int))]
 	public ArrayReference BaseResolvedValues;
 
-	[FieldOffset(56)]
+	[FieldOffset(44)]
 	[ElementType(typeof(int))]
 	public ArrayReference AdditionalStatsValues;
 
-	[FieldOffset(72)]
+	[FieldOffset(60)]
 	[ReferenceTable("GrantedEffects")]
 	[ElementType(typeof(TableReference))]
 	public ArrayReference GrantedEffects;
 
-	[FieldOffset(88)]
+
+    [FieldOffset(88)]
 	[ReferenceTable("Stats")]
 	[ElementType(typeof(TableReference))]
 	public ArrayReference AdditionalFlags;
@@ -53,19 +54,25 @@ public struct GrantedEffectStatSetsPerLevel
 	[ElementType(typeof(TableReference))]
 	public ArrayReference InterpolationBases;
 
-	[FieldOffset(136)]
+	[FieldOffset(129)]
 	[ReferenceTable("Stats")]
 	[ElementType(typeof(TableReference))]
 	public ArrayReference AdditionalStats;
 
-	[FieldOffset(152)]
+	[FieldOffset(145)]
 	[ReferenceTable("StatInterpolationTypes")]
 	[EnumName("StatInterpolationTypes")]
 	[ElementType(typeof(TEnum))]
 	public ArrayReference StatInterpolations;
 
-	[FieldOffset(168)]
+	[FieldOffset(161)]
 	[ElementType(typeof(float))]
 	public ArrayReference FloatStatsValues;
+
+    [FieldOffset(177)]
+    public float PlayerLevel;
+
+    [FieldOffset(181)]
+    public int AdditionalBaseDamage;
 
 }

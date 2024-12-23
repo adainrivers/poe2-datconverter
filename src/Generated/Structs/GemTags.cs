@@ -21,8 +21,5 @@ public struct GemTags
 	[ReferenceTable("Stats")]
 	public TableReference Stat3;
 
-	[FieldOffset(64)]
-	[ReferenceTable("Stats")]
-	public TableReference Stat4;
 
 }

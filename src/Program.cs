@@ -4,7 +4,7 @@ namespace PoE2Converter;
 
 internal static class Program
 {
-    private const bool UpdateRepo = false;
+    private const bool UpdateRepo = true;
     private static void Main()
     {
         CSharpClassGenerator.Generate();

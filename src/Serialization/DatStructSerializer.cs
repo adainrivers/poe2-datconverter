@@ -95,6 +95,17 @@ public class DatStructSerializer
             _jsonWriter.WriteNull();
             return;
         }
+        if(fieldType == typeof(byte[]))
+        {
+            var hex = Convert.ToHexString((byte[])value);
+            _jsonWriter.WriteValue(hex);
+            return;
+        }
+        if (fieldType == typeof(string))
+        {
+            _jsonWriter.WriteValue(value);
+            return;
+        }
         if (fieldType == typeof(StringReference))
         {
             _jsonWriter.WriteValue(((StringReference)value).GetValue(overrideReader ?? _reader));

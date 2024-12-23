@@ -42,10 +42,10 @@ public struct ActiveSkills
 	public StringReference WebsiteImage;
 
 	[FieldOffset(112)]
-	public TBool Unk010;
+	public TBool EnabledMaybe;
 
 	[FieldOffset(113)]
-	public StringReference Unk011;
+	public StringReference GrantedEffectMaybe;
 
 	[FieldOffset(121)]
 	public TBool Unk012;
@@ -130,7 +130,7 @@ public struct ActiveSkills
     [FieldOffset(305)]
 	public TableReference Unk034;
 
-	[FieldOffset(321)]
+	[FieldOffset(322)]
 	public StringReference Unk035;
 
 	[FieldOffset(329)]

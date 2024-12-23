@@ -14,96 +14,76 @@ public struct GrantedEffects
 	[ElementType(typeof(TableReference))]
 	public ArrayReference AllowedActiveSkillTypes;
 
-	[FieldOffset(25)]
-	public StringReference SupportGemLetter;
+    [FieldOffset(25)]
+	public long Unk025;
 
-	[FieldOffset(33)]
-	[ReferenceTable("Attributes")]
-	[EnumName("Attributes")]
-	public TEnum Attribute;
+    [FieldOffset(33)]
+    public long Unk033;
 
-	[FieldOffset(37)]
-	[ReferenceTable("ActiveSkillType")]
-	[ElementType(typeof(TableReference))]
-	public ArrayReference AddedActiveSkillTypes;
+    [FieldOffset(41)]
+    public long Unk041;
 
-	[FieldOffset(53)]
-	[ReferenceTable("ActiveSkillType")]
-	[ElementType(typeof(TableReference))]
-	public ArrayReference ExcludedActiveSkillTypes;
+    [FieldOffset(49)]
+    public long Unk049;
 
-	[FieldOffset(69)]
-	public TBool SupportsGemsOnly;
+    [FieldOffset(57)]
+    public long Unk057;
 
-	[FieldOffset(70)]
-	public int Unk008;
+    [FieldOffset(65)]
+    public TBool Unk065;
 
-	[FieldOffset(74)]
-	[ElementType(typeof(int))]
-	public ArrayReference Unk009;
+    [FieldOffset(66)]
+    public int Unk066;
 
-	[FieldOffset(90)]
-	public TBool CannotBeSupported;
+    [FieldOffset(70)]
+    public TBool Unk070;
 
-	[FieldOffset(91)]
-	public int Unk011;
+    [FieldOffset(71)]
+    public int Unk071;
 
-	[FieldOffset(95)]
-	public int CastTime;
+    [FieldOffset(75)]
+	public int Unk075;
 
-	[FieldOffset(99)]
-	[ReferenceTable("ActiveSkills")]
-	public TableReference ActiveSkill;
 
-	[FieldOffset(115)]
-	public TBool IgnoreMinionTypes;
+    [FieldOffset(79)]
+    [ReferenceTable("ActiveSkills")]
+    public TableReference ActiveSkill;
 
-	[FieldOffset(116)]
-	public TBool Unk015;
+    [FieldOffset(113)]
+	public TableReference Unk113;
 
-	[FieldOffset(117)]
-	[ReferenceTable("ActiveSkillType")]
-	[ElementType(typeof(TableReference))]
-	public ArrayReference AddedMinionActiveSkillTypes;
+	[FieldOffset(129)]
+	public TableReference Unk129;
 
-	[FieldOffset(133)]
-	[ReferenceTable("Animation")]
-	public TableReference Animation;
 
-	[FieldOffset(149)]
-	[ReferenceTable("MultiPartAchievements")]
-	public TableReference MultiPartAchievement;
+	[FieldOffset(145)]
+    public TBool Unk145;
 
-	[FieldOffset(165)]
-	public TBool Unk019;
+    [FieldOffset(146)]
+    public long Unk146;
 
-	[FieldOffset(166)]
-	[ReferenceTable("ItemClasses")]
-	[ElementType(typeof(TableReference))]
-	public ArrayReference SupportWeaponRestrictions;
+    [FieldOffset(154)]
+    public long Unk154;
 
-	[FieldOffset(182)]
-	[ReferenceTable("GrantedEffects")]
-	public TableReference RegularVariant;
+    [FieldOffset(162)] public StringReference Unk162;
 
-	[FieldOffset(190)]
-	public int Unk022;
+ //   [FieldOffset(170)]
+	//[MarshalAs(UnmanagedType.ByValArray, SizeConst = 14, ArraySubType = UnmanagedType.U1)]
+ //   public byte[] Unk170;
 
-	[FieldOffset(194)]
-	public int Unk023;
 
-	[FieldOffset(198)]
-	public int Unk024;
-
-	[FieldOffset(202)]
-	public TBool Unk025;
-
-	[FieldOffset(203)]
+    [FieldOffset(184)]
 	[ReferenceTable("GrantedEffectStatSets")]
-	public TableReference StatSet;
+	public TableReference DefaultStatSet;
 
-	[FieldOffset(219)]
+    [FieldOffset(200)]
+    [ReferenceTable("GrantedEffectStatSets")]
 	[ElementType(typeof(TableReference))]
-	public ArrayReference Unk027;
+    public ArrayReference AdditionalStatSets;
+
+
+	[FieldOffset(224)]
+	[ElementType(typeof(long))]
+    public ArrayReference Unk216;
 
 }

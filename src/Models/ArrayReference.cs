@@ -19,6 +19,28 @@ public struct ArrayReference
 
         var results = new List<object>();
 
+        if (underlyingType == typeof(string))
+        {
+            var currentOffset = Offset;
+            for (var i = 0; i < Count; i++)
+            {
+                var stringData = dataSection[(int)currentOffset..];
+                var stringLength = stringData.IndexOf(Constants.StringNullTerminator);
+                if (stringLength > 1024) stringLength = 1024;
+                if (stringLength % 2 != 0)
+                {
+                    currentOffset++;
+                    stringLength++;
+                }
+
+                var str = Encoding.Unicode.GetString(stringData[..stringLength]);
+                results.Add(str);
+                currentOffset += stringLength + Constants.StringNullTerminator.Length;
+            }
+
+            return results;
+        }
+
         var size = Marshal.SizeOf(underlyingType);
         var arrayDataLength = Count * size;
         if (arrayDataLength == 0) return [];
